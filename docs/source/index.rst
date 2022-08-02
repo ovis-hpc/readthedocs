@@ -22,11 +22,12 @@ LDMS is a low-overhead, low-latency framework for collecting, transfering, and s
    githubwiki
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: LDMS 
    
    ldms-quickstart
    ldms-tutorial
+   ldms-streams
    
 .. toctree::
    :maxdepth: 2

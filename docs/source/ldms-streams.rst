@@ -1,11 +1,14 @@
 Streams-enabled Application Data Collectors
-######################
+###########################
+
 Caliper
-***********
+***********************
+
 DARSHAN
-**************
+***********************
+
 Kokkos
-**************  
+***********************
 * Appropriate Kokkos function calls must be included in the application code. Add the following environmental variables to your run script to push Kokkos data from the application to stream for collection.
 
 .. code-block:: RST
@@ -22,6 +25,6 @@ Kokkos
 * The KOKKOS_LDMS_VERBOSE variable can be set to 1 for debug purposes which prints all collected kernel data to the console.
 
 How to make a data connector
-****************
+***********************
 Defining a format
-*****************
+***********************

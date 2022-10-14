@@ -6,7 +6,7 @@ Caliper
 
 DARSHAN
 ***********************
-This section covers basics steps on how to compile, build and use the Darshan-LDMS Integration code (i.e. darshanConnector). The following application tests are part of the Darshan program and can be found under <darshan-prefix>/darshan-test/regression/test-cases/src/. 
+This section covers basics steps on how to compile, build and use the Darshan-LDMS Integration code (i.e. darshanConnector). The following application tests are part of the Darshan program and can be found under <darshan-prefix>/darshan/darshan-test/regression/test-cases/src/. 
 
 Compile and Build with LDMS
 ---------------------------
@@ -16,25 +16,25 @@ Compile and Build with LDMS
   
   git clone https://github.com/darshan-hpc/darshan.git
   module swap PrgEnv-intel/6.0.9 PrgEnv-gnu # depending on the system. 
-  cd darshan/ && mkdir build/
+  cd <darshan-prefix>/darshan/ && mkdir build/
   ./prepare.sh && cd build/
-  ../configure --with-log-path=/projects/darshan/logs --prefix=/projects/darshan/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=<path_to_ldms_install> && make && make install
+  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=<path_to_ldms_install> && make && make install
   
 * To build HDF5 module for darshan, you must first load the module with ``module load cray-hdf5-parallel`` then run configure as follows: 
 .. code-block:: RST
 
-  ../configure --with-log-path=/projects/darshan/logs --prefix=/projects/darshan/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=/projects/ovis/darshanConnector/ovis/LDMS_install --enable-hdf5-mod --with-hdf5=/opt/cray/pe/hdf5-parallel/1.12.0.0/gnu/8.2  && make && make install
+  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=/projects/ovis/darshanConnector/ovis/LDMS_install --enable-hdf5-mod --with-hdf5=/opt/cray/pe/hdf5-parallel/1.12.0.0/gnu/8.2  && make && make install
 
 Configuration For Darshan DXT Test Case(s)  
 ------------------------------------------
-Below are the instructions to configure your system for running a darshan test (mpi-io-test.c) for the darshanConnector code. All Darshan application test scripts are located in ``darshan/darshan-test/regression/test-cases/``.
+Below are the instructions to configure your system for running a darshan test (mpi-io-test.c) for the darshanConnector code. All Darshan application test scripts are located in ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/``.
 
 * Double Check Test Scripts
 Double check the test scripts are modified appropriately in order to run a successful test. Make sure the following file contains the desired partition name for the sbatch command.
 
 .. code-block:: RST
   
-  cd <darshan-prefix>/darshan-test/regression
+  cd <darshan-prefix>/darshan/darshan-test/regression
   vi cray-module-nersc/runjob.sh
   
   # inside "runjob.sh"
@@ -94,8 +94,8 @@ This section gives a step by step on executing a simple Darshan test script with
 * Once the test scripts have been checked and the LDMS daemon is running and connected, open another terminal window (login node) and make sure the environment variables listed and set the following environment variables before running an application test with the darshanConnector code:
 .. code-block:: RST
 
-  export LD_PRELOAD=<path-to-darshan-install>/lib/libdarshan.so
-  export LD_LIBRARY_PATH=<path-to-LDMS-install>/lib/
+  export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
+  export LD_LIBRARY_PATH=<darshan-prefix>/darshan/build/install/lib/
   
   #set env variables for ldms streams daemon testing
   export DARSHAN_LDMS_STREAM=darshanConnector
@@ -118,7 +118,7 @@ Single Test
 * Run Darshan's example "mpi-io-test" program within ``/test-cases/src/`` by setting the following environment variables, go to ``darshan/darshan-test/regression/test-cases`` and execute this script.
 .. code-block:: RST
   
-  export DARSHAN_PATH=darshan/install
+  export DARSHAN_PATH=<darshan-prefix>/darshan/build/install
   export DARSHAN_TMP=darshan-ldms-output/
   export DARSHAN_PLATFORM=cray-module-nersc
   cd darshan/darshan-test/regression/test-cases
@@ -132,12 +132,12 @@ All Tests
 .. code-block:: RST
   
   # run darshan tests
-  cd darshan/darshan-test/regression/
+  cd <darshan-prefix>/darshan/darshan-test/regression/
 
   #set output directory
   DTDIR=darshan-ldms-output/
   rm -r $DTDIR
-  ./run-all.sh darshan/install $DTDIR cray-module-nersc
+  ./run-all.sh <path-to-darshan-install> $DTDIR cray-module-nersc
 
 *Note*: Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENAbLE_LDMS variable is set. If not, no data will be collected by LDMS.
 
@@ -154,9 +154,9 @@ LDMS Log File
 /////////////
 *   Once the application has completed, run ``cat /tmp/hello_stream_store.log`` in the terminal window where the ldmsd is running (compute node). You should see a similar output to the one below.
 
-> cat /tmp/hello_stream_store.log
 .. code-block:: RST
-
+  
+  > cat /tmp/hello_stream_store.log
   Fri Feb 18 11:35:23 2022: INFO  : stream_type: JSON, msg: "{ "job_id":53023,"rank":3,"ProducerName":"nid00052","file":"darshan-output/mpi-io-test.tmp.dat","record_id":1601543006480890062,"module":"POSIX","type":"MET","max_byte":-1,"switches":-1,"flushes":-1,"cnt":1,"op":"opens_segment","seg":[{"data_set":"N/A","pt_sel":-1,"irreg_hslab":-1,"reg_hslab":-1,"ndims":-1,"npoints":-1,"off":-1,"len":-1,"dur":0.00,"timestamp":1645209323.082951}]}", msg_len: 401, entity: 0x155544084aa0
 
   Fri Feb 18 11:35:23 2022: INFO  : stream_type: JSON, msg: "{ "job_id":53023,"rank":3,"ProducerName":"nid00052","file":"N/A","record_id":1601543006480890062,"module":"POSIX","type":"MOD","max_byte":-1,"switches":-1,"flushes":-1,"cnt":1,"op":"closes_segment","seg":[{"data_set":"N/A","pt_sel":-1,"irreg_hslab":-1,"reg_hslab":-1,"ndims":-1,"npoints":-1,"off":-1,"len":-1,"dur":0.00,"timestamp":1645209323.083581}]}", msg_len: 353, entity: 0x155544083f60
@@ -165,10 +165,11 @@ LDMS Log File
 CSV File
 ////////
 * To view the data stored in the generated CSV file from the streams store plugin, kill the ldmsd daemon first by running: ``killall ldmsd``
-* Then ``cat`` the file in which the CSV file is located. Below is the stored DXT module data from LDMS's streams\_csv_\_store plugin for the ``mpi-io-test-dxt.sh`` test case.  
- 
+* Then ``cat`` the file in which the CSV file is located. Below is the stored DXT module data from LDMS's streams\_csv_\_store plugin for the ``mpi-io-test-dxt.sh`` test case.
+
 .. code-block:: RST
-   #module,uid,ProducerName,switches,file,rank,flushes,record_id,exe,max_byte,type,job_id,op,cnt,seg:off,seg:pt_sel,seg:dur,seg:len,seg:ndims,seg:reg_hslab,seg:irreg_hslab,seg:data_set,seg:npoints,seg:timestamp,seg:total,seg:start    
+
+  #module,uid,ProducerName,switches,file,rank,flushes,record_id,exe,max_byte,type,job_id,op,cnt,seg:off,seg:pt_sel,seg:dur,seg:len,seg:ndims,seg:reg_hslab,seg:irreg_hslab,seg:data_set,seg:npoints,seg:timestamp,seg:total,seg:start    
   POSIX,99066,n9,-1,darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007415,-1,-1,-1,-1,N/A,-1,1662576527,0.007415,0.298313
   MPIIO,99066,n9,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.100397,-1,-1,-1,-1,N/A,-1,1662576527,0.100397,0.209427
   POSIX,99066,n11,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,339,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.00742,-1,-1,-1,-1,N/A,-1,1662576527,0.00742,0.297529
@@ -176,7 +177,7 @@ CSV File
   POSIX,99066,n14,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,437,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007418,-1,-1,-1,-1,N/A,-1,1662576527,0.007418,0.296812
   POSIX,99066,n7,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,192,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007435,-1,-1,-1,-1,N/A,-1,1662576527,0.007435,0.294776
   MPIIO,99066,n7,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,192,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.033042,-1,-1,-1,-1,N/A,-1,1662576527,0.033042,0.273251
-...
+  ...
 
 Kokkos
 ***********************

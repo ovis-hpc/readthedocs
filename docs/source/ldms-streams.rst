@@ -8,10 +8,14 @@ DARSHAN
 ***********************
 This section covers basics steps on how to compile, build and use the Darshan-LDMS Integration code (i.e. darshanConnector). The following application tests are part of the Darshan program and can be found under <darshan-prefix>/darshan/darshan-test/regression/test-cases/src/. 
 
+.. note::
+  
+  LDMS must already be installed on the system or locally. If it is not, then please following the ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
+
 Compile and Build with LDMS
 ---------------------------
 * Run the following to build Darshan and link against an existing LDMS library on the system.
-
+  
 .. code-block:: RST
   
   git clone https://github.com/darshan-hpc/darshan.git
@@ -25,12 +29,21 @@ Compile and Build with LDMS
 
   ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=/projects/ovis/darshanConnector/ovis/LDMS_install --enable-hdf5-mod --with-hdf5=/opt/cray/pe/hdf5-parallel/1.12.0.0/gnu/8.2  && make && make install
 
+.. note::
+  
+  This configuration is specific to a CRAY machine (i.e. compile with cc instead of mpicc). For more information on how to install and build the code across various platforms, please visit the `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ 
+  
 Configuration For Darshan DXT Test Case(s)  
 ------------------------------------------
 Below are the instructions to configure your system for running a darshan test (mpi-io-test.c) for the darshanConnector code. All Darshan application test scripts are located in ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/``.
 
 * Double Check Test Scripts
 Double check the test scripts are modified appropriately in order to run a successful test. Make sure the following file contains the desired partition name for the sbatch command.
+Darshan has various test setups and module loads specific to the system. In this example, we will be running Darshan on a CRAY machine so we will need to edit the test scripts within ``darshan-test/regression/cray-module-nersc``.
+
+.. note::
+
+  A list of other darshan test setups can be found in the ``darshan-test/regression`` directory. 
 
 .. code-block:: RST
   
@@ -39,8 +52,7 @@ Double check the test scripts are modified appropriately in order to run a succe
   
   # inside "runjob.sh"
   sbatch --wait -N 1 -t 10 -p <name-of-partition> $NODE_CONSTRAINTS --output $DARSHAN_TMP/$$-tmp.out --error $DARSHAN_TMP/$$-tmp.err    $DARSHAN_TESTDIR/$DARSHAN_PLATFORM/slurm-submit.sl "$@"
-
-Once this is done, make sure the 
+  
 
 Run An LDMS Streams Daemon
 --------------------------
@@ -61,8 +73,8 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   config name=hello_sampler producer=${HOSTNAME} instance=${HOSTNAME}/hello_sampler stream=darshanConnector component_id=${COMPONENT_ID}
   start name=hello_sampler interval=${SAMPLE_INTERVAL} offset=${SAMPLE_OFFSET}
   
-  load name=l2_stream_csv_store
-  config name=l2_stream_csv_store path=./streams/store container=csv stream=darshanConnector
+  load name=stream_csv_store
+  config name=stream_csv_store path=./streams/store container=csv stream=darshanConnector
 
 * Set up the environment for starting an LDMS daemon:
 .. code-block:: RST
@@ -78,14 +90,18 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   export SAMPLE_OFFSET="0"
   export HOSTNAME="localhost"
 
-*Note*: LDMS must already be install either on the system or locally. 
+.. note::
+  
+  LDMS must already be installed on the system or locally. If it is not, then please following the ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.   
 
 *   Next, run the LDSM Streams daemon with the following command:
 .. code-block:: RST
 
   ldmsd -x sock:10444 -c hello_stream_store.conf -l /tmp/hello_stream_store.log -v DEBUG -r ldmsd.pid
 
-*Note:* To check that the ldmsd daemon is connected running please run ``ps auwx | grep ldmsd | grep -v grep``, ``ldms_ls -h <host-name> -x sock -p <port-number> -a none -v`` or ``cat /tmp/hello_stream_store.log``. Where <host-name> is the node where the LDMS daemon exists and <port-number> is the port it is listening on.
+.. note::
+  
+  To check that the ldmsd daemon is connected running please run ``ps auwx | grep ldmsd | grep -v grep``, ``ldms_ls -h <host-name> -x sock -p <port-number> -a none -v`` or ``cat /tmp/hello_stream_store.log``. Where <host-name> is the node where the LDMS daemon exists and <port-number> is the port it is listening on.
 
 Execute The Test Script(s)
 --------------------------
@@ -111,7 +127,9 @@ This section gives a step by step on executing a simple Darshan test script with
   #export STDIO_ENABLE_LDMS=
   #export HDF5_ENABLE_LDMS= 
 
-*NOTE*: The <host-name> is set to the LDMS Streams daemon currently running (e.g. in this case it would be node1).
+.. note:: 
+  
+  The <host-name> is set to the LDMS Streams daemon currently running (e.g. in this case it would be node1).
   
 Single Test
 ///////////
@@ -124,7 +142,9 @@ Single Test
   cd darshan/darshan-test/regression/test-cases
   ./mpi-io-test-dxt.sh
 
-*Note*: Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENAbLE_LDMS variable is set. If not, no data will be collected by LDMS.
+.. note::
+  
+  Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS.
 
 All Tests
 //////////
@@ -139,7 +159,9 @@ All Tests
   rm -r $DTDIR
   ./run-all.sh <path-to-darshan-install> $DTDIR cray-module-nersc
 
-*Note*: Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENAbLE_LDMS variable is set. If not, no data will be collected by LDMS.
+.. note::
+
+  Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENAbLE_LDMS variable is set. If not, no data will be collected by LDMS.
 
 Check Results
 -------------

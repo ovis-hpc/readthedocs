@@ -180,8 +180,8 @@ All Tests
 
   Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS.
   
-Run Test On Login Node
-----------------------
+Run Single Test On Login Node
+-----------------------------
 *OPTIONAL* If you are not installing the darshanConnector code on cluster, please run the following commands to do run a single Darshan test case on the login node.
 1. Set Environment Variables for Darshan, LDMS and Darshan-LDMS Integrated code (i.e. darshanConnector).
 

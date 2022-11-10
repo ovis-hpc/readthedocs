@@ -275,7 +275,7 @@ This section provides the expected output of an application run with the data pu
 
 * If you are publishing to a local streams daemon (compute or login nodes) to collect the Darshan data then please compare the generated csv file to the one shown below in this section. 
 
-* If you are publishing to a system daemon that aggregates the data and stores to a Scalable Object Store (SOS), please skip this section and go to `sos-quickstart`_ for more information about viewing and accessing data from this database.
+* If you are publishing to a system daemon that aggregates the data and stores to a Scalable Object Store (SOS), please skip this section and go to the `SOS Quickstart Guide <sos-quickstart.rst>`_ for more information about viewing and accessing data from this database.
 
 LDMS Log File
 /////////////
@@ -307,7 +307,7 @@ CSV File
 
 Compare With Darshan Log File(s)
 ////////////////////////////////
-If you decided to parse Darshan's binary file from ``step 6`` in `Run Test On Login Node`_ section, you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
+If you decided to parse Darshan's binary file from ``step 6`` in _`Run Test On Login Node`_ section, you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
 
 If the data is correct, the producerName, file path and record_id for each Module (i.e. POSIX, MPIIO, etc.) will be the same.
 

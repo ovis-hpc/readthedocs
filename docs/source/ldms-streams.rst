@@ -159,9 +159,8 @@ Single Test
 
 .. note::
   
-  Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS.
-  
- * *(OPTIONAL)* To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID in ``<darshan-prefix>/darshan-test/regression/cray-module-nersc/slurm-submit.sl``. If this is not set, the job_id field will be set to the first PID.   
+  Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS. 
+  **OPTIONAL** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID in ``<darshan-prefix>/darshan-test/regression/cray-module-nersc/slurm-submit.sl``. If this is not set, the job_id field will be set to the first PID.   
 
 All Tests
 //////////
@@ -180,9 +179,9 @@ All Tests
 
   Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS.
   
-Run Single Test On Login Node
------------------------------
-*OPTIONAL* If you are not installing the darshanConnector code on cluster, please run the following commands to do run a single Darshan test case on the login node.
+Run Single Test On Login Node (OPTIONAL)
+----------------------------------------
+If you are not installing the darshanConnector code on cluster, please run the following commands to do run a single Darshan test case on the login node.
 1. Set Environment Variables for Darshan, LDMS and Darshan-LDMS Integrated code (i.e. darshanConnector).
 
 .. code-block:: RST
@@ -245,7 +244,7 @@ Run Single Test On Login Node
   export DARSHAN_TESTDIR=$PWD/darshan/darshan-test/regression
   export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
  
-4. *OPTIONAL* Generate TMP Path if it doesn't exist
+4. **OPTIONAL** Generate TMP Path if it doesn't exist
 
 .. code-block:: RST 
 
@@ -261,7 +260,7 @@ Run Single Test On Login Node
   cd $DARSHAN_TMP
   ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
 
-6. *OPTIONAL* Parse the Darshan binary file using Darshans standard and DXT (only if DXT_ENABLE_IO_TRACE is enabled) parsers.
+6. **OPTIONAL** Parse the Darshan binary file using Darshans standard and DXT (only if DXT_ENABLE_IO_TRACE is enabled) parsers.
 
 .. code-block:: RST 
 

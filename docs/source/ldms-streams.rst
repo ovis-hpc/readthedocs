@@ -160,7 +160,7 @@ Single Test
 .. note::
   
   Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS. 
-  **Optional** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID in ``<darshan-prefix>/darshan-test/regression/cray-module-nersc/slurm-submit.sl``. If this is not set, the job_id field will be set to the first PID.   
+  **(Optional)** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID in ``<darshan-prefix>/darshan-test/regression/cray-module-nersc/slurm-submit.sl``. If this is not set, the job_id field will be set to the first PID.   
 
 All Tests
 //////////
@@ -245,7 +245,7 @@ If you are not installing the darshanConnector code on cluster, please run the f
   export DARSHAN_TESTDIR=$PWD/darshan/darshan-test/regression
   export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
  
-4. **Optional** Generate TMP Path if it doesn't exist
+4. **(Optional)** Generate TMP Path if it doesn't exist
 
 .. code-block:: RST 
 
@@ -261,7 +261,7 @@ If you are not installing the darshanConnector code on cluster, please run the f
   cd $DARSHAN_TMP
   ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
 
-6. **Optional** Parse the Darshan binary file using Darshans standard and DXT (only if DXT_ENABLE_IO_TRACE is enabled) parsers.
+6. **(Optional)** Parse the Darshan binary file using Darshans standard and DXT (only if DXT_ENABLE_IO_TRACE is enabled) parsers.
 
 .. code-block:: RST 
 
@@ -296,7 +296,7 @@ CSV File
 
 .. code-block:: RST
 
-#module,uid,ProducerName,switches,file,rank,flushes,record_id,exe,max_byte,type,job_id,op,cnt,seg:off,seg:pt_sel,seg:dur,seg:len,seg:ndims,seg:reg_hslab,seg:irreg_hslab,seg:data_set,seg:npoints,seg:timestamp,seg:total,seg:start    
+  #module,uid,ProducerName,switches,file,rank,flushes,record_id,exe,max_byte,type,job_id,op,cnt,seg:off,seg:pt_sel,seg:dur,seg:len,seg:ndims,seg:reg_hslab,seg:irreg_hslab,seg:data_set,seg:npoints,seg:timestamp,seg:total,seg:start    
   POSIX,99066,n9,-1,darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007415,-1,-1,-1,-1,N/A,-1,1662576527,0.007415,0.298313
   MPIIO,99066,n9,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.100397,-1,-1,-1,-1,N/A,-1,1662576527,0.100397,0.209427
   POSIX,99066,n11,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,339,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.00742,-1,-1,-1,-1,N/A,-1,1662576527,0.00742,0.297529

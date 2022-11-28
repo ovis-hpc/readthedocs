@@ -330,7 +330,213 @@ Kokkos
 * The KOKKOS_SAMPLER_RATE variable determines the rate of messages pushed to streams and collected. Please note that it is in best practice to set this to a prime number to avoid collecting information from the same kernels.
 * The KOKKOS_LDMS_VERBOSE variable can be set to 1 for debug purposes which prints all collected kernel data to the console.
 
-How to make a data connector
-***********************
-Defining a format
+How To Make A Data Connector
+*****************************
+In order to create a data connector with LDMS to collect runtime timeseries application data, you will need to utilize LDMS's Streams Functionality. This section will provide the necessary functions and Streams API required to make the data connector.
+
+The example (code) below is pulled from the Darshan-LDMS Integration code.  
+
+.. note::
+  
+  The LDMS Streams functionality uses a push-based method to reduce memory consumed and data loss on the node.
+
+Initialize All Necessary Variables
+-----------------------------------
+
+* First, you will need to initialize all necessary variables used by the Streams API:
+
+.. code-block:: RST 
+
+  #define SLURM_NOTIFY_TIMEOUT 5
+  ldms_t ldms_g;
+  pthread_mutex_t ln_lock;
+  int conn_status, to;
+  ldms_t ldms_darsh;
+  sem_t conn_sem;
+  sem_t recv_sem;
+
+
+Copy "Hello Sampler" Streams API Functions
+------------------------------------------
+Next, copy the ``ldms_t setup_connection`` and ``static void event_cb`` functions listed below. These functions were pulled from the ``hello_sampler`` code (i.e. Streams API). 
+
+The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemon and the  ``static void event_cb`` is a callback function to check the connection status of the LDMS Daemon.
+
+.. code-block:: RST
+
+  static void event_cb(ldms_t x, ldms_xprt_event_t e, void *cb_arg)
+  {
+          switch (e->type) {
+          case LDMS_XPRT_EVENT_CONNECTED:
+                  sem_post(&conn_sem);
+                  conn_status = 0;
+                  break;
+          case LDMS_XPRT_EVENT_REJECTED:
+                  ldms_xprt_put(x);
+                  conn_status = ECONNREFUSED;
+                  break;
+          case LDMS_XPRT_EVENT_DISCONNECTED:
+                  ldms_xprt_put(x);
+                  conn_status = ENOTCONN;
+                  break;
+          case LDMS_XPRT_EVENT_ERROR:
+                  conn_status = ECONNREFUSED;
+                  break;
+          case LDMS_XPRT_EVENT_RECV:
+                  sem_post(&dC.recv_sem);
+                  break;
+          case LDMS_XPRT_EVENT_SEND_COMPLETE:
+                  break;
+          default:
+                  printf("Received invalid event type %d\n", e->type);
+          }
+  }
+
+  ldms_t setup_connection(const char *xprt, const char *host,
+                          const char *port, const char *auth)
+  {
+          char hostname[PATH_MAX];
+          const char *timeout = "5";
+          int rc;
+          struct timespec ts;
+
+          if (!host) {
+                  if (0 == gethostname(hostname, sizeof(hostname)))
+                          host = hostname;
+          }
+          if (!timeout) {
+                  ts.tv_sec = time(NULL) + 5;
+                  ts.tv_nsec = 0;
+          } else {
+                  int to = atoi(timeout);
+                  if (to <= 0)
+                          to = 5;
+                  ts.tv_sec = time(NULL) + to;
+                  ts.tv_nsec = 0;
+          }
+
+          ldms_g = ldms_xprt_new_with_auth(xprt, NULL, auth, NULL);
+          if (!ldms_g) {
+                  printf("Error %d creating the '%s' transport\n",
+                         errno, xprt);
+                  return NULL;
+          }
+
+          sem_init(recv_sem, 1, 0);
+          sem_init(conn_sem, 1, 0);
+
+          rc = ldms_xprt_connect_by_name(ldms_g, host, port, event_cb, NULL);
+          if (rc) {
+                  printf("Error %d connecting to %s:%s\n",
+                         rc, host, port);
+                  return NULL;
+          }
+          sem_timedwait(conn_sem, &ts);
+          if (conn_status)
+                  return NULL;
+          return ldms_g;
+  }
+
+Initialize and Connect to LDMSD
+------------------------------------------
+Once the above functions have been copied, the ``setup_connection`` will need to be called in order to establish a connection the LDMSD.
+
+.. note::
+  
+  The LDMSD needs to already be active (i.e. running on a node) in order to connect to it and must use the `Streams Plugin <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/sampler/hello_stream/Plugin_hello_sampler.man>`_ . The host is set to the node the daemon is running on and port is set to the port the daemon is listening to. 
+
+.. code-block:: RST
+
+  void darshan_ldms_connector_initialize()
+  {
+      const char* env_ldms_stream =  getenv("DARSHAN_LDMS_STREAM");
+      const char* env_ldms_xprt    = getenv("DARSHAN_LDMS_XPRT");
+      const char* env_ldms_host    = getenv("DARSHAN_LDMS_HOST");
+      const char* env_ldms_port    = getenv("DARSHAN_LDMS_PORT");
+      const char* env_ldms_auth    = getenv("DARSHAN_LDMS_AUTH");
+
+      /* Check/set LDMS transport type */
+      if (!env_ldms_xprt || !env_ldms_host || !env_ldms_port || !env_ldms_auth || env_ldms_stream){
+          printf("Either the transport, host, port or authentication is not given\n");
+          return;
+      }
+
+      pthread_mutex_lock(&dC.ln_lock);
+      dC.ldms_darsh = setup_connection(env_ldms_xprt, env_ldms_host, env_ldms_port, env_ldms_auth);
+          if (conn_status != 0) {
+              printf("Error setting up connection to LDMS streams daemon: %i -- exiting\n", conn_status);
+              pthread_mutex_unlock(ln_lock);
+              return;
+          }
+          else if (dC.ldms_darsh->disconnected){
+              printf("Disconnected from LDMS streams daemon -- exiting\n");
+              pthread_mutex_unlock(ln_lock);
+              return;
+          }
+      pthread_mutex_unlock(ln_lock);
+      return;
+  }
+
+Publish Event Data to LDMSD
+-------------------------------------
+Now we will create a function that will collect all relevent application events and publish to the LDMS Streams Daemon. In the Darshan-LDMS Integration, the following Darshan's I/O traces for each I/O event (i.e. open, close, read, write) are collected along with the absolute timestamp (for timeseries data) for each I/O event:
+
+.. code-block:: RST
+
+  void darshan_ldms_connector_send(int64_t record_count, char *rwo, int64_t offset, int64_t length, int64_t max_byte, int64_t rw_switch, int64_t flushes,  double start_time, double end_time, struct timespec tspec_start, struct timespec tspec_end, double total_time, char *mod_name, char *data_type)
+  {
+      char jb11[1024];
+      int rc, ret, i, size, exists;
+      dC.env_ldms_stream  = getenv("DARSHAN_LDMS_STREAM");
+
+      pthread_mutex_lock(ln_lock);
+      if (dC.ldms_darsh != NULL)
+          exists = 1;
+      else
+          exists = 0;
+      pthread_mutex_unlock(ln_lock);
+
+      if (!exists){
+          return;
+      }
+
+      sprintf(jb11,"{ \"uid\":%ld, \"exe\":\"%s\",\"job_id\":%ld,\"rank\":%ld,\"ProducerName\":\"%s\",\"file\":\"%s\",\"record_id\":%"PRIu64",\"module\":\"%s\",\"type\":\"%s\",\"max_byte\":%ld,\"switches\":%ld,\"flushes\":%ld,\"cnt\":%ld,\"op\":\"%s\",\"seg\":[{\"data_set\":\"%s\",\"pt_sel\":%ld,\"irreg_hslab\":%ld,\"reg_hslab\":%ld,\"ndims\":%ld,\"npoints\":%ld,\"off\":%ld,\"len\":%ld,\"start\":%0.6f,\"dur\":%0.6f,\"total\":%.6f,\"timestamp\":%lu.%.6lu}]}", dC.uid, dC.exename, dC.jobid, dC.rank, dC.hname, dC.filename, dC.record_id, mod_name, data_type, max_byte, rw_switch, flushes, record_count, rwo, dC.data_set, dC.hdf5_data[0], dC.hdf5_data[1], dC.hdf5_data[2], dC.hdf5_data[3], dC.hdf5_data[4], offset, length, start_time, end_time-start_time, total_time, tspec_end.tv_sec, micro_s);
+
+      rc = ldmsd_stream_publish(ldms_darsh, env_ldms_stream, LDMSD_STREAM_JSON, jb11, strlen(jb11) + 1);
+      if (rc)
+          printf("Error %d publishing data.\n", rc);
+
+   out_1:
+      return;
+  }
+  
+  .. note::
+
+  For more information about the various Darshan I/O traces and metrics collected, please visit `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ and `Darshan LDMS Metrics Collected <https://github.com/Snell1224/darshan/wiki/Darshan-LDMS---Metric-Definitions>`_ pages.
+
+Once this function is called, it initializes a connection to the LDMS Streams Daemon, attempts reconnection if the connection is not established, then formats the given arguements/variables into a JSON message format and finally publshed to the LDMS Streams Daemon.
+
+There are various types of formats that can be used to publish the data (i.e. JSON, string, etc.) so please review the `Defining A Format`_ section for more information.
+
+Collect Event Data 
+/////////////////////////
+
+To collect the application data in real time (and using the example given in this section), the ``void darshan_ldms_connector_send(arg1, arg2, arg3,....)`` will be placed in all sections of the code where we want to publish a message. From the Darshan-LDMS Integration code we would have:
+
+.. code-block:: RST
+
+  darshan_ldms_connector_send(rec_ref->file_rec->counters[MPIIO_COLL_OPENS] + rec_ref->file_rec->counters[MPIIO_INDEP_OPENS], "open", -1, -1, -1, -1, -1, __tm1, __tm2, __ts1, __ts2, rec_ref->file_rec->fcounters[MPIIO_F_META_TIME], "MPIIO", "MET");
+  
+This line of code is placed within multiple macros (`MPIIO_RECORD_OPEN/READ/WRITE <https://github.com/darshan-hpc/darshan/blob/main/darshan-runtime/lib/darshan-mpiio.c>`_) in Darshan's MPIIO module. 
+
+* Doing this will call the function everytime Darshan detects an I/O event from the application (i.e. read, write, open, close). Once called, the arguements will be passed to the function, added to the JSON formatted message and pushed to the LDMS daemon.
+
+.. note:: 
+  
+  For more information about how to store the published data from and LDMS Streams Daemon, please see the `Stream CSV Store plugin man pages <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/store/stream/Plugin_stream_csv_store.man>`_
+
+
+
+
+Defining A Format
 ***********************

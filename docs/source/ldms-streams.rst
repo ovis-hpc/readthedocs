@@ -439,11 +439,11 @@ The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemo
 
 Initialize and Connect to LDMSD
 ------------------------------------------
-Once the above functions have been copied, the ``setup_connection`` will need to be called in order to establish a connection the LDMSD.
+Once the above functions have been copied, the ``setup_connection`` will need to be called in order to establish a connection an LDMS Streams Daemon.
 
 .. note::
   
-  The LDMSD needs to already be active (i.e. running on a node) in order to connect to it and must use the `Streams Plugin <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/sampler/hello_stream/Plugin_hello_sampler.man>`_ . The host is set to the node the daemon is running on and port is set to the port the daemon is listening to. 
+  The LDMS Daemon is configured with the  `Streams Plugin <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/sampler/hello_stream/Plugin_hello_sampler.man>`_ and should already be running on the node. The host is set to the node the daemon is running on and port is set to the port the daemon is listening to. 
 
 .. code-block:: RST
 
@@ -461,14 +461,14 @@ Once the above functions have been copied, the ``setup_connection`` will need to
           return;
       }
 
-      pthread_mutex_lock(&dC.ln_lock);
-      dC.ldms_darsh = setup_connection(env_ldms_xprt, env_ldms_host, env_ldms_port, env_ldms_auth);
+      pthread_mutex_lock(ln_lock);
+      ldms_darsh = setup_connection(env_ldms_xprt, env_ldms_host, env_ldms_port, env_ldms_auth);
           if (conn_status != 0) {
               printf("Error setting up connection to LDMS streams daemon: %i -- exiting\n", conn_status);
               pthread_mutex_unlock(ln_lock);
               return;
           }
-          else if (dC.ldms_darsh->disconnected){
+          else if (ldms_darsh->disconnected){
               printf("Disconnected from LDMS streams daemon -- exiting\n");
               pthread_mutex_unlock(ln_lock);
               return;
@@ -476,6 +476,11 @@ Once the above functions have been copied, the ``setup_connection`` will need to
       pthread_mutex_unlock(ln_lock);
       return;
   }
+  
+The environment variables ``DARSHAN_LDMS_X`` are used to define the stream name (configured in the daemon), transport type (sock, ugni, etc.), host, port and authentication of the LDMSD. In this specific example, the stream name is set to "darshanConnector" so the environment variable, ``DARSHAN_LDMS_STREAM`` is exported as follows: ``export DARSHAN_LDMS_STREAM=darshanConnector``
+
+.. note::
+   The environment variables are not required. The stream, transport, host, port and authentication can be initialized and set within in the code.
 
 Publish Event Data to LDMSD
 -------------------------------------
@@ -487,10 +492,10 @@ Now we will create a function that will collect all relevent application events 
   {
       char jb11[1024];
       int rc, ret, i, size, exists;
-      dC.env_ldms_stream  = getenv("DARSHAN_LDMS_STREAM");
+      env_ldms_stream  = getenv("DARSHAN_LDMS_STREAM");
 
       pthread_mutex_lock(ln_lock);
-      if (dC.ldms_darsh != NULL)
+      if (ldms_darsh != NULL)
           exists = 1;
       else
           exists = 0;

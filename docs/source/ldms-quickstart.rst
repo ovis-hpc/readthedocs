@@ -1,8 +1,5 @@
 LDMS Quick Start
 ###########################
-This is an example of the quickstart page. 
-
-v4 page is under construction.
 
 Prerequisites
 ***********************

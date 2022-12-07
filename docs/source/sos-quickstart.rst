@@ -57,8 +57,9 @@ cd into the top level sos checkout directory
 The build will result in /home/XXX/BuildSos/lib/python3.X/site-packages with sosdb and numsos modules. The sosdb module includes the DataSet class and also the Array and Sos modules, which are written in C for efficiency. The numsos module includes the DataSource, DataSink, Stack, and Transform classes.
 
 Set the environment variables appropriately using: 
-* export PATH=/home/XXX/BuildSos/bin:$PATH
-* export PYTHONPATH=/home/XXX/BuildSos/lib/python3.X/site-packages:$PYTHONPATH
+.. code-block:: console
+  export PATH=/home/XXX/BuildSos/bin:$PATH
+  export PYTHONPATH=/home/XXX/BuildSos/lib/python3.X/site-packages:$PYTHONPATH
 
 Importing a CSV file and using the command line tools
 *********************************
@@ -124,14 +125,14 @@ Creating a SOS container
 
 1. Create a container if you don't already have one:
 
-.. code-block:: RST
+.. code-block:: console
  > sos-db --path /dir/my-container --create
 
 Adding a schema to a container
 
 2. Create the schema in the container:
 
-.. code-block:: RST
+.. code-block:: console
  > sos-schema --path /dir/my-container --add meminfo_E5-2698.schema.json
 
 Querying for schema information
@@ -139,7 +140,7 @@ Querying for schema information
 3. Query the schema to see what's in it:
 a. Using sos-schema:
 
-.. code-block:: RST
+.. code-block:: console
  > sos-schema --path /dir/my-container --query meminfo_E5-2698 --verbose
  meminfo_E5-2698
  Id   Type             Indexed      Name                            
@@ -159,7 +160,7 @@ a. Using sos-schema:
 
 b. OR using sos_cmd:
 
-.. code-block:: RST
+.. code-block:: console
  > sos_cmd -C /dir/my-container -l
  schema :
     name      : meminfo_E5-2698
@@ -210,7 +211,7 @@ b. OR using sos_cmd:
 
 Note that there is no data yet in the container (using sos_cmd):
 
-.. code-block:: RST
+.. code-block:: console
  > sos_cmd -C /dir/my-container -q -S meminfo_E5-2698 -X comp_time
  timestamp                        component_id       job_id             ...      comp_time                        job_comp_time                    job_time_comp                    
  -------------------------------- ------------------  ... -------------------------------- 
@@ -220,14 +221,14 @@ Importing CSV data into a container
 
 4. Import the CSV data into the container:
 
-.. code-block:: RST
+.. code-block:: console
  > sos-import-csv --path /dir/my-container --schema meminfo_E5-2698 --map meminfo_E5-2698.map.json --csv meminfo_E5-2698.1000
  Importing from CSV file meminfo_E5-2698.1000 into /home/gentile/Source/numsos/csvimport/test using map meminfo_E5-2698.map.json
  Created 1000 records
 
 5. You can monitor the progress from another window like this:
 
-.. code-block:: RST
+.. code-block:: console
  > sos-monitor --path /dir/my-container --schema meminfo_E5-2698
 
 It will take less than a second for 1000 lines, but you can see progress during larger file loads.
@@ -236,7 +237,7 @@ Querying data in a container
 6. Query for the data in a container:
 
  a. Query all the data, using comp_time as an index, which will determine the output order
-.. code-block:: RST
+.. code-block:: console
  > sos_cmd -C /dir/my-container -q -S meminfo_E5-2698 -X comp_time
  timestamp                        component_id       job_id            ...   DirectMap1G        comp_time                        job_comp_time                    job_time_comp                    
  -------------------------------- ------------------ ------------------ ... -------------------------------- 
@@ -250,7 +251,7 @@ Querying data in a container
 
 b. Query only for certain variables (also using an index):
 
-.. code-block:: RST
+.. code-block:: console
  > sos_cmd -C /dir/my-container -q -S meminfo_E5-2698 -X comp_time -f table -V timestamp -V component_id -V Active
  timestamp                        component_id       Active             
  -------------------------------- ------------------ ------------------ 
@@ -266,7 +267,7 @@ b. Query only for certain variables (also using an index):
 
 c. Querying with a filter:
 
-.. code-block:: RST
+.. code-block:: console
  > sos_cmd -C /home/gentile/Source/numsos/csvimport/test -q -S meminfo_E5-2698 -X comp_time -f table -V timestamp -V component_id -V Active -F "timestamp:gt:1518803957" -X comp_time
  timestamp                        component_id       Active             
  -------------------------------- ------------------ ------------------ 
@@ -287,7 +288,7 @@ c. Querying with a filter:
 
 d. Querying with multiple filters:
 
-.. code-block:: RST
+.. code-block:: console
  > sos_cmd -C /dir/my-container -q -S meminfo_E5-2698 -X comp_time -f table -V timestamp -V component_id -V Active -F "timestamp:gt:1518803960" -X comp_time -F "component_id:gt:177"
  timestamp                        component_id       Active             
  -------------------------------- ------------------ ------------------ 

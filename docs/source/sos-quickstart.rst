@@ -119,8 +119,6 @@ These files can be obtained from a clone of the wiki under the directory: files/
      1518803953.003055,3055,nid00012,12,5078835....1957888,134217728
      1518803953.003319,3319,nid00013,13,5078835....1957888,134217728
 
-Importing CSV into SOS
-***********************
 Creating a SOS container
 
 1. Create a container if you don't already have one:
@@ -140,6 +138,7 @@ Adding a schema to a container
 Querying for schema information
 
 3. Query the schema to see what's in it:
+
 a. Using sos-schema:
 
 .. code-block:: console

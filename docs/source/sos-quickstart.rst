@@ -103,8 +103,6 @@ These files can be obtained from a clone of the wiki under the directory: files/
           "index" : {} }
      ]
      }
-     #
-     #
      > more meminfo_E5-2698.map.json
      [
         { "target" : "timestamp", "source" : { "column" : 0 } },
@@ -117,8 +115,6 @@ These files can be obtained from a clone of the wiki under the directory: files/
         { "target" : "DirectMap2M", "source" : { "column" : 47 } },
         { "target" : "DirectMap1G", "source" : { "column" : 48 } }
      ] ]
-     #
-     #
      >  more meminfo_E5-2698.1000
      1518803953.003055,3055,nid00012,12,5078835....1957888,134217728
      1518803953.003319,3319,nid00013,13,5078835....1957888,134217728

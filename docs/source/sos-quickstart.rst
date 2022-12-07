@@ -63,6 +63,7 @@ Set the environment variables appropriately using:
 
 Importing a CSV file and using the command line tools
 *********************************
+
 .. list-table:: CSV and Formatting FIles
     * - File
       - Use With

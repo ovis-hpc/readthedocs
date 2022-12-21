@@ -343,7 +343,7 @@ The example (code) below is pulled from the Darshan-LDMS Integration code.
 Initialize All Necessary Variables
 -----------------------------------
 
-* First, you will need to initialize all necessary variables used by the Streams API:
+* First, the following variables will need to be initialized globally or accessible by the Streams API Functions described in the next section:
 
 .. code-block:: RST 
 
@@ -358,7 +358,7 @@ Initialize All Necessary Variables
 
 Copy "Hello Sampler" Streams API Functions
 ------------------------------------------
-Next, copy the ``ldms_t setup_connection`` and ``static void event_cb`` functions listed below. These functions were pulled from the ``hello_sampler`` code (i.e. Streams API). 
+Next, copy the ``ldms_t setup_connection`` and ``static void event_cb`` functions listed below. These functions originated from the `ldmsd_stream_subscribe.c <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/ldmsd/test/ldmsd_stream_subscribe.c>`_ code. 
 
 The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemon and the  ``static void event_cb`` is a callback function to check the connection status of the LDMS Daemon.
 
@@ -515,11 +515,11 @@ Now we will create a function that will collect all relevent application events 
       return;
   }
   
-  .. note::
+.. note::
 
   For more information about the various Darshan I/O traces and metrics collected, please visit `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ and `Darshan LDMS Metrics Collected <https://github.com/Snell1224/darshan/wiki/Darshan-LDMS---Metric-Definitions>`_ pages.
 
-Once this function is called, it initializes a connection to the LDMS Streams Daemon, attempts reconnection if the connection is not established, then formats the given arguements/variables into a JSON message format and finally publshed to the LDMS Streams Daemon.
+Once this function is called, it initializes a connection to the LDMS Streams Daemon, attempts reconnection if the connection is not established, then formats the given arguements/variables into a JSON message format and finally publishes to the LDMS Streams Deamon.
 
 There are various types of formats that can be used to publish the data (i.e. JSON, string, etc.) so please review the `Defining A Format`_ section for more information.
 

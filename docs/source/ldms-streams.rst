@@ -22,7 +22,7 @@ Compile and Build with LDMS
   module swap PrgEnv-intel/6.0.9 PrgEnv-gnu # depending on the system. 
   cd <darshan-prefix>/darshan/ && mkdir build/
   ./prepare.sh && cd build/
-  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=<path_to_ldms_install> 
+  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --enable-ldms-mod --with-ldms=<path_to_ldms_install> 
   make && make install
 .. note::
   

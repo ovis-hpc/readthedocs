@@ -13,8 +13,6 @@ Welcome To OVIS-HPC Documentation!
 
 OVIS is a modular system for HPC data collection, transport, storage, -log message exploration, and visualization as well as analysis.
 
-The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, low-latency framework for collection, movement, and storage of metric/event data on distributed computer systems.
-
 .. toctree::
    :maxdepth: 2
    :caption: About OVIS
@@ -23,7 +21,7 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
 
 .. toctree::
    :maxdepth: 3
-   :caption: LDMS 
+   :caption: LDMS: The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, low-latency framework for collection, movement, and storage of metric/event data on distributed computer systems.
    
    ldms-quickstart
    ldms-tutorial

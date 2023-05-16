@@ -6,11 +6,13 @@ Caliper
 
 This section covers the basic steps on how to compile, build and use the caliperConnector. 
 
-What Is Caliper?
+**What Is Caliper?**
+
 A program instrumentation and performance measurement framework that allows users to implement analysiscapabilities (e.g. performance profiling, tracing, monitoring, and auto-tuning)into their applications using Caliper’s annotation API.
 
-What Is the caliperConnector?
-A Caliper-LDMS functionality that utilizes LDMS Streams to collect Caliper related data and absolute timestamp during runtime. PublishesJSONformatted message to the LDMS Streams interface
+**What Is the caliperConnector?**
+
+A Caliper-LDMS functionality that utilizes LDMS Streams to collect Caliper related data and absolute timestamp during runtime. It formats the data to a JSON message and *publishes* it to an LDMS streams interface.
 
 Setup & Configuration
 ----------------------
@@ -35,7 +37,7 @@ Once done, you will just need to execute your program and you will have applicat
 
 .. note::
   
-  The MPI service (i.e.``mpi``) is required when enabling LDMS because it is used for associating the MPI rank data collected by LDMS.
+  The MPI service (i.e.mpi) is required when enabling LDMS because it is used for associating the MPI rank data collected by LDMS.
 
 LDMS Expected Output
 --------------------
@@ -52,13 +54,21 @@ LDMS collects a set of runtime timeseries data of the application in parallel wi
 Any data collected by LDMS should have the same fields as the one shown above and can be viewed in a csv file **if** the LDMS csv_store plugin is configured in the LDMSD aggregator.
 
 .. note::
-  More informaiton about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon>`_ under _`<Darshan>`_ or in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
+  More informaiton about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon>`_ under `<Darshan>`_ or in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
 
 
 
 DARSHAN
 ***********************
 This section covers basics steps on how to compile, build and use the Darshan-LDMS Integration code (i.e. darshanConnector). The following application tests are part of the Darshan program and can be found under ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/src/``. 
+
+**What Is Darshan?**
+
+A lightweight I/O characterization tool that transparently captures application I/O behavior from HPC applications with minimal overhead. 
+
+**What Is The darshanConnector?**
+
+A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s original I/O tracing, Darshan’s eXtended tracing (DXT) and absolute timestamp during runtime. It formats the data to a JSON message and *publishes* it to an LDMS streams interface. This data is a timeseries (i.e. absolute timestamp is collected) that will contain information about each individual I/O operation.
 
 .. note::
   
@@ -188,7 +198,6 @@ This section gives a step by step on executing a simple Darshan test script with
   export DARSHAN_LDMS_AUTH=none
   
   # determine which modules we want to publish to ldms streams 
-  #export DXT_ENABLE_LDMS= # posix and mpiio data will be collected
   #export MPIIO_ENABLE_LDMS= 
   #export POSIX_ENABLE_LDMS=  
   #export STDIO_ENABLE_LDMS=
@@ -265,7 +274,6 @@ If you are not installing the darshanConnector code on cluster, please run the f
   export DARSHAN_LDMS_PORT=10444
   export DARSHAN_LDMS_AUTH=none
   # determine which modules we want to publish to ldms streams 
-  export DXT_ENABLE_LDMS= # posix and mpiio data will be collected
   #export MPIIO_ENABLE_LDMS= 
   #export POSIX_ENABLE_LDMS=  
   #export STDIO_ENABLE_LDMS=
@@ -320,6 +328,107 @@ If you are not installing the darshanConnector code on cluster, please run the f
   $DARSHAN_PATH/bin/darshan-parser --all $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}.darshan.txt
   $DARSHAN_PATH/bin/darshan-dxt-parser --show-incomplete $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}-dxt.darshan.txt      
   
+Pre-Installed Darshan-LDMS 
+---------------------------
+If both the Darshan-LDMS integrated code and LDMS are already installed and a system LDMS streams daemon is running, then there are two ways to enable the LDMS functionality. 
+1. Set the environment via darshan_ldms.env script 
+2. Load the Darshan-LDMS module via darshan_ldms 
+
+.. note:: RST
+  
+  Only when executing an application or submitting a job does the user need to load the darshan_ldms module or set the darshan_ldms.env script.  Compiling,     building or installing the application does not affect the darshanConnector and vice versa. 
+
+1. Set Environment
+///////////////////
+
+In order to enable the darshanConnector code on the system, just source the following env script:
+
+.. code-block:: RST
+  
+  $ module use /projects/ovis/modules/<system>
+  $ source /projects/ovis/modules/<system>/darshan_ldms.env
+
+**OPTIONAL**: Add a "-v" when sourcing this file to enable verbose:
+
+.. code-block:: RST
+  
+  $ source /projects/ovis/modules/<system>/darshan_ldms.env -v
+
+This will output json messages collected by ldms to the terminal window.
+
+.. note::RST
+  
+  The STDIO data will NOT be collected by ldms. This is to prevent any recursive LDMS function calls. 
+
+2. Load Module
+///////////////
+
+If you do not wish to set the environment using the env script from above, you can always load the darshan_ldms module as follows:
+
+.. code-block:: RST
+  
+  $ module use /projects/ovis/modules/<system>
+  $ module load darshan_ldms
+  
+**OPTIONAL**: If you decide to load the module, you will need to turn on verbose by setting the following environment variable in your run script:
+  # export DARSHAN_LDMS_VERBOSE=
+
+Script Information
+///////////////////
+
+The darshan_ldms module and .env file set the following env variables to define where the Darshan install is located, the LDMS daemon connection and what kind of file level access data will be published and stored to DSOS (via LDMS streams).
+
+If you only want to collect a specific type of data such as "MPIIO" then you will only set the MPIIO_ENABLE_LDMS variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
+
+.. note:: RST
+  
+  All darshan binary files (i.e. <executable-name>.darshan) will be saved to /projects/ovis/darshanConnector/<system>/darshan/build/logs
+
+.. code-block:: RST
+  # Set variables for darshan install
+  export LD_PRELOAD=$LD_PRELOAD:/projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so
+  export PATH=$PATH:/projects/ovis/darshanConnector/<system>/darshan/build/install/bin
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/projects/ovis/darshanConnector/<system>/darshan/build/install/lib
+  export LIBRARY_PATH=$LIBRARY_PATH:/projects/ovis/darshanConnector/<system>/darshan/build/install/lib
+
+  export DARSHAN_RUNTIME_DIR=/projects/ovis/darshanConnector/<system>/darshan/build/install
+  export DARSHAN_RUNTIME_BIN=/projects/ovis/darshanConnector/<system>/darshan/build/install/bin
+  export DARSHAN_RUNTIME_LIB=/projects/ovis/darshanConnector/<system>/darshan/build/install/lib
+  export HDF5_USE_FILE_LOCKING=1
+
+  # Set logfile path
+  export DARSHAN_TMP=/projects/ovis/darshanConnector/<system>/darshan/build/logs/
+  export LOGFILE_PATH_DARSHAN=$DARSHAN_TMP
+
+  # Connect to ldms daemon
+  export DARSHAN_LDMS_STREAM=darshanConnector
+  export DARSHAN_LDMS_PORT=412
+  export DARSHAN_LDMS_HOST=localhost
+  export DARSHAN_LDMS_XPRT=sock
+  export DARSHAN_LDMS_AUTH=munge
+
+  # Specify type of data to collect
+  export MPIIO_ENABLE_LDMS=
+  export POSIX_ENABLE_LDMS=
+  export STDIO_ENABLE_LDMS=
+  export HDF5_ENABLE_LDMS=
+
+  # check if verbose is requested
+  if [ "$1" == "-v" ]; then
+          export DARSHAN_LDMS_VERBOSE=
+          echo "Verbose is set."
+          echo "STDIO data will not be collected by LDMS to avoid recursion."
+  else
+          unset DARSHAN_LDMS_VERBOSE
+  fi
+
+Run application
+///////////////
+Once the module is loaded and environment set, you will just need to compile and run your application. All darshan related logs will automatically be saved under /projects/ovis/darshanConnector/<system>/darshan/build/logs.
+
+.. code-block:: RST
+
+
 Check Results
 -------------
 LDMS Output
@@ -368,6 +477,14 @@ If the data is correct, the producerName, file path and record_id for each Modul
 Kokkos
 ***********************
 * Appropriate Kokkos function calls must be included in the application code. Add the following environmental variables to your run script to push Kokkos data from the application to stream for collection.
+
+**What Is Kokkos?**
+
+A C++ parallel programming ecosystem for performance portability across multi-core, many-core, and GPU node architectures. Provides abstractions of parallel execution of code and data management.
+
+**What Is The kokkosConnector?**
+
+A Kokkos-LDMS functionality that utilizes LDMS Streams to collect Kokkos related data during runtime. Kokkos sampler controls the sampling rate and provides the option to sample data using a count-based push. It then formats the data to a JSON message and *publishes* it to an LDMS streams interface. 
 
 .. code-block:: RST
 

@@ -4,6 +4,58 @@ Streams-enabled Application Data Collectors
 Caliper
 ***********************
 
+This section covers the basic steps on how to compile, build and use the caliperConnector. 
+
+What Is Caliper?
+A program instrumentation and performance measurement framework that allows users to implement analysiscapabilities (e.g. performance profiling, tracing, monitoring, and auto-tuning)into their applications using Caliper’s annotation API.
+
+What Is the caliperConnector?
+A Caliper-LDMS functionality that utilizes LDMS Streams to collect Caliper related data and absolute timestamp during runtime. PublishesJSONformatted message to the LDMS Streams interface
+
+Setup & Configuration
+----------------------
+Build the Caliper program with the application you wish to analyze. No modifications to the Caliper's instrumentations were required to integrate LDMS so you will just need to follow the build and install instructions from `Calipers' Build and Install Webpage <https://software.llnl.gov/Caliper/CaliperBasics.html#build-and-install>`_
+
+One built, you will need to poin the $LD_LIBRARY_PATH to Caliper's library:
+
+.. code-block:: RST
+  
+  LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path-to-caliper-installation>/lib64
+
+Now, to enable LDMS data collection, set (or export) the following list of caliper variables to ``ldms`` when executing a program. An example is shown below:
+
+.. code-block:: RST
+  
+  CALI_LOOP_MONITOR_ITERATION_INTERVAL=10 ./caliper_example.o 400
+  CALI_SERVICES_ENABLE=loop_monitor,mpi,ldms
+
+The ``CALI_LOOP_MONITOR_ITERATION_INTERVAL`` collects measurements every n loop iterations of the acpplicaiton and the ``CALI_SERVICES_ENABLE`` define which services will be combined to collect the data. 
+
+Once done, you will just need to execute your program and you will have application data collected by Caliper and LDMS.
+
+.. note::
+  
+  The MPI service (i.e.``mpi``) is required when enabling LDMS because it is used for associating the MPI rank data collected by LDMS.
+
+LDMS Expected Output
+--------------------
+LDMS collects a set of runtime timeseries data of the application in parallel with Caliper. Below is an example output of the data collect, formatted in to a json string:
+
+.. code-block::
+  
+  {"job_id":11878171,"ProducerName":“n1","rank":0,"timestamp":1670373198.056455,"region":"init","time":33.172237 }
+  {"job_id":11878171,"ProducerName":"n1","rank":0,"timestamp":1670373198.056455,"region":"initialization","time":33.211929 }
+  {"job_id":11878171,"ProducerName":“n1","rank":0,"timestamp":1670373198.056455,"region":"main","time":44.147736 }
+  {"job_id":11878171,"ProducerName":“n1","rank":0,"timestamp":1670373203.556555,"region":"main","time":0.049086 }
+  {"job_id":11878171,"ProducerName":“n1","rank":0,"timestamp":1670373203.556555,"region":"run","time":0.049086 }
+
+Any data collected by LDMS should have the same fields as the one shown above and can be viewed in a csv file **if** the LDMS csv_store plugin is configured in the LDMSD aggregator.
+
+.. note::
+  More informaiton about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon>`_ under _`<Darshan>`_ or in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
+
+
+
 DARSHAN
 ***********************
 This section covers basics steps on how to compile, build and use the Darshan-LDMS Integration code (i.e. darshanConnector). The following application tests are part of the Darshan program and can be found under ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/src/``. 

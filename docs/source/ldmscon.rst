@@ -15,8 +15,10 @@ Recordings of previous presentations, tutorials and information for LDMSCON2021 
 `LDMSCON2021 <https://sites.google.com/view/ldmscon2021>`_
 
 * The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
+.. image:: images/ldmscon/ldmscon2021pres.PNG
+   :width: 200
 * The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
-.. image:: images/ldmscon/ldmscon2021tutorial_and_pres.png
+.. image:: images/ldmscon/ldmscon2021tutorial.PNG
    :width: 200
 
 LDMSCON2020

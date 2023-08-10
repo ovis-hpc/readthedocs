@@ -509,10 +509,19 @@ The example (code) below is pulled from the Darshan-LDMS Integration code.
   
   The LDMS Streams functionality uses a push-based method to reduce memory consumed and data loss on the node.
 
+Include the following LDMS files
+---------------------------------------
+* First, the following libaries will need to be included in the program as these contain all the functions that the data connector will be using/calling.
+.. code-block:: RST
+
+  #include <ldms/ldms.h> 
+  #include <ldms/ldmsd_stream.h>
+  #include <ovis_util/util.h>
+
 Initialize All Necessary Variables
 -----------------------------------
 
-* First, the following variables will need to be initialized globally or accessible by the Streams API Functions described in the next section:
+* Next, the following variables will need to be initialized globally or accessible by the Streams API Functions described in the next section:
 
 .. code-block:: RST 
 

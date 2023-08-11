@@ -593,7 +593,7 @@ The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemo
                   ts.tv_nsec = 0;
           }
 
-          ldms_g = ldms_xprt_new_with_auth(xprt, NULL, auth, NULL);
+          ldms_g = ldms_xprt_new_with_auth(xprt, auth, NULL);
           if (!ldms_g) {
                   printf("Error %d creating the '%s' transport\n",
                          errno, xprt);

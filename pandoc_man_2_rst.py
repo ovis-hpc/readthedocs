@@ -11,4 +11,5 @@ for d in ['man','src/contrib/sampler/*','src/contrib/store/*','src/ldmsd/test/',
     for i in files:
         fname = i.split('/')[-1].replace('.man','.rst')
         #print(f'/usr/local/bin/pandoc -f man -s -t rst --toc {i} -o man2rst/{fname}')
+        os.system('mkdir -p man2rst')
         os.system(f'/usr/local/bin/pandoc -f man -s -t rst --toc {i} -o man2rst/{fname}')

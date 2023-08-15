@@ -68,7 +68,7 @@ A lightweight I/O characterization tool that transparently captures application 
 
 **What Is The darshanConnector?**
 
-A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s original I/O tracing, Darshan’s eXtended tracing (DXT) and absolute timestamp during runtime. It formats the data to a JSON message and *publishes* it to an LDMS streams interface. This data is a timeseries (i.e. absolute timestamp is collected) that will contain information about each individual I/O operation.
+A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s original I/O tracing, Darshan’s eXtended tracing (DXT) and absolute timestamp during runtime. It formats the data to a JSON message and *publishes* it to an LDMS streams interface. This data is a timeseries (i.e. absolute timestamp is collected) that will contain information about each individual I/O event.
 
 .. note::
   

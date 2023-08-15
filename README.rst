@@ -1,7 +1,7 @@
 OVIS-HPC Documentation
 ########################
 
-This repository hosts all Ovis/LDMS related documentation such as how-to tutorials, getting started with LDMS, docker-hub links, LDMS API and much more. Documentation webpage can be found here: `ovis-hpc/readthedocs <https://ovis-hpcreadthedocs.readthedocs.io/en/latest/>`_
+This repository hosts all Ovis/LDMS related documentation such as how-to tutorials, getting started with LDMS, docker-hub links, LDMS API and much more. Documentation webpage can be found here: `ovis-hpc/readthedocs <https://ovis-hpc.readthedocs.io/en/latest/>`_
 
 Contributing to ReadTheDocs
 ############################

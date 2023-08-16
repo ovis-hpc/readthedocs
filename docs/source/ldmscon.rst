@@ -39,7 +39,7 @@ Recordings of previous presentations, tutorials and information for LDMSCON2022 
 Archived LDMSCONs
 ************
 All LDMSCONs prior to 2022 have been archived and can be found here:
-'Archived LDMSCOns <https://sites.google.com/view/ldmscon/archived>'_
+`Archived LDMSCONs <https://sites.google.com/view/ldmscon/archived>`_
 
 
 

@@ -32,8 +32,6 @@ About LDMS
    :maxdepth: 2
    :caption: Contributing to LDMS
 
-   samplerwrite
-   storewrite
-   docreqs
+   contributing/index 
 
 

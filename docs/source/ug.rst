@@ -30,3 +30,7 @@ For instance:
 
     unsubscribe ldms-announce
 
+
+LDMS User Group Meeting Notes
+-----------------------------
+All notes for our biweekly meetings can be found here: :ref:`ug_notes`

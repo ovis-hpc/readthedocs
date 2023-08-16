@@ -29,28 +29,18 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
    aboutovis
 
 .. toctree::
-   
+   :maxdepth: 2
+   :caption: OVIS Components
+
    ldms/index
-   
-.. toctree::
-   
    sos/index
-   
-.. toctree::
-   
+   maestro/index
+   baler/index
    asf/index 
    
 .. toctree::
-   
-   maestro/index
-
-.. toctree::
-   
-   baler/index
-   
-.. toctree::
    :maxdepth: 2
-   :caption: Contributing to OVIS
+   :caption: Contributing to LDMS
 
    samplerwrite
    storewrite

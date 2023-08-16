@@ -1,4 +1,4 @@
-LDMS Mailing List and Telecon Info
+LDMS User's Group
 ==============================
 
 LDMS User's group will meet every other Monday at Noon (Mountain time). 

@@ -156,9 +156,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   export HOSTNAME="localhost"
 .. note::
   
-  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
-
-  :ref:`ldms-quickstart.rst`
+  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_. UPDATED
 
 * Next, create a file called **"darshan\_stream\_store.conf"** and add the following content to it:
 

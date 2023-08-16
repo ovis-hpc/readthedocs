@@ -29,7 +29,6 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
    aboutovis
    ldmscon
    ug
-   ug_notes
    publications
 
 .. toctree::

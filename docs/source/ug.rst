@@ -33,4 +33,4 @@ For instance:
 
 LDMS User Group Meeting Notes
 -----------------------------
-All notes for our biweekly meetings can be found here: :ref:`ug_notes`
+All notes for our biweekly meetings can be found here: :doc:`Meeting Notes </docs/source/ug_notes>`

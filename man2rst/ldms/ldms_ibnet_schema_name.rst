@@ -1,5 +1,5 @@
 ===
-man
+ldms_ibnet_schema_name
 ===
 
 :Date: 4 June 2020

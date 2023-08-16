@@ -1,5 +1,5 @@
 ===
-man
+Plugin_syspapi_sampler
 ===
 
 :Date: 30 Sep 2019

@@ -1,5 +1,5 @@
 ===
-man
+Plugin_store_rabbitv3
 ===
 
 :Date: 03 Dec 2016

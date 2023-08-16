@@ -1,5 +1,5 @@
 ===
-man
+Plugin_aries_mmr_configurable
 ===
 
 :Date: 12 Apr 2020

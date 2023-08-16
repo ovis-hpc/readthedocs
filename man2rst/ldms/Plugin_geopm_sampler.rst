@@ -1,5 +1,5 @@
 ===
-man
+Plugin_geopm_sampler
 ===
 
 :Date: 06 May 2022

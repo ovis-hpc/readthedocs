@@ -1,5 +1,5 @@
 ===
-man
+Plugin_lustre2_client
 ===
 
 :Date: 26 Oct 2017

@@ -1,5 +1,5 @@
 ===
-man
+Plugin_aries_linkstatus
 ===
 
 :Date: 4 Jan 2018

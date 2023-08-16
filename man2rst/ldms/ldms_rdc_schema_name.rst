@@ -1,5 +1,5 @@
 ===
-man
+ldms_rdc_schema_name
 ===
 
 :Date: 2 April 2021

@@ -1,5 +1,5 @@
 ===
-man
+Plugin_edac
 ===
 
 :Date: 18 Feb 2018

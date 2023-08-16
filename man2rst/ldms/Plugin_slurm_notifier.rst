@@ -1,5 +1,5 @@
 ===
-man
+Plugin_slurm_notifier
 ===
 
 :Date: 30 Sep 2019

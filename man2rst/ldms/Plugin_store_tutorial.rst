@@ -1,5 +1,5 @@
 ===
-man
+Plugin_store_tutorial
 ===
 
 :Date: 24 Oct 2019

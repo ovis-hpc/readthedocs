@@ -1,5 +1,5 @@
 ===
-man
+ldms_sampler_base
 ===
 
 :Date: 04 Feb 2018

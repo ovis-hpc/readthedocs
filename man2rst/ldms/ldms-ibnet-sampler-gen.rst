@@ -1,5 +1,5 @@
 ===
-man
+ldms-ibnet-sampler-gen
 ===
 
 :Date: 4 June 2020

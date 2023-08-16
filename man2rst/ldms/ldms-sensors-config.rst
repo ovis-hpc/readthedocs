@@ -1,5 +1,5 @@
 ===
-man
+ldms-sensors-config
 ===
 
 :Date: 15 Dec 2018

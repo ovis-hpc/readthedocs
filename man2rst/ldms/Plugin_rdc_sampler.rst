@@ -1,5 +1,5 @@
 ===
-man
+Plugin_rdc_sampler
 ===
 
 :Date: 1 Apr 2021

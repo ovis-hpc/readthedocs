@@ -1,5 +1,5 @@
 ===
-man
+dsosd_directory
 ===
 
 :Date: 15 May 2023

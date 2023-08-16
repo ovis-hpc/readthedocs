@@ -1,5 +1,5 @@
 ===
-man
+ldmsd_setgroup
 ===
 
 :Date: 5 Jul 2018

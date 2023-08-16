@@ -1,5 +1,5 @@
 ===
-man
+ldmsd_stream_publish
 ===
 
 :Date: 21 Aug 2021

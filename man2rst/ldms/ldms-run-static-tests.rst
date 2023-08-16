@@ -1,5 +1,5 @@
 ===
-man
+ldms-run-static-tests
 ===
 
 :Date: 21 Aug 2020

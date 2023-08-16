@@ -1,5 +1,5 @@
 ===
-man
+Plugin_sampler_atasmart
 ===
 
 :Date: 18 Feb 2018

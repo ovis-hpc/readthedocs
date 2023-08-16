@@ -1,5 +1,5 @@
 ===
-man
+Plugin_avro_kafka_store
 ===
 
 :Date: 30 Mar 2023

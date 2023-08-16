@@ -1,5 +1,5 @@
 ===
-man
+Plugin_variorum_sampler
 ===
 
 :Date: 27 Jun 2022

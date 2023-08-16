@@ -1,5 +1,5 @@
 ===
-man
+Plugin_coretemp
 ===
 
 :Date: 3 May 2022

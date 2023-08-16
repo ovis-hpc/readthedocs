@@ -1,5 +1,5 @@
 ===
-man
+Plugin_tutorial_sampler
 ===
 
 :Date: 24 Oct 2019

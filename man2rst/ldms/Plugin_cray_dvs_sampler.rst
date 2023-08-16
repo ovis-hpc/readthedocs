@@ -1,5 +1,5 @@
 ===
-man
+Plugin_cray_dvs_sampler
 ===
 
 :Date: 05 Feb 2018

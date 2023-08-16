@@ -1,5 +1,5 @@
 ===
-man
+Plugin_lnet_stats
 ===
 
 :Date: 18 Feb 2018

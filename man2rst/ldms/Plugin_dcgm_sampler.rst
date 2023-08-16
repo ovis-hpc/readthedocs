@@ -1,5 +1,5 @@
 ===
-man
+Plugin_dcgm_sampler
 ===
 
 :Date: 1 May 2019

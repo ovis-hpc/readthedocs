@@ -1,5 +1,5 @@
 ===
-man
+Plugin_store_slurm
 ===
 
 :Date: 30 Sep 2019

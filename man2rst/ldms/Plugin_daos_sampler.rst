@@ -1,5 +1,5 @@
 ===
-man
+Plugin_daos_sampler
 ===
 
 :Date: 28 Apr 2022

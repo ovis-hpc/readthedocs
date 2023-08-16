@@ -1,5 +1,5 @@
 ===
-man
+Plugin_hello_sampler
 ===
 
 :Date: 21 Aug 2021

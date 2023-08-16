@@ -1,5 +1,5 @@
 ===
-man
+Plugin_ibmad_records_sampler
 ===
 
 :Date: 1 May 2019

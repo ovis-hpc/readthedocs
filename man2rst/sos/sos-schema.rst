@@ -1,5 +1,5 @@
 ===
-man
+sos-schema
 ===
 
 :Date: 20 July 2023

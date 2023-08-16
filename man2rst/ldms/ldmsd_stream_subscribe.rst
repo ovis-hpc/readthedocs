@@ -1,5 +1,5 @@
 ===
-man
+ldmsd_stream_subscribe
 ===
 
 :Date: 21 Aug 2021

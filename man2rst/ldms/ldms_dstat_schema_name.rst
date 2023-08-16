@@ -1,5 +1,5 @@
 ===
-man
+ldms_dstat_schema_name
 ===
 
 :Date: 17 Nov 2020

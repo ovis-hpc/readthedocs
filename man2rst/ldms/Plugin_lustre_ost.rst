@@ -1,5 +1,5 @@
 ===
-man
+Plugin_lustre_ost
 ===
 
 :Date: 1 May 2019

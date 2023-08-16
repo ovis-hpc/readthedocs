@@ -1,5 +1,5 @@
 ===
-man
+Plugin_shm_sampler
 ===
 
 :Date: 5 March 2018

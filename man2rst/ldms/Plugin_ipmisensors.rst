@@ -1,5 +1,5 @@
 ===
-man
+Plugin_ipmisensors
 ===
 
 :Date: 21 Mar 2019

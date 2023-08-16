@@ -1,5 +1,5 @@
 ===
-man
+Plugin_store_rabbitkw
 ===
 
 :Date: 10 Jun 2018

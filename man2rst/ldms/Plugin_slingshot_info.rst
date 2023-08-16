@@ -1,5 +1,5 @@
 ===
-man
+Plugin_slingshot_info
 ===
 
 :Date: 1 May 2022

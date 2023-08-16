@@ -1,5 +1,5 @@
 ===
-man
+Plugin_ipmireader
 ===
 
 :Date: 18 Feb 2019

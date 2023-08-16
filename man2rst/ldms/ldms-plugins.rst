@@ -1,5 +1,5 @@
 ===
-man
+ldms-plugins
 ===
 
 :Date: 28 Feb 2018

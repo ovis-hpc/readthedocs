@@ -36,33 +36,10 @@ Recordings of previous presentations, tutorials and information for LDMSCON2022 
 .. image:: images/ldmscon/ldmscon2022tutorial.PNG
    :width: 200
 
-LDMSCON2021
+Archived LDMSCONs
 ************
-Recordings of previous presentations, tutorials and information for LDMSCON2021 can be found here:
-`LDMSCON2021 <https://sites.google.com/view/ldmscon2021>`_
-
-* The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
-.. image:: images/ldmscon/ldmscon2021pres.PNG
-   :width: 200
-* The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
-.. image:: images/ldmscon/ldmscon2021tutorial.PNG
-   :width: 200
-
-LDMSCON2020
-************
-Recordings of previous presentations, tutorials and information for LDMSCON2020 can be found here:
-`LDMSCON2020 <https://sites.google.com/view/ldmscon2020>`_
-
-* The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
-.. image:: images/ldmscon/ldmscon2020tutorial.png
-   :width: 200
-
-LDMSCON2019
-************
-The website for LDMSCON2019 can be found here:
-`LDMSCON2019 <https://sites.google.com/view/ldmscon2019>`_
-
-LDMSCON2019 was hosted in-person so there are no video recordings of this conference. 
+All LDMSCONs prior to 2022 have been archived and can be found here:
+'https://sites.google.com/view/ldmscon/archived'_
 
 
 

@@ -41,24 +41,6 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
    baler/index
    asf/index 
    
-.. toctree::
-   :maxdepth: 2
-   :caption: LDMS User's Group Conference
-   
-   ldmscon
-
-.. toctree::
-   :maxdepth: 2
-   :caption: User's Group Meetings
-   
-   ug
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Publications
-
-   publications
-   
 Other Projects
 ====================================
 `ovis <https://github.com/ovis-hpc/ovis>`_

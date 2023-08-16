@@ -25,52 +25,27 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
 .. toctree::
    :maxdepth: 2
    :caption: About OVIS
-   
    aboutovis
 
 .. toctree::
    :maxdepth: 3
-   :caption: LDMS
-   
    ldms/index
-..
-   ldms-quickstart
-   ldms-tutorial
-   ldms-streams
    
 .. toctree::
    :maxdepth: 2
-   :caption: SOS
    sos/index
-..
-   sos-quickstart
-   dsos-quickstart
-   sos-tutorial
    
 .. toctree::
    :maxdepth: 2
-   :caption: AppSysFusion 
    asf/index 
-..
-   asf-quickstart
-   grafanausage
-   grafanapanel
-   pyanalysis
-   asf-tutorial
    
 .. toctree::
    :maxdepth: 2
-   :caption: Maestro
    maestro/index
-..
-   maestro-quickstart
 
 .. toctree::
    :maxdepth: 2
-   :caption: Baler
    baler/index
-..
-   baler-quickstart
    
 .. toctree::
    :maxdepth: 2

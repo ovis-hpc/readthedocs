@@ -28,23 +28,18 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
    aboutovis
 
 .. toctree::
-   :maxdepth: 3
    ldms/index
    
 .. toctree::
-   :maxdepth: 2
    sos/index
    
 .. toctree::
-   :maxdepth: 2
    asf/index 
    
 .. toctree::
-   :maxdepth: 2
    maestro/index
 
 .. toctree::
-   :maxdepth: 2
    baler/index
    
 .. toctree::

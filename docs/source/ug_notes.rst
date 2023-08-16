@@ -1,1 +1,3 @@
-Sample text here
+August 14, 2023
+----------------
+- SAMPLE MEETING NOTES!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

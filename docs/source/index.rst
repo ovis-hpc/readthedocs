@@ -40,14 +40,6 @@ The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, lo
    
 .. toctree::
    :maxdepth: 2
-   :caption: Contributing to LDMS
-
-   samplerwrite
-   storewrite
-   docreqs
-
-.. toctree::
-   :maxdepth: 2
    :caption: LDMS User's Group Conference
    
    ldmscon

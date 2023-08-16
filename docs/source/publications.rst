@@ -1,7 +1,10 @@
 OVIS Publications
 =====================
 
-To reference LDMS, please use: 
+Citing LDMS
+-------------
+
+To reference LDMS, please use:
 
 | `Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7013000>`_
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
@@ -19,4 +22,25 @@ BibTex:
 | number={},
 | pages={154-165},
 | doi={10.1109/SC.2014.18}}
+
+
+Publications and Presentations
+================================
+
+Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS). Many publications listed here are also available at OSTI.GOV some months after publication.
+
+2023
+----
+foo
+
+2022
+----
+bar
+
+2021
+----
+zed 
+
+2020
+----
 

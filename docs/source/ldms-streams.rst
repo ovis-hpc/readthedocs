@@ -484,13 +484,19 @@ A C++ parallel programming ecosystem for performance portability across multi-co
 
 **What Is The kokkosConnector?**
 
-A Kokkos-LDMS functionality that utilizes LDMS Streams to collect Kokkos related data during runtime. Kokkos sampler controls the sampling rate and provides the option to sample data using a count-based push. It then formats the data to a JSON message and *publishes* it to an LDMS streams interface. 
+A Kokkos-LDMS functionality that utilizes LDMS Streams to collect Kokkos related data during runtime. Kokkos sampler, provided by the Kokkos-tools library, controls the sampling rate and provides the option to sample data using a count-based push. It then formats the data to a JSON message and *publishes* it to an LDMS streams interface. 
+
+.. warning::
+
+To use kokkosConnector, all users will need to install Kokkos-Tools. You can find their repository and instructions on installing it here: https://github.com/kokkos/kokkos-tools
+
+The following environmental variables are needed in an application's runscript to run the kokkos-sampler and LDMS's kokkosConnector:
 
 .. code-block:: RST
 
   export KOKKOS_LDMS_HOST="localhost" 
   export KOKKOS_LDMS_PORT="412" 
-  export KOKKOS_PROFILE_LIBRARY="<insert install directory>/ovis/kokkosConnector/src/kp_sampler.so;<insert install directory>/ovis/kokkosConnector/src/kp_kernel_ldms.so"
+  export KOKKOS_PROFILE_LIBRARY="<insert install directory>/kokkos-tools/common/kokkos_sampler/kp_sampler.so;<insert install directory>/ovis/kokkosConnector/kp_kernel_ldms.so"
   export KOKKOS_SAMPLER_RATE=101
   export KOKKOS_LDMS_VERBOSE=0
   export KOKKOS_LDMS_AUTH="munge"

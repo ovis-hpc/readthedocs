@@ -1,5 +1,5 @@
 ===
-man
+Plugin_store_sos
 ===
 
 :Date: 21 Dec 2015

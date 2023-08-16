@@ -6,7 +6,7 @@ To reference LDMS, please use:
 | `Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7013000>`_
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
 | SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, New Orleans, LA, USA, 2014, pp. 154-165, doi: 10.1109/SC.2014.18.
-
+|
 
 BibTex:
 

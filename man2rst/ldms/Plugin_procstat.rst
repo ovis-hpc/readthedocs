@@ -1,6 +1,6 @@
-===
+===============
 Plugin_procstat
-===
+===============
 
 :Date: 03 Dec 2016
 
@@ -9,18 +9,18 @@ Plugin_procstat
 ..
 
 NAME
-====
+================
 
 Plugin_procstat - man page for the LDMS procstat plugin
 
 SYNOPSIS
-========
+====================
 
 | Within ldmsd_controller or in a configuration file
 | config name=procstat [ <attr> = <value> ]
 
 DESCRIPTION
-===========
+=======================
 
 The procstat plugin provides cpu utilization info from /proc/stat,
 allowing for hyperthreading and downed core variability. As
@@ -30,7 +30,7 @@ be set in the plugin options with the maxcpu parameter. Cores not
 actually appearing will be reported as 0 values.
 
 CONFIGURATION ATTRIBUTE SYNTAX
-==============================
+==========================================
 
 See ldms_sampler_base(7) for the common sampler options.
 
@@ -57,18 +57,18 @@ See ldms_sampler_base(7) for the common sampler options.
         100, while 250, 300, 1000 may also occur.
 
 DATA
-====
+================
 
 This reports both interrupt count and time processing them. For detailed
 interrupt data by type, consider Plugin_procinterrupts(7).
 
 BUGS
-====
+================
 
 Reporting all interrupts by name is not implemented.
 
 EXAMPLES
-========
+====================
 
 Within ldmsd_controller or a configuration file:
 
@@ -79,7 +79,7 @@ Within ldmsd_controller or a configuration file:
    start name=procstat interval=1000000 offset=0
 
 SEE ALSO
-========
+====================
 
 ldms_sampler_base(7), Plugin_procinterrupts(7), Kernel source
 fs/proc/stat.c and proc(5), ldmsd(8), ldmsd_controller(8)

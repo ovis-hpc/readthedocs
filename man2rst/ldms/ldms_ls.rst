@@ -1,6 +1,6 @@
-===
+=======
 ldms_ls
-===
+=======
 
 :Date: 28 Feb 2018
 
@@ -9,23 +9,23 @@ ldms_ls
 ..
 
 NAME
-====
+========
 
 ldms_ls - Query an ldmsd for metric set values
 
 SYNOPSIS
-========
+============
 
 ldms_ls [OPTION...] [NAME]
 
 DESCRIPTION
-===========
+===============
 
 The ldms_ls command is used to query an ldmsd (ldms daemon) for metric
 set values.
 
 ENVIRONMENT
-===========
+===============
 
 The following environment variables must be set:
 ------------------------------------------------
@@ -53,7 +53,7 @@ LDMS_LS_MEM_SZ
    The size of memory reserved for metric sets. See the -m option.
 
 OPTIONS
-=======
+===========
 
 If the NAME is specified on the command line without -E/-S/-I, only information for that instance = NAME is displayed.
 
@@ -118,23 +118,23 @@ If the NAME is specified on the command line without -E/-S/-I, only information 
    is 10 sec.
 
 DEFAULTS
-========
+============
 
 **ldms_ls** with no arguments defaults to **ldms_ls -p** *XXX* **-h**
 *localhost* **-x** *sock* where XXX is the LDMS_DEFAULT_PORT.
 
 NOTES
-=====
+=========
 
 None.
 
 BUGS
-====
+========
 
 No known bugs.
 
 EXAMPLES
-========
+============
 
 ::
 
@@ -219,6 +219,6 @@ this case ldms_ls will display only the information of the metric sets
 that matched the given regular expression.
 
 SEE ALSO
-========
+============
 
 ldms_authentication(7), ldmsd(8), ldms_quickstart(7),

@@ -1,6 +1,6 @@
-===
+=====
 ldmsd
-===
+=====
 
 :Date: 28 Feb 2018
 
@@ -9,17 +9,17 @@ ldmsd
 ..
 
 NAME
-====
+======
 
 ldmsd - Start an ldms daemon
 
 SYNOPSIS
-========
+==========
 
 ldmsd [OPTION...]
 
 DESCRIPTION
-===========
+=============
 
 The ldmsd command can be used to start an ldms daemon. Plugin
 configuration of the ldmsd can be done via the a configuration file or
@@ -33,7 +33,7 @@ without requiring python. This capability will be replaced and it is not
 recommended that you use this option.
 
 ENVIRONMENT
-===========
+=============
 
 The ldmsd-check-env program will dump currently set environment variables that may influence ldmsd and plugin behavior.
 -----------------------------------------------------------------------------------------------------------------------
@@ -114,7 +114,7 @@ ZAP_UGNI_STATE_OFFSET
    ZAP_UGNI_STATE_INTERVAL, above).
 
 OPTIONS
-=======
+=========
 
 General/Configuration Options:
 ------------------------------
@@ -269,7 +269,7 @@ Thread Options:
    | THR_COUNT is the number of event threads to start.
 
 SPECIFYING COMMAND-LINE OPTIONS IN CONFIGURATION FILES
-======================================================
+========================================================
 
 Users can use the 'option' command to specify some command-line options
 in a configuration file.
@@ -327,7 +327,7 @@ Example
      start name=meminfo interval=1000000 offset=0
 
 RUNNING LDMSD ON CRAY XE/XK/XC SYSTEMS USING APRUN
-==================================================
+====================================================
 
 ldsmd can be run as either a user or as root using the appropriate PTag
 and cookie.
@@ -356,7 +356,7 @@ Check (or set) the PTag and cookie.
    either case, Use aprun with the correct -p <ptag> when running.
 
 REORDERED COMMANDS
-==================
+====================
 
 Certain commands in are reordered when processing input scripts
 specified with -c. Items related to failover are handled as described in
@@ -365,17 +365,17 @@ non-promoted commands from the loaded script. In particular, env,
 loglevel, listen, auth, and option are promoted.
 
 NOTES
-=====
+=======
 
 OCM flags are unsupported at this time.
 
 BUGS
-====
+======
 
 None known.
 
 EXAMPLES
-========
+==========
 
 ::
 
@@ -385,7 +385,7 @@ EXAMPLES
    $/tmp/opt/ovis/sbin/ldmsd -x sock:60000 -p sock:61000 -p unix:/var/runldmsd/metric_socket
 
 SEE ALSO
-========
+==========
 
 ldms_authentication(7), ldmsctl(8), ldms_ls(8), ldmsd_controller(8),
 ldms_quickstart(7)

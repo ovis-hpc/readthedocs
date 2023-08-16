@@ -3,7 +3,7 @@ LDMS
 About LDMS
 
 .. toctree::
-   :maxdepth: 3 
+   :maxdepth: 2
 
    ldms-quickstart
    ldms-tutorial
@@ -14,21 +14,21 @@ About LDMS
    :caption: LDMS Man Pages
    :glob:
 
-   ldms_man/*
+   ldms_man/index
 
 .. toctree::
    :maxdepth: 2
    :caption: Sampler Plugin Man Pages
    :glob:
 
-   sampler_man/*
+   sampler_man/index
 
 .. toctree::
    :maxdepth: 2
    :caption: Store Plugin Man Pages
    :glob:
 
-   store_man/*
+   store_man/index
 
 
 .. toctree::

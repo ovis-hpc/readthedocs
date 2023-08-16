@@ -486,10 +486,10 @@ A C++ parallel programming ecosystem for performance portability across multi-co
 
 A Kokkos-LDMS functionality that utilizes LDMS Streams to collect Kokkos related data during runtime. Kokkos sampler, provided by the Kokkos-tools library, controls the sampling rate and provides the option to sample data using a count-based push. It then formats the data to a JSON message and *publishes* it to an LDMS streams interface. 
 
-.. warning::
-To use kokkosConnector, all users will need to install Kokkos-Tools. You can find their repository and instructions on installing it here: https://github.com/kokkos/kokkos-tools
+.. warning:: 
+    To use kokkosConnector, all users will need to install Kokkos-Tools. You can find their repository and instructions on installing it here: https://github.com/kokkos/kokkos-tools
 
-The following environmental variables are needed in an application's runscript to run the kokkos-sampler and LDMS's kokkosConnector:
+    The following environmental variables are needed in an application's runscript to run the kokkos-sampler and LDMS's kokkosConnector:
 
 .. code-block:: RST
 

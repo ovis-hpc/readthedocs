@@ -24,8 +24,8 @@ BibTex:
 | doi={10.1109/SC.2014.18}}
 
 
-Publications and Presentations
--------------------------------
+Publications and Selected Presentations
+-----------------------------------------
 
 Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS). Many publications listed here are also available at OSTI.GOV some months after publication.
 
@@ -45,5 +45,66 @@ zed
 ^^^^
 
 2019
+^^^^
+
+2018
+^^^^
+
+2017
+^^^^
+
+2016
+^^^^
+
+2015
+^^^^
+
+2014
+^^^^
+
+2013
+^^^^
+
+2012
+^^^^
+
+2011
+^^^^
+
+2010
+^^^^
+
+2009
+^^^^
+
+2008
+^^^^
+
+2007
+^^^^
+
+2006
+^^^^
+
+2005
+^^^^
+
+2004
+^^^^
+
+2003
+^^^^
+
+
+
+Dataset Releases
+-----------------
+
+The ASCR funded exascale resilience project Holistic Measurement Driven Resilience: Combining Operational Fault and Failure Measurements and Fault Injection for Quantifying Fault Detection and Impact released the following system datasets in support of resilience research:
+
+2019
+^^^^
+
+2016
 ^^^^
 

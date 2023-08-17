@@ -25,22 +25,25 @@ BibTex:
 
 
 Publications and Presentations
-================================
+-------------------------------
 
 Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS). Many publications listed here are also available at OSTI.GOV some months after publication.
 
 2023
-----
+^^^^
 foo
 
 2022
-----
+^^^^
 bar
 
 2021
-----
+^^^^
 zed 
 
 2020
-----
+^^^^
+
+2019
+^^^^
 

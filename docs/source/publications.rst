@@ -110,14 +110,30 @@ bar
 
 
 
-Dataset Releases
------------------
+Dataset Releases - HMDR
+------------------------
 
 The ASCR funded exascale resilience project Holistic Measurement Driven Resilience: Combining Operational Fault and Failure Measurements and Fault Injection for Quantifying Fault Detection and Impact released the following system datasets in support of resilience research:
 
 2019
 ^^^^
+| Cielo Fault Injection Dataset 2016
+| S. Jha, V. Formicola, A. Bonnie, M. Mason, D. Chen, F. Deng, A. Gentile, J. Brandt, L. Kaplan, J. Repik, J. Enos, M. Showerman, A. Greiner, Z. Kalbarczyk, R. Iyer, and W. Kramer.
+| LA-UR-19-22749, SAND2019-3531 O, Mar 2019.
+
 
 2016
 ^^^^
+
+| Mutrino Dataset 2/15-6/16 (12/16 Release)(`About <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/about-mutrino1yr-v122016.pdf>`_)
+| J. Brandt, A. Gentile, and J. Repik
+| SAND2016-12310 O, Dec 2016
+| [Online]: `http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/mutrino1yr-v122016.tgz <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/mutrino1yr-v122016.tgz>`_
+|
+
+| Mutrino Dataset 2/15-5/15 (`About <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/about-logs.051715.pdf>`_)
+| J. Brandt, A. Gentile, and J. Repik
+| SAND2016-2449 O, Mar 2016
+| [Online]: `http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/logs.051715.cr.tgz <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/logs.051715.cr.tgz>`_
+|
 

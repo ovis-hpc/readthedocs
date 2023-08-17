@@ -107,6 +107,11 @@ bar
 
 2003
 ^^^^
+| Distributed Intelligent RAS System for Large Computational Clusters
+| J. M. Brandt, N. M. Berry, R. A. Yao, B. M. Tsudama, and A. C. Gentile
+| SC|03, Phoenix, AZ November 2003.
+- Exhibit Demo
+- Conference Poster
 
 
 

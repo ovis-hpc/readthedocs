@@ -39,7 +39,7 @@ bar
 
 2021
 ^^^^
-| Integrating Systems Operations into CoDesign -- Keynote_ 
+| Integrating Systems Operations into CoDesign -- *Keynote* 
 | Presented by A. Gentile
 | `2nd Int'l Workshop on Monitoring and Operational Data Analytics (MODA21) <https://moda21.sciencesconf.org/>`_. Jul 2021.
 |

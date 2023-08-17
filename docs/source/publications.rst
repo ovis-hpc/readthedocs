@@ -39,7 +39,20 @@ bar
 
 2021
 ^^^^
-zed 
+| Integrating Systems Operations into CoDesign -- Keynote_ 
+| Presented by A. Gentile
+| `2nd Int'l Workshop on Monitoring and Operational Data Analytics (MODA21) <https://moda21.sciencesconf.org/>`_. Jul 2021.
+|
+
+| `Delay Sensitivity-Driven Congestion Mitigation for HPC Systems <https://dl.acm.org/doi/pdf/10.1145/3447818.3460362>`_
+| A. Patke, S. Jha, H. Qui, J. Brandt, A. Gentile, J. Greenseid, A. Kalbarczyk, and R. Iyer
+| ICS '21: Proceedings of the ACM International Conference on Supercomputing, June 2021, Pages 342–353, https://doi.org/10.1145/3447818.3460362
+|
+
+| `Enabling System and Application Data Fusion <https://www.youtube.com/watch?v=EmsYILnwDys>`_
+| Presented by A. Gentile
+| 2021 ECP Annual Meeting Center and Application Monitoring WG. Apr 2021.
+|
 
 2020
 ^^^^

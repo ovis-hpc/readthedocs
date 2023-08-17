@@ -95,15 +95,33 @@ bar
 
 2007
 ^^^^
+| OVIS-2: A Distributed Framework for Scalable Monitoring and Analysis of Large Computational Clusters
+| J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
+| SC|07 Reno, NV, November 2007.
+- Exhibit Presentation and Demo
 
 2006
 ^^^^
 
 2005
 ^^^^
+| Bayesian Inference for Intelligent, Real-time Monitoring of Computational Clusters
+| J. M. Brandt, A. C. Gentile, D. J. Hale, Y. M. Marzouk, and P. P. Pébay
+| SC|05 Seattle, Washington, November 2005.
+- Exhibit Presentation, Demo, and Flier
+- Conference Poster
+
+ ::
+| Meaningful Automated Statistical Analysis of Large Computational Clusters
+| J. M. Brandt, A. C. Gentile, Y. M. Marzouk, and P. P. Pébay
+| SAND Report 2005-4558, Sandia National Laboratories, July 2005.
 
 2004
 ^^^^
+| Detection of System Abnormalities Through Behavioral Analysis of ASC Codes
+| J. M. Brandt and A. C. Gentile
+| SC|04 Exhibit, Pittsburgh, PA, November 2004.
+- Exhibit Demo
 
 2003
 ^^^^

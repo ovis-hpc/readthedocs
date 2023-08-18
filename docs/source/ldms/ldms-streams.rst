@@ -136,12 +136,14 @@ This section will go over how to start and configure a simple LDMS Streams deamo
 If an LDMS Streams daemon is already running on the system then please skip to the next section `Execute The Test Script(s)`_.
 
 1. First, initialize an ldms streams daemon on a compute node as follows:
+
 .. code-block:: RST
 
   salloc -N 1 --time=2:00:00 -p <partition-name>
   *ssh to node*
 
 2. Once on the compute node (interactive session), set up the environment for starting an LDMS daemon:
+
 .. code-block:: RST
 
   TOP=<path-to-ldms-install> 
@@ -170,6 +172,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   config name=stream_csv_store path=./streams/store container=csv stream=darshanConnector rolltype=3 rollover=500000  
 
 4.   Next, run the LDSM Streams daemon with the following command:
+
 .. code-block:: RST
 
   ldmsd -x sock:10444 -c darshan_stream_store.conf -l /tmp/darshan_stream_store.log -v DEBUG -r ldmsd.pid
@@ -183,6 +186,7 @@ Execute Test Script(s)
 This section gives a step by step on executing a simple Darshan test script with the LDMS Darshan Integration code (e.g. darshanConnector).
 
 1. Once the test scripts have been checked and the LDMS daemon is running and connected, **open another terminal window (login node)** and make sure the environment variables listed and set the following environment variables before running an application test with the darshanConnector code:
+
 .. code-block:: RST
 
   export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
@@ -210,6 +214,7 @@ This section gives a step by step on executing a simple Darshan test script with
 Single Script
 ==============
 Run Darshan's example "mpi-io-test.sh" script by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and execute this script.
+
 .. code-block:: RST
   
   export DARSHAN_PATH=<darshan-prefix>/darshan/build/install
@@ -226,6 +231,7 @@ Run Darshan's example "mpi-io-test.sh" script by setting the following environme
 All Scripts
 ===========
 If you wish to run all of Darshan's test scripts then please use the ``run-all.sh`` script located in ``darshan/darshan-test/regression`` and run it with the following arguements:
+
 .. code-block:: RST
   
   # run darshan tests
@@ -331,11 +337,13 @@ The section goes over step-by-step instructions on how to compile and execute th
 Pre-Installed Darshan-LDMS 
 ---------------------------
 If both the Darshan-LDMS integrated code and LDMS are already installed and a system LDMS streams daemon is running, then there are two ways to enable the LDMS functionality. 
+
 1. Set the environment via darshan_ldms.env script 
+
 2. Load the Darshan-LDMS module via darshan_ldms 
 
 .. note:: RST
-  
+
   Only when executing an application or submitting a job does the user need to load the darshan_ldms module or set the darshan_ldms.env script.  Compiling,     building or installing the application does not affect the darshanConnector and vice versa. 
 
 1. Set Environment
@@ -356,7 +364,7 @@ In order to enable the darshanConnector code on the system, just source the foll
 
 This will output json messages collected by ldms to the terminal window.
 
-.. note::RST
+.. note::
   
   The STDIO data will NOT be collected by ldms. This is to prevent any recursive LDMS function calls. 
 
@@ -380,7 +388,7 @@ The darshan_ldms module and .env file set the following env variables to define 
 
 If you only want to collect a specific type of data such as "MPIIO" then you will only set the MPIIO_ENABLE_LDMS variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
 
-.. note:: RST
+.. note::
   
   All darshan binary files (i.e. <executable-name>.darshan) will be saved to /projects/ovis/darshanConnector/<system>/darshan/build/logs
 

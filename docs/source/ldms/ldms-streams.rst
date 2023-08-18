@@ -76,7 +76,7 @@ A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s o
 
 Compile and Build with LDMS
 ---------------------------
-* Run the following to build Darshan and link against an existing LDMS library on the system.
+1. Run the following to build Darshan and link against an existing LDMS library on the system.
   
 .. code-block:: RST
   
@@ -90,7 +90,7 @@ Compile and Build with LDMS
   
   This configuration is specific to the system (i.e. in this case we compile with cc instead of mpicc). For more information on how to install and build the code across various platforms, please visit `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ 
   
-* To build HDF5 module for darshan, you must first load the module with ``module load cray-hdf5-parallel`` then run configure as follows: 
+2. To build HDF5 module for darshan, you must first load the module with ``module load cray-hdf5-parallel`` then run configure as follows: 
 .. code-block:: RST
 
   ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=/projects/ovis/darshanConnector/ovis/LDMS_install --enable-hdf5-mod --with-hdf5=<path-to-hdf5-install>  
@@ -109,13 +109,13 @@ If you do not have HDF5 installed on your system, install this with:
   
   If the HDF5 library is installed this way, you do not need to include the ``--with-hdf5`` flag during configuration. For more information on other methods and HDF5 versions to install, please visit `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_.
   
-Configuration For Darshan DXT Test Case(s)  
+Configuring Darshan Test Script(s) 
 ------------------------------------------
-Below are the instructions to configure your system for running a darshan test (mpi-io-test.c) for the darshanConnector code. All Darshan application test scripts are located in ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/``.
+Below are the instructions to configure your system to run a Darshan test script(s) (mpi-io-test.c) with the darshanConnector code. All Darshan application test scripts are located in ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/``.
 
-* Double Check Test Scripts
-Double check the test scripts are modified appropriately in order to run a successful test. Make sure the following file contains the desired partition name for the sbatch command.
-Darshan has various test setups and module loads specific to the system. In this example, we will be running Darshan on a CRAY machine so we will need to edit the test scripts within ``darshan-test/regression/cray-module-nersc``.
+1. Double check the test scripts are modified appropriately in order to run a successful test. Make sure the following file contains the desired partition name for the sbatch command.
+
+2. Darshan has various test setups and module loads specific to the system. In this example, we will be running Darshan on a CRAY machine so we will need to edit the test scripts within ``darshan-test/regression/cray-module-nersc``.
 
 .. note::
 
@@ -131,17 +131,17 @@ Darshan has various test setups and module loads specific to the system. In this
   
 
 Run An LDMS Streams Daemon
---------------------------
+///////////////////////////
 This section will go over how to start and configure a simple LDMS Streams deamon to collect the Darshan data and store to a CSV file. 
 If an LDMS Streams daemon is already running on the system then please skip to the next section `Execute The Test Script(s)`_.
 
-* First, initialize an ldms streams daemon on a compute node as follows:
+1. First, initialize an ldms streams daemon on a compute node as follows:
 .. code-block:: RST
 
   salloc -N 1 --time=2:00:00 -p <partition-name>
   *ssh to node*
 
-* Once on the compute node (interactive session), set up the environment for starting an LDMS daemon:
+2. Once on the compute node (interactive session), set up the environment for starting an LDMS daemon:
 .. code-block:: RST
 
   TOP=<path-to-ldms-install> 
@@ -158,7 +158,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   
   LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_. UPDATED
 
-* Next, create a file called **"darshan\_stream\_store.conf"** and add the following content to it:
+3. Next, create a file called **"darshan\_stream\_store.conf"** and add the following content to it:
 
 .. code-block:: RST
   
@@ -169,7 +169,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   load name=stream_csv_store
   config name=stream_csv_store path=./streams/store container=csv stream=darshanConnector rolltype=3 rollover=500000  
 
-*   Next, run the LDSM Streams daemon with the following command:
+4.   Next, run the LDSM Streams daemon with the following command:
 .. code-block:: RST
 
   ldmsd -x sock:10444 -c darshan_stream_store.conf -l /tmp/darshan_stream_store.log -v DEBUG -r ldmsd.pid
@@ -178,11 +178,11 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   
   To check that the ldmsd daemon is connected running please run ``ps auwx | grep ldmsd | grep -v grep``, ``ldms_ls -h <host-name> -x sock -p <port-number> -a none -v`` or ``cat /tmp/darshan_stream_store.log``. Where <host-name> is the node where the LDMS daemon exists and <port-number> is the port it is listening on.
 
-Execute The Test Script(s)
---------------------------
+Execute Test Script(s)
+//////////////////////////
 This section gives a step by step on executing a simple Darshan test script with the LDMS Darshan Integration code (e.g. darshanConnector).
 
-* Once the test scripts have been checked and the LDMS daemon is running and connected, **open another terminal window (login node)** and make sure the environment variables listed and set the following environment variables before running an application test with the darshanConnector code:
+1. Once the test scripts have been checked and the LDMS daemon is running and connected, **open another terminal window (login node)** and make sure the environment variables listed and set the following environment variables before running an application test with the darshanConnector code:
 .. code-block:: RST
 
   export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
@@ -207,9 +207,9 @@ This section gives a step by step on executing a simple Darshan test script with
   
   The ``<host-name>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into).
   
-Single Test
-///////////
-* Run Darshan's example "mpi-io-test" program within ``/test-cases/src/`` by setting the following environment variables, go to ``darshan/darshan-test/regression/test-cases`` and execute this script.
+Single Script
+==============
+Run Darshan's example "mpi-io-test.sh" script by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and execute this script.
 .. code-block:: RST
   
   export DARSHAN_PATH=<darshan-prefix>/darshan/build/install
@@ -223,9 +223,9 @@ Single Test
   Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS. 
   **(Optional)** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID in ``<darshan-prefix>/darshan-test/regression/cray-module-nersc/slurm-submit.sl``. If this is not set, the job_id field will be set to the first PID.   
 
-All Tests
-//////////
-* If you wish to run all of Darshan's test scripts then please use the ``run-all.sh`` script located in ``darshan/darshan-test/regression`` and run it with the following arguements:
+All Scripts
+===========
+If you wish to run all of Darshan's test scripts then please use the ``run-all.sh`` script located in ``darshan/darshan-test/regression`` and run it with the following arguements:
 .. code-block:: RST
   
   # run darshan tests
@@ -240,9 +240,9 @@ All Tests
 
   Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS.
   
-Run Single Test On Login Node 
-------------------------------
-If you are not installing the darshanConnector code on cluster, please run the following commands to do run a single Darshan test case on the login node.
+Configure & Run A Program (login node) 
+----------------------------------
+The section goes over step-by-step instructions on how to compile and execute the mpi-io-test.c program under 'darshan/darshan-test/regression/test-cases/src/', collect the data with the LDMS streams daemon and store it to a CSV file on a single login node. This section is for those who will not be running their applications on a cluster (i.e. no compute nodes).
 
 1. Set Environment Variables for Darshan, LDMS and Darshan-LDMS Integrated code (i.e. darshanConnector).
 

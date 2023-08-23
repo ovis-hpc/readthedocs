@@ -89,6 +89,68 @@ bar
 
 2010
 ^^^^
+| OVIS, Lightweight Data Metric Service (LDMS), and Log File Analysis
+| SC|10 New Orleans, LA, Nov 2010.
+- Exhibit ASC Booth Demos
+- Exhibit ASC Booth talk: OVIS 3: Scalable Data Collection and Analysis for Large Scale HPC System Understanding
+
+ ::
+| Scalable HPC Monitoring and Analysis for Understanding and Automated Response -- *Invited Presentation*
+| HPC Resilience Summit 2010: Workshop on Resilience for Exascale HPC at the Los Alamos Computer Science Symposium, Santa Fe, NM. Oct 2010.
+
+ ::
+| OVIS 3.2 User's Guide (NB: Deprecated)
+| J. Brandt, A. Gentile, C. Houf, J. Mayo, P. Pebay, D. Roe, D. Thompson, and M. Wong
+| SAND 2010-7109, Sandia National Laboratories, Oct 2010.
+
+ ::
+| Understanding Large Scale HPC Systems Through Scalable Monitoring and Analysis
+| New Mexico State University, NM. October 2010.
+
+ ::
+| Understanding Large Scale HPC Systems Through Scalable Monitoring and Analysis -- *Invited Presentation*
+| European Grid Initiative (EGI) Technical Forum 2010, Amsterdam, Netherlands. September 2010.
+
+ ::
+| Computing Contingency Statistics in Parallel: Design Trade-Offs and Limiting Cases
+| P. Pébay, D. Thompson, and J. Bennett
+| IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Heraklion, Greece. September 2010.
+
+ ::
+| A Framework for Graph-Based Synthesis, Analysis, and Visualization of HPC Cluster Job Data
+| J. Brandt, V. De Sapio, A. Gentile, P. Kegelmeyer, J. Mayo, P. Pebay, D. Roe, D. Thompson, and M. Wong
+| SAND2010-2400, Sandia National Laboratories, August 2010.
+
+ ::
+| The OVIS analysis architecture (NB: Deprecated)
+| J. M. Brandt, V. De Sapio, A. C. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. H. Wong
+| Sandia Report SAND2010-5107, Sandia National Laboratories, July 2010.
+
+ ::
+| The Python command line interface to the OVIS analysis functionality (NB: Deprecated)
+| J. M. Brandt, A. C. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. H. Wong
+| Sandia Report SAND2010-4289, Sandia National Laboratories, June 2010.
+
+ ::
+| Quantifying Effectiveness of Failure Prediction and Response in HPC Systems: Methodology and Example
+| J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| 1st Int'l Workshop on Fault-Tolerance for HPC at Extreme Scale (FTXS) at the 40th Annual IEEE/IFIP Int'l. Conf. on Dependable Systems and Networks (DSN) Chicago, IL. June 2010.
+
+ ::
+| Using Cloud Constructs and Predictive Analysis to Enable Pre-Failure Process Migration in HPC Systems
+| J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| Workshop on Resiliency in High-Performance Computing (Resilience) in Clusters, Clouds, and Grids at the 10th IEEE Int'l. Symposium on Cluster, Cloud, and Grid Computing (CCGRID), Melbourne, Australia. May 2010.
+
+ ::
+| Combining Virtualization, Resource Characterization, and Resource Management to Enable Efficient High Performance Compute Platforms Through Intelligent Dynamic Resource Allocation
+| J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| 6th Workshop on System Management Techniques, Processes, and Services (SMTPS) - Special Focus on Cloud Computing at the 24th IEEE Int'l. Parallel and Distributed Processing Symposium (IPDPS), Atlanta, GA. April 2010.
+
+ ::
+| Scalable Information Fusion for Fault Tolerance in Large-Scale HPC -- *Minisymposium Presentation*
+| J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| Minisymposium on Vertically Integrated Fault Tolerance for Large-Scale Scientific Computing
+at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattle, WA. Feb 2010.
 
 2009
 ^^^^

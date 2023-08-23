@@ -80,6 +80,9 @@ bar
 
 2013
 ^^^^
+| `High Fidelity Data Collection and Transport Service Applied to the Cray XE6/XK6 <https://cug.org/proceedings/cug2013_proceedings/includes/files/pap167-file1.pdf>`_
+| J. Brandt, T. Tucker, A. Gentile, D. Thompson, V. Kuhns, and J. Repik
+| Proc. Cray User's Group (CUG), Napa Valley, CA. May 2013.
 
 2012
 ^^^^

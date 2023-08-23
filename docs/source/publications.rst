@@ -77,6 +77,41 @@ bar
 
 2014
 ^^^^
+| Extreme-scale HPC Monitoring
+| In Sandia National Laboratories HPC Annual Report 2014, 2014.
+
+ ::
+| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications
+| A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
+| IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC14) New Orleans, LA. Nov 2014.
+
+ ::
+| Monitoring Large-Scale HPC Systems: Issues and Approaches -- BOF Session Organizer 🔸
+| IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC14), New Orleans, LA. Nov 2014.
+
+ ::
+| Demonstrating Improved Application Performance Using Dynamic Monitoring and Task Mapping
+| J. Brandt, K. Devine, A. Gentile, and K. Pedretti
+| 1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) at IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Madrid, Spain. Sept 2014.
+
+ ::
+| Monitoring Application Resource Utilization on the Intel PHI Coprocessor -- Minitalk
+| J. Brandt and A. Gentile
+| 1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) at IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Madrid, Spain. Sept 2014.
+
+ ::
+| Memory Reliability and Performance Degradation -- Minitalk (Extended Abstract)
+Benjamin Allan
+| 1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) at IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Madrid, Spain. Sept 2014.
+
+ ::
+| Large Scale System Monitoring and Analysis on Blue Waters Using OVIS -- *Best Paper Finalist*
+| M. Showerman, J. Enos, J. Fullop (NCSA), P. Cassella (Cray), N. Naksinehaboon, N. Taerat, T. Tucker (OGC), J. Brandt, A. Gentile, and B. Allan (SNL)
+| Proc. Cray User's Group (CUG), Lugano, Switzerland. May 2014.
+
+ ::
+| Large Scale HPC Monitoring
+| New Mexico State University, Las Cruses, NM. April 2014.
 
 2013
 ^^^^

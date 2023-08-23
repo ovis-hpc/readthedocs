@@ -96,7 +96,7 @@ bar
 
  ::
 | Scalable HPC Monitoring and Analysis for Understanding and Automated Response -- *Invited Presentation*
-| HPC Resilience Summit 2010: Workshop on Resilience for Exascale HPC at the Los Alamos Computer Science Symposium, Santa Fe, NM. Oct 2010.
+| `HPC Resilience Summit 2010: Workshop on Resilience for Exascale HPC <http://www.csm.ornl.gov/srt/conferences/ResilienceSummit/2010/>`_ at the Los Alamos Computer Science Symposium, Santa Fe, NM. Oct 2010.
 
  ::
 | OVIS 3.2 User's Guide (NB: Deprecated)
@@ -105,16 +105,17 @@ bar
 
  ::
 | Understanding Large Scale HPC Systems Through Scalable Monitoring and Analysis
-| New Mexico State University, NM. October 2010.
+| `New Mexico State University <http://www.cs.nmsu.edu/wp/>`_, Las Cruces, NM. October 2010.
 
  ::
 | Understanding Large Scale HPC Systems Through Scalable Monitoring and Analysis -- *Invited Presentation*
-| European Grid Initiative (EGI) Technical Forum 2010, Amsterdam, Netherlands. September 2010.
+| `European Grid Initiative (EGI) Technical Forum 2010 <http://www.egi.eu/EGITF2010/>`_, Amsterdam, Netherlands. September 2010.
 
  ::
 | Computing Contingency Statistics in Parallel: Design Trade-Offs and Limiting Cases
 | P. Pébay, D. Thompson, and J. Bennett
-| IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Heraklion, Greece. September 2010.
+| 2010 IEEE International Conference on Cluster Computing, Heraklion, Greece, 2010, pp. 156-165
+| `doi: 10.1109/CLUSTER.2010.43 <https://doi.org/10.1109/CLUSTER.2010.43>`_
 
  ::
 | A Framework for Graph-Based Synthesis, Analysis, and Visualization of HPC Cluster Job Data
@@ -134,17 +135,20 @@ bar
  ::
 | Quantifying Effectiveness of Failure Prediction and Response in HPC Systems: Methodology and Example
 | J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
-| 1st Int'l Workshop on Fault-Tolerance for HPC at Extreme Scale (FTXS) at the 40th Annual IEEE/IFIP Int'l. Conf. on Dependable Systems and Networks (DSN) Chicago, IL. June 2010.
+| 2010 International Conference on Dependable Systems and Networks Workshops (DSN-W), Chicago, IL, USA, 2010, pp. 2-7
+| `doi: 10.1109/DSNW.2010.5542629 <https://doi.org/doi: 10.1109/DSNW.2010.5542629>`_
 
  ::
 | Using Cloud Constructs and Predictive Analysis to Enable Pre-Failure Process Migration in HPC Systems
 | J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
-| Workshop on Resiliency in High-Performance Computing (Resilience) in Clusters, Clouds, and Grids at the 10th IEEE Int'l. Symposium on Cluster, Cloud, and Grid Computing (CCGRID), Melbourne, Australia. May 2010.
+| 2010 10th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing, Melbourne, VIC, Australia, 2010, pp. 703-708
+| `doi: 10.1109/CCGRID.2010.31 <https://doi.org/10.1109/CCGRID.2010.31>`_
 
  ::
 | Combining Virtualization, Resource Characterization, and Resource Management to Enable Efficient High Performance Compute Platforms Through Intelligent Dynamic Resource Allocation
 | J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
-| 6th Workshop on System Management Techniques, Processes, and Services (SMTPS) - Special Focus on Cloud Computing at the 24th IEEE Int'l. Parallel and Distributed Processing Symposium (IPDPS), Atlanta, GA. April 2010.
+| 2010 IEEE International Symposium on Parallel & Distributed Processing, Workshops and Phd Forum (IPDPSW), Atlanta, GA, USA, 2010, pp. 1-8
+| `doi: 10.1109/IPDPSW.2010.5470719 <https://doi.org/doi: 10.1109/IPDPSW.2010.5470719>`_
 
  ::
 | Scalable Information Fusion for Fault Tolerance in Large-Scale HPC -- *Minisymposium Presentation*

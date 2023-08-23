@@ -6,10 +6,10 @@ Citing LDMS
 
 To reference LDMS, please use:
  ::
-| `Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7013000>`_
+| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications 
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
 | SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis
-| New Orleans, LA, USA, 2014, pp. 154-165, doi: 10.1109/SC.2014.18.
+| New Orleans, LA, USA, 2014, pp. 154-165, `doi: 10.1109/SC.2014.18 <https://doi.org/10.1109/SC.2014.18>`_
 |
 
 BibTex:
@@ -48,7 +48,7 @@ bar
 | `Delay Sensitivity-Driven Congestion Mitigation for HPC Systems <https://dl.acm.org/doi/pdf/10.1145/3447818.3460362>`_
 | A. Patke, S. Jha, H. Qui, J. Brandt, A. Gentile, J. Greenseid, A. Kalbarczyk, and R. Iyer
 | ICS '21: Proceedings of the ACM International Conference on Supercomputing, June 2021, Pages 342–353
-| doi: 10.1145/3447818.3460362 <https://doi.org/10.1145/3447818.3460362>_
+| `doi: 10.1145/3447818.3460362 <https://doi.org/10.1145/3447818.3460362>`_
 
  ::
 | `Enabling System and Application Data Fusion <https://www.youtube.com/watch?v=EmsYILnwDys>`_

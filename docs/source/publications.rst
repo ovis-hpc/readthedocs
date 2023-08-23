@@ -59,18 +59,88 @@ bar
 
 2020
 ^^^^
+foo 
 
 2019
 ^^^^
+foo
 
 2018
 ^^^^
+foo
 
 2017
 ^^^^
+foo 
 
 2016
 ^^^^
+| `Data Analytics Support for HPC System Management <http://sc16.supercomputing.org/presentation/?id=pan110&sess=sess187>`_ -- *Panelist*
+| SC16, Fri 18th Nov 2016 10:30-noon.
+
+ ::
+| Monitoring Large Scale HPC Systems: Understanding, Diagnosis and Attribution of Performance Variation and Issues -- *BoF Session Organizer*
+| SC16, 5:15pm-7pm Wed Nov 16 2016.
+
+ ::
+| Discovery, Interpretation, and Communication of Meaningful Information in HPC Monitoring Data
+| `University of Central Florida <http://www.cecs.ucf.edu/>`_, Oct 2016.
+
+ ::
+| Holistic Measurement Driven Resilience
+| `Chaos Community Day <http://chaos.community/>`_ Seattle, WA. Aug. 2016.
+
+ ::
+| Continuous Whole-System Monitoring Toward Rapid Understanding of Production HPC Applications and Systems
+| A. Agelastos, B. Allan, J. Brandt, A. Gentile, S. Lefantzi, S. Monk, J. Ogden, M. Rajan, and J. Stevenson
+| `Parallel Computing (2016) <http://www.journals.elsevier.com/parallel-computing>`_, Elsevier B. V., `http://dx.doi.org/10.1016/j.parco.2016.05.009 <http://dx.doi.org/10.1016/j.parco.2016.05.009>`_
+
+ ::
+| Large-Scale Persistent Numerical Data Source Monitoring System Experiences
+| J. Brandt, A. Gentile, M. Showerman, J. Enos, J. Fullop, and G. Bauer
+| 2016 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), Chicago, IL, USA, 2016, pp. 1711-1720
+| `doi: 10.1109/IPDPSW.2016.188 <https://doi.org/10.1109/IPDPSW.2016.188>`_
+
+ ::
+| Design and Implementation of a Scalable HPC Monitoring System
+| S. Sanchez, A. Bonnie, G. Van Heule, C. Robinson, A. DeConinck, K. Kelly, Q. Snead, and J. Brandt
+| 2016 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), Chicago, IL, USA, 2016, pp. 1721-1725
+| `doi: 10.1109/IPDPSW.2016.167 <https://doi.org/10.1109/IPDPSW.2016.167>`_
+
+ ::
+| Network Performance Counter Monitoring and Analysis on the Cray XC Platform
+| J. Brandt, E. Froese, A. Gentile, L. Kaplan, B. Allan, and E. Walsh
+| Proc. `Cray Users Group (CUG) <https://cug.org/CUG2016>`_, May 2016.
+
+ ::
+| Dynamic Model Specific Register (MSR) Data Collection as a System Service
+| G. H. Bauer, J. Brandt, A. Gentile, A. Kot, and M. Showerman
+| Proc. `Cray Users Group (CUG) <https://cug.org/CUG2016>`_, May 2016.
+
+ ::
+| `Design and Implementation of a Scalable HPC Monitoring System for Trinity <https://ssl.linklings.net/conferences/cug/cug2016_program/views/includes/files/pap126s2-file1.pdf>`_
+| A. DeConinck, A. Bonnie, K. Kelly, S. Sanchez, C. Martin, and M. Mason (LANL), J. Brandt, A. Gentile, B. Allan, and A. Agelastos (SNL), M. Davis and M. Berry (Cray)
+| Proc. `Cray Users Group (CUG) <https://cug.org/CUG2016>`_, May 2016.
+
+ ::
+| `Addressing the Challenges of "Systems Monitoring" Data Flows <https://cug.org/proceedings/cug2016_proceedings/includes/files/bof112.pdf>`_-- *BOF Session Organizer*
+| M. Showerman, J. Brandt, and A. Gentile
+| Proc. `Cray Users Group (CUG) <https://cug.org/CUG2016>`_, May 2016.
+
+ ::
+| Smart HPC Centers: Data, Analysis, Feedback, and Response
+| J. Brandt, A. Gentile, C. Martin, B. Allan, and K. Devine
+| `Minisymposium on Improving Performance, Throughput, and Efficiency of HPC Centers through Full System Data Analytics <http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=22167>`_ -- *Minisymposium Organizer* 
+| at the `SIAM Conf. on Parallel Processing for Scientific Computing (PP16) <http://www.siam.org/meetings/pp16/>`_, Paris, France. Apr 2016.
+
+ ::
+| Monitoring High Speed Network Fabrics: Experiences and Needs
+| J. Brandt, A. Gentile, B. Allan, S. Lefantzi, and M. Aguilar
+| at `Open Fabrics Alliance Workshop <https://www.openfabrics.org/index.php/2016-ofa-workshop.html>`_, Monterey, CA. Apr 2016.
+
+ ::
+| Monitoring Large Scale HPC Platforms: Issues, Approaches, and Experiences
+| `Univ. of Central Florida <http://www.cecs.ucf.edu/>`_, Jan 2016.
 
 2015
 ^^^^

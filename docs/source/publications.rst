@@ -93,7 +93,8 @@ foo
  ::
 | Continuous Whole-System Monitoring Toward Rapid Understanding of Production HPC Applications and Systems
 | A. Agelastos, B. Allan, J. Brandt, A. Gentile, S. Lefantzi, S. Monk, J. Ogden, M. Rajan, and J. Stevenson
-| `Parallel Computing (2016) <http://www.journals.elsevier.com/parallel-computing>`_, Elsevier B. V., `http://dx.doi.org/10.1016/j.parco.2016.05.009 <http://dx.doi.org/10.1016/j.parco.2016.05.009>`_
+| `Parallel Computing (2016) <http://www.journals.elsevier.com/parallel-computing>`_, Elsevier B. V.
+| `http://dx.doi.org/10.1016/j.parco.2016.05.009 <http://dx.doi.org/10.1016/j.parco.2016.05.009>`_
 
  ::
 | Large-Scale Persistent Numerical Data Source Monitoring System Experiences

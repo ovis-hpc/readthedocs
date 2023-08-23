@@ -8,7 +8,8 @@ To reference LDMS, please use:
  ::
 | `Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications <https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7013000>`_
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
-| SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, New Orleans, LA, USA, 2014, pp. 154-165, doi: 10.1109/SC.2014.18.
+| SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis
+| New Orleans, LA, USA, 2014, pp. 154-165, doi: 10.1109/SC.2014.18.
 |
 
 BibTex:
@@ -110,6 +111,12 @@ bar
 | SC|05 Seattle, Washington, November 2005.
 - Exhibit Presentation, Demo, and Flier
 - Conference Poster
+
+ ::
+| Meaningful Automated Statistical Analysis of Large Computational Clusters
+| J. M. Brandt, A. C. Gentile, Y. M. Marzouk and P. P. Pebay
+| 2005 IEEE International Conference on Cluster Computing
+| Burlington, MA, USA, 2005, pp. 1-2, doi: 10.1109/CLUSTR.2005.347090.
 
  ::
 | Meaningful Automated Statistical Analysis of Large Computational Clusters

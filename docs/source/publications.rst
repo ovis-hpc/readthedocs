@@ -92,10 +92,49 @@ bar
 
 2009
 ^^^^
+| OVIS in HPC: Information Fusion for Resilience
+| `Louisiana Tech University <http://www.latech.edu/>`_ Ruston, LA. December 2009.
+
+ ::
+| Failure Prediction and Resilience in Large-Scale HPC Platforms
+| SC|09 Portland, OR, November 2009.
+- Exhibit Presentation and Demo
+
+ ::
+| Advanced ParaView Visualization
+| K. Moreland, J. Ahrens, D. DeMarle, D. Thompson, P. Pébay and N. Fabian
+| peer-reviewed tutorial on the use of statistics engines at the IEEE VisWeek 2009, Atlantic City, NJ. October 2009.
+
+ ::
+| Data Fusion and Statistical Analysis: Piercing the Darkness of the Black Box -- *Invited Presentation*
+| J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| `Workshop on Resiliency for Petascale HPC <http://www.lanl.gov/conferences/lacss/2009/agenda/workshops.shtml>`_ at the `Los Alamos Computer Science Symposium (LACSS 2009) <https://www.lanl.gov/conferences/lacss/2009/>`_, Santa Fe, NM. October 2009.
+
+ ::
+| Methodologies for Advance Warning of Compute Cluster Problems via Statistical Analysis: A Case Study
+| J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| Proceedings of the 2009 Workshop on Resiliency in High Performance Computing (Resilience) June 2009, pp. 7-14
+| `doi: 10.1145/1552526.1552528 <https://doi.org/10.1145/1552526.1552528>`_
+
+ ::
+| Resource Monitoring and Management with OVIS to Enable HPC in Cloud Computing Environments 
+| J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| 2009 IEEE International Symposium on Parallel & Distributed Processing, Rome, Italy, 2009, pp. 1-8
+| `doi: 10.1109/IPDPS.2009.5161234 <https://doi.org/10.1109/IPDPS.2009.5161234>`_
+- Note: 5th Workshop on System Management Techniques, Processes, and Services (SMTPS) - Special Focus on Cloud Computing -- *Best Paper Award*
+
+ ::
+| OVIS 2.0 User's Guide (Deprecated)
+| J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
+| SAND 2009-2329, Sandia National Laboratories, April 2009
+
+ ::
+| OVIS: Scalable Real-time Analysis of Very Large Datasets
+| Overview viewgraph. 2009.
 
 2008
 ^^^^
-| OVIS2: Whole System Monitoring and Analysis - Toward Understanding and Prediction
+| OVIS-2: Whole System Monitoring and Analysis - Toward Understanding and Prediction
 | J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
 | SC|08 Austin, TX. November 2008.
 - Exhibit Presentation and Demo

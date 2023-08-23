@@ -74,6 +74,56 @@ bar
 
 2015
 ^^^^
+| `HPC Monitoring, Understanding, and Performance: Where Less is Less <http://scdoe.info/2015/11/09/jim-brandt-sandia/>`_ -- *Featured Presentation at DOE Booth*
+| J. Brandt
+| at `IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC15) <http://scdoe.info/booth-schedule/>`_ Austin, TX. Nov 2015.
+
+ ::
+| `LDMS Demo <http://scdoe.info/booth-schedule/>`_ at DOE Booth SC15 Nov 2015.
+
+ ::
+| Monitoring Large-Scale HPC Systems: Data Analytics and Insights - BOF Session Organizer 🔸
+| at `IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC15) <http://sc15.supercomputing.org/>`_ Austin, TX. Nov 2015.
+
+ ::
+| Infrastructure for In Situ System Monitoring and Application Data Analysis
+| J. Brandt, K. Devine, and A. Gentile
+| `ISAV 2015 <http://vis.lbl.gov/Events/ISAV-2015/>`_: Proceedings of the First Workshop on In Situ Infrastructures for Enabling Extreme-Scale Analysis and Visualization, November 2015, Pages 36–40,
+| `doi: 10.1145/2828612.2828621 <https://doi.org/10.1145/2828612.2828621>`_
+
+ ::
+| New Systems, New Behaviors, New Patterns: Monitoring Insights from System Standup
+| J. Brandt, A. Gentile, C. Martin, J. Repik, and N. Taerat
+| `2015 IEEE International Conference on Cluster Computing <http://www.mcs.anl.gov/ieeecluster2015/>`_, Chicago, IL, USA, 2015, pp. 658-665
+| `doi: 10.1109/CLUSTER.2015.116 <https://doi.org/10.1109/CLUSTER.2015.116>`_
+
+ ::
+| Extending LDMS to Enable Performance Monitoring in Multi-Core Applications
+| S. Feldman, D. Zhang, D. Dechev, and J. Brandt
+| `2015 IEEE International Conference on Cluster Computing <http://www.mcs.anl.gov/ieeecluster2015/>`_, Chicago, IL, USA, 2015, pp. 717-720
+| `doi: 10.1109/CLUSTER.2015.125 <https://doi.org/10.1109/CLUSTER.2015.125>`_
+
+ ::
+| Toward Rapid Understanding of Production HPC Applications and Systems
+| A. Agelastos, B. Allan, J. Brandt, A. Gentile, S. Lefantzi, S. Monk, J. Ogden, M. Rajan, and J. Stevenson
+| `2015 IEEE International Conference on Cluster Computing <http://www.mcs.anl.gov/ieeecluster2015/>`_, Chicago, IL, USA, 2015, pp. 464-473
+| `doi: 10.1109/CLUSTER.2015.71 <https://doi.org/10.1109/CLUSTER.2015.71>`_
+
+ ::
+| Enabling Advanced Operational Analysis Through Multi-Subsystem Data Integration on Trinity -- *Best Paper Finalist*
+| J. Brandt, D. DeBonis, A. Gentile, J. Lujan, C. Martin, D. Martinez, S. Olivier, K. Pedretti, N. Taerat, and R. Velarde
+| Proc. `Cray User's Group (CUG) <https://cug.org/CUG2015>`_, Chicago, IL. April 2015.
+
+ ::
+| Scalable Integrated High-Fidelity Continuous Monitoring
+| at System Monitoring of Cray Systems BoF
+| Proc. `Cray User's Group (CUG) <https://cug.org/CUG2015>`_, Chicago, IL. April 2015.
+
+ ::
+| Demonstrating Improved Application Performance Using Dynamic Monitoring and Task Mapping -- *Minisymposium Presentation*
+| J. Brandt, K. Devine, A. Gentile, and K. Pedretti
+| Minisymposium on Topology Mapping and Locality
+| at the `SIAM Conf. on Computational Science and Engineering (CSE 15) <http://www.siam.org/meetings/cse15/>`_, Salt Lake City, UT. Mar 2015.
 
 2014
 ^^^^

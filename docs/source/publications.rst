@@ -9,9 +9,10 @@ To reference LDMS, please use:
 | Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications 
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
 | SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis
-| New Orleans, LA, USA, 2014, pp. 154-165, `doi: 10.1109/SC.2014.18 <https://doi.org/10.1109/SC.2014.18>`_
-|
+| New Orleans, LA, USA, 2014, pp. 154-165
+| `doi: 10.1109/SC.2014.18 <https://doi.org/10.1109/SC.2014.18>`_
 
+ ::
 BibTex:
  ::
 | @INPROCEEDINGS{7013000,
@@ -94,6 +95,34 @@ bar
 
 2008
 ^^^^
+| OVIS2: Whole System Monitoring and Analysis - Toward Understanding and Prediction
+| J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
+| SC|08 Austin, TX. November 2008.
+- Exhibit Presentation and Demo
+
+ ::
+| Combining System Characterization and Novel Execution Models to Achieve Scalable Robust Computing -- *Invited Presentation*
+| H. Adalsteinsson, J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pebay, D. Thompson, and M. Wong
+| Workshop on Resiliency for Petascale HPC
+| at the `Los Alamos Computer Science Symposium (LACSS 2008) <http://www.lanl.gov/conferences/lacss/2008/>`_, Santa Fe, NM. October 2008.
+
+ ::
+| OVIS: Scalable, Real-time Statistical Analysis of Very Large Datasets
+| J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay , D. Thompson, and M. Wong
+| 2008 Sandia Workshop on Data Mining and Data Analysis
+| Extended abstract, SAND Report 2008-6109, Sandia National Laboratories, September 2008.
+
+ ::
+| Using Probabilistic Characterization to Reduce Runtime Faults on HPC Systems
+| J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay , D. Thompson, and M. Wong
+| 2008 Eighth IEEE International Symposium on Cluster Computing and the Grid (CCGRID), Lyon, France, 2008, pp. 759-764
+| `doi: 10.1109/CCGRID.2008.124 <https://doi.org/10.1109/CCGRID.2008.124>`_
+
+ ::
+| OVIS-2: A Robust Distributed Architecture for Scalable RAS
+| J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
+| 2008 IEEE International Symposium on Parallel and Distributed Processing, Miami, FL, USA, 2008, pp. 1-8
+| `doi: 10.1109/IPDPS.2008.4536549 <https://doi.org/10.1109/IPDPS.2008.4536549>`_
 
 2007
 ^^^^
@@ -116,7 +145,7 @@ bar
 
  ::
 | OVIS: A Tool for Intelligent, Real-Time Monitoring of Computational Clusters
-| Proceedings 20th IEEE International Parallel & Distributed Processing Symposium, Rhodes, Greece, 2006, pp. 8 pp.-, 
+| Proceedings 20th IEEE International Parallel & Distributed Processing Symposium, Rhodes, Greece, 2006, pp. 8 pp.- 
 | `doi: 10.1109/IPDPS.2006.1639698 <https://doi.org/10.1109/IPDPS.2006.1639698>`_
 
  ::

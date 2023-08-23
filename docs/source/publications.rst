@@ -47,7 +47,8 @@ bar
  ::
 | `Delay Sensitivity-Driven Congestion Mitigation for HPC Systems <https://dl.acm.org/doi/pdf/10.1145/3447818.3460362>`_
 | A. Patke, S. Jha, H. Qui, J. Brandt, A. Gentile, J. Greenseid, A. Kalbarczyk, and R. Iyer
-| ICS '21: Proceedings of the ACM International Conference on Supercomputing, June 2021, Pages 342–353, https://doi.org/10.1145/3447818.3460362
+| ICS '21: Proceedings of the ACM International Conference on Supercomputing, June 2021, Pages 342–353
+| doi: 10.1145/3447818.3460362 <https://doi.org/10.1145/3447818.3460362>_
 
  ::
 | `Enabling System and Application Data Fusion <https://www.youtube.com/watch?v=EmsYILnwDys>`_
@@ -103,6 +104,25 @@ bar
 
 2006
 ^^^^
+| Monitoring Computational Clusters with OVIS
+| J. M. Brandt, A. C. Gentile, P. P. Pébay and M. H. Wong
+| SAND Report 2006-7939, Sandia National Laboratories, December 2006.
+
+ ::
+| OVIS: A Tool for Intelligent, Real-time Monitoring of Computational Clusters
+| J. M. Brandt, A. C. Gentile, J. Ortega, P. P. Pébay, D. C. Thompson, and M. H. Wong
+| SC|06 Tampa, FL, November 2006.
+- Exhibit Presentation and Demo
+
+ ::
+| OVIS: A Tool for Intelligent, Real-Time Monitoring of Computational Clusters
+| Proceedings 20th IEEE International Parallel & Distributed Processing Symposium, Rhodes, Greece, 2006, pp. 8 pp.-, 
+| `doi: 10.1109/IPDPS.2006.1639698 <https://doi.org/10.1109/IPDPS.2006.1639698>`_
+
+ ::
+| Distributed, Intelligent RAS System for Large Computational Clusters: FactSheet
+| J. M. Brandt, A. C. Gentile, P. P. Pébay and M. H. Wong
+| Fact sheet, Sandia National Laboratories, April 2006.
 
 2005
 ^^^^
@@ -113,13 +133,13 @@ bar
 - Conference Poster
 
  ::
-| Meaningful Automated Statistical Analysis of Large Computational Clusters
+| Meaningful Automated Statistical Analysis of Large Computational Clusters 
 | J. M. Brandt, A. C. Gentile, Y. M. Marzouk and P. P. Pebay
-| 2005 IEEE International Conference on Cluster Computing
-| Burlington, MA, USA, 2005, pp. 1-2, doi: 10.1109/CLUSTR.2005.347090.
+| 2005 IEEE International Conference on Cluster Computing, Burlington, MA, USA, 2005, pp. 1-2
+| `doi: 10.1109/CLUSTR.2005.347090 <https://doi.org/10.1109/CLUSTR.2005.347090>`_
 
  ::
-| Meaningful Automated Statistical Analysis of Large Computational Clusters
+| Meaningful Automated Statistical Analysis of Large Computational Clusters 
 | J. M. Brandt, A. C. Gentile, Y. M. Marzouk, and P. P. Pébay
 | SAND Report 2005-4558, Sandia National Laboratories, July 2005.
 

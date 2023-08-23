@@ -86,6 +86,28 @@ bar
 
 2011
 ^^^^
+| OVIS, Lightweight Data Metric Service (LDMS), and Log File Analysis
+| SC|11 Seattle, WA, November 2011.
+- Exhibit ASC Booth 803 -- Demos & talk
+- OVIS at Petascale Systems Management BOF -- *Panelist*
+
+ ::
+| Develop Feedback System for Intelligent Dynamic Resource Allocation to Improve Application Performance
+| J. Brandt, A. Gentile, D. Thompson and T. Tucker
+| SAND2011-6301. Sandia National Laboratories. September 2011.
+
+ ::
+| Framework for Enabling System Understanding
+| J. Brandt, F. Chen, A. Gentile, C. Leangsuksun, J. Mayo, P. Pebay, D. Roe, N. Taerat, D. Thompson, and M. Wong
+| In: Alexander, M., et al. Euro-Par 2011: Parallel Processing Workshops. Euro-Par 2011. Lecture Notes in Computer Science, vol 7156. Springer, Berlin, Heidelberg. 
+| `doi: 10.1007/978-3-642-29740-3_27 <https://doi.org/10.1007/978-3-642-29740-3_27>`_
+
+ ::
+| Baler: Deterministic, lossless log message clustering tool
+| N. Taerat, J. Brandt, A. Gentile, M. Wong, and C. Leangsuksun
+| In: Computer Science - Research and Development
+| Volume 26, Numbers 3-4, 285-295, (2011)
+| `doi: 10.1007/s00450-011-0155-3 <https://doi.org/10.1007/s00450-011-0155-3>`_
 
 2010
 ^^^^

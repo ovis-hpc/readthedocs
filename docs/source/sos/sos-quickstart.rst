@@ -46,7 +46,7 @@ cd into the top level sos checkout directory
     ./autogen.sh # this will call autoreconf to generate `configure` script
     mkdir build
     cd build
-    ../configure --prefix=/SOS/INSTALL/PATH [--disable-python] [--enable-debug] \
+    ../configure --prefix=/home/XXX/BuildSos [--disable-python] [--enable-debug] \
         [--enable-doc] [--enable-html]
     # add 'PYTHON=/PYTHON/EXECUTABLE/PATH' if PYTHON environment variable not set
     # add `--enable-debug` to turn on debugging logic inside the SOS libraries
@@ -57,6 +57,7 @@ cd into the top level sos checkout directory
 The build will result in /home/XXX/BuildSos/lib/python3.X/site-packages with sosdb and numsos modules. The sosdb module includes the DataSet class and also the Array and Sos modules, which are written in C for efficiency. The numsos module includes the DataSource, DataSink, Stack, and Transform classes.
 
 Set the environment variables appropriately using: 
+
 .. code-block:: console
 
   export PATH=/home/XXX/BuildSos/bin:$PATH

@@ -17,7 +17,7 @@ Our cluster configuration file, let's call it dsos.conf, would simply be
   node1
   node2
 
-Dsosql expects the path to this dsos.conf and the database path for correct functionality. These can be entered as options in to dsosql using the -a and -o options, respectively. They can also be entered after dropping into the dsosql shellLike ldmsd_controller, commands to dsosql can be entered after going into a shell or by echo'ing them into the utility. 
+Dsosql expects the path to this dsos.conf and the database path for correct functionality. These can be entered as options in to dsosql using the -a and -o options, respectively. They can also be entered after dropping into the dsosql shell, like ldmsd_controller, commands to dsosql can be entered after going into a shell or by echo'ing them into the utility. 
 
 .. code-block:: console
 
@@ -54,3 +54,14 @@ Commands available in dsosql are attach, create_part, create_schema, help, impor
 
 Python API
 **********
+
+Like dsosql, python expects a dsos.conf path and a database path. A Sos.Session object is initialized, opened, and then a query setup to begin querying data out of the database. The query initialization expects a max rows returned value for the resultant data object, which will be a pandas DataFrame with columns consisting of the metrics queried and the metrics comprising the index queried. The max rows, or query block size, can typically be set at 1024*1024 though changing block sizes will affect performance.
+
+.. code-block:: python
+
+    import pandas as pd
+    from sosdb import Sos
+    sess = Sos.Session("dsos.conf")
+    cont = sess.open("/storage/sos/database")
+    query = cont.query(1024*1024)
+    query.select('select Active from meminfo') 

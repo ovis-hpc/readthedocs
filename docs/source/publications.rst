@@ -83,6 +83,15 @@ bar
 
 2012
 ^^^^
+| Filtering Log Data: Finding Needles in the Haystack
+| L. Yu, Z. Zheng, Z. Lan, T. Jones, J. Brandt, and A. Gentile
+| IEEE/IFIP Int'l. Conf. on Dependable Systems and Networks (DSN 2012), Boston, MA, 2012, pp. 1-12
+| `doi: 10.1109/DSN.2012.6263948 <https://doi.org/10.1109/DSN.2012.6263948>`_
+
+ ::
+| Report of Experiments and Evidence for ASC L2 Milestone 4467 - Demonstration of a Legacy Application's Path to Exascale
+| B. Barrett, R. Barrett, J. Brandt, R. Brightwell, M. Curry, N. Fabian, K. Ferreira, A. Gentile, S. Hemmert, S. Kelly, R. Klundt, J. Laros, V. Leung, M. Levenhagen, G. Lofstead, K. Moreland, R. Oldfield, K. Pedretti, A. Rodrigues, D. Thompson, T. Tucker, L. Ward, J. Van Dyke, C. Vaughan, and K. Wheeler
+| SAND2012-1750. Sandia National Laboratories. March 2012.
 
 2011
 ^^^^

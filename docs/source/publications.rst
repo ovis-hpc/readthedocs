@@ -216,7 +216,7 @@ foo
 | Demonstrating Improved Application Performance Using Dynamic Monitoring and Task Mapping
 | J. Brandt, K. Devine, A. Gentile, and K. Pedretti
 | `2014 IEEE International Conference on Cluster Computing (CLUSTER) <http://www.cluster2014.org/>`_, Madrid, Spain, 2014, pp. 408-415
-| `doi: 10.1109/CLUSTER.2014.6968670 <https://doi.org/0.1109/CLUSTER.2014.6968670>`_
+| `doi: 10.1109/CLUSTER.2014.6968670 <https://doi.org/10.1109/CLUSTER.2014.6968670>`_
 
  ::
 | Monitoring Application Resource Utilization on the Intel PHI Coprocessor -- Minitalk

@@ -78,52 +78,55 @@ bar
 2014
 ^^^^
 | Extreme-scale HPC Monitoring
-| In Sandia National Laboratories HPC Annual Report 2014, 2014.
+| In `Sandia National Laboratories HPC Annual Report 2014 <https://www.sandia.gov/app/uploads/sites/165/2022/03/HPC_AnnualReport2014_FNL.pdf>`_, 2014.
 
  ::
-| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications
+| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications 
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
-| IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC14) New Orleans, LA. Nov 2014.
+| `SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis <http://sc14.supercomputing.org/>`_
+| New Orleans, LA, USA, 2014, pp. 154-165
+| `doi: 10.1109/SC.2014.18 <https://doi.org/10.1109/SC.2014.18>`_
 
  ::
-| Monitoring Large-Scale HPC Systems: Issues and Approaches -- BOF Session Organizer 🔸
-| IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC14), New Orleans, LA. Nov 2014.
+| Monitoring Large-Scale HPC Systems: Issues and Approaches -- *BOF Session Organizer*
+| `IEEE/ACM Int'l. Conf. for High Performance Storage, Networking, and Analysis (SC14) <http://sc14.supercomputing.org/>`_, New Orleans, LA. Nov 2014.
 
  ::
 | Demonstrating Improved Application Performance Using Dynamic Monitoring and Task Mapping
 | J. Brandt, K. Devine, A. Gentile, and K. Pedretti
-| 1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) at IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Madrid, Spain. Sept 2014.
+| `2014 IEEE International Conference on Cluster Computing (CLUSTER) <http://www.cluster2014.org/>`_, Madrid, Spain, 2014, pp. 408-415
+| `doi: 10.1109/CLUSTER.2014.6968670 <https://doi.org/0.1109/CLUSTER.2014.6968670>`_
 
  ::
 | Monitoring Application Resource Utilization on the Intel PHI Coprocessor -- Minitalk
 | J. Brandt and A. Gentile
-| 1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) at IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Madrid, Spain. Sept 2014.
+| `1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) <https://sites.google.com/site/hpcmaspa2014/>`_ at `IEEE Int'l. Conf. on Cluster Computing (CLUSTER) <http://www.cluster2014.org/>`_, Madrid, Spain. Sept 2014.
 
  ::
-| Memory Reliability and Performance Degradation -- Minitalk (Extended Abstract)
+| `Memory Reliability and Performance Degradation <https://github.com/ovis-hpc/ovis-publications/wiki/papers/2014/SilentErrorsHpcmaspa2014.pdf>`_-- Minitalk (`Extended Abstract <https://github.com/ovis-hpc/ovis-publications/wiki/papers/2014/SilentErrorsAbstractHpcmaspa2014.pdf>`_)
 Benjamin Allan
-| 1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) at IEEE Int'l. Conf. on Cluster Computing (CLUSTER), Madrid, Spain. Sept 2014.
+| `1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA) <https://sites.google.com/site/hpcmaspa2014/>`_ at `IEEE Int'l. Conf. on Cluster Computing (CLUSTER) <http://www.cluster2014.org/>`_, Madrid, Spain. Sept 2014.
 
  ::
 | Large Scale System Monitoring and Analysis on Blue Waters Using OVIS -- *Best Paper Finalist*
 | M. Showerman, J. Enos, J. Fullop (NCSA), P. Cassella (Cray), N. Naksinehaboon, N. Taerat, T. Tucker (OGC), J. Brandt, A. Gentile, and B. Allan (SNL)
-| Proc. Cray User's Group (CUG), Lugano, Switzerland. May 2014.
+| Proc. `Cray User's Group (CUG) <https://ssl.linklings.net/conferences/cug/cug2014_program/views/at_a_glance.html>`_, Lugano, Switzerland. May 2014.
 
  ::
 | Large Scale HPC Monitoring
-| New Mexico State University, Las Cruses, NM. April 2014.
+| `New Mexico State University <http://research.nmsu.edu/areas/computer/>`_, Las Cruses, NM. April 2014.
 
 2013
 ^^^^
 | `High Fidelity Data Collection and Transport Service Applied to the Cray XE6/XK6 <https://cug.org/proceedings/cug2013_proceedings/includes/files/pap167-file1.pdf>`_
 | J. Brandt, T. Tucker, A. Gentile, D. Thompson, V. Kuhns, and J. Repik
-| Proc. Cray User's Group (CUG), Napa Valley, CA. May 2013.
+| Proc. `Cray User's Group (CUG) <https://ssl.linklings.net/conferences/cug/cug2013_program/views/at_a_glance.html>`_, Napa Valley, CA. May 2013.
 
 2012
 ^^^^
 | Filtering Log Data: Finding Needles in the Haystack
 | L. Yu, Z. Zheng, Z. Lan, T. Jones, J. Brandt, and A. Gentile
-| IEEE/IFIP Int'l. Conf. on Dependable Systems and Networks (DSN 2012), Boston, MA, 2012, pp. 1-12
+| `IEEE/IFIP Int'l. Conf. on Dependable Systems and Networks (DSN 2012) <http://2012.dsn.org/>`_, Boston, MA, 2012, pp. 1-12
 | `doi: 10.1109/DSN.2012.6263948 <https://doi.org/10.1109/DSN.2012.6263948>`_
 
  ::
@@ -136,7 +139,7 @@ Benjamin Allan
 | OVIS, Lightweight Data Metric Service (LDMS), and Log File Analysis
 | SC|11 Seattle, WA, November 2011.
 - Exhibit ASC Booth 803 -- Demos & talk
-- OVIS at Petascale Systems Management BOF -- *Panelist*
+- OVIS at `Petascale Systems Management BOF <http://sc11.supercomputing.org/schedule/event_detail.php?evid=bof195>`_ -- *Panelist*
 
  ::
 | Develop Feedback System for Intelligent Dynamic Resource Allocation to Improve Application Performance
@@ -168,7 +171,7 @@ Benjamin Allan
 | `HPC Resilience Summit 2010: Workshop on Resilience for Exascale HPC <http://www.csm.ornl.gov/srt/conferences/ResilienceSummit/2010/>`_ at the Los Alamos Computer Science Symposium, Santa Fe, NM. Oct 2010.
 
  ::
-| OVIS 3.2 User's Guide (NB: Deprecated)
+| OVIS 3.2 User's Guide -- *(NB: Deprecated)*
 | J. Brandt, A. Gentile, C. Houf, J. Mayo, P. Pebay, D. Roe, D. Thompson, and M. Wong
 | SAND 2010-7109, Sandia National Laboratories, Oct 2010.
 
@@ -183,7 +186,7 @@ Benjamin Allan
  ::
 | Computing Contingency Statistics in Parallel: Design Trade-Offs and Limiting Cases
 | P. Pébay, D. Thompson, and J. Bennett
-| 2010 IEEE International Conference on Cluster Computing, Heraklion, Greece, 2010, pp. 156-165
+| `2010 IEEE International Conference on Cluster Computing <https://ieeexplore.ieee.org/xpl/conhome/5599992/proceeding>`_, Heraklion, Greece, 2010, pp. 156-165
 | `doi: 10.1109/CLUSTER.2010.43 <https://doi.org/10.1109/CLUSTER.2010.43>`_
 
  ::
@@ -192,12 +195,12 @@ Benjamin Allan
 | SAND2010-2400, Sandia National Laboratories, August 2010.
 
  ::
-| The OVIS analysis architecture (NB: Deprecated)
+| The OVIS analysis architecture -- *(NB: Deprecated)*
 | J. M. Brandt, V. De Sapio, A. C. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. H. Wong
 | Sandia Report SAND2010-5107, Sandia National Laboratories, July 2010.
 
  ::
-| The Python command line interface to the OVIS analysis functionality (NB: Deprecated)
+| The Python command line interface to the OVIS analysis functionality -- *(NB: Deprecated)*
 | J. M. Brandt, A. C. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. H. Wong
 | Sandia Report SAND2010-4289, Sandia National Laboratories, June 2010.
 
@@ -210,7 +213,7 @@ Benjamin Allan
  ::
 | Using Cloud Constructs and Predictive Analysis to Enable Pre-Failure Process Migration in HPC Systems
 | J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
-| 2010 10th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing, Melbourne, VIC, Australia, 2010, pp. 703-708
+| `2010 10th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing <http://www.manjrasoft.com/ccgrid2010/mainpage.html>`_, Melbourne, VIC, Australia, 2010, pp. 703-708
 | `doi: 10.1109/CCGRID.2010.31 <https://doi.org/10.1109/CCGRID.2010.31>`_
 
  ::
@@ -223,7 +226,7 @@ Benjamin Allan
 | Scalable Information Fusion for Fault Tolerance in Large-Scale HPC -- *Minisymposium Presentation*
 | J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
 | Minisymposium on Vertically Integrated Fault Tolerance for Large-Scale Scientific Computing
-at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattle, WA. Feb 2010.
+at the `SIAM Conf. on Parallel Processing and Scientific Computing (PP10) <http://www.siam.org/meetings/pp10/>`_, Seattle, WA. Feb 2010.
 
 2009
 ^^^^
@@ -232,13 +235,13 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
 
  ::
 | Failure Prediction and Resilience in Large-Scale HPC Platforms
-| SC|09 Portland, OR, November 2009.
+| `SC|09 <http://sc09.supercomputing.org/>`_ Portland, OR, November 2009.
 - Exhibit Presentation and Demo
 
  ::
 | Advanced ParaView Visualization
 | K. Moreland, J. Ahrens, D. DeMarle, D. Thompson, P. Pébay and N. Fabian
-| peer-reviewed tutorial on the use of statistics engines at the IEEE VisWeek 2009, Atlantic City, NJ. October 2009.
+| peer-reviewed tutorial on the use of statistics engines at the `IEEE VisWeek 2009 <http://vis.computer.org/VisWeek2009>`_, Atlantic City, NJ. October 2009.
 
  ::
 | Data Fusion and Statistical Analysis: Piercing the Darkness of the Black Box -- *Invited Presentation*
@@ -248,18 +251,18 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
  ::
 | Methodologies for Advance Warning of Compute Cluster Problems via Statistical Analysis: A Case Study
 | J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
-| Proceedings of the 2009 Workshop on Resiliency in High Performance Computing (Resilience) June 2009, pp. 7-14
+| `Proceedings of the 2009 Workshop on Resiliency in High Performance Computing (Resilience) <http://xcr.cenit.latech.edu/resilience2009/>`_ June 2009, pp. 7-14
 | `doi: 10.1145/1552526.1552528 <https://doi.org/10.1145/1552526.1552528>`_
 
  ::
-| Resource Monitoring and Management with OVIS to Enable HPC in Cloud Computing Environments 
+| Resource Monitoring and Management with OVIS to Enable HPC in Cloud Computing Environments
 | J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
-| 2009 IEEE International Symposium on Parallel & Distributed Processing, Rome, Italy, 2009, pp. 1-8
+| `2009 IEEE International Symposium on Parallel & Distributed Processing <http://www.ipdps.org/>`_, Rome, Italy, 2009, pp. 1-8
 | `doi: 10.1109/IPDPS.2009.5161234 <https://doi.org/10.1109/IPDPS.2009.5161234>`_
 - Note: 5th Workshop on System Management Techniques, Processes, and Services (SMTPS) - Special Focus on Cloud Computing -- *Best Paper Award*
 
  ::
-| OVIS 2.0 User's Guide (Deprecated)
+| OVIS 2.0 User's Guide -- *(NB: Deprecated)*
 | J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong
 | SAND 2009-2329, Sandia National Laboratories, April 2009
 
@@ -271,7 +274,7 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
 ^^^^
 | OVIS-2: Whole System Monitoring and Analysis - Toward Understanding and Prediction
 | J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
-| SC|08 Austin, TX. November 2008.
+| `SC|08 <http://sc08.supercomputing.org/>`_ Austin, TX. November 2008.
 - Exhibit Presentation and Demo
 
  ::
@@ -289,20 +292,20 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
  ::
 | Using Probabilistic Characterization to Reduce Runtime Faults on HPC Systems
 | J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay , D. Thompson, and M. Wong
-| 2008 Eighth IEEE International Symposium on Cluster Computing and the Grid (CCGRID), Lyon, France, 2008, pp. 759-764
+| `2008 Eighth IEEE International Symposium on Cluster Computing and the Grid (CCGRID) <http://ccgrid2008.ens-lyon.fr/>`_, Lyon, France, 2008, pp. 759-764
 | `doi: 10.1109/CCGRID.2008.124 <https://doi.org/10.1109/CCGRID.2008.124>`_
 
  ::
 | OVIS-2: A Robust Distributed Architecture for Scalable RAS
 | J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
-| 2008 IEEE International Symposium on Parallel and Distributed Processing, Miami, FL, USA, 2008, pp. 1-8
+| `2008 IEEE International Symposium on Parallel and Distributed Processing <http://www.ipdps.org/>`_, Miami, FL, USA, 2008, pp. 1-8
 | `doi: 10.1109/IPDPS.2008.4536549 <https://doi.org/10.1109/IPDPS.2008.4536549>`_
 
 2007
 ^^^^
 | OVIS-2: A Distributed Framework for Scalable Monitoring and Analysis of Large Computational Clusters
 | J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong
-| SC|07 Reno, NV, November 2007.
+| `SC|07 <http://sc07.supercomputing.org/>`_ Reno, NV, November 2007.
 - Exhibit Presentation and Demo
 
 2006
@@ -314,12 +317,12 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
  ::
 | OVIS: A Tool for Intelligent, Real-time Monitoring of Computational Clusters
 | J. M. Brandt, A. C. Gentile, J. Ortega, P. P. Pébay, D. C. Thompson, and M. H. Wong
-| SC|06 Tampa, FL, November 2006.
+| `SC|06 <http://sc06.supercomputing.org/>`_ Tampa, FL, November 2006.
 - Exhibit Presentation and Demo
 
  ::
 | OVIS: A Tool for Intelligent, Real-Time Monitoring of Computational Clusters
-| Proceedings 20th IEEE International Parallel & Distributed Processing Symposium, Rhodes, Greece, 2006, pp. 8 pp.- 
+| `Proceedings 20th IEEE International Parallel & Distributed Processing Symposium <http://www.ipdps.org/ipdps2006/>`_, Rhodes, Greece, 2006, pp. 8 pp.- 
 | `doi: 10.1109/IPDPS.2006.1639698 <https://doi.org/10.1109/IPDPS.2006.1639698>`_
 
  ::
@@ -331,14 +334,14 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
 ^^^^
 | Bayesian Inference for Intelligent, Real-time Monitoring of Computational Clusters
 | J. M. Brandt, A. C. Gentile, D. J. Hale, Y. M. Marzouk, and P. P. Pébay
-| SC|05 Seattle, Washington, November 2005.
+| `SC|05 <http://sc05.supercomputing.org/>`_ Seattle, Washington, November 2005.
 - Exhibit Presentation, Demo, and Flier
 - Conference Poster
 
  ::
-| Meaningful Automated Statistical Analysis of Large Computational Clusters 
+| Meaningful Automated Statistical Analysis of Large Computational Clusters
 | J. M. Brandt, A. C. Gentile, Y. M. Marzouk and P. P. Pebay
-| 2005 IEEE International Conference on Cluster Computing, Burlington, MA, USA, 2005, pp. 1-2
+| `2005 IEEE International Conference on Cluster Computing <http://www.cluster2005.org/>`_, Burlington, MA, USA, 2005, pp. 1-2
 | `doi: 10.1109/CLUSTR.2005.347090 <https://doi.org/10.1109/CLUSTR.2005.347090>`_
 
  ::
@@ -350,14 +353,14 @@ at the SIAM Conf. on Parallel Processing and Scientific Computing (PP10), Seattl
 ^^^^
 | Detection of System Abnormalities Through Behavioral Analysis of ASC Codes
 | J. M. Brandt and A. C. Gentile
-| SC|04 Exhibit, Pittsburgh, PA, November 2004.
+| `SC|04 <http://acm.supercomputing.org/sc2004>`_ Exhibit, Pittsburgh, PA, November 2004.
 - Exhibit Demo
 
 2003
 ^^^^
 | Distributed Intelligent RAS System for Large Computational Clusters
 | J. M. Brandt, N. M. Berry, R. A. Yao, B. M. Tsudama, and A. C. Gentile
-| SC|03, Phoenix, AZ November 2003.
+| `SC|03 <http://acm.supercomputing.org/sc2003>`_, Phoenix, AZ November 2003.
 - Exhibit Demo
 - Conference Poster
 
@@ -377,7 +380,7 @@ The ASCR funded exascale resilience project Holistic Measurement Driven Resilien
 
 2016
 ^^^^
-| Mutrino Dataset 2/15-6/16 (12/16 Release)(`About <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/about-mutrino1yr-v122016.pdf>`_)
+| Mutrino Dataset 2/15-6/16 (12/16 Release) (`About <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/about-mutrino1yr-v122016.pdf>`_)
 | J. Brandt, A. Gentile, and J. Repik
 | SAND2016-12310 O, Dec 2016
 | [Online]: `http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/mutrino1yr-v122016.tgz <http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/mutrino1yr-v122016.tgz>`_

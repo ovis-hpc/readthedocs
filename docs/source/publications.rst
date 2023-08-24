@@ -73,7 +73,87 @@ foo
 
 2018
 ^^^^
-foo
+| Platform Independent Run Time HPC Monitoring, Analysis, and Feedback at Any-Scale -- *Featured Presentation at DOE Booth*
+| J. Brandt
+| SC18, Nov 2018.
+
+ ::
+| Monitoring Large-Scale HPC Systems: Extracting and Presenting Meaningful System and Application Insights -- *BoF Session Organizer* 
+| `SC18 <https://sc18.supercomputing.org/presentation/?id=bof219&sess=sess452>`_, Nov 2018.
+
+ ::
+| An Efficient Latch-free Database Index Based on Multi-dimensional Lists
+| K. Lamar, R. Izadpanah, J. Brandt, and D. Dechev
+| 2018 IEEE 37th International Performance Computing and Communications Conference (IPCCC), Orlando, FL, USA, 2018, pp. 1-2
+| `doi: 10.1109/PCCC.2018.8710973 <https://doi.org/10.1109/PCCC.2018.8710973>`_
+
+ ::
+| Online Diagnosis of Performance Variation in HPC Systems Using Machine Learning
+| O. Tuncer, E. Ates, Y. Zhang, A. Turk, J. Brandt, V. Leung, M.Egele, and A. Coskun
+| IEEE Transactions on Parallel and Distributed Systems 
+| `doi: 10.1109/TPDS.2018.2870403 <https://doi.org/10.1109/TPDS.2018.2870403>`_, Sep 2018.
+
+ ::
+| A Methodology for Characterizing the Correspondence Between Real and Proxy Applications
+| O. Aaziz, J.M. Cook, J. Cook, T. Juedeman, D. Richards, and C. Vaughan
+| 2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 190-200
+| `doi: 10.1109/CLUSTER.2018.00037 <https://doi.org/10.1109/CLUSTER.2018.00037>`_
+
+ ::
+| Large-Scale System Monitoring Experiences and Recommendations -- *Invited Peer-Reviewed Submission*
+| V. Ahlgren, S. Andersson, J. Brandt, N. P. Cardo, S. Chunduri, J. Enos, P. Fields, A. Gentile, R. Gerber, M. Gienger, J. Greenseid, A. Greiner, B. Hadri, Y. (Helen) He, D. Hoppe, U. Kaila, K. Kelly, M. Klein, A. Kristiansen, S. Leak, M. Mason, K. Pedretti, J-G. Piccinali, J. Repik, J. Rogers, S. Salminen, M. Showerman, C. Whitney, and J. Williams (Authors representing ALCF, CSC, CSCS, HLRS, KAUST, LANL, NCSA, NERSC, ORNL, SNL, and Cray)
+| 2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 532-542
+| `doi: 10.1109/CLUSTER.2018.00069 <https://doi.org/10.1109/CLUSTER.2018.00069>`_
+
+ ::
+| Characterizing Supercomputer Traffic Networks Through Link-Level Analysis
+| S. Jha, J. Brandt, A. Gentile, Z. Kalbarczyk, and R. Iyer
+| 2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 562-570
+| `doi: 10.1109/CLUSTER.2018.00072 <https://doi.org/doi: 10.1109/CLUSTER.2018.00072>`_
+
+ ::
+| Modeling Expected Application Runtime for Characterizing and Assessing Job Performance
+| O. Aaziz, J. Cook, and M. Tanash
+| 2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 543-551
+| `doi: 10.1109/CLUSTER.2018.00070 <https://doi.org/10.1109/CLUSTER.2018.00070>`_
+
+ ::
+| Taxonomist: Application Detection through Rich Monitoring Data -- *Best Artifact Award*
+| E. Ates, O. Tuncer, A. Turk, V. J. Leung, J. Brandt, M. Egele and A. K. Coskun
+| Euro-Par 2018: Parallel Processing: 24th International Conference on Parallel and Distributed Computing, Turin, Italy, August 27 - 31, 2018, Pages 92–105
+| `doi: 0.1007/978-3-319-96983-1_7 <https://doi.org/10.1007/978-3-319-96983-1_7>`_
+| `Artifact <https://doi.org/10.6084/m9.figshare.6384248>`_
+
+ ::
+| Integrating Low-latency Analysis into HPC System Monitoring
+| R. Izadpanah, N. Naksinehaboon, J. Brandt, A. Gentile, and D. Dechev
+| ICPP '18: Proceedings of the 47th International Conference on Parallel Processing, August 2018, Article No.: 5, Pages 1–10
+| `doi: 10.1145/3225058.3225086 <https://doi.org/10.1145/3225058.3225086>`_
+
+ ::
+| Cray System Monitoring: Successes, Requirements, Priorities
+| V. Ahlgren, S. Andersson, J. Brandt, N. P. Cardo, S. Chunduri, J. Enos, P. Fields, A. Gentile, R. Gerber, J. Greenseid, A. Greiner, B. Hadri, Y. He, D. Hoppe, U. Kaila, K. Kelly, M. Klein, A. Kristiansen, S. Leak, M. Mason, K. Pedretti, J-G. Piccinali, J. Repik, J. Rogers, S. Salminen, M. Showerman, C. Whitney, and J. Williams. (Authors representing ALCF, CSC, CSCS, HLRS, KAUST, LANL, NCSA, NERSC, ORNL, SNL, and Cray)
+| `Proc. Cray Users Group (CUG) <https://cug.org/CUG2018>`_, Stockholm, Sweden. May 2018.
+
+ ::
+| Supporting Failure Analysis with Discoverable, Annotated Log Datasets
+| S. Leak, A. Greiner, A. Gentile, and J. Brandt
+| `Proc. Cray Users Group (CUG) <https://cug.org/CUG2018>`_, Stockholm, Sweden. May 2018.
+
+ ::
+| Automated Analysis and Effective Feedback -- *BOF Session Organizer*
+| M. Showerman, J. Brandt, and A. Gentile
+| `Cray Users Group (CUG) <https://cug.org/CUG2018>`_, May 2018.
+
+ ::
+| Runtime HPC System and Application Performance Assessment and Diagnostics
+| J. Brandt, A. Gentile, Jon Cook, B. Allan, Jeanine Cook, O. Aaziz, T. Tucker, N. Naksinehaboon, N. Taerat, E. Ates, O. Tuncer, M. Egele, A. Turk, and A. Coskun
+| `Conference on Data Analysis (CODA) <http://www.cvent.com/events/coda-2018-conference-on-data-analysis-2018/event-summary-3e85bd2488b946d59cf84337876019e7.aspx>`_, Sante Fe, NM, March 2018.
+
+ ::
+| Continuous Performance Tracking for Kokkos using LDMS
+| J. Brandt, S. Hammond, T. Tucker, A. Gentile, and J. Cook
+| Programming Models and CoDesign Meeting, Albuquerque, NM. Feb 2018.
 
 2017
 ^^^^

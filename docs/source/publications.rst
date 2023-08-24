@@ -36,7 +36,13 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 
 2023
 ^^^^
-foo
+| Towards Practical Machine Learning Frameworks for Performance Diagnostics in Supercomputers
+| B. Aksar, E. Sencan, B. Schwaller, V. Leung, J. Brandt, B. Kulis, M. Egele, and A. Coskun
+| AI4Sys '23: Proceedings of the First Workshop on AI for Systems, August 2023, pp 1–6
+| `doi: 10.1145/3588982.3603609 <https://doi.org/10.1145/3588982.3603609>`_
+
+ ::
+| foo
 
 2022
 ^^^^

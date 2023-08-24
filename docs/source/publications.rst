@@ -37,6 +37,12 @@ foo
 
 2022
 ^^^^
+| ALBADross: Active Learning Based Anomaly Diagnosis for Production HPC Systems
+| B. Aksar, E. Sencan, B. Schwaller, O. Aaziz, V. Leung, J. Brandt, B. Kulis, B and A. Coskun,
+| 2022 IEEE International Conference on Cluster Computing (CLUSTER), Heidelberg, Germany, 2022, pp. 369-380
+| `doi: 10.1109/CLUSTER51413.2022.00048 <https://doi.org/Diagnosing Performance Variations in HPC Applications Using Machine Learning 10.1109/CLUSTER51413.2022.00048>`_
+
+ ::
 bar
 
 2021
@@ -71,7 +77,46 @@ foo
 
 2017
 ^^^^
-foo 
+| Systems Monitoring Data in Action -- *BoF Session Organizer*
+| SC17, 12:15pm-1:15 pm Thurs Nov 16 2017.
+
+ ::
+| Holistic Measurement Driven System Assessment
+| S. Jha, J. Brandt, A. Gentile, Z. Kalbarczyk, G. Bauer, J. Enos, M. Showerman, L. Kaplan, B. Bode, A. Greiner, A. Bonnie, M. Mason, R. Iyer, and W. Kramer
+| 2017 IEEE International Conference on Cluster Computing (CLUSTER), Honolulu, HI, USA, 2017, pp. 797-800
+| `doi: 10.1109/CLUSTER.2017.124 <https://doi.org/10.1109/CLUSTER.2017.124>`_
+
+ ::
+| Diagnosing Performance Variations in HPC Applications Using Machine Learning -- *Gauss Award Winner*
+| O. Tuncer, E. Ates, Y. Zhang, A. Turk, J. Brandt, V. J. Leung, M. Egele, and A. K. Coskun
+| High Performance Computing: 32nd International Conference, ISC High Performance 2017, Frankfurt, Germany, June 18–22, 2017, Pages 355–373
+| `doi: 0.1007/978-3-319-58667-0_19 <https://doi.org/10.1007/978-3-319-58667-0_19>`_
+
+ ::
+| LDMS Version 3 Tutorial and Demo Material -- *(NB: Deprecated)*
+| J. Brandt, T. Tucker, A. Gentile, N. Naksinehaboon, and N. Taerat
+| Sandia National Laboratories, SAND2017-5153 O, May 2017.
+
+ ::
+| Understanding Fault Scenarios and Impacts Through Fault Injection Experiments in Cielo
+| V. Formicola, S. Jha, F. Deng, D. Chen (UIUC), A. Bonnie, M. Mason (LANL), J. Brandt, A. Gentile (SNL), L. Kaplan, J. Repik (Cray), J, Enos, M. Showerman (NCSA), A. Greiner (NERSC), Z. Kalbarczyk, R. Iyer, and W. Kramer (UIUC)
+| `Proc. Cray Users Group (CUG) <https://cug.org/CUG2017>`_, May 2017.
+
+ ::
+| Runtime Collection and Analysis of System Metrics for Production Monitoring of Trinity Phase II 
+| A. DeConinck, H. Nam, D. Morton, A. Bonnie, C. Lueninghoener (LANL), J. Brandt, A. Gentile, K. Pedretti, A. Agelastos, C. Vaughan, S. Hammond, B. Allan (SNL), M. Davis and J. Repik (Cray)
+| `Proc. Cray Users Group (CUG) <https://cug.org/CUG2017>`_, May 2017.
+
+ ::
+| Holistic Systems Monitoring and Analysis -- *BOF Session Organizer*
+| M. Showerman, J. Brandt, and A. Gentile
+| `Cray Users Group (CUG) <https://cug.org/CUG2017>`_, May 2017.
+
+ ::
+| Contention and Congestion: Challenges and Approaches to Understanding Application Impact
+| A. Gentile, J. Brandt, A. Agelastos, and J. Lamb, K. Ruggirello, and J. Stevenson
+| `Minisymposium on Understanding Performance Variability due to Application-Data Center Interaction <http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=61301>`_ -- *Minisymposium Organizer*
+| at the `SIAM Conf. on Computational Science and Engineering (CSE 17) <http://www.siam.org/meetings/cse17/>`_, Feb 2017.
 
 2016
 ^^^^

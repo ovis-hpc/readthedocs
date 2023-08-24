@@ -50,6 +50,12 @@ bar
 
 2021
 ^^^^
+| Using Monitoring Data to Improve HPC Performance via Network-Data-Driven Allocation
+| Y. Zhang, B. Aksar, O. Aaziz, B. Schwaller, J. Brandt, V. Leung, M. Egele, and A. Coskun
+| 2021 IEEE High Performance Extreme Computing Conference (HPEC), Waltham, MA, USA, 2021, pp. 1-7
+| `doi: 10.1109/HPEC49654.2021.9622783 <https://doi.org/0.1109/HPEC49654.2021.9622783>`_
+
+ ::
 | Integrating Systems Operations into CoDesign -- *Keynote* 
 | Presented by A. Gentile
 | `2nd Int'l Workshop on Monitoring and Operational Data Analytics (MODA21) <https://moda21.sciencesconf.org/>`_. Jul 2021.
@@ -103,7 +109,7 @@ foo
 | `doi: 10.1109/CLUSTER.2018.00037 <https://doi.org/10.1109/CLUSTER.2018.00037>`_
 
  ::
-| Large-Scale System Monitoring Experiences and Recommendations -- *Invited Peer-Reviewed Submission*
+| Large-Scale System Monitoring Experiences and Recommendations -- *Invited Peer-Reviewed Submission at* `HPCMASPA <https://sites.google.com/site/hpcmaspa2018>`_ 
 | V. Ahlgren, S. Andersson, J. Brandt, N. P. Cardo, S. Chunduri, J. Enos, P. Fields, A. Gentile, R. Gerber, M. Gienger, J. Greenseid, A. Greiner, B. Hadri, Y. (Helen) He, D. Hoppe, U. Kaila, K. Kelly, M. Klein, A. Kristiansen, S. Leak, M. Mason, K. Pedretti, J-G. Piccinali, J. Repik, J. Rogers, S. Salminen, M. Showerman, C. Whitney, and J. Williams (Authors representing ALCF, CSC, CSCS, HLRS, KAUST, LANL, NCSA, NERSC, ORNL, SNL, and Cray)
 | 2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 532-542
 | `doi: 10.1109/CLUSTER.2018.00069 <https://doi.org/10.1109/CLUSTER.2018.00069>`_

@@ -209,7 +209,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
  ::
 | Production Application Performance Data Streaming for System Monitoring
 | R. Izadpanah, B. Allan, D. Dechev, and J. Brandt
-| ACM Transactions on Modeling and Performance Evaluation of Computing Systems (TOMPECS). Vol 4 Issue 2, Article No.: 8, pp 1–25
+| ACM Transactions on Modeling and Performance Evaluation of Computing Systems (TOMPECS). Vol 4 Issue 2, Article No.: 8, pp 1–25, 2019
 | `doi: doi.org/10.1145/3319498 <https://doi.org/10.1145/3319498>`_
 
  ::

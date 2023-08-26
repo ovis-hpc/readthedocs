@@ -80,7 +80,53 @@ bar
 
 2020
 ^^^^
-foo 
+ ::
+| HPC System Data Pipeline to Enable Meaningful Insights through Analytic-Driven Visualizations
+| B. Schwaller, N. Tucker, T. Tucker, B. Allan, and J. Brandt
+| in 2020 IEEE International Conference on Cluster Computing (CLUSTER), Kobe, Japan, 2020 pp. 433-441.
+| `doi: 10.1109/CLUSTER49012.2020.00062 <https://doi.org/10.1109/CLUSTER49012.2020.00062>`_
+
+ ::
+| Towards Workload-Adaptive Scheduling for HPC Clusters
+| A. Goponenko, R. Izadpanah, J. Brandt, and D. Dechev
+| 2020 IEEE International Conference on Cluster Computing (CLUSTER), Kobe, Japan, 2020, pp. 449-453
+| `doi: 10.1109/CLUSTER49012.2020.00064 <https://doi.org/10.1109/CLUSTER49012.2020.00064>`_
+
+ ::
+| LDMS Monitoring of EDR InfiniBand Networks -- *workshop work-in-progress paper & presentation*
+| B. Allan, M. Aguilar, B. Schwaller, S. Langer
+| 2020 IEEE International Conference on Cluster Computing (CLUSTER), Kobe, Japan, 2020, pp. 459-463
+| `doi: 10.1109/CLUSTER49012.2020.00066 <https://doi.org/10.1109/CLUSTER49012.2020.00066>`_
+| Also as Sandia Technical Report SAND2020-8534C (paper) and SAND2020-9599C (presentation).
+
+ ::
+| Inspecting fast commodity RDMA network performance on production systems with LDMS -- *Workshop presentation*
+| B. Allan, M. Aguilar, B. Schwaller, S. Langer
+| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
+| Sandia Technical report SAND2020-8014C.
+
+ ::
+| Production LDMS, genders, systemd, and the future -- *Workshop presentation*
+| B. Allan
+| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
+| Sandia Technical report SAND2020-8015C.
+ 
+ ::
+| LDMS packaging: Moving from tribal knowledge to community knowledge -- *Workshop presentation*
+| B. Allan
+| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
+| Sandia Technical report SAND2020-8013C.
+
+ ::
+| `Measuring Congestion in High-Performance Datacenter Networks <https://www.usenix.org/conference/nsdi20/presentation/jha>`_
+| S. Jha, A. Gentile, J. Brandt, A. Patke, B. Lim, G. Bauer, M. Showerman, L. Kaplan, Z. Kalbarczyk, W. Kramer, and R. Iyer
+| In the `17th USENIX Symposium on Networked Systems Design and Implementation (NSDI) <https://www.usenix.org/conference/nsdi20>`_. Feb 2020.
+
+ ::
+| Attributing Performance Variation from Integrated Application and System Data -- *poster*
+| O. Aaziz, B. Allan, J. Brandt, J. Cook., K. Devine, J. Elliott, A. Gentile, S. Olivier, K. Pedretti, and T. Tucker
+| Applied Computer Science Meeting, Feb 2020.
+
 
 2019
 ^^^^

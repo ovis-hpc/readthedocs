@@ -84,7 +84,89 @@ foo
 
 2019
 ^^^^
-foo
+| Enabling Machine Learning-based HPC Performance Diagnostics in Production Environments -- *Panel Organizer*
+| Organizers: M. Showerman, J. Greenseid, A. Gentile, and J. Brandt
+| Panelists: W. T. Kramer (NCSA), R. Gerber (NERSC), N. Brown (EPCC), and A. Saxton (NCSA)
+| `SC19 <https://sc19.supercomputing.org>`_, Fri 11/22 8:30 AM Nov 2019
+
+ ::
+| Holistic Measurement Driven System Assessment (HMDSA) -- *poster*
+| S. Jha, M. Showerman, A. Saxton, J. Enos, G. Bauer, Z. Kalbarczyk, A. Gentile, J. Brandt, R. Iyer, and W. T. Kramer
+| `SC19 <https://sc19.supercomputing.org>`_, Nov 2019.
+
+ ::
+| A Machine Learning Approach to Understanding HPC Application Performance Variation -- *poster*
+| B. Aksar, B. Schwaller, O. Aaziz, E. Ates, J. Brandt, A. K. Coskun, M. Egele, and V. Leung
+| `SC19 <https://sc19.supercomputing.org>`_, Nov 2019.
+
+ ::
+| LDMS v4: Writing Sampler and Store Plugins
+| A. Gentile
+| `LDMS User's Group Conference 2019 (LDMSCON2019) <https://sites.google.com/view/ldmscon2019>`_
+| Sandia National Laboratories, SAND2019-12858 O, Oct 2019.
+
+ ::
+| Figures of merit for production HPC
+| B. Allan
+| Sandia National Laboratories, SAND2019-12564, Oct. 2019.
+| `doi: 10.2172/1571365 <https://doi.org/10.2172/1571365>`_
+
+ ::
+| Proxy or Imposter? A Method and Case Study to Determine the Answer
+| O. Aaziz, J. Cook, C. Vaughan, and D. Richards
+| 2019 IEEE International Conference on Cluster Computing (CLUSTER), Albuquerque, NM, USA, 2019, pp. 1-9
+| `doi: 10.1109/CLUSTER.2019.8891049 <https://doi.org/10.1109/CLUSTER.2019.8891049>`_
+
+ ::
+| Standardized Environment for Monitoring Heterogeneous Architectures
+| C. Brown, B. Schwaller, N. Gauntt, B. Allan and K. Davis
+| 2019 IEEE International Conference on Cluster Computing (CLUSTER), Albuquerque, NM, USA, 2019, pp. 1-5
+| doi: 10.1109/CLUSTER.2019.8890997 <https://doi.org/10.1109/CLUSTER.2019.8890997>`_
+
+ ::
+| A Study of Network Congestion in Two Supercomputing High-Speed Interconnects
+| S. Jha, A. Patke, J. Brandt, A. Gentile, M. Showerman, E. Roman, Z. Kalbarczyk, and R. Iyer
+| in 2019 IEEE Symposium on High-Performance Interconnects (HOTI), Santa Clara, CA, USA, 2019, pp. 45-48
+| doi: 10.1109/HOTI.2019.00024 <https://doi.org/10.1109/HOTI.2019.00024>`_
+
+ ::
+| `Sandia HPC cluster performance monitoring, analysis & visualization <https://www.osti.gov/servlets/purl/1641829>`_
+| B. Allan
+| Sandia National Laboratories, SAND2019-10266C, Aug. 2019.
+
+ ::
+| HPAS: An HPC Performance Anomaly Suite for Reproducing Performance Variations
+| E. Ates, Y. Zhang, B. Aksar, J. Brandt, V. J. Leung, M. Egele, and A. K. Coskun
+| ICPP '19: Proceedings of the 48th International Conference on Parallel Processing, August 2019, Article No.: 40, Pages 1–10
+| `doi: 10.1145/3337821.3337907 <https://doi.org/10.1145/3337821.3337907>`_
+
+ ::
+| Production Application Performance Data Streaming for System Monitoring
+| R. Izadpanah, B. Allan, D. Dechev, and J. Brandt
+| ACM Transactions on Modeling and Performance Evaluation of Computing Systems (TOMPECS). Vol 4 Issue 2, Article No.: 8, pp 1–25
+| `doi: doi.org/10.1145/3319498 <https://doi.org/10.1145/3319498>`_
+
+ ::
+| Exploring New Monitoring and Analysis Capabilities on Cray’s Software Preview System
+| J. Brandt, C. Brown, S. Donoho, A. Gentile, J. Greenseid, W. Kramer, P. Langer, A. Rashid, K. Rehm, and M. Showerman
+| at `Cray User Group (CUG) 2019 <https://cug.org/cug-2019/>`_. May 2019.
+
+ ::
+| Extracting Actionable System-Application Performance Factors
+| J. Brandt, A. Gentile, and J. Cook
+| Minisymposium on Modeling Resource Utilization and Contention in HPC System-Application Interactions -- *Minisymposium Organizer*
+| at the `SIAM Conf. on Computational Science and Engineering (CSE 19) <http://www.siam.org/meetings/cse19/>`_, Feb-Mar 2019.
+
+ ::
+| Holistic Measurement Driven System Assessment (HMDSA) -- `poster <https://hmdsa.github.io/hmdsa/pages/resources/figs/ECP_Kramer_poster_fin.pdf>`_
+| Bill Kramer, Greg Bauer, Brett Bode, Mike Showerman, Jeremy Enos, Aaron Saxton, Saurabh Jha, Zbigniew Kalbarczyk, and Ravishankar Iyer (NCSA/UIUC) and James Brandt and Ann Gentile (SNL)
+| at `Exascale Computing Project Annual Meeting 2019 <https://ecpannualmeeting.com/>`_, Jan 2019.
+| and `HMDSA Project Website <https://hmdsa.github.io/hmdsa/>`_
+
+ ::
+| Two Weeks In The Life of Skybridge -- SLURM and LDMS metrics and metadata.
+| B. Allan
+| Sandia National Laboratories SAND 2019-4915, April 2019.
 
 2018
 ^^^^

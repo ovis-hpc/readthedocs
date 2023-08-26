@@ -47,7 +47,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | ALBADross: Active Learning Based Anomaly Diagnosis for Production HPC Systems
 | B. Aksar, E. Sencan, B. Schwaller, O. Aaziz, V. Leung, J. Brandt, B. Kulis, B and A. Coskun,
 | 2022 IEEE International Conference on Cluster Computing (CLUSTER), Heidelberg, Germany, 2022, pp. 369-380
-| `doi: 10.1109/CLUSTER51413.2022.00048 <https://doi.org/Diagnosing Performance Variations in HPC Applications Using Machine Learning 10.1109/CLUSTER51413.2022.00048>`_
+| `doi: 10.1109/CLUSTER51413.2022.00048 <https://doi.org/10.1109/CLUSTER51413.2022.00048>`_
 
  ::
 | Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling A. Goponenko, K. Lamar,

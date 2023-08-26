@@ -41,8 +41,6 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | AI4Sys '23: Proceedings of the First Workshop on AI for Systems, August 2023, pp 1–6
 | `doi: 10.1145/3588982.3603609 <https://doi.org/10.1145/3588982.3603609>`_
 
- ::
-| foo
 
 2022
 ^^^^
@@ -52,10 +50,25 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `doi: 10.1109/CLUSTER51413.2022.00048 <https://doi.org/Diagnosing Performance Variations in HPC Applications Using Machine Learning 10.1109/CLUSTER51413.2022.00048>`_
 
  ::
-bar
+| Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling A. Goponenko, K. Lamar,
+| C. Peterson, B. Allan, J. Brandt, and D. Dechev 
+| 2022 IEEE 34th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD), Bordeaux, France, 2022, pp. 241-252
+| `doi: 10.1109/SBAC-PAD55451.2022.00035 <https://doi.org/10.1109/SBAC-PAD55451.2022.00035>`_
 
 2021
 ^^^^
+| Systematically Inferring I/O Performance Variability by Examining Repetitive Job Behavior 
+| E. Costa, T. Patel, B. Schwaller, J. Brandt, D. Tiwari 
+| SC '21: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, November 2021, Article No.: 33, Pages 1–15
+| `doi: 10.1145/3458817.3476186 <https://doi.org/10.1145/3458817.3476186>`_
+
+ ::
+| Backfilling HPC Jobs with a Multimodal-Aware Predictor 
+| K. Lamar, A. Goponenko, C. Peterson, B. Allan, J. Brandt, and D. Dechev 
+| 2021 IEEE International Conference on Cluster Computing (CLUSTER), Portland, OR, USA, 2021, pp. 618-622 
+| `doi: 10.1109/Cluster48925.2021.00093.021 <https://doi.org/10.1109/Cluster48925.2021.00093.021>`_
+
+ ::
 | Using Monitoring Data to Improve HPC Performance via Network-Data-Driven Allocation
 | Y. Zhang, B. Aksar, O. Aaziz, B. Schwaller, J. Brandt, V. Leung, M. Egele, and A. Coskun
 | 2021 IEEE High Performance Extreme Computing Conference (HPEC), Waltham, MA, USA, 2021, pp. 1-7
@@ -116,6 +129,13 @@ bar
 | B. Allan
 | `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
 | Sandia Technical report SAND2020-8013C.
+
+ ::
+| ALAMO: Autonomous Lightweight Allocation, Management, and Optimization 
+| R. Brightwell, K. B. Ferreira, R. E. Grant, S. Levy, J. Lofstead, S. L. Olivier, K. T. Pedretti, A. J. Younge, A. Gentile, and J. Brandt. 
+| In: Nichols J., Verastegui B., Maccabe A., Hernandez O., Parete-Koon S., Ahearn T. (eds) Driving Scientific and Engineering Discoveries Through the Convergence of HPC, Big Data and AI. 
+| Smoky Mountains Computational Sciences and Engineering Conference (SMC2020) Communications in Computer and Information Science, vol 1315. Springer, Cham., 2020.
+| `doi: 10.1007/978-3-030-63393-6_27 <https://doi.org/10.1007/978-3-030-63393-6_27>`_
 
  ::
 | `Measuring Congestion in High-Performance Datacenter Networks <https://www.usenix.org/conference/nsdi20/presentation/jha>`_

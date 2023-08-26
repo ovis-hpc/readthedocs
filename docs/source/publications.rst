@@ -72,7 +72,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | Using Monitoring Data to Improve HPC Performance via Network-Data-Driven Allocation
 | Y. Zhang, B. Aksar, O. Aaziz, B. Schwaller, J. Brandt, V. Leung, M. Egele, and A. Coskun
 | 2021 IEEE High Performance Extreme Computing Conference (HPEC), Waltham, MA, USA, 2021, pp. 1-7
-| `doi: 10.1109/HPEC49654.2021.9622783 <https://doi.org/0.1109/HPEC49654.2021.9622783>`_
+| `doi: 10.1109/HPEC49654.2021.9622783 <https://doi.org/10.1109/HPEC49654.2021.9622783>`_
 
  ::
 | Integrating Systems Operations into CoDesign -- *Keynote* 

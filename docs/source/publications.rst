@@ -193,7 +193,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | A Study of Network Congestion in Two Supercomputing High-Speed Interconnects
 | S. Jha, A. Patke, J. Brandt, A. Gentile, M. Showerman, E. Roman, Z. Kalbarczyk, and R. Iyer
 | in 2019 IEEE Symposium on High-Performance Interconnects (HOTI), Santa Clara, CA, USA, 2019, pp. 45-48
-| doi: 10.1109/HOTI.2019.00024 <https://doi.org/10.1109/HOTI.2019.00024>`_
+| `doi: 10.1109/HOTI.2019.00024 <https://doi.org/10.1109/HOTI.2019.00024>`_
 
  ::
 | `Sandia HPC cluster performance monitoring, analysis & visualization <https://www.osti.gov/servlets/purl/1641829>`_

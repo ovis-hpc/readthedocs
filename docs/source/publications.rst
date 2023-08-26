@@ -187,7 +187,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | Standardized Environment for Monitoring Heterogeneous Architectures
 | C. Brown, B. Schwaller, N. Gauntt, B. Allan and K. Davis
 | 2019 IEEE International Conference on Cluster Computing (CLUSTER), Albuquerque, NM, USA, 2019, pp. 1-5
-| doi: 10.1109/CLUSTER.2019.8890997 <https://doi.org/10.1109/CLUSTER.2019.8890997>`_
+| `doi: 10.1109/CLUSTER.2019.8890997 <https://doi.org/10.1109/CLUSTER.2019.8890997>`_
 
  ::
 | A Study of Network Congestion in Two Supercomputing High-Speed Interconnects

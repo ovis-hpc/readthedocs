@@ -66,7 +66,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | Backfilling HPC Jobs with a Multimodal-Aware Predictor 
 | K. Lamar, A. Goponenko, C. Peterson, B. Allan, J. Brandt, and D. Dechev 
 | 2021 IEEE International Conference on Cluster Computing (CLUSTER), Portland, OR, USA, 2021, pp. 618-622 
-| `doi: 10.1109/Cluster48925.2021.00093.021 <https://doi.org/10.1109/Cluster48925.2021.00093.021>`_
+| `doi: 10.1109/Cluster48925.2021.00093 <https://doi.org/10.1109/Cluster48925.2021.00093>`_
 
  ::
 | Using Monitoring Data to Improve HPC Performance via Network-Data-Driven Allocation

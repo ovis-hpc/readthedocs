@@ -8,7 +8,7 @@ Configuring the Query and Visualization
 ---------------------------------------
 .. image:: images/grafanapanel.png
 
-Once you right click on the panel title and select edit, the panel settings will appear. The first tab is for configuring the query. There are 10 fields in the query field defined below:
+Once you right click on the panel title and select edit, the panel settings will appear. The first tab is for configuring the query. There are 8 fields in the query field defined below:
 
 * Query Type - type of query to perform. The most commonly used in "analysis" which calls an analysis module. "metrics" is used to return raw data without any analysis module. 
 * Query Format - the type of visualization to be used on the dataset. It is used by Grafana Formatter to properly JSON-ify the data returned from the analysis module. Can be either time_series, table, or heatmap.

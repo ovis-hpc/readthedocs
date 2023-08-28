@@ -25,6 +25,7 @@ Example Analysis Module
 Below is a basic analysis that simply queries the database and returns the DataFrame of the metrics passed in along with the timestamp, component_id, and job_id for each metric. 
 
 .. code-block :: python
+
     import os, sys, traceback
     import datetime as dt
     from graf_analysis.grafanaAnalysis import Analysis

@@ -9,27 +9,6 @@ Creating a New Dashboard
 
 The Grafana interface can be accessed at <URL>. To create a new dashboard, click on the + sign on the left side of the home page and hit dashboard. This will create a blank dashboard with an empty panel in it. Panels can be thought of as a visualization of a single query. Hit the add query button on the panel to begin configuring the query to be sent to an analysis module. 
 
-Configuring the Query and Visualization
-///////////////////////////////////////
-<add image here>
-
-Once you hit either add query on a panel or right click on the panel title and hit edit, the panel settings will appear. The first tab is for configuring the query. There are 10 fields in the query field defined below:
-
-* Format - The type of visualization to be used on the dataset (time_series or table). Is used by Grafana Formatter to properly json-ify the data returned from the analysis module. 
-* Container - The name of the container to be used. This path will also be used in the analysis module later on to query the correct container.
-* (Optional) Schema - What LDMS schema will be passed into the analysis module
-* (Optional) Job ID - Pass a slurm job ID into the query. If don't you want to pass a value, input 0
-* (Optional) Comp ID - Pass a component ID into the query. If don't you want to pass a value, input 0
-* (Optional) User Name - Pass a user name into the query
-* (Optional) Metric - Pass a metric, or a comma separated list (without spaces) of metrics, into the analysis module
-* Query Type - type of query to perform. The most commonly used in "analysis" which calls an analysis module. "Metrics" is used to return raw data without any analysis module. Others are unused currently. 
-* Analysis - required if you choose analysis query type. Specifies the python script and class name to call to get data. 
-* (Optional) Extra Params - Pass in an arbitrary string into the analysis module
-
-The second tab in the panel settings is for visualization. Graph, Table, and Heatmap are the available visualizations for a query output. Text, which uses Markdown language, could also be used for Dashboard descriptions or details. If you use a graph visualization, the query Format should be time_series. If you use a table visualization, the query Format should be table.
-
-Graphs have multiple draw modes: bars, lines, and points. You can any or all of these draw modes on. You can also stack multiple time_series using the stack toggle button. 
-
 Dashboard Variables and Advanced Settings
 /////////////////////////////////////////
 

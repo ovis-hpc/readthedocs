@@ -5,7 +5,7 @@ Create A Simple Analysis
 ------------------------
 To start, please create a folder called ``graf_analysis`` in your home directory and copy the following contents to a python file called ``queryMeminfo.py``:
 
-* This is a python analysis that queries the DSOS database and returns a DataFrame of all the "meminfo" metrics along with the ``timestamp``, ``component_id`` and ``job_id``. 
+* This is a python analysis that queries the DSOS database and returns a DataFrame of the ``meminfo`` schema metrics along with the ``timestamp``, ``component_id`` and ``job_id``. 
 
 queryMeminfo.py:
 
@@ -17,7 +17,7 @@ queryMeminfo.py:
     from sosdb import Sos
     import pandas as pd
     import numpy as np
-    class dsosTemplate(Analysis):
+    class queryMeminfo(Analysis):
         def __init__(self, cont, start, end, schema='meminfo', maxDataPoints=4096):
             super().__init__(cont, start, end, schema, 1000000)
     
@@ -42,8 +42,7 @@ queryMeminfo.py:
 
 Test Analysis via Terminal Window
 ----------------------------------
-You do not need to query from the Grafana interface to test your module. Below is a simple code which mimics the Grafana pipeline and prints the JSON returned to Grafana. 
-If you wish to find a username based on another metric listed in the schema "jobid", just include "job_id=<job_id number>" to the get_data function. 
+You can easily test your module without the Grafana interface by creating a python script that mimics the Grafana query and formats the returned JSON into a timeseries dataframe or table. 
 
 First, you will need to set your path and pythonpath environment variables with the following:
 
@@ -52,11 +51,9 @@ First, you will need to set your path and pythonpath environment variables with 
     export PYTHONPATH=/usr/bin/python:/<INSTALL_PATH>/lib/python<PYTHON_VERSION>/site-packages/
     export PATH=/usr/bin:/<INSTALL_PATH>/bin:/<INSTALL_PATH>/sbin::$PATH
 
-* Then create the following file in the same directory as your python analysis (i.e. ``/user/home/graf_analysis/``) and label it ``testModule.py``. This python script imitates the Grafana query that calls your analysis module and will output the DataFrame described earlier.
+* Then create the following file in the same directory as your python analysis (i.e. ``/user/home/graf_analysis/``) and label it ``testModule.py``. 
 
-.. note::
-
-  You will need to provide the path to the DSOS container and Sos.Session() configuration file in order to run this python script. Please see the :doc:`pyanalysis.rst` for more details.
+* This python script imitates the Grafana query that calls your analysis module and will return a timeseries DataFrame of the ``Active`` and ``Inactive`` meminfo metrics.
 
 .. code-block :: python
 
@@ -73,14 +70,18 @@ First, you will need to set your path and pythonpath environment variables with 
     cont = '<PATH_TO_DATABASE>'
     cont = sess.open(cont)
     
-    model = dsosTemplate(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
+    model = queryMeminfo(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
     
-    x = model.get_data(['Active'])
+    x = model.get_data(['Active','Inactive'])
     
     #fmt = table_formatter(x)
     fmt = time_series_formatter(x)
     x = fmt.ret_json()
     print(x)
+
+.. note::
+
+  You will need to provide the path to the DSOS container and ``Sos.Session()`` configuration file in order to run this python script. Please see the :doc:`pyanalysis.rst` for more details.
 
 * Next, run the python module:
 
@@ -88,28 +89,42 @@ First, you will need to set your path and pythonpath environment variables with 
 
   python3 testModule.py
 
-  All imports are python scripts that need to reside in the same directory as the test analysis module in order for it to run successfully.  
+.. note::
+
+    All imports are python scripts that need to reside in the same directory as the test analysis module in order for it to run successfully.  
 
 Then, run the python script with the current python verion installed. In this case it would be ``python3 <analysisTemplate.py>``
 
+Expected Results & Output
++++++++++++++++++++++++++
+The following is an example test of an analysis module that queries the schema "job_id" and outputs the
+
 Test Analysis via Grafana Dashboard
 -----------------------------------
+You can optionally test the analysis in a grafana dashboard. This is not preferred because it is a bit more time consuming and, if there is a lot of data to query, there can be some additional wait time in that as well.
 
 Create A New Dashboard
 //////////////////////
-The Grafana interface can be accessed at <URL>. To create a new dashboard, click on the + sign on the left side of the home page and hit dashboard. This will create a blank dashboard with an empty panel in it. Panels can be thought of as a visualization of a single query. Hit the add query button on the panel to begin configuring the query to be sent to an analysis module. 
+To create a new dashboard, click on the + sign on the left side of the home page and hit dashboard. This will create a blank dashboard with an empty panel in it. Hit the add query button on the panel to begin configuring the query to be sent to an analysis module. 
 
 .. note::
   
   For more information on how to navigate around the Grafana dashboard and what the variables and advanced settings do, please see :doc:`Grafana Panel <grafanapanel>` and :doc:`Grafana Usage <grafanause>`
 
-Expected Results & Output
--------------------------
-Terminal Window
-/////////////////////////////
-The following is an example test of an analysis module that queries the schema "job_id" and outputs the
+* Next, add your analysis by filling out the required fields shown below:
+.. image::
 
-Grafana Dashboard
-/////////////////////////////////
+
+* These fields are identical to the python script you can generate to test in your terminal window so please refer to :ref:`Test Analysis via Terminal Window` or :doc:`Grafana Panel <grafanapanel>` for more details.
+
+* Now change the analysis to query from the last 5 minutes by selecting the down arrow in the top right of the panel and selecting "Last 5 minutes"
+.. image::
+
+* Then change the refresh rate to 5 seconds so that Grafana will automatically query the data every 5 seconds
+.. image::
+
+* Now you should be able to see a the "Active" and "Inactive" values for each job_id.
+.. image::
+
 
 

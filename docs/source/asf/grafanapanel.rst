@@ -19,6 +19,10 @@ Once you right click on the panel title and select edit, the panel settings will
 * Extra Params - (Optional) pass in an arbitrary string into the analysis module
 * Filters - (Optional) include a no-sql like syntax for filtering your query, can be a comma separated list of filters i.e. component_id == 5,job_id > 0
 
-The second tab in the panel settings is for visualization. Graph, Table, and Heatmap are the available visualizations for a query output. Text, which uses Markdown language, could also be used for Dashboard descriptions or details. If you use a graph visualization, the query Format should be time_series. If you use a table visualization, the query Format should be table.
+The second tab in the panel settings is for visualization. Graph, Table, and Heatmap are the available visualizations for a query output. 
+
+Text, which uses Markdown language, could also be used for Dashboard descriptions or details. If you use a graph visualization, the query Format should be time_series. If you use a table visualization, the query Format should be table.
 
 Graphs have multiple draw modes: bars, lines, and points. You can any or all of these draw modes on. You can also stack multiple time_series using the stack toggle button.
+
+For more information about how to view the data and configure the panels, please see Grafana's `Panels and Visualization Documentation <https://grafana.com/docs/grafana/latest/panels-visualizations/>`_

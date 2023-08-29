@@ -67,15 +67,14 @@ With the example parameters specified in the last section, our select statement 
 
 Testing an Analysis Module
 --------------------------
-This section goes over how to test your python analysis module as a user. 
+This section goes over how to test your python analysis module as a user.  
 
 You do not need to query from the Grafana interface to test your module. Below is a simple code which mimics the Grafana pipeline and prints the JSON returned to Grafana.
 
 .. note::
 
-	**If Grafana and SOS are already installed on your system then please skip the `Required Scripts`_ section** and ask your system administrator where these scripts reside on the system (usually under a "graf_analysis" folder) so that you may copy all necessary python scripts and modules to your home directory (/home/<username>/<grafana_analysis>), edit/modify exisiting python analysis modules and create new ones.
+	**If Grafana and SOS are already installed on your system then please skip the `Required Scripts`_ section** and ask your system administrator where these scripts reside on the system so that you may copy all necessary python scripts and modules to your home directory, edit/modify exisiting python analysis modules and create new ones.
 
-	If these python scripts or modules **do not exist on your system and you have no way of accessing them** then please continue to the `Required Scripts`_ section.
 
 .. code-block :: bash
 
@@ -108,14 +107,22 @@ Then you can imitate the Grafana query to call your analysis module using a pyth
     x = fmt.ret_json()
     print(x)
 
+* The ``model.get_data`` is where you can define the type of metrics to collect (in this case it is "Active"), what filters and extra parameters you want to add to your query. The syntax is as follows: ``(['<metric>'], filters=['job_id>0'], params='<variable>')``
+
+* If you would like to query all metrics then replace ``Active`` with ``*``.
+* To query a specific job_id: set ``job_id`` to you job_id with ``==``.
+* To query from a specific time range: update the start time, ``time.time()-300`` and end time, ``time.time()`` to an epoch timestamp. 
+* To add a string metric, filter or parameter, you must include a double quote, ``"``, before and after the string (i.e. ``filters=['user=="myusername"']``)
+
 .. note::
 
-	To make things easier, you can always populate an .sh file with this content and will only need to run ``source <pythonsetup.sh>``
-	All imports are python scripts that need to reside in the same directory as the test analysis module in order for it to run successfully.  
+	The ``params`` can be any number or string that you want to define in your analysis module to better manage, output or analyze the data. For example, you can program your module to return specific analyses such as the average with ``params='analysis=average'`` by parsing the arguement, using ``if`` statements to determine what analysis to apply to the data and, to make things cleaner, a function to perform these calculations in.   
 	
 Required Scripts
------------------
-The following scripts are needed to run the python analysis module. **If you do not have access to these existing scripts** then please create them in the same directory as your python analysis module. 
+////////////////
+The following scripts are needed to run the python analysis module. If these python scripts or modules **do not exist on your system and you have no way of accessing them** then please continue. Otherwise, you can skip this section
+
+**If you do not have access to these existing scripts** then please create them in the same directory as your python analysis module. 
 
 .. note::
   

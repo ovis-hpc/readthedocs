@@ -54,7 +54,7 @@ LDMS collects a set of runtime timeseries data of the application in parallel wi
 Any data collected by LDMS should have the same fields as the one shown above and can be viewed in a csv file **if** the LDMS csv_store plugin is configured in the LDMSD aggregator.
 
 .. note::
-  More informaiton about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon>`_ under `<Darshan>`_ or in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
+  More informaiton about starting and configuring and LDMS daemon to store to CSV can be found in the "ref:`Run An LDMS Streams Daemon>` under :ref:`<Darshan>` or in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
 
 
 
@@ -72,7 +72,7 @@ A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s o
 
 .. note::
   
-  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart.rst>`_.
+  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
 
 Compile and Build with LDMS
 ---------------------------
@@ -133,7 +133,7 @@ Below are the instructions to configure your system to run a Darshan test script
 Run An LDMS Streams Daemon
 ///////////////////////////
 This section will go over how to start and configure a simple LDMS Streams deamon to collect the Darshan data and store to a CSV file. 
-If an LDMS Streams daemon is already running on the system then please skip to the next section `Execute The Test Script(s)`_.
+If an LDMS Streams daemon is already running on the system then please skip to the next section :ref:`Execute The Test Script(s)`.
 
 1. First, initialize an ldms streams daemon on a compute node as follows:
 
@@ -158,7 +158,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   export HOSTNAME="localhost"
 .. note::
   
-  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_. UPDATED
+  LDMS must already be installed on the system or locally. If it is not, then please follow ``Getting The Source`` and ``Building The Source`` in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
 
 3. Next, create a file called **"darshan\_stream\_store.conf"** and add the following content to it:
 
@@ -445,7 +445,7 @@ This section provides the expected output of an application run with the data pu
 
 * If you are publishing to a local streams daemon (compute or login nodes) to collect the Darshan data then please compare the generated csv file to the one shown below in this section. 
 
-* If you are publishing to a system daemon that aggregates the data and stores to a Scalable Object Store (SOS), please skip this section and go to the `SOS Quickstart Guide <sos-quickstart.rst>`_ for more information about viewing and accessing data from this database.
+* If you are publishing to a system daemon that aggregates the data and stores to a Scalable Object Store (SOS), please skip this section and go to the :doc:`SOS Quickstart Guide <sos-quickstart>` for more information about viewing and accessing data from this database.
 
 LDMS Log File
 /////////////

@@ -490,7 +490,9 @@ Kokkos
 
 A C++ parallel programming ecosystem for performance portability across multi-core, many-core, and GPU node architectures. Provides abstractions of parallel execution of code and data management.
 
-**What Is The kokkosConnector?**
+Setup and Configuration
+----------------------
+**The KokkosConnector**
 
 A Kokkos-LDMS functionality that utilizes LDMS Streams to collect Kokkos related data during runtime. Kokkos sampler, provided by the Kokkos-tools library, controls the sampling rate and provides the option to sample data using a count-based push. It then formats the data to a JSON message and *publishes* it to an LDMS streams interface. 
 

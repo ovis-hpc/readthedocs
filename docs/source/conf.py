@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'OVIS-HPC'
-copyright = '2022, Sandia National Laboratories and Open Grid Computing, Inc.'
+copyright = '2023, Sandia National Laboratories and Open Grid Computing, Inc.'
 author = 'SNL/OGC'
 
 release = '0.1'

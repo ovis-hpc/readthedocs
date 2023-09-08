@@ -6,4 +6,3 @@ About Maestro
    :maxdepth: 2
 
    maestro-quickstart
-   container-quickstart

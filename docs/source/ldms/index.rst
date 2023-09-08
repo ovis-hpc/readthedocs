@@ -8,6 +8,7 @@ About LDMS
    ldms-quickstart
    ldms-tutorial
    ldms-streams
+   container-quickstart
 
 .. toctree::
    :maxdepth: 2

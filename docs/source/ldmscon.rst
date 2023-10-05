@@ -14,6 +14,26 @@ Please go to the <insert-link> to stay up to date on tutorials, presentations an
 
 LDMSCON2023
 ************
+The following attachment contains the scripts and commands used in the LDMCON2023 Basics powerpoint presentation. 
+
+**Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial.**
+
+:download: `LDMSCON2023 Directory Structure <https://github.com/ovis-hpc/readthedocs/blob/main/files/ldmscon2023_directory.zip>`_
+
+**If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation will need to be changed**, along with the following files, to the absolute path of where the ``ldmscon2023/``.
+
+   * ``../conf/e3/agg_store_csv.conf``
+   * ``../scripts/e1/start_ldms_simple.sh``
+   * ``../scripts/e2/start_ldms_simple_agg.sh``
+   * ``../scripts/e3/start_agg_store_csv.sh``
+   * ``../scripts/e3/store_csv.txt``
+
+.. note::
+   All files under ``../scripts/e*`` are not used in the tutorial but rather are the commands/steps used for each exercise. They demonstrate LDMS's ability to configure and initialize it's daemons with a single bash script. 
+
+.. note:: 
+   These scripts must be ran in a directory that is readable and writable. Otherwise the log/data file generation will not work.
+
 Recordings of previous presentations, tutorials and information for LDMSCON2023 can be found here:
 `LDMSCON2023 <https://sites.google.com/view/ldmscon2023>`_
 

@@ -18,7 +18,7 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 **Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial.**
 
-:download: `LDMSCON2023 Directory Structure <https://github.com/ovis-hpc/readthedocs/blob/main/files/ldmscon2023_directory.zip>`_
+:download: `ldmscon2023_directory.zip <https://github.com/ovis-hpc/readthedocs/blob/main/files/ldmscon2023_directory.zip>`_
 
 **If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation will need to be changed**, along with the following files, to the absolute path of where the ``ldmscon2023/``.
 

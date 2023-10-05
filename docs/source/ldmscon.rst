@@ -32,7 +32,7 @@ Recordings of previous presentations, tutorials and information for LDMSCON2023 
 
 .. note::
   
-  **If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation will need to be changed**, along with the following files, to the absolute path of where the ``ldmscon2023/``.
+  **If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation, and following files, **will need to be changed to the absolute path of ``ldmscon2023/``**.
 
    * ``../conf/e3/agg_store_csv.conf``
    * ``../scripts/e1/start_ldms_simple.sh``

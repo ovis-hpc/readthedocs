@@ -18,10 +18,10 @@ Recordings of previous presentations, tutorials and information for LDMSCON2023 
 `LDMSCON2023 <https://sites.google.com/view/ldmscon2023>`_
 
 * The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
-.. image:: TBD
+.. image:: images/ldmscon/ldmscon2023pres.PNG
    :width: 200
 * The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
-.. image:: TBD
+.. image:: images/ldmscon/ldmscon2023tutorial.PNG
    :width: 200
 
 LDMSCON2022

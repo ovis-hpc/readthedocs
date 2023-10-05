@@ -20,7 +20,19 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 :download: `ldmscon2023_directory.zip <https://github.com/ovis-hpc/readthedocs/blob/main/files/ldmscon2023_directory.zip>`_
 
-**If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation will need to be changed**, along with the following files, to the absolute path of where the ``ldmscon2023/``.
+Recordings of previous presentations, tutorials and information for LDMSCON2023 can be found here:
+`LDMSCON2023 <https://sites.google.com/view/ldmscon2023>`_
+
+* The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
+.. image:: images/ldmscon/ldmscon2023pres.PNG
+   :width: 200
+* The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
+.. image:: images/ldmscon/ldmscon2023tutorial.png
+   :width: 200
+
+.. note::
+  
+  If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation will need to be changed**, along with the following files, to the absolute path of where the ``ldmscon2023/``.
 
    * ``../conf/e3/agg_store_csv.conf``
    * ``../scripts/e1/start_ldms_simple.sh``
@@ -33,16 +45,6 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 .. note:: 
    These scripts must be ran in a directory that is readable and writable. Otherwise the log/data file generation will not work.
-
-Recordings of previous presentations, tutorials and information for LDMSCON2023 can be found here:
-`LDMSCON2023 <https://sites.google.com/view/ldmscon2023>`_
-
-* The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
-.. image:: images/ldmscon/ldmscon2023pres.PNG
-   :width: 200
-* The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
-.. image:: images/ldmscon/ldmscon2023tutorial.png
-   :width: 200
 
 LDMSCON2022
 ************

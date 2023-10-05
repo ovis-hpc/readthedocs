@@ -21,7 +21,7 @@ Recordings of previous presentations, tutorials and information for LDMSCON2023 
 .. image:: images/ldmscon/ldmscon2023pres.PNG
    :width: 200
 * The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
-.. image:: images/ldmscon/ldmscon2023tutorial.PNG
+.. image:: images/ldmscon/ldmscon2023tutorial.png
    :width: 200
 
 LDMSCON2022

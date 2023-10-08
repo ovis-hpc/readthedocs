@@ -676,6 +676,12 @@ The environment variables ``DARSHAN_LDMS_X`` are used to define the stream name 
 .. note::
    The environment variables are not required. The stream, transport, host, port and authentication can be initialized and set within in the code.
 
+.. note::
+    If you run into the following error: ``error:unknown type name 'sem_t'`` then you will need to add the following libraries to your code:
+    
+    * #include <ldms/ldms_xprt.h>
+    * #include <semaphore.h>
+    
 Publish Event Data to LDMSD
 -------------------------------------
 Now we will create a function that will collect all relevent application events and publish to the LDMS Streams Daemon. In the Darshan-LDMS Integration, the following Darshan's I/O traces for each I/O event (i.e. open, close, read, write) are collected along with the absolute timestamp (for timeseries data) for each I/O event:

@@ -1,8 +1,8 @@
 AppSysFusion
 ====
 .. image:: ../images/appsysfusion.png
-   :width: 500
-   :height: 200
+   :width: 300
+   :height: 150
    :align: center
 
 AppSysFusion provides analysis and visualization capabilities aimed at serving insights from HPC monitoring data gathered with LDMS, though could be generalized outside of that scope. 

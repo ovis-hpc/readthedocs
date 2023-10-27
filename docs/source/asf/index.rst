@@ -1,10 +1,10 @@
-AppSysFusion
-====
 .. image:: ../images/appsysfusion.png
    :width: 300
    :height: 150
    :align: center
 
+AppSysFusion
+====
 AppSysFusion provides analysis and visualization capabilities aimed at serving insights from HPC monitoring data gathered with LDMS, though could be generalized outside of that scope. 
 It combines a Grafana front-end with a Django back-end to perform in-query analyses on raw data and return transformed information back to the end user. 
 By performing in-query analyses, only data of interest to the end-user is operated on rather than the entirety of the dataset for all analyses for all time. 

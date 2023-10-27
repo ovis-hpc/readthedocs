@@ -11,8 +11,8 @@
 Welcome To OVIS-HPC Documentation!
 ====================================
 .. image:: images/ovis-hpc_homepage.PNG
-   :width: 1200
-   :height: 200
+   :width: 2400
+   :height: 250
 
 LDMS GitHub: https://github.com/ovis-hpc/ovis
 

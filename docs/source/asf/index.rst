@@ -1,6 +1,6 @@
 .. image:: ../images/appsysfusion.png
    :width: 300
-   :height: 150
+   :height: 125
    :align: center
 
 AppSysFusion

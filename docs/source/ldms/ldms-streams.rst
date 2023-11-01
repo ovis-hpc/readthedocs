@@ -54,7 +54,7 @@ LDMS collects a set of runtime timeseries data of the application in parallel wi
 Any data collected by LDMS should have the same fields as the one shown above and can be viewed in a csv file **if** the LDMS csv_store plugin is configured in the LDMSD aggregator.
 
 .. note::
-  More informaiton about starting and configuring and LDMS daemon to store to CSV can be found in the "ref:`Run An LDMS Streams Daemon>` under :ref:`<Darshan>` or in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
+  More information about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon`_ under `Darshan`_ or in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
 
 
 
@@ -249,7 +249,7 @@ If you wish to run all of Darshan's test scripts then please use the ``run-all.s
   
 Configure & Run A Program (login node) 
 ----------------------------------
-The section goes over step-by-step instructions on how to compile and execute the mpi-io-test.c program under 'darshan/darshan-test/regression/test-cases/src/', collect the data with the LDMS streams daemon and store it to a CSV file on a single login node. This section is for those who will not be running their applications on a cluster (i.e. no compute nodes).
+The section goes over step-by-step instructions on how to compile and execute the mpi-io-test.c program under ``darshan/darshan-test/regression/test-cases/src/``, collect the data with the LDMS streams daemon and store it to a CSV file on a single login node. This section is for those who will not be running their applications on a cluster (i.e. no compute nodes).
 
 1. Set Environment Variables for Darshan, LDMS and Darshan-LDMS Integrated code (i.e. darshanConnector).
 
@@ -260,7 +260,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   export LD_PRELOAD=$DARSHAN_PATH/lib/libdarshan.so
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_PATH/lib
   export HDF5_LIB=<path-to-hdf5-shared-library>/libhdf5.so
-  export DXT_ENABLE_IO_TRACE=1 #optional
+  export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" # optional. Please visit Darshan's webpage for more information.
   
   # LDMS
   TOP=<path-to-ldms-install> 
@@ -328,7 +328,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   cd $DARSHAN_TMP
   ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
 
-6. **(Optional)** Parse the Darshan binary file using Darshans standard and DXT (only if DXT_ENABLE_IO_TRACE is enabled) parsers.
+6. **(Optional)** Parse the Darshan binary file using Darshans' standard and DXT (only if the ``DXT Module`` is enabled) parsers.
 
 .. code-block:: RST 
 
@@ -468,19 +468,19 @@ CSV File
 
   #module,uid,ProducerName,switches,file,rank,flushes,record_id,exe,max_byte,type,job_id,op,cnt,seg:off,seg:pt_sel,seg:dur,seg:len,seg:ndims,seg:reg_hslab,seg:irreg_hslab,seg:data_set,seg:npoints,seg:timestamp,seg:total,seg:start    
   POSIX,99066,n9,-1,darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007415,-1,-1,-1,-1,N/A,-1,1662576527,0.007415,0.298313
-  MPIIO,99066,n9,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.100397,-1,-1,-1,-1,N/A,-1,1662576527,0.100397,0.209427
-  POSIX,99066,n11,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,339,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.00742,-1,-1,-1,-1,N/A,-1,1662576527,0.00742,0.297529
-  POSIX,99066,n6,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,184,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007375,-1,-1,-1,-1,N/A,-1,1662576527,0.007375,0.295111
-  POSIX,99066,n14,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,437,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007418,-1,-1,-1,-1,N/A,-1,1662576527,0.007418,0.296812
-  POSIX,99066,n7,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,192,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007435,-1,-1,-1,-1,N/A,-1,1662576527,0.007435,0.294776
-  MPIIO,99066,n7,-1,/lustre/spwalto/darshan-ldms-output/mpi-io-test_lC.tmp.out,192,-1,9.22337E+18,/lustre/spwalto/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.033042,-1,-1,-1,-1,N/A,-1,1662576527,0.033042,0.273251
+  MPIIO,99066,n9,-1,/lustre/user/darshan-ldms-output/mpi-io-test_lC.tmp.out,278,-1,9.22337E+18,/lustre/user/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.100397,-1,-1,-1,-1,N/A,-1,1662576527,0.100397,0.209427
+  POSIX,99066,n11,-1,/lustre/user/darshan-ldms-output/mpi-io-test_lC.tmp.out,339,-1,9.22337E+18,/lustre/user/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.00742,-1,-1,-1,-1,N/A,-1,1662576527,0.00742,0.297529
+  POSIX,99066,n6,-1,/lustre/user/darshan-ldms-output/mpi-io-test_lC.tmp.out,184,-1,9.22337E+18,/lustre/user/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007375,-1,-1,-1,-1,N/A,-1,1662576527,0.007375,0.295111
+  POSIX,99066,n14,-1,/lustre/user/darshan-ldms-output/mpi-io-test_lC.tmp.out,437,-1,9.22337E+18,/lustre/user/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007418,-1,-1,-1,-1,N/A,-1,1662576527,0.007418,0.296812
+  POSIX,99066,n7,-1,/lustre/user/darshan-ldms-output/mpi-io-test_lC.tmp.out,192,-1,9.22337E+18,/lustre/user/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.007435,-1,-1,-1,-1,N/A,-1,1662576527,0.007435,0.294776
+  MPIIO,99066,n7,-1,/lustre/user/darshan-ldms-output/mpi-io-test_lC.tmp.out,192,-1,9.22337E+18,/lustre/user/darshan-ldms-output/mpi-io-test,-1,MET,10697754,open,1,-1,-1,0.033042,-1,-1,-1,-1,N/A,-1,1662576527,0.033042,0.273251
   ...
 
 Compare With Darshan Log File(s)
 ////////////////////////////////
 If you decided to parse Darshan's binary file from ``step 6`` in _`Run Test On Login Node`_ section, you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
 
-If the data is correct, the producerName, file path and record_id for each Module (i.e. POSIX, MPIIO, etc.) will be the same.
+The producerName, file path and record_id of each job should match and, if dxt was enabled, the individual I/O statistics of each rank (i.e. start time and number of I/O operations).
 
 
 Kokkos

@@ -7,7 +7,7 @@ To start, please create a folder called ``graf_analysis`` in your home directory
 
 * This is a python analysis that queries the DSOS database and returns a DataFrame of the ``meminfo`` schema metrics along with the ``timestamp``, ``component_id`` and ``job_id``. 
 
-queryMeminfo.py:
+dsosTemplate.py:
 
 .. code-block :: python
 
@@ -23,8 +23,8 @@ queryMeminfo.py:
     
         def get_data(self, metrics, filters=[],params=None):
             try:
-                sel = f'select {",".join(metrics)} from {self.schema}'
-                where_clause = self.get_where(filters)
+                self.sel = f'select {",".join(metrics)} from {self.schema}'
+                where_clause = self.get_where(filters,res=FALSE)
                 order = 'time_job_comp'
                 orderby='order_by ' + order
                 self.query.select(f'{sel} {where_clause} {orderby}')
@@ -44,14 +44,7 @@ Test Analysis via Terminal Window
 ----------------------------------
 You can easily test your module without the Grafana interface by creating a python script that mimics the Grafana query and formats the returned JSON into a timeseries dataframe or table. 
 
-First, you will need to set your path and pythonpath environment variables with the following:
-
-.. code-block :: bash
-
-    export PYTHONPATH=/usr/bin/python:/<INSTALL_PATH>/lib/python<PYTHON_VERSION>/site-packages/
-    export PATH=/usr/bin:/<INSTALL_PATH>/bin:/<INSTALL_PATH>/sbin::$PATH
-
-* Then create the following file in the same directory as your python analysis (i.e. ``/user/home/graf_analysis/``) and label it ``testModule.py``. 
+First, create the following file in the same directory as your python analysis (i.e. ``/user/home/graf_analysis/``) and label it ``testDSOSanalysis.py``. 
 
 * This python script imitates the Grafana query that calls your analysis module and will return a timeseries DataFrame of the ``Active`` and ``Inactive`` meminfo metrics.
 
@@ -72,7 +65,7 @@ First, you will need to set your path and pythonpath environment variables with 
     
     model = queryMeminfo(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
     
-    x = model.get_data(['Active','Inactive'])
+    x = model.get_data(['Active','Inactive'], filters=['job_id'], params='')
     
     #fmt = table_formatter(x)
     fmt = time_series_formatter(x)
@@ -99,8 +92,7 @@ Expected Results & Output
 +++++++++++++++++++++++++
 The following is an example test of an analysis module that queries the ``meminfo`` schema an returns a timeseries dataframe of the ``Active`` and ``Inactive`` metrics:
 
-.. image::
-
+.. image:: ../images/grafana-output.PNG
 
 Test Analysis via Grafana Dashboard
 -----------------------------------
@@ -116,19 +108,19 @@ To create a new dashboard, click on the + sign on the left side of the home page
 
 * Next, add your analysis by filling out the required fields shown below:
 
-.. image:: /docs/source/images/grafana_query.PNG
+.. image:: ../images/grafana_query.PNG
     :width: 200
 
 * These fields are identical to the python script you can generate to test in your terminal window so please refer to :ref:`Test Analysis via Terminal Window` or :doc:`Grafana Panel <grafanapanel>` for more details.
 
 * Now change the analysis to query from the last 5 minutes by selecting the down arrow in the top right of the panel and selecting "Last 5 minutes"
 
-.. image:: /docs/source/images/grafana_time.PNG
+.. image:: ../images/grafana_time.PNG
     :width: 200
 
 * Then change the refresh rate to 5 seconds so that Grafana will automatically query the data every 5 seconds
 
-.. image:: /docs/source/images/grafana_timerange.PNG
+.. image:: ../images/grafana_timerange.PNG
     :width: 200
 
 * Now you should be able to see a the "Active" and "Inactive" values for each job_id.

@@ -74,7 +74,7 @@ First, create the following file in the same directory as your python analysis (
 
 .. note::
 
-  You will need to provide the path to the DSOS container and ``Sos.Session()`` configuration file in order to run this python script. Please see the :ref:`pyanalysis.rst` for more details.
+  You will need to provide the path to the DSOS container and ``Sos.Session()`` configuration file in order to run this python script. Please see the `Python Analysis Creation <pyanalysis.rst>`_ for more details.
 
 * Next, run the python module:
 
@@ -99,7 +99,7 @@ Test Analysis via Grafana Dashboard
 You can optionally test the analysis in a grafana dashboard. This is not preferred because it is a bit more time consuming and, if there is a lot of data to query, there can be some additional wait time in that as well.
 
 Create A New Dashboard
-//////////////////////
+++++++++++++++++++++++++++
 To create a new dashboard, click on the + sign on the left side of the home page and hit dashboard. This will create a blank dashboard with an empty panel in it. Hit the add query button on the panel to begin configuring the query to be sent to an analysis module. 
 
 .. note::

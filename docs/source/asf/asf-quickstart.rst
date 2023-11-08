@@ -3,7 +3,7 @@ AppSysFusion Quick Start
 
 Create A Simple Analysis
 ------------------------
-To start, please create a folder called ``graf_analysis`` in your home directory and copy the following contents to a python file called ``queryMeminfo.py``:
+To start, please create a folder called ``graf_analysis`` in your home directory and copy the following contents to a python file called ``dsosTemplate.py``:
 
 * This is a python analysis that queries the DSOS database and returns a DataFrame of the ``meminfo`` schema metrics along with the ``timestamp``, ``component_id`` and ``job_id``. 
 

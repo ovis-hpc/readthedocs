@@ -17,7 +17,7 @@ dsosTemplate.py:
     from sosdb import Sos
     import pandas as pd
     import numpy as np
-    class queryMeminfo(Analysis):
+    class dsosTemplate(Analysis):
         def __init__(self, cont, start, end, schema='meminfo', maxDataPoints=4096):
             super().__init__(cont, start, end, schema, 1000000)
     
@@ -63,7 +63,7 @@ First, create the following file in the same directory as your python analysis (
     cont = '<PATH_TO_DATABASE>'
     cont = sess.open(cont)
     
-    model = queryMeminfo(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
+    model = dsosTemplate(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
     
     x = model.get_data(['Active','Inactive'], filters=['job_id'], params='')
     
@@ -74,7 +74,7 @@ First, create the following file in the same directory as your python analysis (
 
 .. note::
 
-  You will need to provide the path to the DSOS container and ``Sos.Session()`` configuration file in order to run this python script. Please see the :doc:`pyanalysis.rst` for more details.
+  You will need to provide the path to the DSOS container and ``Sos.Session()`` configuration file in order to run this python script. Please see the :ref:`pyanalysis.rst` for more details.
 
 * Next, run the python module:
 

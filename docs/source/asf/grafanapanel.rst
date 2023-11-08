@@ -6,7 +6,7 @@ This will create a blank dashboard with an empty panel in it. Panels can be thou
 
 Configuring the Query and Visualization
 ---------------------------------------
-.. image:: images/grafanapanel.png
+.. image:: ../images/grafana/grafanapanel.png
 
 Once you right click on the panel title and select edit, the panel settings will appear. The first tab is for configuring the query. There are 8 fields in the query field defined below:
 

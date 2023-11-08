@@ -1,6 +1,6 @@
-==============
+=========================
 Plugin_loadavg
-==============
+=========================
 
 :Date: 7 Apr 2020
 
@@ -9,23 +9,23 @@ Plugin_loadavg
 ..
 
 NAME
-===============
+==========================
 
-Plugin_loadavg - man page for the LDMS loadavg plugin
+Plugin_loadavg - Plugin_loadavg page for the LDMS loadavg plugin
 
 SYNOPSIS
-===================
+==============================
 
 | Within ldmsd_controller
 | config name=loadavg [ <attr> = <value> ]
 
 DESCRIPTION
-======================
+=================================
 
 The loadavg plugin provides OS information from /proc/loadavg
 
 CONFIGURATION ATTRIBUTE SYNTAX
-=========================================
+====================================================
 
 This plugin uses the sampler_base base class. This man page covers only
 the configuration attributes, or those with default values, specific to
@@ -60,7 +60,7 @@ base class.
         load15min, runnable, scheduling_entities, newest_pid.
 
 DATA
-===============
+==========================
 
 This reports metrics from /proc/loadavg, which has the format: load1min
 load5min load15min runnable/scheduling_entities newest_pid.
@@ -69,7 +69,7 @@ The load numbers are multiplied by 100 and cast to unsigned integers as
 they are collected, rather than being collected as real numbers.
 
 EXAMPLES
-===================
+==============================
 
 Within ldmsd_controller or a configuration file:
 
@@ -80,11 +80,11 @@ Within ldmsd_controller or a configuration file:
    start name=loadavg interval=1000000
 
 NOTES
-================
+===========================
 
 See proc(5) for the definitions of the metrics.
 
 SEE ALSO
-===================
+==============================
 
 proc(5), ldmsd(8), ldms_sampler_base(7), ldmsd_controller(8)

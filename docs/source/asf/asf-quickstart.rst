@@ -80,7 +80,7 @@ First, create the following file in the same directory as your python analysis (
 
 .. code-block :: bash
 
-  python3 testModule.py
+  python3 dsosTemplate.py
 
 .. note::
 
@@ -116,7 +116,7 @@ To create a new dashboard, click on the + sign on the left side of the home page
 * Now change the analysis to query from the last 5 minutes by selecting the down arrow in the top right of the panel and selecting "Last 5 minutes"
 
 .. image:: ../images/grafana/grafana_time.PNG
-    :width: 200
+    :height: 50
 
 * Then change the refresh rate to 5 seconds so that Grafana will automatically query the data every 5 seconds
 

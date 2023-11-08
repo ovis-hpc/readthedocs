@@ -54,7 +54,7 @@ LDMS collects a set of runtime timeseries data of the application in parallel wi
 Any data collected by LDMS should have the same fields as the one shown above and can be viewed in a csv file **if** the LDMS csv_store plugin is configured in the LDMSD aggregator.
 
 .. note::
-  More information about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon`_ under `Darshan`_ or in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
+  More information about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon`_ under `Darshan`_ or in the `LDMS Quickstart Guide <ldms-quickstart>`_.
 
 
 
@@ -72,7 +72,7 @@ A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s o
 
 .. note::
   
-  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
+  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_.
 
 Compile and Build with LDMS
 ---------------------------
@@ -159,7 +159,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   export HOSTNAME="localhost"
 .. note::
   
-  LDMS must already be installed on the system or locally. If it is not, then please follow ``Getting The Source`` and ``Building The Source`` in the :doc:`LDMS Quickstart Guide <ldms-quickstart>`.
+  LDMS must already be installed on the system or locally. If it is not, then please follow ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_.
 
 3. Next, create a file called **"darshan\_stream\_store.conf"** and add the following content to it:
 

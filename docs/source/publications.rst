@@ -54,7 +54,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171)
 | Jim Brandt, Florina Ciorba, Ann Gentile, Michael Ott, and Torsten Wilde
 | In Dagstuhl Reports, Volume 13, Issue 4, pp. 98-120, Schloss Dagstuhl - Leibniz-Zentrum für Informatik (2023)
-| `https://drops.dagstuhl.de/entities/document/10.4230/DagRep.13.4.98 <https://drops.dagstuhl.de/entities/document/10.423/DagRep.13.4.98>`_
+| `doi: 10.4230/DagRep.13.4.98 <https://drops.dagstuhl.de/entities/document/10.423/DagRep.13.4.98>`_
 
 2022
 ^^^^

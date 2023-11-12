@@ -50,6 +50,11 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | AI4Sys '23: Proceedings of the First Workshop on AI for Systems, August 2023, pp 1–6
 | `doi: 10.1145/3588982.3603609 <https://doi.org/10.1145/3588982.3603609>`_
 
+ ::
+| Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171)
+| Jim Brandt, Florina Ciorba, Ann Gentile, Michael Ott, and Torsten Wilde
+| In Dagstuhl Reports, Volume 13, Issue 4, pp. 98-120, Schloss Dagstuhl - Leibniz-Zentrum für Informatik (2023)
+| `https://drops.dagstuhl.de/entities/document/10.4230/DagRep.13.4.98 <https://drops.dagstuhl.de/entities/document/10.4230/DagRep.13.4.98>`_
 
 2022
 ^^^^

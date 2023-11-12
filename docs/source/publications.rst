@@ -33,9 +33,16 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 
 2023
 ^^^^
+| Prodigy: Toward Unsupervised Anomaly Detection in Production HPC Systems
+| Burak Aksar, Efe Sencan, Benjamin Schwaller, Omar Aaziz, Vitus J. Leung, Jim Brandt, Brian Kulis, Manuel Egele, and Ayse K. Coskun 
+| SC `23: Proc of the Int'l Conf. for High Performance Computing, Networking, Storage and Analysis.
+| Nov 2023, to appear.
+
+ ::
 | Autonomy Loops for Monitoring, Operational Data Analytics, Feedback, and Response in HPC Operations
 | Francieli Boito, Jim Brandt, Valeria Cardellini, Philip Carns, Florina M. Ciorba, Hilary Egan, Ahmed Eleliemy, Ann Gentile, Thomas Gruber, Jeff Hanson, Utz-Uwe Haus, Kevin Huck, Thomas Ilsche, Thomas Jakobsche, Terry Jones, Sven Karlsson, Abdullah Mueen, Michael Ott, Tapasya Patki, Krishnan Raghavan, Stephen Simms, Kathleen Shoga, Michael Showerman, Devesh Tiwari, Torsten Wilde, Ivy Peng, and Keiji Yamamoto
-| Proc. IEEE Cluster, 2023. To appear
+| Proc. IEEE Cluster
+| Oct 2023, to appear
 
  ::
 | Towards Practical Machine Learning Frameworks for Performance Diagnostics in Supercomputers

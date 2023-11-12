@@ -29,13 +29,15 @@ BibTex:
 Publications and Selected Presentations
 -----------------------------------------
 
-Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS). Many publications listed here are also available at OSTI.GOV some months after publication.
-
-*ATTN: THIS PAGE IS UNDER CONSTRUCTION IN AUG 2023. IT IS EXPECTED TO BE COMPLETE BY EARLY SEP 2023.*
-
+Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS). 
 
 2023
 ^^^^
+| Autonomy Loops for Monitoring, Operational Data Analytics, Feedback, and Response in HPC Operations
+| Francieli Boito, Jim Brandt, Valeria Cardellini, Philip Carns, Florina M. Ciorba, Hilary Egan, Ahmed Eleliemy, Ann Gentile, Thomas Gruber, Jeff Hanson, Utz-Uwe Haus, Kevin Huck, Thomas Ilsche, Thomas Jakobsche, Terry Jones, Sven Karlsson, Abdullah Mueen, Michael Ott, Tapasya Patki, Krishnan Raghavan, Stephen Simms, Kathleen Shoga, Michael Showerman, Devesh Tiwari, Torsten Wilde, Ivy Peng, and Keiji Yamamoto
+| Proc. IEEE Cluster, 2023. To appear
+
+ ::
 | Towards Practical Machine Learning Frameworks for Performance Diagnostics in Supercomputers
 | B. Aksar, E. Sencan, B. Schwaller, V. Leung, J. Brandt, B. Kulis, M. Egele, and A. Coskun
 | AI4Sys '23: Proceedings of the First Workshop on AI for Systems, August 2023, pp 1–6
@@ -50,8 +52,8 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `doi: 10.1109/CLUSTER51413.2022.00048 <https://doi.org/10.1109/CLUSTER51413.2022.00048>`_
 
  ::
-| Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling A. Goponenko, K. Lamar,
-| C. Peterson, B. Allan, J. Brandt, and D. Dechev 
+| Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling 
+| A. Goponenko, K. Lamar, C. Peterson, B. Allan, J. Brandt, and D. Dechev 
 | 2022 IEEE 34th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD), Bordeaux, France, 2022, pp. 241-252
 | `doi: 10.1109/SBAC-PAD55451.2022.00035 <https://doi.org/10.1109/SBAC-PAD55451.2022.00035>`_
 

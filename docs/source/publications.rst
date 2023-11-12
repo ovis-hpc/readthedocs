@@ -56,6 +56,12 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | In Dagstuhl Reports, Volume 13, Issue 4, pp. 98-120, Schloss Dagstuhl - Leibniz-Zentrum für Informatik (2023)
 | `doi: 10.4230/DagRep.13.4.98 <https://drops.dagstuhl.de/entities/document/10.423/DagRep.13.4.98>`_
 
+ ::
+| Community Readiness and Opportunities for Progress in HPC Monitoring, Analysis, Feedback, and Response -- *Keynote*
+| J. Brandt
+| `Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171) <https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/23171>`_
+
+
 2022
 ^^^^
 | ALBADross: Active Learning Based Anomaly Diagnosis for Production HPC Systems

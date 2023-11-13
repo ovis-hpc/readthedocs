@@ -51,6 +51,12 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `doi: 10.1145/3588982.3603609 <https://doi.org/10.1145/3588982.3603609>`_
 
  ::
+| Evaluating and Influencing Extreme-Scale Monitoring Implementations
+| Jim Brandt, Chris Morrone, Eric Roman, Ann Gentile, Tom Tucker, Jeff Hanson, Kathleen Shoga, and Alec Scott
+| Proc Cray User's Group
+| May 2023.
+
+ ::
 | Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171)
 | Jim Brandt, Florina Ciorba, Ann Gentile, Michael Ott, and Torsten Wilde
 | In Dagstuhl Reports, Volume 13, Issue 4, pp. 98-120, Schloss Dagstuhl - Leibniz-Zentrum für Informatik (2023)
@@ -60,6 +66,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | Community Readiness and Opportunities for Progress in HPC Monitoring, Analysis, Feedback, and Response -- *Keynote*
 | J. Brandt
 | `Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171) <https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/23171>`_
+| Apr 2023
 
 
 2022

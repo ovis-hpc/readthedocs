@@ -18,7 +18,7 @@ LDMS GitHub: https://github.com/ovis-hpc/ovis
 
 To join the LDMS Users Group Mailing List: https://github.com/ovis-hpc/ovis-wiki/wiki/Mailing-Lists
 
-OVIS is a modular system for HPC data collection, transport, storage, -log message exploration, and visualization as well as analysis.
+OVIS is a modular system for HPC data collection, transport, storage, analysis, visualization, and log message exploration.
 
 The Lightweight Distributed Metric Service (LDMS) is a scalable low-overhead, low-latency framework for collection, movement, and storage of metric/event data on distributed computer systems.
 

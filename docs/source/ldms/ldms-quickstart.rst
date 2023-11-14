@@ -3,7 +3,7 @@ LDMS Quick Start
 
 Prerequisites
 ***********************
-* Ubuntu 16.04
+* Ubuntu 16.04 (LDMS runs on any *nix OS; Ubuntu was used in this demnstration)
 * openssl-dev
 * gnu compiler
 * swig

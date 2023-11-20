@@ -74,6 +74,9 @@ A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s o
   
   LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_.
 
+.. note::
+  If the Darshan-LDMS code is already deployed on your system, please skip to ``
+
 Compile and Build with LDMS
 ---------------------------
 1. Run the following to build Darshan and link against an existing LDMS library on the system.
@@ -110,31 +113,11 @@ If you do not have HDF5 installed on your system, install this with:
   
   If the HDF5 library is installed this way, you do not need to include the ``--with-hdf5`` flag during configuration. For more information on other methods and HDF5 versions to install, please visit `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_.
   
-Configuring Darshan Test Script(s) 
-------------------------------------------
-Below are the instructions to configure your system to run a Darshan test script(s) (mpi-io-test.c) with the darshanConnector code. All Darshan application test scripts are located in ``<darshan-prefix>/darshan/darshan-test/regression/test-cases/``.
-
-1. Double check the test scripts are modified appropriately in order to run a successful test. Make sure the following file contains the desired partition name for the sbatch command.
-
-2. Darshan has various test setups and module loads specific to the system. In this example, we will be running Darshan on a CRAY machine so we will need to edit the test scripts within ``darshan-test/regression/cray-module-nersc``.
-
-.. note::
-
-  A list of other darshan test setups can be found in the ``darshan-test/regression`` directory. 
-
-.. code-block:: RST
-  
-  cd <darshan-prefix>/darshan/darshan-test/regression
-  vi cray-module-nersc/runjob.sh
-  
-  # inside "runjob.sh"
-  sbatch --wait -N 1 -t 10 -p <name-of-partition> $NODE_CONSTRAINTS --output $DARSHAN_TMP/$$-tmp.out --error $DARSHAN_TMP/$$-tmp.err    $DARSHAN_TESTDIR/$DARSHAN_PLATFORM/slurm-submit.sl "$@"
-  
 
 Run An LDMS Streams Daemon
 ///////////////////////////
 This section will go over how to start and configure a simple LDMS Streams deamon to collect the Darshan data and store to a CSV file. 
-If an LDMS Streams daemon is already running on the system then please skip to the next section :ref:`Execute The Test Script(s)`.
+If an LDMS Streams daemon is already running on the system then please skip to the next section `Execute The Test Script(s)`_.
 
 1. First, initialize an ldms streams daemon on a compute node as follows:
 
@@ -157,6 +140,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   export SAMPLE_INTERVAL="1000000"
   export SAMPLE_OFFSET="0"
   export HOSTNAME="localhost"
+
 .. note::
   
   LDMS must already be installed on the system or locally. If it is not, then please follow ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_.
@@ -190,11 +174,15 @@ This section gives a step by step on executing a simple Darshan test script with
 
 .. code-block:: RST
 
+  export DARSHAN_INSTALL_PATH=<darshan-prefix>
   export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
-  export LD_LIBRARY_PATH=<darshan-prefix>/darshan/build/install/lib/
-  export HDF5_LIB=<path-to-hdf5-shared-libary-file>/libhdf5.so
-  export DXT_ENABLE_IO_TRACE=1 # optional
-  
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
+  export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" # optional. Please visit Darshan's webpage for more information.
+
+  # uncomment if hdf5 is enabled
+  #export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/hdf5/openmpi
+  #export HDF5_LIB=<path-to-hdf5-shared-libary-file>/libhdf5.so
+
   #set env variables for ldms streams daemon testing
   export DARSHAN_LDMS_STREAM=darshanConnector
   export DARSHAN_LDMS_XPRT=sock
@@ -207,45 +195,43 @@ This section gives a step by step on executing a simple Darshan test script with
   #export DARSHAN_LDMS_ENABLE_POSIX=  
   #export DARSHAN_LDMS_ENABLE_STDIO=
   #export DARSHAN_LDMS_ENABLE_HDF5= 
+  #export DARSHAN_LDMS_ENABLE_ALL=
+  #export DARSHAN_LDMS_VERBOSE=
 
-.. note:: 
+.. warning:: 
   
-  The ``<host-name>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into).
+  The ``<host-name>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into). Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the DARSHAN_LDMS_ENABLE_* variable is set. If not, no data will be collected by LDMS. 
   
+.. note::
+  
+  **(Optional)** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID. If this is not set, the job_id field will be set to the first PID.  
+
+.. note::
+
+  ``DARSHAN_LDMS_VERBOSE`` outputs the JSON formatted messages sent to the LDMS streams daemon. The output will be sent to STDERR.
+
 Single Script
 ==============
-Run Darshan's example "mpi-io-test.sh" script by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and execute this script.
+Now we will test the darshanConnector with Darshan's example "mpi-io-test.sh" script by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and execute this script.
+
+.. note::
+  Darshan has various test setups and module loads specific to the system. In this example, we will be running Darshan on a CRAY machine so we will need to set the following environment variables:
 
 .. code-block:: RST
   
-  export DARSHAN_PATH=<darshan-prefix>/darshan/build/install
-  export DARSHAN_TMP=/tmp/darshan-ldms-output/
-  export DARSHAN_PLATFORM=cray-module-nersc
-  cd darshan/darshan-test/regression/test-cases
-  ./mpi-io-test-dxt.sh
-
-.. note::
+  export PROG=mpi-io-test
+  export DARSHAN_TMP=/tmp/darshan-ldms-test
+  export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
+  export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
   
-  Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS. 
-  **(Optional)** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID in ``<darshan-prefix>/darshan-test/regression/cray-module-nersc/slurm-submit.sl``. If this is not set, the job_id field will be set to the first PID.   
-
-All Scripts
-===========
-If you wish to run all of Darshan's test scripts then please use the ``run-all.sh`` script located in ``darshan/darshan-test/regression`` and run it with the following arguements:
+Now ``cd`` to the executable and test the script with the darshanConnector enabled.
 
 .. code-block:: RST
-  
-  # run darshan tests
-  cd <darshan-prefix>/darshan/darshan-test/regression/
 
-  #set output directory
-  DTDIR=darshan-ldms-output/
-  rm -r $DTDIR
-  ./run-all.sh <path-to-darshan-install> $DTDIR cray-module-nersc
-
-.. note::
-
-  Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the *_ENABLE_LDMS variable is set. If not, no data will be collected by LDMS.
+  cd darshan/darshan-test/regression/test-cases/src
+  mpicc $DARSHAN_TESTDIR/test-cases/src/${PROG}.c -o $DARSHAN_TMP/${PROG}
+  cd $DARSHAN_TMP
+  ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
   
 Configure & Run A Program (login node) 
 ----------------------------------
@@ -256,11 +242,14 @@ The section goes over step-by-step instructions on how to compile and execute th
 .. code-block:: RST
   
   # Darshan
-  export DARSHAN_PATH=<darshan-prefix>/darshan/build/install
-  export LD_PRELOAD=$DARSHAN_PATH/lib/libdarshan.so
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_PATH/lib
-  export HDF5_LIB=<path-to-hdf5-shared-library>/libhdf5.so
+  export DARSHAN_INSTALL_PATH=<darshan-prefix>
+  export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
   export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" # optional. Please visit Darshan's webpage for more information.
+
+  # uncomment if hdf5 is enabled
+  #export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/hdf5/openmpi
+  #export HDF5_LIB=<path-to-hdf5-shared-libary-file>/libhdf5.so
   
   # LDMS
   TOP=<path-to-ldms-install> 
@@ -284,7 +273,13 @@ The section goes over step-by-step instructions on how to compile and execute th
   #export DARSHAN_LDMS_ENABLE_MPIIO= 
   #export DARSHAN_LDMS_ENABLE_POSIX=  
   #export DARSHAN_LDMS_ENABLE_STDIO=
-  #export DARSHAN_LDMS_ENABLE_HDF5= 
+  #export DARSHAN_LDMS_ENABLE_HDF5=
+  #export DARSHAN_LDMS_ENABLE_ALL=
+  #export DARSHAN_LDMS_VERBOSE=
+
+.. note::
+
+  ``DARSHAN_LDMS_VERBOSE`` outputs the JSON formatted messages sent to the LDMS streams daemon. The output will be sent to STDERR.
 
 2. Generate the LDMSD Configuration File and Start the Daemon
 
@@ -308,23 +303,16 @@ The section goes over step-by-step instructions on how to compile and execute th
 .. code-block:: RST 
 
   export PROG=mpi-io-test
-  export DARSHAN_TMP=/tmp/darshan-ldms-output/
-  export DARSHAN_TESTDIR=$PWD/darshan/darshan-test/regression
+  export DARSHAN_TMP=/tmp/darshan-ldms-test
+  export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
   export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
- 
-4. **(Optional)** Generate TMP Path if it doesn't exist
-
-.. code-block:: RST 
-
-  if [ ! -d $DARSHAN_TMP ]; then
-       mkdir -p $DARSHAN_TMP
-  fi
   
 5. Run Darshan's mpi-io-test.c program
 
 .. code-block:: RST 
 
-  cc $DARSHAN_TESTDIR/test-cases/src/${PROG}.c -o $DARSHAN_TMP/${PROG}
+  cd darshan/darshan-test/regression/test-cases/src
+  mpicc $DARSHAN_TESTDIR/test-cases/src/${PROG}.c -o $DARSHAN_TMP/${PROG}
   cd $DARSHAN_TMP
   ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
 
@@ -337,7 +325,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   
 Pre-Installed Darshan-LDMS 
 ---------------------------
-If both the Darshan-LDMS integrated code and LDMS are already installed and a system LDMS streams daemon is running, then there are two ways to enable the LDMS functionality. 
+If both the Darshan-LDMS integrated code (i.e. darshanConnector) and LDMS are already installed and a system LDMS streams daemon is running, then there are two ways to enable the LDMS functionality. 
 
 1. Set the environment via darshan_ldms.env script 
 
@@ -421,12 +409,13 @@ If you only want to collect a specific type of data such as "MPIIO" then you wil
   export DARSHAN_LDMS_ENABLE_POSIX=
   export DARSHAN_LDMS_ENABLE_STDIO=
   export DARSHAN_LDMS_ENABLE_HDF5=
+  #export DARSHAN_LDMS_ENABLE_ALL=
+  #export DARSHAN_LDMS_VERBOSE=
 
   # check if verbose is requested
   if [ "$1" == "-v" ]; then
           export DARSHAN_LDMS_VERBOSE=
           echo "Verbose is set."
-          echo "STDIO data will not be collected by LDMS to avoid recursion."
   else
           unset DARSHAN_LDMS_VERBOSE
   fi

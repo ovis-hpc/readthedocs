@@ -203,10 +203,10 @@ This section gives a step by step on executing a simple Darshan test script with
   export DARSHAN_LDMS_AUTH=none
   
   # determine which modules we want to publish to ldms streams 
-  #export MPIIO_ENABLE_LDMS= 
-  #export POSIX_ENABLE_LDMS=  
-  #export STDIO_ENABLE_LDMS=
-  #export HDF5_ENABLE_LDMS= 
+  #export DARSHAN_LDMS_ENABLE_MPIIO= 
+  #export DARSHAN_LDMS_ENABLE_POSIX=  
+  #export DARSHAN_LDMS_ENABLE_STDIO=
+  #export DARSHAN_LDMS_ENABLE_HDF5= 
 
 .. note:: 
   
@@ -281,10 +281,10 @@ The section goes over step-by-step instructions on how to compile and execute th
   export DARSHAN_LDMS_PORT=10444
   export DARSHAN_LDMS_AUTH=none
   # determine which modules we want to publish to ldms streams 
-  #export MPIIO_ENABLE_LDMS= 
-  #export POSIX_ENABLE_LDMS=  
-  #export STDIO_ENABLE_LDMS=
-  #export HDF5_ENABLE_LDMS= 
+  #export DARSHAN_LDMS_ENABLE_MPIIO= 
+  #export DARSHAN_LDMS_ENABLE_POSIX=  
+  #export DARSHAN_LDMS_ENABLE_STDIO=
+  #export DARSHAN_LDMS_ENABLE_HDF5= 
 
 2. Generate the LDMSD Configuration File and Start the Daemon
 
@@ -387,7 +387,7 @@ Script Information
 
 The darshan_ldms module and .env file set the following env variables to define where the Darshan install is located, the LDMS daemon connection and what kind of file level access data will be published and stored to DSOS (via LDMS streams).
 
-If you only want to collect a specific type of data such as "MPIIO" then you will only set the MPIIO_ENABLE_LDMS variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
+If you only want to collect a specific type of data such as "MPIIO" then you will only set the DARSHAN_LDMS_ENABLE_MPIIO variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
 
 .. note::
   
@@ -417,10 +417,10 @@ If you only want to collect a specific type of data such as "MPIIO" then you wil
   export DARSHAN_LDMS_AUTH=munge
 
   # Specify type of data to collect
-  export MPIIO_ENABLE_LDMS=
-  export POSIX_ENABLE_LDMS=
-  export STDIO_ENABLE_LDMS=
-  export HDF5_ENABLE_LDMS=
+  export DARSHAN_LDMS_ENABLE_MPIIO=
+  export DARSHAN_LDMS_ENABLE_POSIX=
+  export DARSHAN_LDMS_ENABLE_STDIO=
+  export DARSHAN_LDMS_ENABLE_HDF5=
 
   # check if verbose is requested
   if [ "$1" == "-v" ]; then

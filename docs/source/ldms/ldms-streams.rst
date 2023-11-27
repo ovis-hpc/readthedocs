@@ -54,7 +54,7 @@ LDMS collects a set of runtime timeseries data of the application in parallel wi
 Any data collected by LDMS should have the same fields as the one shown above and can be viewed in a csv file **if** the LDMS csv_store plugin is configured in the LDMSD aggregator.
 
 .. note::
-  More information about starting and configuring and LDMS daemon to store to CSV can be found in the `Run An LDMS Streams Daemon`_ under `Darshan`_ or in the `LDMS Quickstart Guide <ldms-quickstart>`_.
+  More information about starting and configuring and LDMS daemon to store to CSV can be found in `Run An LDMS Streams Daemon`_ or `LDMS Quickstart Guide <ldms-quickstart>`_.
 
 
 

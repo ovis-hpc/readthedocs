@@ -1,4 +1,4 @@
-FStreams-enabled Application Data Collectors
+Streams-enabled Application Data Collectors
 ###########################
 
 Caliper

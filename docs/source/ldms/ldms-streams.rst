@@ -1,4 +1,4 @@
-Streams-enabled Application Data Collectors
+FStreams-enabled Application Data Collectors
 ###########################
 
 Caliper
@@ -115,9 +115,9 @@ If you do not have HDF5 installed on your system, install this with:
   
 
 Run An LDMS Streams Daemon
-///////////////////////////
+---------------------------
 This section will go over how to start and configure a simple LDMS Streams deamon to collect the Darshan data and store to a CSV file. 
-If an LDMS Streams daemon is already running on the system then please skip to the next section `Execute The Test Script(s)`_.
+If an LDMS Streams daemon is already running on the system then please skip to the next section `Test The Darshan-LDMS Integrated Code`_.
 
 1. First, initialize an ldms streams daemon on a compute node as follows:
 
@@ -166,18 +166,21 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   
   To check that the ldmsd daemon is connected running please run ``ps auwx | grep ldmsd | grep -v grep``, ``ldms_ls -h <host-name> -x sock -p <port-number> -a none -v`` or ``cat /tmp/darshan_stream_store.log``. Where <host-name> is the node where the LDMS daemon exists and <port-number> is the port it is listening on.
 
-Execute Test Script(s)
-//////////////////////////
-This section gives a step by step on executing a simple Darshan test script with the LDMS Darshan Integration code (e.g. darshanConnector).
+Test The Darshan-LDMS Integrated Code
+---------------------------
+This section gives step by step instructions on how to test the Darshan-LDMS Integrated code (i.e. darshanConnector) by executing a simple test application provided by Darshan.
 
-1. Once the test scripts have been checked and the LDMS daemon is running and connected, **open another terminal window (login node)** and make sure the environment variables listed and set the following environment variables before running an application test with the darshanConnector code:
+Set The Environment
+////////////////////
+1. Once the LDMS streams daemon is initialized, **open another terminal window (login node)** and set the following environment variables before running an application test with Darshan:
 
 .. code-block:: RST
 
   export DARSHAN_INSTALL_PATH=<darshan-prefix>
   export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
-  export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" # optional. Please visit Darshan's webpage for more information.
+  # optional. Please visit Darshan's webpage for more information.
+  export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" 
 
   # uncomment if hdf5 is enabled
   #export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/hdf5/openmpi
@@ -190,7 +193,7 @@ This section gives a step by step on executing a simple Darshan test script with
   export DARSHAN_LDMS_PORT=10444
   export DARSHAN_LDMS_AUTH=none
   
-  # determine which modules we want to publish to ldms streams 
+  # determine which modules we want to publish to ldmsd 
   #export DARSHAN_LDMS_ENABLE_MPIIO= 
   #export DARSHAN_LDMS_ENABLE_POSIX=  
   #export DARSHAN_LDMS_ENABLE_STDIO=
@@ -198,24 +201,21 @@ This section gives a step by step on executing a simple Darshan test script with
   #export DARSHAN_LDMS_ENABLE_ALL=
   #export DARSHAN_LDMS_VERBOSE=
 
-.. warning:: 
+.. note:: 
   
-  The ``<host-name>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into). Make sure the LD_PRELOAD and all other DARSHAN_LDMS_* related variables are set and at least one of the DARSHAN_LDMS_ENABLE_* variable is set. If not, no data will be collected by LDMS. 
+  The ``<host-name>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into). Make sure the LD_PRELOAD and at least one of the DARSHAN_LDMS_ENABLE_* variable is set. If not, no data will be collected by LDMS. 
   
 .. note::
   
-  **(Optional)** To collect the correct job_id by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID. If this is not set, the job_id field will be set to the first PID.  
+  **(Optional)** To collect the correct ``job_id`` by Darshan and LDMS, please export the environment variable ``PBS_JOBID`` to $SLURM_JOB_ID (or other workload management platform). If this is not set, the job_id field will be set to the first PID.  
 
 .. note::
 
   ``DARSHAN_LDMS_VERBOSE`` outputs the JSON formatted messages sent to the LDMS streams daemon. The output will be sent to STDERR.
 
-Single Script
-==============
-Now we will test the darshanConnector with Darshan's example "mpi-io-test.sh" script by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and execute this script.
-
-.. note::
-  Darshan has various test setups and module loads specific to the system. In this example, we will be running Darshan on a CRAY machine so we will need to set the following environment variables:
+Execute Test Application
+/////////////////////////
+Now we will test the darshanConnector with Darshan's example "mpi-io-test.c" code by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and executing this application.
 
 .. code-block:: RST
   
@@ -224,7 +224,7 @@ Now we will test the darshanConnector with Darshan's example "mpi-io-test.sh" sc
   export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
   export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
   
-Now ``cd`` to the executable and test the script with the darshanConnector enabled.
+Now ``cd`` to the executable and test the appilcation with the darshanConnector enabled.
 
 .. code-block:: RST
 
@@ -232,6 +232,8 @@ Now ``cd`` to the executable and test the script with the darshanConnector enabl
   mpicc $DARSHAN_TESTDIR/test-cases/src/${PROG}.c -o $DARSHAN_TMP/${PROG}
   cd $DARSHAN_TMP
   ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
+
+Once the application is complete, to view the data please skip to `Check Results`_.
   
 Configure & Run A Program (login node) 
 ----------------------------------
@@ -245,7 +247,8 @@ The section goes over step-by-step instructions on how to compile and execute th
   export DARSHAN_INSTALL_PATH=<darshan-prefix>
   export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
-  export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" # optional. Please visit Darshan's webpage for more information.
+  # Optional. Please visit Darshan's runtime webpage for more information.
+  #export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO"
 
   # uncomment if hdf5 is enabled
   #export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/hdf5/openmpi
@@ -269,7 +272,8 @@ The section goes over step-by-step instructions on how to compile and execute th
   export DARSHAN_LDMS_HOST=<host-name>
   export DARSHAN_LDMS_PORT=10444
   export DARSHAN_LDMS_AUTH=none
-  # determine which modules we want to publish to ldms streams 
+
+  # determine which modules we want to publish to ldmsd 
   #export DARSHAN_LDMS_ENABLE_MPIIO= 
   #export DARSHAN_LDMS_ENABLE_POSIX=  
   #export DARSHAN_LDMS_ENABLE_STDIO=
@@ -316,12 +320,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   cd $DARSHAN_TMP
   ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
 
-6. **(Optional)** Parse the Darshan binary file using Darshans' standard and DXT (only if the ``DXT Module`` is enabled) parsers.
-
-.. code-block:: RST 
-
-  $DARSHAN_PATH/bin/darshan-parser --all $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}.darshan.txt
-  $DARSHAN_PATH/bin/darshan-dxt-parser --show-incomplete $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}-dxt.darshan.txt      
+Once the application is complete, to view the data please skip to `Check Results`_.
   
 Pre-Installed Darshan-LDMS 
 ---------------------------
@@ -424,8 +423,6 @@ Run application
 ///////////////
 Once the module is loaded and environment set, you will just need to compile and run your application. All darshan related logs will automatically be saved under /projects/ovis/darshanConnector/<system>/darshan/build/logs.
 
-.. code-block:: RST
-
 
 Check Results
 -------------
@@ -467,7 +464,14 @@ CSV File
 
 Compare With Darshan Log File(s)
 ////////////////////////////////
-If you decided to parse Darshan's binary file from ``step 6`` in _`Run Test On Login Node`_ section, you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
+Parse the Darshan binary file using Darshans' standard and DXT (only if the ``DXT Module`` is enabled) parsers.
+
+.. code-block:: RST 
+
+  $DARSHAN_PATH/bin/darshan-parser --all $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}.darshan.txt
+  $DARSHAN_PATH/bin/darshan-dxt-parser --show-incomplete $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}-dxt.darshan.txt
+
+Now you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
 
 The producerName, file path and record_id of each job should match and, if dxt was enabled, the individual I/O statistics of each rank (i.e. start time and number of I/O operations).
 

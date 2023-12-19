@@ -571,7 +571,7 @@ The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemo
                   conn_status = ECONNREFUSED;
                   break;
           case LDMS_XPRT_EVENT_RECV:
-                  sem_post(&dC.recv_sem);
+                  sem_post(&recv_sem);
                   break;
           case LDMS_XPRT_EVENT_SEND_COMPLETE:
                   break;
@@ -610,8 +610,8 @@ The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemo
                   return NULL;
           }
 
-          sem_init(recv_sem, 1, 0);
-          sem_init(conn_sem, 1, 0);
+          sem_init(&recv_sem, 1, 0);
+          sem_init(&conn_sem, 1, 0);
 
           rc = ldms_xprt_connect_by_name(ldms_g, host, port, event_cb, NULL);
           if (rc) {
@@ -619,7 +619,7 @@ The ``setup_connection`` contains LDMS API calls that connects to the LDMS daemo
                          rc, host, port);
                   return NULL;
           }
-          sem_timedwait(conn_sem, &ts);
+          sem_timedwait(&conn_sem, &ts);
           if (conn_status)
                   return NULL;
           return ldms_g;
@@ -631,7 +631,7 @@ Once the above functions have been copied, the ``setup_connection`` will need to
 
 .. note::
   
-  The LDMS Daemon is configured with the  `Streams Plugin <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/sampler/hello_stream/Plugin_hello_sampler.man>`_ and should already be running on the node. The host is set to the node the daemon is running on and port is set to the port the daemon is listening to. 
+  The LDMS Daemon is configured with the  `Streams Plugin <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/sampler/hello_stream/Plugin_hello_sampler.man>`_ and should already be running on the node. The host is set to the node the daemon is running on and port is set to the port the daemon is listening to. Below you will find an example of the Darshan Connector for reference. 
 
 .. code-block:: RST
 

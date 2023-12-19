@@ -38,6 +38,7 @@ To join the LDMS Users Group Mailing List: https://github.com/ovis-hpc/ovis-wiki
    maestro/index
    baler/index
    asf/index 
+   deployment/index
    
 Other Projects
 ====================================

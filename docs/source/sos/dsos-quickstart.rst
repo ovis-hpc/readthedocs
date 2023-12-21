@@ -63,5 +63,53 @@ Like dsosql, python expects a dsos.conf path and a database path. A Sos.Session 
     from sosdb import Sos
     sess = Sos.Session("dsos.conf")
     cont = sess.open("/storage/sos/database")
-    query = cont.query(1024*1024)
+    query = Sos.SqlQuery(cont,1024*1024)
     query.select('select Active from meminfo') 
+    df = query.next()
+
+The query.next() can be run multiple times to get more data matching the query. The next() will return None if no further data matches the query. A function to return all data matching a query can be written as:
+
+.. code-block:: python
+
+     def get_all_data(self, query):
+        df = query.next()
+        if df is None:
+           return None
+        res = df.copy(deep=True)
+        while df is not None:
+            df = query.next()
+            res = pd.concat([df, res])
+        del df
+        return res
+
+To manually add a record to a DSOS database we can use the insert_df function for a sos container object. 
+The dataframe inserted must have rows that match the types and length of the schema being inserted into, otherwise an error will be raised. 
+The data will be round robin-ed into the SOS containers referenced in the dsos.conf. 
+
+.. code-block:: python
+   
+    import pandas as pd
+    from sosdb import Sos
+    sess = Sos.Session("dsos.conf")
+    cont = sess.open("/storage/sos/database")
+    schema = cont.schema_by_name('meminfo')
+    in_df = {DATAFRAME OF RECORD(S) TO BE INSERTED}
+    cont.insert_df(schema,in_df)
+       
+To update a record in a DSOS database, the update needs to be bounded by a transaction begin and end to prevent data corruption.
+Create a key to find the record to be updated, change the values desired, and then update the record.
+
+.. code-block:: python
+    import pandas as pd
+    from sosdb import Sos
+    sess = Sos.Session("dsos.conf")
+    cont = sess.open("/storage/sos/database")
+    schema = cont.schema_by_name('meminfo')
+    attr = schema['job_time_comp']
+    key = attr.key(JOB,TIME,COMP)
+    obj = attr.find(key)
+    cont.transaction_begin()
+    obj['component_id'] = 13
+    cont.obj_update(obj)
+    cont.transaction_end()
+

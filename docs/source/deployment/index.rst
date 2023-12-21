@@ -5,6 +5,6 @@ About Maestro
 .. toctree::
    :maxdepth: 2
 
-   ldms-test-github
+   ldms-test
    ldms-jenkins
 

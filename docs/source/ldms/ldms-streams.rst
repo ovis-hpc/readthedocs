@@ -75,7 +75,7 @@ A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s o
   LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_.
 
 .. note::
-  If the Darshan-LDMS code is already deployed on your system, please skip to ``
+  If the Darshan-LDMS code is already deployed on your system, please skip to `Run An LDMS Streams Daemon`_
 
 Compile and Build with LDMS
 ---------------------------
@@ -84,14 +84,15 @@ Compile and Build with LDMS
 .. code-block:: RST
   
   git clone https://github.com/darshan-hpc/darshan.git
-  module swap PrgEnv-intel/6.0.9 PrgEnv-gnu # depending on the system. 
   cd <darshan-prefix>/darshan/ && mkdir build/
   ./prepare.sh && cd build/
-  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --enable-ldms-mod --with-ldms=<path_to_ldms_install> 
+  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=mpicc --enable-ldms-mod --with-ldms=<path_to_ldms_install> 
   make && make install
 .. note::
-  
-  This configuration is specific to the system (i.e. in this case we compile with cc instead of mpicc). For more information on how to install and build the code across various platforms, please visit `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ 
+
+  1. This configuration is specific to the system (i.e. in this case we compile with mpicc). 
+  2. If running an mpi program, make sure openmpi is installed/loaded on the system.
+  For more information on how to install and build the code across various platforms, please visit `Darshan's Runtime Installation Page   <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ 
   
 2. To build HDF5 module for darshan, you must first load the module with ``module load cray-hdf5-parallel`` then run configure as follows: 
 

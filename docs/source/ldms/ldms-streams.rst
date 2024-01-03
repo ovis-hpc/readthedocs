@@ -196,6 +196,7 @@ Set The Environment
   
   # enable LDMS data collection. No runtime data collection will occur if this is not exported.
   export DARSHAN_LDMS_ENABLE=
+  
   # determine which modules we want to publish to ldmsd 
   #export DARSHAN_LDMS_ENABLE_MPIIO= 
   #export DARSHAN_LDMS_ENABLE_POSIX=  
@@ -276,6 +277,9 @@ The section goes over step-by-step instructions on how to compile and execute th
   export DARSHAN_LDMS_PORT=10444
   export DARSHAN_LDMS_AUTH=none
 
+  # enable LDMS data collection. No runtime data collection will occur if this is not exported.
+  export DARSHAN_LDMS_ENABLE=
+  
   # determine which modules we want to publish to ldmsd 
   #export DARSHAN_LDMS_ENABLE_MPIIO= 
   #export DARSHAN_LDMS_ENABLE_POSIX=  
@@ -407,6 +411,7 @@ If you only want to collect a specific type of data such as "MPIIO" then you wil
   export DARSHAN_LDMS_AUTH=munge
 
   # Specify type of data to collect
+  export DARSHAN_LDMS_ENABLE=
   export DARSHAN_LDMS_ENABLE_MPIIO=
   export DARSHAN_LDMS_ENABLE_POSIX=
   export DARSHAN_LDMS_ENABLE_STDIO=

@@ -52,6 +52,24 @@ Dsosql expects the path to this dsos.conf and the database path for correct func
 Commands available in dsosql are attach, create_part, create_schema, help, import, open, select, set, show, show_part, and show_schema. 
 
 
+Select Syntax and Options
+*************************
+
+The select statement is used to set parameters for querying the sos databases attached in the dsosql setup.
+The query language is sql-like. The basic format follows the structure of "select {metrics} from {schema}".
+The schema field is for a defined schema in the database to be queried. Only a single schema can be selected in a query.
+Metrics can be a single metric in a schema, a list of metrics separated by commas, or an asterisk to request all metrics in the schema be returned that match the filters.
+Additional filters can be added using a "where {filters}" syntax after the schema selection.
+Filters can be conjoined using "and" and "or" and paranthesis can be used to further join filter statements.
+When filters are used to match on strings, the string must have quotes encasing it so the select interpreter knows it is not referencing another metric.
+
+The index to use for the query can be specified using "order_by {index}". Dsosql will give a best effort to optimize the query based on the filters given in the select statement if the order_by is not specified.
+Choosing an index for your query can vastly change the performance. Best practices are to use an index that matches the most specifying metric in your query filter.
+
+A resampling window can also be added to the query if the schema has timestamp as a metric using "resample {window}".
+This will return the averages of values for lengths of time with size specified by the window, which must be an integer.
+
+
 Python API
 **********
 

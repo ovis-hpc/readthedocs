@@ -81,7 +81,7 @@ Importing a CSV file and using the command line tools
       - sos-import-csv --csv 	
       - 1000 lines of CSV meminfo data 
 
-These files can be obtained from a clone of the wiki under the directory: quickstart in the sos clone dir.
+These files can be obtained from a clone of the wiki under the quickstart directory in the top level of the sos repo.
 
 .. code-block:: console
 

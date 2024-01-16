@@ -167,7 +167,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   
   To check that the ldmsd daemon is connected running please run ``ps auwx | grep ldmsd | grep -v grep``, ``ldms_ls -h <host-name> -x sock -p <port-number> -a none -v`` or ``cat /tmp/darshan_stream_store.log``. Where <host-name> is the node where the LDMS daemon exists and <port-number> is the port it is listening on.
 
-Test The Darshan-LDMS Integrated Code
+Test The Darshan-LDMS Integrated Code (Multi Node)
 ---------------------------
 This section gives step by step instructions on how to test the Darshan-LDMS Integrated code (i.e. darshanConnector) by executing a simple test application provided by Darshan.
 
@@ -219,7 +219,7 @@ Set The Environment
 
 Execute Test Application
 /////////////////////////
-Now we will test the darshanConnector with Darshan's example "mpi-io-test.c" code by setting the following environment variables, ``cd`` to ``darshan/darshan-test/regression/test-cases`` and executing this application.
+Now we will test the darshanConnector with Darshan's example "mpi-io-test.c" code by setting the following environment variables:
 
 .. code-block:: RST
   
@@ -235,11 +235,11 @@ Now ``cd`` to the executable and test the appilcation with the darshanConnector 
   cd darshan/darshan-test/regression/test-cases/src
   mpicc $DARSHAN_TESTDIR/test-cases/src/${PROG}.c -o $DARSHAN_TMP/${PROG}
   cd $DARSHAN_TMP
-  ./${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
+  srun ${PROG} -f $DARSHAN_TMP/${PROG}.tmp.dat
 
 Once the application is complete, to view the data please skip to `Check Results`_.
   
-Configure & Run A Program (login node) 
+Test The Darshan-LDMS Integrated Code (Single Node) 
 ----------------------------------
 The section goes over step-by-step instructions on how to compile and execute the mpi-io-test.c program under ``darshan/darshan-test/regression/test-cases/src/``, collect the data with the LDMS streams daemon and store it to a CSV file on a single login node. This section is for those who will not be running their applications on a cluster (i.e. no compute nodes).
 

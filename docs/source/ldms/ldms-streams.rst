@@ -178,7 +178,7 @@ Set The Environment
 .. code-block:: RST
 
   export DARSHAN_INSTALL_PATH=<path-to-darshan-install>
-  export LD_PRELOAD=<darshan-prefix>/lib/libdarshan.so
+  export LD_PRELOAD=<path-to-darshan-install>/lib/libdarshan.so
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
   # optional. Please visit Darshan's webpage for more information.
   export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" 

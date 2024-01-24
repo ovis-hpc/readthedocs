@@ -86,7 +86,7 @@ Compile and Build with LDMS
   git clone https://github.com/darshan-hpc/darshan.git
   cd <darshan-prefix>/darshan/ && mkdir build/
   ./prepare.sh && cd build/
-  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=mpicc --enable-ldms-mod --with-ldms=<path_to_ldms_install> 
+  ../configure --with-log-path-by-env=DARSHAN_LOGFILE_PATH --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=mpicc --enable-ldms-mod --with-ldms=<path_to_ldms_install> 
   make && make install
 .. note::
 
@@ -98,7 +98,7 @@ Compile and Build with LDMS
 
 .. code-block:: RST
 
-  ../configure --with-log-path=<darshan-prefix>/darshan/build/logs --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=<path_to_ldms_install> --enable-hdf5-mod --with-hdf5=<path-to-hdf5-install>  
+  ../configure --with-log-path-by-env=LOGFILE_PATH_DARSHAN --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=<path_to_ldms_install> --enable-hdf5-mod --with-hdf5=<path-to-hdf5-install>  
   make && make install
 
 2a. **OPTIONAL** If you do not have HDF5 installed on your system, install this with:
@@ -136,7 +136,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   export LDMSD_PLUGIN_LIBPATH="$TOP/lib/ovis-ldms/"
   export ZAP_LIBPATH="$TOP/lib/ovis-ldms"
   export PATH="$TOP/sbin:$TOP/bin:$PATH"
-  export PYTHONPATH="$TOP/lib/python2.7/site-packages/"
+  export PYTHONPATH=<python-packages-path>
   export COMPONENT_ID="1"
   export SAMPLE_INTERVAL="1000000"
   export SAMPLE_OFFSET="0"
@@ -226,7 +226,7 @@ Now we will test the darshanConnector with Darshan's example "mpi-io-test.c" cod
   export PROG=mpi-io-test
   export DARSHAN_TMP=/tmp/darshan-ldms-test
   export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
-  export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
+  export DARSHAN_LOGFILE_PATH=$DARSHAN_TMP
   
 Now ``cd`` to the executable and test the appilcation with the darshanConnector enabled.
 
@@ -264,7 +264,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   export LDMSD_PLUGIN_LIBPATH="$TOP/lib/ovis-ldms/"
   export ZAP_LIBPATH="$TOP/lib/ovis-ldms"
   export PATH="$TOP/sbin:$TOP/bin:$PATH"
-  export PYTHONPATH="$TOP/lib/python2.7/site-packages/"
+  export PYTHONPATH=<python-packages-path>
   export COMPONENT_ID="1"
   export SAMPLE_INTERVAL="1000000"
   export SAMPLE_OFFSET="0"
@@ -316,7 +316,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   export PROG=mpi-io-test
   export DARSHAN_TMP=/tmp/darshan-ldms-test
   export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
-  export DARSHAN_LOGFILE=$DARSHAN_TMP/${PROG}.darshan
+  export DARSHAN_LOGFILE_PATH=$DARSHAN_TMP
   
 5. Run Darshan's mpi-io-test.c program
 
@@ -476,8 +476,8 @@ Parse the Darshan binary file using Darshans' standard and DXT (only if the ``DX
 
 .. code-block:: RST 
 
-  $DARSHAN_PATH/bin/darshan-parser --all $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}.darshan.txt
-  $DARSHAN_PATH/bin/darshan-dxt-parser --show-incomplete $DARSHAN_LOGFILE > $DARSHAN_TMP/${PROG}-dxt.darshan.txt
+  $DARSHAN_PATH/bin/darshan-parser --all $DARSHAN_LOGFILE_PATH/<name-of-logfile>.darshan > $DARSHAN_TMP/${PROG}.darshan.txt
+  $DARSHAN_PATH/bin/darshan-dxt-parser --show-incomplete $DARSHAN_LOGFILE_PATH/<name-of-logfile>.darshan > $DARSHAN_TMP/${PROG}-dxt.darshan.txt
 
 Now you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
 

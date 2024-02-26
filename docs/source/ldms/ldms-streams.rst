@@ -381,7 +381,7 @@ Script Information
 
 The darshan_ldms module and .env file set the following env variables to define where the Darshan install is located, the LDMS daemon connection and what kind of file level access data will be published and stored to DSOS (via LDMS streams).
 
-If you only want to collect a specific type of data such as "MPIIO" then you will only set the DARSHAN_LDMS_ENABLE_MPIIO variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
+If you only want to collect a specific type of data such as "MPIIO" then you will only set the ``DARSHAN_LDMS_ENABLE_MPIIO`` variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
 
 .. note::
   
@@ -427,9 +427,20 @@ If you only want to collect a specific type of data such as "MPIIO" then you wil
           unset DARSHAN_LDMS_VERBOSE
   fi
 
+
 Run application
 ///////////////
 Once the module is loaded and environment set, you will just need to compile and run your application. All darshan related logs will automatically be saved under /projects/ovis/darshanConnector/<system>/darshan/build/logs.
+
+.. note::
+
+  If runtime errors or issues occur, then this is most likely due to incompatibility issues with the application build, Darshan-LDMS build or ``LD_PRELOAD``. If this is the case then please do the following:
+
+  1. Unset ``LD_PRELOAD`` and run the application with: ``mpiexec -env LD_PRELOAD /projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so`` or ``srun --export=/projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so``. For more information please see section 5.2 in `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_.  
+
+  2. If you are still running into runtime issues, please send an email to ldms@sandia.gov and provide: 
+    a) mpi-io, hdf5, pnetcdf, compiler version (if applicable) used to build your application 
+    b) Contents of your environment variables: $PATH, $LIBRARY_PATH, $LD_LIBRARY_PATH and $LD_PRELOAD. 
 
 
 Check Results

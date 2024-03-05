@@ -77,6 +77,64 @@ A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s o
 .. note::
   If the Darshan-LDMS code is already deployed on your system, please skip to `Run An LDMS Streams Daemon`_
 
+**Metric Definitions**
+Below are the list of Darshan metrics that are currently being collected by the darshanConnector:
+
+* ``schema:`` Schema name of the data collected by the darshanConnector. This is an LDMS related metric and is only used for storing the data to the correct location in DSOS.
+
+* ``module:`` Name of the Darshan module data being collected.
+
+* ``uid:`` User ID of the job run.
+
+* ``exe:`` Full path to the application executable. Only set to the full path when the "type" metric is set to "MET". Otherwise it is set to N/A.
+
+* ``ProducerName:`` Name of the compute node the application is running on.
+
+* ``switches:`` Number of times access alternated between read and write.
+
+* ``file:`` Path to the filename of the I/O operations. Only set to the full path when the "type" metric is set to "MET". Otherwise it is set to N/A.
+
+* ``rank:`` Rank of the processes at I/O
+
+* ``flushes:`` Number of times the "flush" operation was performed. For H5F and H5D it is the HDF5 file flush and dataset flush operation counts, respectively.
+
+* ``record_id:`` Darshan file record ID of the file the dataset belongs to.
+
+* ``max_byte:`` Highest offset byte read and written (i.e. Darshan's "<MODULE\>\_MAX_BYTE_*" parameter).
+
+* ``type:`` The type of json data being published. It is either set to MOD for gathering "module" data or MET for gathering static "meta" data (i.e. record id, rank ,etc.)
+
+* ``job_id:`` The Job ID of the application run.
+
+* ``op:`` Type of operation being performed (i.e. read, open, close, write).
+
+* ``cnt:`` The count of the operations ("op" field) performed per module per rank. Resets to 0 after each "close" operation.
+
+* ``seg:`` Contains the following array metrics from the operation ("op" field):
+  
+  ``pt_sel: HDF5 number of different access selections.
+  reg_hslab: HDF5 number of regular hyperslabs.
+  irreg_hslab: HDF5 number of irregular hyperslabs.
+  ndims: HDF5 number of dimensions in dataset's dataspace.
+  npoints: HDF5 number of points in dataset's dataspace.
+  off: Cumulative total bytes read and cumulative total bytes written, respectively, for each module per rank. (i.e. Darshan's "offset" DXT parameter)
+  len: Number of bytes read/written for the given operation per rank.
+  start: Start time (seconds) of each I/O operation performed for the given rank
+  dur: Duration of each operation performed for the given rank. (i.e. a rank takes "X" time to perform a r/w/o/c operation.)
+  total: Cumulative time since the application run after the I/O operation (i.e. start of application + dur)
+  timestamp: End time of given operation (i.e. "op" field) for the given rank (i.e. "rank" field). In epoch time.``
+
+For all metric fields that don't apply to a module, a value of ``-1`` is given.
+
+All data fields which that not change throughout the entire application run (i.e. constant), unless the darshanConnector is reconnected/restarted, are listed below:
+
+* ``ProducerName``
+* ``job_id``
+* ``schema``
+* ``exe``
+* ``uid``
+
+
 Compile and Build with LDMS
 ---------------------------
 1. Run the following to build Darshan and link against an existing LDMS library on the system.

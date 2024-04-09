@@ -70,12 +70,12 @@ A lightweight I/O characterization tool that transparently captures application 
 
 A Darshan-LDMS functionality that utilizes LDMS Streams to collect Darshan’s original I/O tracing, Darshan’s eXtended tracing (DXT) and absolute timestamp during runtime. It formats the data to a JSON message and *publishes* it to an LDMS streams interface. This data is a timeseries (i.e. absolute timestamp is collected) that will contain information about each individual I/O event.
 
-.. note::
-  
-  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_.
+.. image:: ../images/darshanConnector.png
+   :caption: The above diagrams provieds a high level visualization of the darshanConnector. During the Darshan initialization, the connector (on the left-hand side) checks to see if darshan has been built against the ldms library and if it has it will initialize a connection to the LDMS stream daemon when the DARSHAN_LDMS_ENABLE is set. Once initialized, the connecter will know which module data we want to collect by checking which environment variables are set. For example, if MPI-IO_ENABLE_LDMS is set, that specific I/O event data will be collected. The runtime data collection and JSON message formatting is then performed in the darshan ldms connector send function. This function is triggered whenever an I/O event occurs. The data is then published to LDMS streams interface and sent to through the LDMS Transport to be stored into a database. As you can see at the very bottom left is the JSON formatted message. Meanwhile, on the right, darshan is running as usual by initializing their modules, collecting the I/O event data for these modules, aggregating and calculating the data and then outputting the information into a Darshan log file. As you can see, the LDMS Streams implementation does not interfere with Darshan
 
 .. note::
-  If the Darshan-LDMS code is already deployed on your system, please skip to `Run An LDMS Streams Daemon`_
+  
+  LDMS must already be installed on the system or locally. If it is not, then please following ``Getting The Source`` and ``Building The Source`` in the `LDMS Quickstart Guide <ldms-quickstart>`_. If the Darshan-LDMS code is already deployed on your system, please skip to `Run An LDMS Streams Daemon`_
 
 **Metric Definitions**
 Below are the list of Darshan metrics that are currently being collected by the darshanConnector:

@@ -3,7 +3,7 @@ LDMS Quick Start
 
 Prerequisites
 ***********************
-* Ubuntu 16.04 (LDMS runs on any *nix OS; Ubuntu was used in this demnstration)
+* Ubuntu 16.04 (LDMS runs on any *nix OS; Ubuntu was used in this demonstration)
 * openssl-dev
 * gnu compiler
 * swig
@@ -107,7 +107,7 @@ For the rest of these instructions, omit the "-a munge" if you do not have munge
 
  ldms_ls -h localhost -x sock -p 10444 -a munge
  ldms_ls -h localhost -x sock -p 10444 -v -a munge
- ldms_ls -h localhost -x sock -p 10444 -l -a mung
+ ldms_ls -h localhost -x sock -p 10444 -l -a munge
  
 Note the use of munge. Users will not be able to query a daemon launched with munge if not querying with munge. Users will only be able to see sets as allowed by the permissions in response to ldms_ls.
 
@@ -229,7 +229,7 @@ Output:
  host1/vmstat
  
 
-ldms_ls -l shows the detailed output, including timestamps. This can be used to verify that the aggregator is   aggregating the two hosts' sets at different intervals.
+ldms_ls -l shows the detailed output, including timestamps. This can be used to verify that the aggregator is aggregating the two hosts' sets at different intervals.
 
 Aggregator Using Data Push
 ***********************

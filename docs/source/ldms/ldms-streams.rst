@@ -8,7 +8,7 @@ This section covers the basic steps on how to compile, build and use the caliper
 
 **What Is Caliper?**
 
-A program instrumentation and performance measurement framework that allows users to implement analysiscapabilities (e.g. performance profiling, tracing, monitoring, and auto-tuning)into their applications using Caliper’s annotation API.
+A program instrumentation and performance measurement framework that allows users to implement analysiscapabilities (e.g. performance profiling, tracing, monitoring, and auto-tuning) into their applications using Caliper’s annotation API.
 
 **What Is the caliperConnector?**
 
@@ -16,7 +16,7 @@ A Caliper-LDMS functionality that utilizes LDMS Streams to collect Caliper relat
 
 Setup & Configuration
 ----------------------
-Build the Caliper program with the application you wish to analyze. No modifications to the Caliper's instrumentations were required to integrate LDMS so you will just need to follow the build and install instructions from `Calipers' Build and Install Webpage <https://software.llnl.gov/Caliper/CaliperBasics.html#build-and-install>`_
+Build the Caliper program with the application you wish to analyze. No modifications to the Caliper's instrumentations were required to integrate LDMS, so you will just need to follow the build and install instructions from `Caliper's Build and Install Webpage <https://software.llnl.gov/Caliper/CaliperBasics.html#build-and-install>`_
 
 One built, you will need to poin the $LD_LIBRARY_PATH to Caliper's library:
 

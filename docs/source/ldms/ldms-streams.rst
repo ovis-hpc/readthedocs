@@ -37,7 +37,7 @@ Once done, you will just need to execute your program and you will have applicat
 
 .. note::
   
-  The MPI service (i.e.mpi) is required when enabling LDMS because it is used for associating the MPI rank data collected by LDMS.
+  The MPI service (i.e. mpi) is required when enabling LDMS because it is used for associating the MPI rank data collected by LDMS.
 
 LDMS Expected Output
 --------------------
@@ -142,24 +142,36 @@ Compile and Build with LDMS
 .. code-block:: RST
   
   git clone https://github.com/darshan-hpc/darshan.git
-  cd <darshan-prefix>/darshan/ && mkdir build/
+  cd darshan && mkdir build/
   ./prepare.sh && cd build/
-  ../configure --with-log-path-by-env=DARSHAN_LOGFILE_PATH --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=mpicc --enable-ldms-mod --with-ldms=<path_to_ldms_install> 
+  ../configure CC=<MPICC_WRAPPER> \
+               --with-log-path-by-env=DARSHAN_LOGFILE_PATH \
+               --prefix=<path-to-installation-directory>/darshan/<darshan_version> \
+               --with-jobid-env=<SCHED_JOBID> \
+               --enable-ldms-mod \
+               --with-ldms=<path_to_ldms_install> 
   make && make install
 .. note::
 
-  1. This configuration is specific to the system (i.e. in this case we compile with mpicc). 
-  2. If running an mpi program, make sure openmpi is installed/loaded on the system.
-  For more information on how to install and build the code across various platforms, please visit `Darshan's Runtime Installation Page   <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_ 
+ * This configuration is specific to the system.  <MPICC_WRAPPER> should be replaced by the compiler wrapper for your MPI Library, (e.g., ``mpicc`` for Open MPI, or ``cc`` for Cray Development Environment MPI wrappers). 
+* If running an MPI program, make sure an MPI library is installed/loaded on the system.
+  For more information on how to install and build the code across various platforms, please visit `Darshan's Runtime Installation Page   <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_
+* ``--with-jobid-env=`` expects a string that is the environment variable that the hosted job scheduler utilizes on the HPC system.  (e.g., Slurm would use ``--with-jobid-env=SLURM_JOBID``)
   
-2. **OPTIONAL** To build HDF5 module for darshan, you must first load the module with ``module load cray-hdf5-parallel`` then run configure as follows: 
+2. **OPTIONAL** To build HDF5 module for Darshan, you must first load the HDF5 modulefile with ``module load hdf5-parallel``, then run configure as follows: 
 
 .. code-block:: RST
 
-  ../configure --with-log-path-by-env=LOGFILE_PATH_DARSHAN --prefix=<darshan-prefix>/darshan/build/install --with-jobid-env=PBS_JOBID CC=cc --with-ldms=<path_to_ldms_install> --enable-hdf5-mod --with-hdf5=<path-to-hdf5-install>  
+  ../configure CC=cc \
+               --with-log-path-by-env=LOGFILE_PATH_DARSHAN \
+               --prefix=<darshan-prefix>/darshan/build/install \
+               --with-jobid-env=PBS_JOBID \
+               --with-ldms=<path_to_ldms_install> \
+               --enable-hdf5-mod \
+               --with-hdf5=<path-to-hdf5-install>  
   make && make install
 
-2a. **OPTIONAL** If you do not have HDF5 installed on your system, install this with:
+2a. **OPTIONAL** If you do not have HDF5 installed on your system, you may install Python's ``h5py`` package with:
 
 .. code-block:: RST
   
@@ -176,7 +188,7 @@ Compile and Build with LDMS
 Run An LDMS Streams Daemon
 ---------------------------
 This section will go over how to start and configure a simple LDMS Streams deamon to collect the Darshan data and store to a CSV file. 
-If an LDMS Streams daemon is already running on the system then please skip to the next section `Test The Darshan-LDMS Integrated Code`_.
+If an LDMS Streams daemon is already running on the system then please skip to `Test the Darshan-LDMS Integrated Code (Multi Node)`_.
 
 1. First, initialize an ldms streams daemon on a compute node as follows:
 
@@ -225,7 +237,7 @@ If an LDMS Streams daemon is already running on the system then please skip to t
   
   To check that the ldmsd daemon is connected running please run ``ps auwx | grep ldmsd | grep -v grep``, ``ldms_ls -h <host-name> -x sock -p <port-number> -a none -v`` or ``cat /tmp/darshan_stream_store.log``. Where <host-name> is the node where the LDMS daemon exists and <port-number> is the port it is listening on.
 
-Test The Darshan-LDMS Integrated Code (Multi Node)
+Test the Darshan-LDMS Integrated Code (Multi Node)
 ---------------------------
 This section gives step by step instructions on how to test the Darshan-LDMS Integrated code (i.e. darshanConnector) by executing a simple test application provided by Darshan.
 
@@ -297,7 +309,7 @@ Now ``cd`` to the executable and test the appilcation with the darshanConnector 
 
 Once the application is complete, to view the data please skip to `Check Results`_.
   
-Test The Darshan-LDMS Integrated Code (Single Node) 
+Test the Darshan-LDMS Integrated Code (Single Node) 
 ----------------------------------
 The section goes over step-by-step instructions on how to compile and execute the mpi-io-test.c program under ``darshan/darshan-test/regression/test-cases/src/``, collect the data with the LDMS streams daemon and store it to a CSV file on a single login node. This section is for those who will not be running their applications on a cluster (i.e. no compute nodes).
 
@@ -376,7 +388,7 @@ The section goes over step-by-step instructions on how to compile and execute th
   export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
   export DARSHAN_LOGFILE_PATH=$DARSHAN_TMP
   
-5. Run Darshan's mpi-io-test.c program
+4. Run Darshan's mpi-io-test.c program
 
 .. code-block:: RST 
 
@@ -389,15 +401,15 @@ Once the application is complete, to view the data please skip to `Check Results
   
 Pre-Installed Darshan-LDMS 
 ---------------------------
-If both the Darshan-LDMS integrated code (i.e. darshanConnector) and LDMS are already installed and a system LDMS streams daemon is running, then there are two ways to enable the LDMS functionality. 
+If both the Darshan-LDMS integrated code (i.e., darshanConnector) and LDMS are already installed, and a system LDMS streams daemon is running, then there are two ways to enable the LDMS functionality: 
 
-1. Set the environment via darshan_ldms.env script 
+1. Set the environment via sourcing the ``darshan_ldms.env`` script 
 
-2. Load the Darshan-LDMS module via darshan_ldms 
+2. Load the Darshan-LDMS module via ``module load darshan_ldms`` 
 
-.. note:: RST
+.. note::
 
-  Only when executing an application or submitting a job does the user need to load the darshan_ldms module or set the darshan_ldms.env script.  Compiling,     building or installing the application does not affect the darshanConnector and vice versa. 
+  Only when executing an application or submitting a job does the user need to load the ``darshan_ldms`` modulefile or source the ``darshan_ldms.env`` script.  Compiling, building, or installing the application does not affect the darshanConnector and vice versa. 
 
 1. Set Environment
 ///////////////////
@@ -432,18 +444,30 @@ If you do not wish to set the environment using the env script from above, you c
   $ module load darshan_ldms
   
 **OPTIONAL**: If you decide to load the module, you will need to turn on verbose by setting the following environment variable in your run script:
-  # export DARSHAN_LDMS_VERBOSE=
+
+.. code-block:: RST
+  $ export DARSHAN_LDMS_VERBOSE="true"
 
 Script Information
 ///////////////////
 
 The darshan_ldms module and .env file set the following env variables to define where the Darshan install is located, the LDMS daemon connection and what kind of file level access data will be published and stored to DSOS (via LDMS streams).
 
-If you only want to collect a specific type of data such as "MPIIO" then you will only set the ``DARSHAN_LDMS_ENABLE_MPIIO`` variable. If you want to collect all types of data then set all *_ENABLE_LDMS variables.
+If you only want to collect a specific type of data such as "MPIIO" then you will only set the ``DARSHAN_LDMS_ENABLE_MPIIO`` variable:
+
+.. code-block:: RST
+  $ export DARSHAN_LDMS_ENABLE_MPIIO=""
+
+If you want to collect all types of data then set all *_ENABLE_LDMS variables:
+
+.. code-block:: RST
+  export DARSHAN_LDMS_ENABLE_MPIIO=""
+  export DARSHAN_LDMS_ENABLE_POSIX=""
+  export DARSHAN_LDMS_ENABLE_HDF5=""
 
 .. note::
   
-  All darshan binary files (i.e. <executable-name>.darshan) will be saved to /projects/ovis/darshanConnector/<system>/darshan/build/logs
+  All Darshan binary files (i.e. <executable-name>.darshan) will be saved to ``$LOGFILE_PATH_DARSHAN``, as specified at build time and exported in the user environment. 
 
 .. code-block:: RST
   # Set variables for darshan install
@@ -492,9 +516,9 @@ Once the module is loaded and environment set, you will just need to compile and
 
 .. note::
 
-  If runtime errors or issues occur, then this is most likely due to incompatibility issues with the application build, Darshan-LDMS build or ``LD_PRELOAD``. If this is the case then please do the following:
+  If runtime errors or issues occur, then this is most likely due to incompatibility issues with the application build, Darshan-LDMS build, or ``LD_PRELOAD``. If this is the case then please do the following:
 
-  1. Unset ``LD_PRELOAD`` and run the application with: ``mpiexec -env LD_PRELOAD /projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so`` or ``srun --export=/projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so``. For more information please see section 5.2 in `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_.  
+  1. Unset ``LD_PRELOAD`` and run the application with: ``mpiexec -env LD_PRELOAD /projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so`` or ``srun --export=LD_PRELOAD=/projects/ovis/darshanConnector/<system>/darshan/build/install/lib/libdarshan.so``. For more information please see section 5.2 in `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_.  
 
   2. If you are still running into runtime issues, please send an email to ldms@sandia.gov and provide: 
     a) mpi-io, hdf5, pnetcdf, compiler version (if applicable) used to build your application 
@@ -550,7 +574,7 @@ Parse the Darshan binary file using Darshans' standard and DXT (only if the ``DX
 
 Now you can view the log(s) with ``cat $DARSHAN_TMP/${PROG}.darshan.txt`` or ``cat $DARSHAN_TMP/${PROG}-dxt.darshan.txt`` and compare them to the data collected by LDMS. 
 
-The producerName, file path and record_id of each job should match and, if dxt was enabled, the individual I/O statistics of each rank (i.e. start time and number of I/O operations).
+The producerName, file path and record_id of each job should match and, if ``dxt`` was enabled, the individual I/O statistics of each rank (i.e., start time and number of I/O operations).
 
 
 Kokkos
@@ -809,10 +833,4 @@ This line of code is placed within multiple macros (`MPIIO_RECORD_OPEN/READ/WRIT
 
 .. note:: 
   
-  For more information about how to store the published data from and LDMS Streams Daemon, please see the `Stream CSV Store plugin man pages <https://github.com/ovis-hpc/ovis/blob/OVIS-4/ldms/src/store/stream/Plugin_stream_csv_store.man>`_
-
-
-
-
-Defining A Format
-***********************
+  For more information about how to store the published data from and LDMS Streams Daemon, please see the Stream CSV Store plugin man pages on a system where LDMS Docs are installed: ``man  Plugin_stream_csv_store``

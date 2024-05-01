@@ -202,11 +202,11 @@ If an LDMS Streams daemon is already running on the system then please skip to `
 
 .. code-block:: RST
 
-  TOP=<path_to_ldms_install> 
-  export LD_LIBRARY_PATH="$TOP/lib/:$TOP/lib:$LD_LIBRARY_PATH"
-  export LDMSD_PLUGIN_LIBPATH="$TOP/lib/ovis-ldms/"
-  export ZAP_LIBPATH="$TOP/lib/ovis-ldms"
-  export PATH="$TOP/sbin:$TOP/bin:$PATH"
+  LDMS_INSTALL=<path_to_ldms_install> 
+  export LD_LIBRARY_PATH="$LDMS_INSTALL/lib/:$LDMS_INSTALL/lib:$LD_LIBRARY_PATH"
+  export LDMSD_PLUGIN_LIBPATH="$LDMS_INSTALL/lib/ovis-ldms/"
+  export ZAP_LIBPATH="$LDMS_INSTALL/lib/ovis-ldms"
+  export PATH="$LDMS_INSTALL/sbin:$LDMS_INSTALL/bin:$PATH"
   export PYTHONPATH=<python-packages-path>
   export COMPONENT_ID="1"
   export SAMPLE_INTERVAL="1000000"
@@ -248,20 +248,20 @@ Set The Environment
 
 .. code-block:: RST
 
-  export DARSHAN_INSTALL_PATH=<path_to_ldms_install>
-  export LD_PRELOAD=<path_to_ldms_install>/lib/libdarshan.so
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
+  export DARSHAN_INSTALL_PATH=<path_to_darshan_install>
+  export LD_PRELOAD=<path_to_darshan_install>/lib/libdarshan.so
+  export LD_LIBRARY_PATH=$DARSHAN_INSTALL_PATH/lib:$LD_LIBRARY_PATH
   # optional. Please visit Darshan's webpage for more information.
   export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO" 
 
   # uncomment if hdf5 is enabled
   #export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/hdf5/openmpi
-  #export HDF5_LIB=<path-to-hdf5-shared-libary-file>/libhdf5.so
+  #export HDF5_LIB=<path_to_hdf5_install>/lib/libhdf5.so
 
   #set env variables for ldms streams daemon testing
   export DARSHAN_LDMS_STREAM=darshanConnector
   export DARSHAN_LDMS_XPRT=sock
-  export DARSHAN_LDMS_HOST=<host-name>
+  export DARSHAN_LDMS_HOST=<hostname>
   export DARSHAN_LDMS_PORT=10444
   export DARSHAN_LDMS_AUTH=none
   
@@ -278,7 +278,7 @@ Set The Environment
 
 .. note:: 
   
-  The ``<hostname>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into). Make sure the LD_PRELOAD and at least one of the DARSHAN_LDMS_ENABLE_* variable is set. If not, no data will be collected by LDMS. 
+  The ``<hostname>`` is set to the node name the LDMS Streams daemon is running on (e.g. the node we previous ssh'd into). Make sure the ``LD_PRELOAD`` and at least one of the ``DARSHAN_LDMS_ENABLE_*`` variables are set. If not, no data will be collected by LDMS. 
   
 .. note::
 
@@ -292,7 +292,7 @@ Now we will test the darshanConnector with Darshan's example ``mpi-io-test.c`` c
   
   export PROG=mpi-io-test
   export DARSHAN_TMP=/tmp/darshan-ldms-test
-  export DARSHAN_TESTDIR=<darshan-prefix>/darshan/darshan-test/regression
+  export DARSHAN_TESTDIR=<path_to_darshan_install>/darshan/darshan-test/regression
   export DARSHAN_LOGFILE_PATH=$DARSHAN_TMP
   
 Now ``cd`` to the executable and test the appilcation with the darshanConnector enabled.
@@ -315,9 +315,9 @@ The section goes over step-by-step instructions on how to compile and execute th
 .. code-block:: RST
   
   # Darshan
-  export DARSHAN_INSTALL_PATH=<darshan-prefix>
-  export LD_PRELOAD=<darshan-prefix>/darshan/build/install/lib/libdarshan.so
-  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$DARSHAN_INSTALL_PATH/lib
+  export DARSHAN_INSTALL_PATH=<path_to_darshan_install>
+  export LD_PRELOAD=<path_to_darshan_install>/lib/libdarshan.so
+  export LD_LIBRARY_PATH=$DARSHAN_INSTALL_PATH/lib:$LD_LIBRARY_PATH
   # Optional. Please visit Darshan's runtime webpage for more information.
   #export DARSHAN_MOD_ENABLE="DXT_POSIX,DXT_MPIIO"
 
@@ -326,17 +326,18 @@ The section goes over step-by-step instructions on how to compile and execute th
   #export HDF5_LIB=<path-to-hdf5-shared-libary-file>/libhdf5.so
   
   # LDMS
-  TOP=<path-to-ldms-install> 
-  export LD_LIBRARY_PATH="$TOP/lib/:$TOP/lib:$LD_LIBRARY_PATH"
-  export LDMSD_PLUGIN_LIBPATH="$TOP/lib/ovis-ldms/"
-  export ZAP_LIBPATH="$TOP/lib/ovis-ldms"
-  export PATH="$TOP/sbin:$TOP/bin:$PATH"
+
+  LDMS_INSTALL=<path_to_ldms_install> 
+  export LD_LIBRARY_PATH="$LDMS_INSTALL/lib/:$LDMS_INSTALL/lib:$LD_LIBRARY_PATH"
+  export LDMSD_PLUGIN_LIBPATH="$LDMS_INSTALL/lib/ovis-ldms/"
+  export ZAP_LIBPATH="$LDMS_INSTALL/lib/ovis-ldms"
+  export PATH="$LDMS_INSTALL/sbin:$LDMS_INSTALL/bin:$PATH"
   export PYTHONPATH=<python-packages-path>
   export COMPONENT_ID="1"
   export SAMPLE_INTERVAL="1000000"
   export SAMPLE_OFFSET="0"
   export HOSTNAME="localhost"
-  
+    
   # darshanConnector
   export DARSHAN_LDMS_STREAM=darshanConnector
   export DARSHAN_LDMS_XPRT=sock
@@ -382,7 +383,7 @@ The section goes over step-by-step instructions on how to compile and execute th
 
   export PROG=mpi-io-test
   export DARSHAN_TMP=/tmp/darshan-ldms-test
-  export DARSHAN_TESTDIR=<darshan-prefix/darshan/darshan-test/regression
+  export DARSHAN_TESTDIR=<path_to_darshan_install>/darshan/darshan-test/regression
   export DARSHAN_LOGFILE_PATH=$DARSHAN_TMP
   
 4. Run Darshan's mpi-io-test.c program
@@ -467,6 +468,7 @@ If you want to collect all types of data then set all *_ENABLE_LDMS variables:
   All Darshan binary log-files (i.e. <executable-name>.darshan) will be saved to ``$LOGFILE_PATH_DARSHAN``, as specified at build time and exported in the user environment. 
 
 .. code-block:: RST
+
   # Set variables for darshan install
   export LD_PRELOAD=$LD_PRELOAD:$DARSHAN_INSTALL_PATH/lib/libdarshan.so
   export PATH=$PATH:$DARSHAN_INSTALL_PATH/bin
@@ -515,7 +517,7 @@ Once the module is loaded and the environment is set, you will just need to run 
 
   If runtime errors or issues occur, then this is most likely due to incompatibility issues with the application build, or the Darshan-LDMS build that is using ``LD_PRELOAD``. You may debug the issue, as follows:
 
-  1. Unset the ``LD_PRELOAD`` environment variable (e.g., ``unset LD_PRELOAD``), then run the application with: ``mpiexec -env LD_PRELOAD $DARSHAN_INSTALL_PATHl/lib/libdarshan.so`` or ``srun --export=LD_PRELOAD=$DARSHAN_INSTALL_PATH/lib/libdarshan.so``. 
+  1. Unset the ``LD_PRELOAD`` environment variable (e.g., ``unset LD_PRELOAD``), then run the application with: ``mpiexec -env LD_PRELOAD $DARSHAN_INSTALL_PATH/lib/libdarshan.so`` or ``srun --export=LD_PRELOAD=$DARSHAN_INSTALL_PATH/lib/libdarshan.so``. 
   For more information please see section 5.2 in `Darshan's Runtime Installation Page <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_.  
 
   2. If you are still running into runtime issues, please send an email to ldms@sandia.gov and provide: 

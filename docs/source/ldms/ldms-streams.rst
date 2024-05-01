@@ -147,7 +147,7 @@ Compile and Build with LDMS
   ../configure CC=<MPICC_WRAPPER> \
                --with-log-path-by-env=LOGFILE_PATH_DARSHAN \
                --prefix=<path-to-installation-directory>/darshan/<darshan_version> \
-               --with-jobid-env=<SCHED_JOBID> \
+               --with-JOB_ID-env=<SCHED_JOB_ID> \
                --enable-ldms-mod \
                --with-ldms=<path_to_ldms_install> 
   make && make install
@@ -156,7 +156,7 @@ Compile and Build with LDMS
  * This configuration is specific to the system.  <MPICC_WRAPPER> should be replaced by the compiler wrapper for your MPI Library, (e.g., ``mpicc`` for Open MPI, or ``cc`` for Cray Development Environment MPI wrappers). 
 * If running an MPI program, make sure an MPI library is installed/loaded on the system.
   For more information on how to install and build the code across various platforms, please visit `Darshan's Runtime Installation Page   <https://www.mcs.anl.gov/research/projects/darshan/docs/darshan-runtime.html>`_
-* ``--with-jobid-env=`` expects a string that is the environment variable that the hosted job scheduler utilizes on the HPC system.  (e.g., Slurm would use ``--with-jobid-env=SLURM_JOBID``)
+* ``--with-jobid-env=`` expects a string that is the environment variable that the hosted job scheduler utilizes on the HPC system.  (e.g., Slurm would use ``--with-jobid-env=SLURM_JOB_ID``)
   
 2. **OPTIONAL** To build HDF5 module for Darshan, you must first load the HDF5 modulefile with ``module load hdf5-parallel``, then run configure as follows: 
 
@@ -165,7 +165,7 @@ Compile and Build with LDMS
   ../configure CC=<MPICC_WRAPPER> \
                --with-log-path-by-env=LOGFILE_PATH_DARSHAN \
                --prefix=<path-to-installation-directory>/darshan/<darshan_version> \
-               --with-jobid-env=<SCHED_JOBID> \
+               --with-jobid-env=<SCHED_JOB_ID> \
                --enable-ldms-mod \
                --with-ldms=<path_to_ldms_install> 
                --enable-hdf5-mod \

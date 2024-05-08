@@ -92,7 +92,7 @@ Expected Results & Output
 +++++++++++++++++++++++++
 The following is an example test of an analysis module that queries the ``meminfo`` schema an returns a timeseries dataframe of the ``Active`` and ``Inactive`` metrics:
 
-.. image:: ../images/grafana/grafana_output.PNG
+.. image:: ../images/grafana/grafana_output.png
 
 Test Analysis via Grafana Dashboard
 -----------------------------------
@@ -108,19 +108,19 @@ To create a new dashboard, click on the + sign on the left side of the home page
 
 * Next, add your analysis by filling out the required fields shown below:
 
-.. image:: ../images/grafana/grafana_query.PNG
+.. image:: ../images/grafana/grafana_query.png
 
 * These fields are identical to the python script you can generate to test in your terminal window so please refer to :ref:`Test Analysis via Terminal Window` or `Grafana Panel <grafanapanel>`_ for more details.
 
 * Now change the analysis to query from the last 5 minutes by selecting the down arrow in the top right of the panel and selecting "Last 5 minutes"
 
-.. image:: ../images/grafana/grafana_time.PNG
+.. image:: ../images/grafana/grafana_time.png
     :height: 250
     :width: 50
 
 * Then change the refresh rate to 5 seconds so that Grafana will automatically query the data every 5 seconds
 
-.. image:: ../images/grafana/grafana_timerange.PNG
+.. image:: ../images/grafana/grafana_timerange.png
 
 * Now you should be able to see a the "Active" and "Inactive" values for each job_id.
 

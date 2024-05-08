@@ -90,6 +90,7 @@ The following steps were ran on a basic RHEL 9 instance via AWS.
  sudo yum install libtool -y
  sudo yum install python3 -y
  sudo yum install python3-devel.x86_64 -y
+ sudo yum install python3-Cython -y
  
  sudo yum install make -y 
  sudo yum install bison -y 

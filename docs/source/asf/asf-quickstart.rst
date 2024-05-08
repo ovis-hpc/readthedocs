@@ -17,7 +17,7 @@ dsosTemplate.py:
     from sosdb import Sos
     import pandas as pd
     import numpy as np
-    class queryMeminfo(Analysis):
+    class dsosTemplate(Analysis):
         def __init__(self, cont, start, end, schema='meminfo', maxDataPoints=4096):
             super().__init__(cont, start, end, schema, 1000000)
     
@@ -63,7 +63,7 @@ First, create the following file in the same directory as your python analysis (
     cont = '<PATH_TO_DATABASE>'
     cont = sess.open(cont)
     
-    model = queryMeminfo(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
+    model = dsosTemplate(cont, time.time()-300, time.time(), schema='meminfo', maxDataPoints=4096)
     
     x = model.get_data(['Active','Inactive'], filters=['job_id'], params='')
     
@@ -112,17 +112,15 @@ To create a new dashboard, click on the + sign on the left side of the home page
 
 * These fields are identical to the python script you can generate to test in your terminal window so please refer to :ref:`Test Analysis via Terminal Window` or `Grafana Panel <grafanapanel>`_ for more details.
 
-
 * Now change the analysis to query from the last 5 minutes by selecting the down arrow in the top right of the panel and selecting "Last 5 minutes"
 
 .. image:: ../images/grafana/grafana_time.PNG
-    :height: 400
-
+    :height: 250
+    :width: 50
 
 * Then change the refresh rate to 5 seconds so that Grafana will automatically query the data every 5 seconds
 
 .. image:: ../images/grafana/grafana_timerange.PNG
-    :height: 320
 
 * Now you should be able to see a the "Active" and "Inactive" values for each job_id.
 

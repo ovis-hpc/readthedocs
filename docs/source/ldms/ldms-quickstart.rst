@@ -4,62 +4,62 @@ LDMS Quick Start
 Installation
 *****************
 
-Ubuntu 16.04 
+AlmaLinux8 
 ------------
 
 Prerequisites
-=============
-* Ubuntu 16.04 (LDMS runs on any *nix OS; Ubuntu was used in this demonstration)
+
+***********************
+* AlmaLinux8 (AlmaLinux is binary compatible with RHEL®)
 * openssl-dev
 * gnu compiler
 * swig
 * autoconf
 * libtool
-* libreadline6
-* libreadline6-dev
+* readline
+* readline-devel
 * libevent
 * libevent-dev
-* autogen
-* python-yams
-* doxygen
+* autogen-libopts
 * gettext
-* python-2.7-dev
-* libglib2.0-dev
+* python3.8
+* python38-Cython
+* python38-libs
+* glib2-devel
+* git
+* bison
+* make
+* yacc (on AlmaLinux8, byacc)
+* flex
 
-Getting the Source
------------------------
-* This example shows cloning into ~/Source/ovis-4 and putting the build in ~/Build/OVIS-4
-
-.. code-block:: RST
- 
- mkdir $HOME/Source
- mkdir $HOME/Build
- cd $HOME/Source
- git clone https://github.com/ovis-hpc/ovis.git ovis-4
- 
-Building the Source
------------------------
-* Go to your source directory
-
-
-cd $HOME/Source/ovis-4
-git checkout OVIS-4
-
-* Run autogen.sh
+Prerequisite Installation
+---------------------------
+The following steps were ran on AlmaLinux8 arm64v8
 
 .. code-block:: RST
- 
- ./autogen.sh
 
-* Configure and Build (Builds default linux samplers. Build installation directory is prefix):
-
-.. code-block:: RST
+   sudo dnf install -y openssl
+   sudo dnf install -y openssl-devel
+   sudo dnf install -y swig
+   sudo dnf install -y libtool
+   sudo dnf install -y readline
+   sudo dnf install -y readline-devel
+   sudo dnf install -y libevent
+   sudo dnf install -y libevent-devel
+   sudo dnf install -y autogen-libopts
+   sudo dnf install -y gettext.a
+   sudo dnf install -y glib2
+   sudo dnf install -y glib2-devel
+   sudo dnf install -y git
+   sudo dnf install -y bison
+   sudo dnf install -y make
+   sudo dnf install -y byacc
+   sudo dnf install -y flex
+   sudo dnf install -y python38
+   sudo dnf install -y python38-devel
+   sudo dnf install -y python38-Cython
+   sudo dnf install -y python38-libs
  
- mkdir build
- cd build
- ../configure --prefix=$HOME/Build/OVIS-4.x
- make
- make install
 
 RHEL 9  
 ------------
@@ -72,7 +72,7 @@ Prerequisites
 * automake
 * libtool
 * python3 (or higher)
-* python3-devel.x86_64 (or higher)
+* python3-devel (or higher)
 * bison
 * flex
 
@@ -96,82 +96,132 @@ The following steps were ran on a basic RHEL 9 instance via AWS.
  sudo yum install flex -y
  
 
-LDMS Build and Install
---------------------------
-* This example shows cloning into ~/ovis and putting the build in ~/ovis/build
+Getting the Source
+
+***********************
+* This example shows cloning into ~/Source/ovis-4 and installing into ~/ovis/4.4.2
 
 .. code-block:: RST
  
- git clone https://github.com/ovis-hpc/ovis.git
- cd ovis && mkdir build/
+ mkdir $HOME/Source
+ mkdir $HOME/ovis
+ cd $HOME/Source
+ git clone -b OVIS-4.4.2 https://github.com/ovis-hpc/ovis.git ovis-4
+ 
+Building the Source
+-----------------------
 
 * Run autogen.sh
-
 .. code-block:: RST
- 
+
+ cd $HOME/Source/ovis 
  ./autogen.sh
 
 * Configure and Build (Builds default linux samplers. Build installation directory is prefix):
 
 .. code-block:: RST
  
+ mkdir build
  cd build
- ../configure --prefix=$HOME/ovis/build/
+ ../configure --prefix=$HOME/ovis/4.4.2
  make
  make install
-
+ 
 Basic Configuration and Running
 *******************************
 * Set up environment:
 
 .. code-block:: RST
 
- export LDMS_INSTALL_PATH=$HOME/ovis/build/
- export LD_LIBRARY_PATH=$LDMS_INSTALL_PATH/lib/:$LD_LIBRARY_PATH
- export LDMSD_PLUGIN_LIBPATH=$LDMS_INSTALL_PATH/lib/ovis-ldms
- export ZAP_LIBPATH=$LDMS_INSTALL_PATH/lib/ovis-ldms
- export PATH=$LDMS_INSTALL_PATH/sbin:$LDMS_INSTALL_PATH/bin:$PATH
- export PYTHONPATH=$LDMS_INSTALL_PATH/lib/python3.6/site-packages
-
+ OVIS=$HOME/ovis/4.4.2
+ export LD_LIBRARY_PATH=$OVIS/lib:$LD_LIBRARY_PATH
+ export LDMSD_PLUGIN_LIBPATH=$OVIS/lib/ovis-ldms
+ export ZAP_LIBPATH=$OVIS/lib/ovis-ldms
+ export PATH=$OVIS/sbin:$OVIS/bin:$PATH
+ export PYTHONPATH=$OVIS/lib/python3.8/site-packages
+ 
 Sampler
 ***********************
-* Make a configuration file (called sampler.conf) to load the meminfo and vmstat samplers with the following contents:
+* Make a configuration file (called sampler.conf) to load the `meminfo` and `vmstat` samplers.
+
+The following configuration employs generic hostname, uid, gid, component id, and permissions octal set values.  
+
+Sampling intervals are set using a "microsecond" time unit (i.e., 1 sec=1e+6 µs), and are adjustable.  Some suggestions include:
+
+.. list-table:: Suggestions for Interval Settings
+   :widths: 25 25 25
+   :header-rows: 1
+
+   * - Sampler
+     - Seconds (sec)
+     - Microseconds (µs)
+   * - Power
+     - 0.1 sec
+     - 100000 µs
+   * - Meminfo
+     - 1.0 sec
+     - 1000000 µs
+   * - VMstat
+     - 10 sec
+     - 10000000 µs
+   * - Link Status
+     - 60 sec
+     - 60000000 µs
+
+Adjust as needed for your system.
+
+Sampling offset is typically set to 0 for sampler plugins.
+
+
+.. code-block:: RST
+   :linenos:
+  
+  # Meminfo Sampler Plugin using 1 second sampling interval
+  load name=meminfo
+  config name=meminfo producer=host1 instance=host1/meminfo component_id=1 schema=meminfo job_set=host1/jobinfo uid=12345 gid=12345 perm=0755
+  start name=meminfo interval=1000000 offset=0
+  # VMStat Sampler Plugin using 10 second sampling interval
+  load name=vmstat
+  config name=vmstat producer=host1 instance=host1/vmstat component_id=1 schema=vmstat job_set=host1/jobinfo uid=0 gid=0 perm=0755
+  start name=vmstat interval=10000000 offset=0
+ 
+You may alternately export environmental variables to influence the runtime, and using variables to reference those values in the sampler configuration file.  
+
+The following setup will set the samplers to collect at 1 second, (i.e., 1000000 µs) intervals:
 
 .. code-block:: RST
 
+  export HOSTNAME=${HOSTNAME:=$(hostname -s)} #Typically already is set, set if not
+  export COMPONENT_ID=1
+  export SAMPLE_INTERVAL=1000000
+  export SAMPLE_OFFSET=50000
+
+.. code-block:: RST
+   :linenos:
+
+  # Meminfo Sampler Plugin using environment variables HOSTNAME, COMPONENT_ID, SAMPLE_INTERVAL, and SAMPLE_OFFSET
   load name=meminfo
   config name=meminfo producer=${HOSTNAME} instance=${HOSTNAME}/meminfo component_id=${COMPONENT_ID} schema=meminfo job_set=${HOSTNAME}/jobinfo uid=12345 gid=12345 perm=0755
   start name=meminfo interval=${SAMPLE_INTERVAL} offset=${SAMPLE_OFFSET}
-  #
+  # VMStat Sampler Plugin using environment variables HOSTNAME, COMPONENT_ID, SAMPLE_INTERVAL, and SAMPLE_OFFSET
   load name=vmstat
   config name=vmstat producer=${HOSTNAME} instance=${HOSTNAME}/vmstat component_id=${COMPONENT_ID} schema=vmstat job_set=${HOSTNAME}/jobinfo uid=0 gid=0 perm=0755
   start name=vmstat interval=${SAMPLE_INTERVAL} offset=${SAMPLE_OFFSET}
- 
-Note that munge is optional, although we do have the specification of munge-based permissions in the above example.
- 
-* Set up additional environmental variables for configuration file:
-
-.. code-block:: RST
-
- export COMPONENT_ID=1
- export SAMPLE_INTERVAL=1000000
- export SAMPLE_OFFSET=50000
- 
-This will set the samplers to collect at 1 second intervals.
 
 * Run a daemon using munge authentication: 
 
 .. code-block:: RST
  
-  ldmsd -x sock:10444 -c sampler.conf -l /tmp/demo_ldmsd_log -v DEBUG -a munge  -r $(pwd)/ldmsd.pid
+  ldmsd -x sock:10444 -c sampler.conf -l /tmp/demo_ldmsd.log -v DEBUG -a munge  -r $(pwd)/ldmsd.pid
  
 Or in non-cluster environments where munge is unavailable:
 
 .. code-block:: RST
  
-  ldmsd -x sock:10444 -c sampler.conf -l /tmp/demo_ldmsd_log -v DEBUG -r $(pwd)/ldmsd.pid
+  ldmsd -x sock:10444 -c sampler.conf -l /tmp/demo_ldmsd.log -v DEBUG -r $(pwd)/ldmsd.pid
   
-For the rest of these instructions, omit the "-a munge" if you do not have munge running. This will also write out DEBUG-level information to the specified (-l) log.
+.. note::
+  For the rest of these instructions, omit the "-a munge" if you do not have munge running. This will also write out DEBUG-level information to the specified (-l) log.
 
 * Run ldms_ls on that node to see set, meta-data, and contents:
 
@@ -181,7 +231,8 @@ For the rest of these instructions, omit the "-a munge" if you do not have munge
  ldms_ls -h localhost -x sock -p 10444 -v -a munge
  ldms_ls -h localhost -x sock -p 10444 -l -a munge
  
-Note the use of munge. Users will not be able to query a daemon launched with munge if not querying with munge. Users will only be able to see sets as allowed by the permissions in response to ldms_ls.
+.. note::
+  Note the use of munge. Users will not be able to query a daemon launched with munge if not querying with  munge. Users will only be able to see sets as allowed by the permissions in response to `ldms_ls`.
 
 Example (note permissions and update hint):
 
@@ -254,6 +305,7 @@ Aggregator Using Data Pull
 * Make a configuration file (called agg11.conf) to aggregate from the two samplers at different intervals with the following contents:
 
 .. code-block:: RST
+   :linenos:
 
  prdcr_add name=host1 host=host1 type=active xprt=sock port=10444 interval=20000000
  prdcr_start name=host1
@@ -270,9 +322,10 @@ Aggregator Using Data Pull
 
 .. code-block:: RST
 
- ldmsd -x sock:10445 -c agg11.conf -l /tmp/demo_ldmsd_log -v ERROR -a munge
+ ldmsd -x sock:10445 -c agg11.conf -l /tmp/demo_ldmsd.log -v ERROR -a munge
  
-* Run ldms_ls on the aggregator node to see set listing:
+
+* Run `ldms_ls` on the aggregator node to see set listing:
 
 .. code-block:: RST
 
@@ -287,13 +340,11 @@ Output:
  host2/meminfo
  host2/vmstat
  
- 
-You can also run ldms_ls to query the ldms daemon on the remote node:
+You can also run `ldms_ls` to query the ldms daemon on the remote node:
 
 .. code-block:: RST
 
  ldms_ls -h host1 -x sock -p 10444 -a munge 
-
 
 Output:
 
@@ -301,9 +352,10 @@ Output:
 
  host1/meminfo
  host1/vmstat
- 
 
-ldms_ls -l shows the detailed output, including timestamps. This can be used to verify that the aggregator is aggregating the two hosts' sets at different intervals.
+
+.. note::
+  `ldms_ls -l` shows the detailed output, including timestamps. This can be used to verify that the aggregator is aggregating the two hosts' sets at different intervals.
 
 Aggregator Using Data Push
 ***********************
@@ -404,7 +456,7 @@ Output:
 
 Set Groups
 ***********************
-A set group is an LDMS set with special information to represent a group of sets inside ldmsd. A set group would appear as a regular LDMS set to other LDMS applications, but ldmsd and ldms_ls will treat it as a collection of LDMS sets. If ldmsd updtr updates a set group, it also subsequently updates all the member sets. Performing ldms_ls -l on a set group will also subsequently perform a long-query all the sets in the group.
+A set group is an LDMS set with special information to represent a group of sets inside ldmsd. A set group would appear as a regular LDMS set to other LDMS applications, but ldmsd and `ldms_ls` will treat it as a collection of LDMS sets. If ldmsd updtr updates a set group, it also subsequently updates all the member sets. Performing ldms_ls -l on a set group will also subsequently perform a long-query all the sets in the group.
 
 To illustrate how a set group works, we will configure 2 sampler daemons with set groups and 1 aggregator daemon that updates and stores the groups in the following subsections. 
 
@@ -444,9 +496,11 @@ The following is the same for s1 sampler daemon, but with different devices (sdb
  
 The s0 LDMS daemon is listening on port 10000 and the s1 LDMS daemon is listening on port 10001. 
 
-Perform ldms_ls on a group
+Perform `ldms_ls` on a group
 ***********************
-Performing ldms_ls -v or ldms_ls -l on a LDMS daemon hosting a group will perform the query on the set representing the group itself as well as iteratively querying the group's members. Example: 
+Performing `ldms_ls -v` or `ldms_ls -l` on a LDMS daemon hosting a group will perform the query on the set representing the group itself as well as iteratively querying the group's members. 
+
+Example: 
 
 .. code-block:: RST
 
@@ -470,8 +524,8 @@ Output:
 
   ldms_ls -h localhost -x sock -p 10000 -v s0/lo | grep consistent # only query lo set from set group s0
   
-
-NOTE: The update time of the group set is the time that the last set was inserted into the group. 
+.. note::
+  The update time of the group set is the time that the last set was inserted into the group. 
 
 Update / store with set group
 ***********************

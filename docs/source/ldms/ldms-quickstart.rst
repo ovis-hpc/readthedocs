@@ -29,7 +29,7 @@ Prerequisites
 * git
 * bison
 * make
-* yacc (on AlmaLinux8, byacc)
+* byacc
 * flex
 
 Prerequisite Installation
@@ -38,27 +38,27 @@ The following steps were ran on AlmaLinux8 arm64v8
 
 .. code-block:: RST
 
-   sudo dnf install -y openssl
-   sudo dnf install -y openssl-devel
-   sudo dnf install -y swig
-   sudo dnf install -y libtool
-   sudo dnf install -y readline
-   sudo dnf install -y readline-devel
-   sudo dnf install -y libevent
-   sudo dnf install -y libevent-devel
-   sudo dnf install -y autogen-libopts
-   sudo dnf install -y gettext.a
-   sudo dnf install -y glib2
-   sudo dnf install -y glib2-devel
-   sudo dnf install -y git
-   sudo dnf install -y bison
-   sudo dnf install -y make
-   sudo dnf install -y byacc
-   sudo dnf install -y flex
-   sudo dnf install -y python38
-   sudo dnf install -y python38-devel
-   sudo dnf install -y python38-Cython
-   sudo dnf install -y python38-libs
+ sudo dnf install -y openssl
+ sudo dnf install -y openssl-devel
+ sudo dnf install -y swig
+ sudo dnf install -y libtool
+ sudo dnf install -y readline
+ sudo dnf install -y readline-devel
+ sudo dnf install -y libevent
+ sudo dnf install -y libevent-devel
+ sudo dnf install -y autogen-libopts
+ sudo dnf install -y gettext.a
+ sudo dnf install -y glib2
+ sudo dnf install -y glib2-devel
+ sudo dnf install -y git
+ sudo dnf install -y bison
+ sudo dnf install -y make
+ sudo dnf install -y byacc
+ sudo dnf install -y flex
+ sudo dnf install -y python38
+ sudo dnf install -y python38-devel
+ sudo dnf install -y python38-Cython
+ sudo dnf install -y python38-libs
  
 
 RHEL 9  
@@ -185,7 +185,7 @@ Sampling offset is typically set to 0 for sampler plugins.
   config name=vmstat producer=host1 instance=host1/vmstat component_id=1 schema=vmstat job_set=host1/jobinfo uid=0 gid=0 perm=0755
   start name=vmstat interval=10000000 offset=0
  
-You may alternately export environmental variables to influence the runtime, and using variables to reference those values in the sampler configuration file.  
+As an alternative to the configuration above, one may, instead, export environmental variables to set LDMS's runtime configuration by using variables to reference those values in the sampler configuration file.  
 
 The following setup will set the samplers to collect at 1 second, (i.e., 1000000 µs) intervals:
 

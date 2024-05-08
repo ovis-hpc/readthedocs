@@ -38,6 +38,7 @@ The following steps were ran on AlmaLinux8 arm64v8
 
 .. code-block:: RST
 
+ sudo dnf update -y
  sudo dnf install -y openssl
  sudo dnf install -y openssl-devel
  sudo dnf install -y swig
@@ -90,16 +91,18 @@ The following steps were ran on a basic RHEL 9 instance via AWS.
  sudo yum install libtool -y
  sudo yum install python3 -y
  sudo yum install python3-devel.x86_64 -y
- 
  sudo yum install make -y 
  sudo yum install bison -y 
  sudo yum install flex -y
  
 
+LDMS Source Installation Instructions
+--------------------------
+
 Getting the Source
 
 ***********************
-* This example shows cloning into ~/Source/ovis-4 and installing into ~/ovis/4.4.2
+* This example shows cloning into $HOME/Source/ovis-4 and installing into $HOME/ovis/4.4.2
 
 .. code-block:: RST
  
@@ -142,13 +145,14 @@ Basic Configuration and Running
  
 Sampler
 ***********************
-* Make a configuration file (called sampler.conf) to load the `meminfo` and `vmstat` samplers.
+* Edit a new configuration file, named `sampler.conf`, to load the `meminfo` and `vmstat` samplers.  For this example, it can be saved anywhere, but it will be used later to start the LDMS Daemon (`ldmsd`)
 
 The following configuration employs generic hostname, uid, gid, component id, and permissions octal set values.  
 
-Sampling intervals are set using a "microsecond" time unit (i.e., 1 sec=1e+6 µs), and are adjustable.  Some suggestions include:
+Sampling intervals are set using a "microsecond" time unit (i.e., 1 sec=1e+6 µs), and are adjustable, as needed.
+Some suggestions include:
 
-.. list-table:: Suggestions for Interval Settings
+.. list-table:: LDMS Sampler Plugin Interval Settings
    :widths: 25 25 25
    :header-rows: 1
 
@@ -168,9 +172,9 @@ Sampling intervals are set using a "microsecond" time unit (i.e., 1 sec=1e+6 µs
      - 60 sec
      - 60000000 µs
 
-Adjust as needed for your system.
 
-Sampling offset is typically set to 0 for sampler plugins.
+.. note::
+  Sampling offset is typically set to 0 for sampler plugins.
 
 
 .. code-block:: RST
@@ -299,6 +303,7 @@ Output:
   ...
   D u64        DirectMap1G                                134217728
   
+
 Aggregator Using Data Pull
 ***********************
 * Start another sampler daemon with a similar configuration on host2 using component_id=2, as above.
@@ -498,7 +503,7 @@ The s0 LDMS daemon is listening on port 10000 and the s1 LDMS daemon is listenin
 
 Perform `ldms_ls` on a group
 ***********************
-Performing `ldms_ls -v` or `ldms_ls -l` on a LDMS daemon hosting a group will perform the query on the set representing the group itself as well as iteratively querying the group's members. 
+Performing `ldms_ls -v` or `ldms_ls -l` on a LDMS daemon hosting a group will perform the query on the set representing the group itself as well as iteratively querying the group's members.
 
 Example: 
 
@@ -551,7 +556,7 @@ The following is an example of an aggregator configuration to match-update only 
  updtr_prdcr_add name=u regex=.*                                                             
  updtr_start name=u   
  
-Performing ldms_ls on the LDMS aggregator daemon exposes all the sets (including groups)
+Performing `ldms_ls` on the LDMS aggregator daemon exposes all the sets (including groups)
 
 .. code-block:: RST
 
@@ -568,7 +573,7 @@ Output:
  s0/lo
  s0/grp
  
-Performing ldms_ls -v on a LDMS daemon hosting a group again but only querying the group and its members: 
+Performing `ldms_ls -v` on a LDMS daemon hosting a group again but only querying the group and its members:
 
 .. code-block:: RST
 

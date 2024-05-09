@@ -74,6 +74,7 @@ Prerequisites
 * libtool
 * python3 (or higher)
 * python3-devel (or higher)
+* cython 
 * bison
 * flex
 
@@ -87,7 +88,6 @@ The following steps were ran on a basic RHEL 9 instance via AWS.
  sudo yum install automake -y
  sudo yum install openssl-devel -y 
  sudo yum install pkg-config -y
- sudo yum install hdf5-tools libhdf5-openmpi-dev openmpi-bin -y
  sudo yum install libtool -y
  sudo yum install python3 -y
  sudo yum install python3-devel.x86_64 -y

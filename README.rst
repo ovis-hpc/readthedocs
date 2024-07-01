@@ -44,7 +44,7 @@ Rst files for man pages are generated using the pandoc_man_2_rst.py python file.
 Pandoc single file usage:
 
 
-..code-block:: RST
+.. code-block:: RST
 
     /usr/local/bin/pandoc -f man -s -t rst --toc {input.man} -o {output.rst}
 

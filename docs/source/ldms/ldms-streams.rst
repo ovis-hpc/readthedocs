@@ -736,35 +736,7 @@ Once the above functions have been copied, the ``setup_connection`` will need to
 
 .. code-block:: RST
 
-  void darshan_ldms_connector_initialize()
-  {
-      const char* env_ldms_stream =  getenv("DARSHAN_LDMS_STREAM");
-      const char* env_ldms_xprt    = getenv("DARSHAN_LDMS_XPRT");
-      const char* env_ldms_host    = getenv("DARSHAN_LDMS_HOST");
-      const char* env_ldms_port    = getenv("DARSHAN_LDMS_PORT");
-      const char* env_ldms_auth    = getenv("DARSHAN_LDMS_AUTH");
-
-      /* Check/set LDMS transport type */
-      if (!env_ldms_xprt || !env_ldms_host || !env_ldms_port || !env_ldms_auth || env_ldms_stream){
-          printf("Either the transport, host, port or authentication is not given\n");
-          return;
-      }
-
-      pthread_mutex_lock(ln_lock);
-      ldms_darsh = setup_connection(env_ldms_xprt, env_ldms_host, env_ldms_port, env_ldms_auth);
-          if (conn_status != 0) {
-              printf("Error setting up connection to LDMS streams daemon: %i -- exiting\n", conn_status);
-              pthread_mutex_unlock(ln_lock);
-              return;
-          }
-          else if (ldms_darsh->disconnected){
-              printf("Disconnected from LDMS streams daemon -- exiting\n");
-              pthread_mutex_unlock(ln_lock);
-              return;
-          }
-      pthread_mutex_unlock(ln_lock);
-      return;
-  }
+  Updates Comming Soon
   
 The environment variables ``DARSHAN_LDMS_X`` are used to define the stream name (configured in the daemon), transport type (sock, ugni, etc.), host, port and authentication of the LDMSD. In this specific example, the stream name is set to "darshanConnector" so the environment variable, ``DARSHAN_LDMS_STREAM`` is exported as follows: ``export DARSHAN_LDMS_STREAM=darshanConnector``
 
@@ -783,32 +755,7 @@ Now we will create a function that will collect all relevent application events 
 
 .. code-block:: RST
 
-  void darshan_ldms_connector_send(int64_t record_count, char *rwo, int64_t offset, int64_t length, int64_t max_byte, int64_t rw_switch, int64_t flushes,  double start_time, double end_time, struct timespec tspec_start, struct timespec tspec_end, double total_time, char *mod_name, char *data_type)
-  {
-      char jb11[1024];
-      int rc, ret, i, size, exists;
-      env_ldms_stream  = getenv("DARSHAN_LDMS_STREAM");
-
-      pthread_mutex_lock(ln_lock);
-      if (ldms_darsh != NULL)
-          exists = 1;
-      else
-          exists = 0;
-      pthread_mutex_unlock(ln_lock);
-
-      if (!exists){
-          return;
-      }
-
-      sprintf(jb11,"{ \"uid\":%ld, \"exe\":\"%s\",\"job_id\":%ld,\"rank\":%ld,\"ProducerName\":\"%s\",\"file\":\"%s\",\"record_id\":%"PRIu64",\"module\":\"%s\",\"type\":\"%s\",\"max_byte\":%ld,\"switches\":%ld,\"flushes\":%ld,\"cnt\":%ld,\"op\":\"%s\",\"seg\":[{\"data_set\":\"%s\",\"pt_sel\":%ld,\"irreg_hslab\":%ld,\"reg_hslab\":%ld,\"ndims\":%ld,\"npoints\":%ld,\"off\":%ld,\"len\":%ld,\"start\":%0.6f,\"dur\":%0.6f,\"total\":%.6f,\"timestamp\":%lu.%.6lu}]}", dC.uid, dC.exename, dC.jobid, dC.rank, dC.hname, dC.filename, dC.record_id, mod_name, data_type, max_byte, rw_switch, flushes, record_count, rwo, dC.data_set, dC.hdf5_data[0], dC.hdf5_data[1], dC.hdf5_data[2], dC.hdf5_data[3], dC.hdf5_data[4], offset, length, start_time, end_time-start_time, total_time, tspec_end.tv_sec, micro_s);
-
-      rc = ldmsd_stream_publish(ldms_darsh, env_ldms_stream, LDMSD_STREAM_JSON, jb11, strlen(jb11) + 1);
-      if (rc)
-          printf("Error %d publishing data.\n", rc);
-
-   out_1:
-      return;
-  }
+  Updates Coming Soon
   
 .. note::
 

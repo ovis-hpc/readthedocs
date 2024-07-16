@@ -1,2 +1,0 @@
-Additional ASF Tutorial Material
-===============================

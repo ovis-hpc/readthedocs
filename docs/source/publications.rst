@@ -6,7 +6,7 @@ Citing LDMS
 
 To reference LDMS, please use:
  ::
-| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications 
+| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
 | SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis
 | New Orleans, LA, USA, 2014, pp. 154-165
@@ -17,8 +17,8 @@ BibTex:
  ::
 | @INPROCEEDINGS{7013000,
 | author={Agelastos, Anthony and Allan, Benjamin and Brandt, Jim and Cassella, Paul and Enos, Jeremy and Fullop, Joshi and Gentile, Ann and Monk, Steve and Naksinehaboon, Nichamon and Ogden, Jeff and Rajan, Mahesh and Showerman, Michael and Stevenson, Joel and Taerat, Narate and Tucker, Tom},
-| booktitle={SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis}, 
-| title={The Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications}, 
+| booktitle={SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},
+| title={The Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications},
 | year={2014},
 | volume={},
 | number={},
@@ -29,12 +29,12 @@ BibTex:
 Publications and Selected Presentations
 -----------------------------------------
 
-Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS). 
+Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS).
 
 2023
 ^^^^
 | Prodigy: Toward Unsupervised Anomaly Detection in Production HPC Systems
-| Burak Aksar, Efe Sencan, Benjamin Schwaller, Omar Aaziz, Vitus J. Leung, Jim Brandt, Brian Kulis, Manuel Egele, and Ayse K. Coskun 
+| Burak Aksar, Efe Sencan, Benjamin Schwaller, Omar Aaziz, Vitus J. Leung, Jim Brandt, Brian Kulis, Manuel Egele, and Ayse K. Coskun
 | SC `23: Proc of the Int'l Conf. for High Performance Computing, Networking, Storage and Analysis.
 | Nov 2023, to appear.
 
@@ -77,22 +77,22 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `doi: 10.1109/CLUSTER51413.2022.00048 <https://doi.org/10.1109/CLUSTER51413.2022.00048>`_
 
  ::
-| Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling 
-| A. Goponenko, K. Lamar, C. Peterson, B. Allan, J. Brandt, and D. Dechev 
+| Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling
+| A. Goponenko, K. Lamar, C. Peterson, B. Allan, J. Brandt, and D. Dechev
 | 2022 IEEE 34th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD), Bordeaux, France, 2022, pp. 241-252
 | `doi: 10.1109/SBAC-PAD55451.2022.00035 <https://doi.org/10.1109/SBAC-PAD55451.2022.00035>`_
 
 2021
 ^^^^
-| Systematically Inferring I/O Performance Variability by Examining Repetitive Job Behavior 
-| E. Costa, T. Patel, B. Schwaller, J. Brandt, D. Tiwari 
+| Systematically Inferring I/O Performance Variability by Examining Repetitive Job Behavior
+| E. Costa, T. Patel, B. Schwaller, J. Brandt, D. Tiwari
 | SC '21: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, November 2021, Article No.: 33, Pages 1–15
 | `doi: 10.1145/3458817.3476186 <https://doi.org/10.1145/3458817.3476186>`_
 
  ::
-| Backfilling HPC Jobs with a Multimodal-Aware Predictor 
-| K. Lamar, A. Goponenko, C. Peterson, B. Allan, J. Brandt, and D. Dechev 
-| 2021 IEEE International Conference on Cluster Computing (CLUSTER), Portland, OR, USA, 2021, pp. 618-622 
+| Backfilling HPC Jobs with a Multimodal-Aware Predictor
+| K. Lamar, A. Goponenko, C. Peterson, B. Allan, J. Brandt, and D. Dechev
+| 2021 IEEE International Conference on Cluster Computing (CLUSTER), Portland, OR, USA, 2021, pp. 618-622
 | `doi: 10.1109/Cluster48925.2021.00093 <https://doi.org/10.1109/Cluster48925.2021.00093>`_
 
  ::
@@ -102,7 +102,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `doi: 10.1109/HPEC49654.2021.9622783 <https://doi.org/10.1109/HPEC49654.2021.9622783>`_
 
  ::
-| Integrating Systems Operations into CoDesign -- *Keynote* 
+| Integrating Systems Operations into CoDesign -- *Keynote*
 | Presented by A. Gentile
 | `2nd Int'l Workshop on Monitoring and Operational Data Analytics (MODA21) <https://moda21.sciencesconf.org/>`_. Jul 2021.
 
@@ -142,25 +142,25 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
  ::
 | Inspecting fast commodity RDMA network performance on production systems with LDMS -- *Workshop presentation*
 | B. Allan, M. Aguilar, B. Schwaller, S. Langer
-| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
+| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020.
 | Sandia Technical report SAND2020-8014C.
 
  ::
 | Production LDMS, genders, systemd, and the future -- *Workshop presentation*
 | B. Allan
-| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
+| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020.
 | Sandia Technical report SAND2020-8015C.
- 
+
  ::
 | LDMS packaging: Moving from tribal knowledge to community knowledge -- *Workshop presentation*
 | B. Allan
-| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020. 
+| `LDMSCON2020: LDMS Users Group Conference 2020 <https://sites.google.com/view/ldmscon2020>`_, Aug 2020.
 | Sandia Technical report SAND2020-8013C.
 
  ::
-| ALAMO: Autonomous Lightweight Allocation, Management, and Optimization 
-| R. Brightwell, K. B. Ferreira, R. E. Grant, S. Levy, J. Lofstead, S. L. Olivier, K. T. Pedretti, A. J. Younge, A. Gentile, and J. Brandt. 
-| In: Nichols J., Verastegui B., Maccabe A., Hernandez O., Parete-Koon S., Ahearn T. (eds) Driving Scientific and Engineering Discoveries Through the Convergence of HPC, Big Data and AI. 
+| ALAMO: Autonomous Lightweight Allocation, Management, and Optimization
+| R. Brightwell, K. B. Ferreira, R. E. Grant, S. Levy, J. Lofstead, S. L. Olivier, K. T. Pedretti, A. J. Younge, A. Gentile, and J. Brandt.
+| In: Nichols J., Verastegui B., Maccabe A., Hernandez O., Parete-Koon S., Ahearn T. (eds) Driving Scientific and Engineering Discoveries Through the Convergence of HPC, Big Data and AI.
 | Smoky Mountains Computational Sciences and Engineering Conference (SMC2020) Communications in Computer and Information Science, vol 1315. Springer, Cham., 2020.
 | `doi: 10.1007/978-3-030-63393-6_27 <https://doi.org/10.1007/978-3-030-63393-6_27>`_
 
@@ -268,7 +268,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | SC18, Nov 2018.
 
  ::
-| Monitoring Large-Scale HPC Systems: Extracting and Presenting Meaningful System and Application Insights -- *BoF Session Organizer* 
+| Monitoring Large-Scale HPC Systems: Extracting and Presenting Meaningful System and Application Insights -- *BoF Session Organizer*
 | `SC18 <https://sc18.supercomputing.org/presentation/?id=bof219&sess=sess452>`_, Nov 2018.
 
  ::
@@ -280,7 +280,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
  ::
 | Online Diagnosis of Performance Variation in HPC Systems Using Machine Learning
 | O. Tuncer, E. Ates, Y. Zhang, A. Turk, J. Brandt, V. Leung, M.Egele, and A. Coskun
-| IEEE Transactions on Parallel and Distributed Systems 
+| IEEE Transactions on Parallel and Distributed Systems
 | `doi: 10.1109/TPDS.2018.2870403 <https://doi.org/10.1109/TPDS.2018.2870403>`_, Sep 2018.
 
  ::
@@ -290,7 +290,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `doi: 10.1109/CLUSTER.2018.00037 <https://doi.org/10.1109/CLUSTER.2018.00037>`_
 
  ::
-| Large-Scale System Monitoring Experiences and Recommendations -- *Invited Peer-Reviewed Submission at* `HPCMASPA <https://sites.google.com/site/hpcmaspa2018>`_ 
+| Large-Scale System Monitoring Experiences and Recommendations -- *Invited Peer-Reviewed Submission at* `HPCMASPA <https://sites.google.com/site/hpcmaspa2018>`_
 | V. Ahlgren, S. Andersson, J. Brandt, N. P. Cardo, S. Chunduri, J. Enos, P. Fields, A. Gentile, R. Gerber, M. Gienger, J. Greenseid, A. Greiner, B. Hadri, Y. (Helen) He, D. Hoppe, U. Kaila, K. Kelly, M. Klein, A. Kristiansen, S. Leak, M. Mason, K. Pedretti, J-G. Piccinali, J. Repik, J. Rogers, S. Salminen, M. Showerman, C. Whitney, and J. Williams (Authors representing ALCF, CSC, CSCS, HLRS, KAUST, LANL, NCSA, NERSC, ORNL, SNL, and Cray)
 | 2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 532-542
 | `doi: 10.1109/CLUSTER.2018.00069 <https://doi.org/10.1109/CLUSTER.2018.00069>`_
@@ -373,7 +373,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | `Proc. Cray Users Group (CUG) <https://cug.org/CUG2017>`_, May 2017.
 
  ::
-| Runtime Collection and Analysis of System Metrics for Production Monitoring of Trinity Phase II 
+| Runtime Collection and Analysis of System Metrics for Production Monitoring of Trinity Phase II
 | A. DeConinck, H. Nam, D. Morton, A. Bonnie, C. Lueninghoener (LANL), J. Brandt, A. Gentile, K. Pedretti, A. Agelastos, C. Vaughan, S. Hammond, B. Allan (SNL), M. Davis and J. Repik (Cray)
 | `Proc. Cray Users Group (CUG) <https://cug.org/CUG2017>`_, May 2017.
 
@@ -446,7 +446,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
  ::
 | Smart HPC Centers: Data, Analysis, Feedback, and Response
 | J. Brandt, A. Gentile, C. Martin, B. Allan, and K. Devine
-| `Minisymposium on Improving Performance, Throughput, and Efficiency of HPC Centers through Full System Data Analytics <http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=22167>`_ -- *Minisymposium Organizer* 
+| `Minisymposium on Improving Performance, Throughput, and Efficiency of HPC Centers through Full System Data Analytics <http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=22167>`_ -- *Minisymposium Organizer*
 | at the `SIAM Conf. on Parallel Processing for Scientific Computing (PP16) <http://www.siam.org/meetings/pp16/>`_, Paris, France. Apr 2016.
 
  ::
@@ -517,7 +517,7 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | In `Sandia National Laboratories HPC Annual Report 2014 <https://www.sandia.gov/app/uploads/sites/165/2022/03/HPC_AnnualReport2014_FNL.pdf>`_, 2014.
 
  ::
-| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications 
+| Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications
 | A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker
 | `SC '14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis <http://sc14.supercomputing.org/>`_
 | New Orleans, LA, USA, 2014, pp. 154-165
@@ -585,7 +585,7 @@ Benjamin Allan
  ::
 | Framework for Enabling System Understanding
 | J. Brandt, F. Chen, A. Gentile, C. Leangsuksun, J. Mayo, P. Pebay, D. Roe, N. Taerat, D. Thompson, and M. Wong
-| In: Alexander, M., et al. Euro-Par 2011: Parallel Processing Workshops. Euro-Par 2011. Lecture Notes in Computer Science, vol 7156. Springer, Berlin, Heidelberg. 
+| In: Alexander, M., et al. Euro-Par 2011: Parallel Processing Workshops. Euro-Par 2011. Lecture Notes in Computer Science, vol 7156. Springer, Berlin, Heidelberg.
 | `doi: 10.1007/978-3-642-29740-3_27 <https://doi.org/10.1007/978-3-642-29740-3_27>`_
 
  ::
@@ -758,7 +758,7 @@ at the `SIAM Conf. on Parallel Processing and Scientific Computing (PP10) <http:
 
  ::
 | OVIS: A Tool for Intelligent, Real-Time Monitoring of Computational Clusters
-| `Proceedings 20th IEEE International Parallel & Distributed Processing Symposium <http://www.ipdps.org/ipdps2006/>`_, Rhodes, Greece, 2006, pp. 8 pp.- 
+| `Proceedings 20th IEEE International Parallel & Distributed Processing Symposium <http://www.ipdps.org/ipdps2006/>`_, Rhodes, Greece, 2006, pp. 8 pp.-
 | `doi: 10.1109/IPDPS.2006.1639698 <https://doi.org/10.1109/IPDPS.2006.1639698>`_
 
  ::
@@ -781,7 +781,7 @@ at the `SIAM Conf. on Parallel Processing and Scientific Computing (PP10) <http:
 | `doi: 10.1109/CLUSTR.2005.347090 <https://doi.org/10.1109/CLUSTR.2005.347090>`_
 
  ::
-| Meaningful Automated Statistical Analysis of Large Computational Clusters 
+| Meaningful Automated Statistical Analysis of Large Computational Clusters
 | J. M. Brandt, A. C. Gentile, Y. M. Marzouk, and P. P. Pébay
 | SAND Report 2005-4558, Sandia National Laboratories, July 2005.
 

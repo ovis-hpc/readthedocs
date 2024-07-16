@@ -35,11 +35,11 @@ Welcome To OVIS-HPC Documentation!
    Maestro <https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/maestro-index.html>
    Baler <https://ovis-hpc.readthedocs.io/projects/baler/en/latest/baler-index.html>
    ASF <https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/asf/index.html>
-   
+
 .. toctree::
    :maxdepth: 6
    :caption: Deployment
-   
+
    LDMS <https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/deployment/index.html>
    SOS <https://ovis-hpc.readthedocs.io/projects/sos/en/latest/deployment/index.html>
    Maestro <https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/deployment/index.html>
@@ -55,7 +55,7 @@ Other Projects
 `sos <https://github.com/ovis-hpc/sos>`_
 `baler <https://github.com/ovis-hpc/baler>`_
 
-   
+
 
 
 

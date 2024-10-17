@@ -307,6 +307,10 @@ Output:
 
 Aggregator Using Data Pull
 ***********************
+All schemas
+------------
+This section covers how to aggregate all schemas from multiple ldmsd samplers.
+
 * Start another sampler daemon with a similar configuration on host2 using component_id=2, as above.
 * Make a configuration file (called agg11.conf) to aggregate from the two samplers at different intervals with the following contents:
 
@@ -359,9 +363,42 @@ Output:
  host1/meminfo
  host1/vmstat
 
+.. note::
+
+  `ldms_ls -l` shows the detailed output, including timestamps. This can be used to verify that the aggregator is aggregating the two hosts' sets at different intervals.
+
+Single Schema
+--------------
+This section covers how to define and aggregate a specific schema, defined in the configuration file, from an ldmsd sampler.
+In the agg_11.conf file from section `ref:All schemas` file you’ll need to add the following line in the updater section(s) and start/restart the aggregator:
+
+.. code-block:: RST
+
+ updtr_match_add name=<string-name> match=schema regex=<schema-name>
+
+Once added, to aggregate only vmstat, the configuration file should be as follows:
+
+.. code-block:: RST
+
+ prdcr_add name=host1 host=host1 type=active xprt=sock port=10444 interval=20000000
+ prdcr_start name=host1
+
+ updtr_add name=policy_h1 interval=1000000 offset=100000
+ updtr_prdcr_add name=policy_h1 regex=host1
+ updtr_match_add name=policy_h2 match=schema regex=vmstat
+ updtr_start name=policy_h1
+
+ prdcr_add name=host2 host=host2 type=active xprt=sock port=10444 interval=20000000
+ prdcr_start name=host2
+
+ updtr_add name=policy_h2 interval=2000000 offset=100000
+ updtr_prdcr_add name=policy_h2 regex=host2
+ updtr_match_add name=policy_h2 match=schema regex=vmstat
+ updtr_start name=policy_h2
 
 .. note::
-  `ldms_ls -l` shows the detailed output, including timestamps. This can be used to verify that the aggregator is aggregating the two hosts' sets at different intervals.
+
+ This can be added anywhere in this section (i.e. before updtr_start, updtr_prdcr_add, etc.)
 
 Aggregator Using Data Push
 ***********************

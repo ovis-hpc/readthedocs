@@ -1,0 +1,998 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.ico">
+    
+    
+      
+        <title>Plugin_msr_interlagos - OVIS-HPC  documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.b83f2e057cd610c26.min.css?v=3ca6ca4f" />
+        <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f637a71a" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Social: Facebook / Open Graph -->
+<title>Flux Framework</title>
+<link rel="canonical" href="https://flux-framework.org/"/>
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://flux-framework.org/">
+<meta property="og:title" content="Flux Framework">
+<meta property="og:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<meta property="og:description" content="Flux Framework">
+<meta property="og:site_name" content="Flux Framework">
+<meta property="og:locale" content="en_US">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FluxFramework">
+<meta name="twitter:title" content="Flux Framework">
+<meta name="twitter:description" content="Flux Framework">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+
+<!-- Social: Google+ / Schema.org  -->
+<meta itemprop="name" content="Flux Framework">
+<meta itemprop="description" content="Flux Framework">
+<meta itemprop="image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<script type="application/ld+json">
+  {"@type":"WebSite","headline":"Flux Framework","url":"https://flux-framework.org/","description":"Flux Framework","name":"Flux Framework","@context":"https://schema.org"}
+</script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.sphx-glr-script-out .highlight pre {
+  background-color: #def0ff !important;
+}
+  </style>
+
+
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="OVIS-HPC  documentation" class="md-header__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OVIS-HPC  documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plugin_msr_interlagos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faqs.html" class="md-tabs__link">
+      <span class="md-ellipsis">Contents</span>
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../projects.html" class="md-tabs__link">
+      <span class="md-ellipsis">Sub-<wbr>Projects</span>
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="OVIS-HPC  documentation" class="md-nav__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    OVIS-HPC  documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          <span class="md-ellipsis">Contents</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Contents</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faqs.html" class="md-nav__link">
+        <span class="md-ellipsis">FAQs</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Tutorials</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Contributing to LDMS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.html" class="md-nav__link">
+        <span class="md-ellipsis">Glossary</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications.html" class="md-nav__link">
+        <span class="md-ellipsis">OVIS Publications</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sub-Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects.html" class="md-nav__link">
+        <span class="md-ellipsis">Projects</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+  <a href="https://github.com/ovis-hpc/readthedocs/blob/main/man2rst/ldms/Plugin_msr_interlagos.rst" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+  </a>
+
+<h1 id="plugin-msr-interlagos"><a class="toc-backref" href="#id1" role="doc-backlink">Plugin_msr_interlagos</a><a class="headerlink" href="#plugin-msr-interlagos" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>04 Jan 2018</p>
+</dd>
+</dl>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#plugin-msr-interlagos" id="id1">Plugin_msr_interlagos</a></p>
+<ul>
+<li><p><a class="reference internal" href="#name" id="id2">NAME</a></p></li>
+<li><p><a class="reference internal" href="#synopsis" id="id3">SYNOPSIS</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id4">DESCRIPTION</a></p></li>
+<li><p><a class="reference internal" href="#external-modification-of-counters-and-external-interactions" id="id5">EXTERNAL MODIFICATION OF COUNTERS AND EXTERNAL INTERACTIONS</a></p></li>
+<li><p><a class="reference internal" href="#counter-configuration-file" id="id6">COUNTER CONFIGURATION FILE</a></p></li>
+<li><p><a class="reference internal" href="#output-format" id="id7">OUTPUT FORMAT</a></p></li>
+<li><p><a class="reference internal" href="#ldmsd-controller-configuration-commands-order" id="id8">LDMSD_CONTROLLER CONFIGURATION COMMANDS ORDER</a></p></li>
+<li><p><a class="reference internal" href="#ldmsd-controller-configuration-attribute-syntax" id="id9">LDMSD_CONTROLLER CONFIGURATION ATTRIBUTE SYNTAX</a></p></li>
+<li><p><a class="reference internal" href="#bugs" id="id10">BUGS</a></p></li>
+<li><p><a class="reference internal" href="#notes" id="id11">NOTES</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id12">EXAMPLES</a></p></li>
+<li><p><a class="reference internal" href="#see-also" id="id13">SEE ALSO</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="name"><a class="toc-backref" href="#id2" role="doc-backlink">NAME</a><a class="headerlink" href="#name" title="Link to this heading">¶</a></h2>
+<p>Plugin_msr - man page for the LDMS msr interlagos plugin</p>
+<h2 id="synopsis"><a class="toc-backref" href="#id3" role="doc-backlink">SYNOPSIS</a><a class="headerlink" href="#synopsis" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Within ldmsd_controller script or a configuration script:</div>
+<div class="line">load name=msr_interlagos</div>
+<div class="line">config name=msr_interlagos action=&lt;value&gt; [ &lt;attr&gt; = &lt;value&gt; ]</div>
+<div class="line">add name=msr_interlagos [ &lt;attr&gt; = &lt;value&gt; ]</div>
+</div>
+<h2 id="description"><a class="toc-backref" href="#id4" role="doc-backlink">DESCRIPTION</a><a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<p>With LDMS (Lightweight Distributed Metric Service), plugins for the
+ldmsd (ldms daemon) are configured via ldmsd_controller or by use of a
+configuration file provided as an argument to the “-c” flag when
+starting ldmsd. In the case of the configuration file the commands are
+the same as those used via the ldmsd_controller interface. The
+msr_interlagos plugin provides msr counter information for the AMD
+Family 15h Models 00h-0Fh Processors (Interlagos) only.</p>
+<p>This is a developmental version of the sampler. It may change at any
+time.</p>
+<p>The sampler will allow you to select from an identified set of counters.
+These are only correctly defined for the AMD Interlagos processor. The
+counter addresses, what events are potentially being counted, the event
+names, the counter types (core, uncore), etc. are defined in a
+configuration file. An example of this file can be found at:
+/util/configs/msr/interlagos/bw_msr_configs.</p>
+<p>The actual counters desired can be defined/modified at/during run time
+using the defined event names subject to the constraint that each
+counter can only count a single event name at a time. If a second name
+mapping into an already selected counter is selected, the selection will
+fail. The event names must be identified via the action=add directive
+for each desired event name. When all desired event names have been
+added, the directive action=finalize is used to instantiate the event
+name to counter mappings.</p>
+<p>The metric names are reported as generic names in the output set since
+their actual identities may be changed dynamically. For any given
+counter the first value (e.g., CTR&lt;NUM&gt;) is the uint64 representation of
+the counter configuration used in the counter setup. The subsequent
+values (e.g., CTR&lt;NUM&gt;_&lt;XY&gt;) are the values read from the counters (1
+per numa node or num core values (with optional additional zero values
+if maxcore specified (see more below)).</p>
+<p>To build the msr_interlagos sampler, build with the following flags:
+<strong>–enable_msr_interlagos</strong></p>
+<p>The ldmsd_controller interface includes functions for manipulating the
+sampling state and counter identities as described below.</p>
+<h2 id="external-modification-of-counters-and-external-interactions"><a class="toc-backref" href="#id5" role="doc-backlink">EXTERNAL MODIFICATION OF COUNTERS AND EXTERNAL INTERACTIONS</a><a class="headerlink" href="#external-modification-of-counters-and-external-interactions" title="Link to this heading">¶</a></h2>
+<p>Note that a user, with appropriate privilege, can change the identity of
+the event being collected via an external methodology such as wrmsr.
+Because of this, the msr_interlagos plugin first rechecks the event
+identity of each counter before sampling, however this is not atomic so
+there is a slight possibility of a race condition where the user may
+change the counter between the check and the read. If the check fails
+zero values are reported for all metrics for that particular counter,
+including the control register(s), and the metric name is a zero length
+string. This continues until the identity is reset, either by external
+methods or by issuing the action=rewrite directive.</p>
+<p>If a user job changes the counters, it is intended that interaction with
+the Resource Manager can invoke the rewrite command for the counters
+once the user job has exited. A script is supplied that can be called
+from epilog to perform this event rewrite. The script is blocking on the
+rewrite in order to avoid a race condition with the next job setting the
+counters before the rewrite is completed. There is a maximum time time
+limit on the blocking call in the script. The script return code
+indicates success or failure. Note that options that require the LDMS
+daemon to check for a flag set by the scheduler are subject to race
+conditions.</p>
+<h2 id="counter-configuration-file"><a class="toc-backref" href="#id6" role="doc-backlink">COUNTER CONFIGURATION FILE</a><a class="headerlink" href="#counter-configuration-file" title="Link to this heading">¶</a></h2>
+<p><strong>!!!WARNING!!!</strong> This plugin only works for Interlagos. Using this
+sampler on other architectures or misconfiguration of the configuration
+file may result in unforseen results with possible damage to the system
+as the control register addresses will not map into the same
+functionality. <strong>!!!WARNING!!!</strong></p>
+<p>Fields in the MSR sampler configuration file are: Name, Write_addr,
+Event, Umask, Read_addr, os_user, core_ena, core_sel, special_flag,
+ctr_type. Please use or modify the example configuration file provided
+in /util/configs/msr/interlagos/bw_msr_configs.</p>
+<p>Valid options for core_flag are MSR_DEFAULT and UNCORE_PER_NUMA.
+MSR_DEFAULT indicates that the associated register will collect the same
+event across all entities (core or numa domain). UNCORE_PER_NUMA is only
+valid for uncore counters for which the unit mask can be used to specify
+for which target numa domain events are being counted. A unit mask of
+“0x0” indicates events will be counted for only the numa domain in which
+the counter resides. A unit mask of “0xF” indicates events will be
+counted for only numa domains in which the counter does not reside. This
+enables understanding cache affinity and the level of IO crossing numa
+boundaries. Valid options for ctr_type are CTR_NUMCORE and CTR_UNCORE.
+These distinguish core and uncore counters.</p>
+<p>Lines starting with a # mark are comments and are skipped.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="c1">##### Core counters ##########</span>
+<span class="n">TLB_DM</span><span class="p">,</span>  <span class="mh">0xc0010200</span><span class="p">,</span> <span class="mh">0x046</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0xc0010201</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">TOT_CYC</span><span class="p">,</span> <span class="mh">0xc0010202</span><span class="p">,</span> <span class="mh">0x076</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xc0010203</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">L2_DCM</span><span class="p">,</span>  <span class="mh">0xc0010202</span><span class="p">,</span> <span class="mh">0x043</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xc0010203</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">L1_DCM</span><span class="p">,</span>  <span class="mh">0xc0010204</span><span class="p">,</span> <span class="mh">0x041</span><span class="p">,</span> <span class="mh">0x01</span><span class="p">,</span> <span class="mh">0xc0010205</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">L1_DCA</span><span class="p">,</span>  <span class="mh">0xc0010204</span><span class="p">,</span> <span class="mh">0x040</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xc0010205</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="c1">#LS_DISP,  0xc0010204, 0x029, 0x01, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#LS_DISP,  0xc0010204, 0x029, 0x02, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#LS_DISP,  0xc0010204, 0x029, 0x04, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="n">LS_DISP</span><span class="p">,</span>  <span class="mh">0xc0010204</span><span class="p">,</span> <span class="mh">0x029</span><span class="p">,</span> <span class="mh">0x07</span><span class="p">,</span> <span class="mh">0xc0010205</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">RETIRED_FLOPS</span><span class="p">,</span>  <span class="mh">0xc0010206</span><span class="p">,</span> <span class="mh">0x003</span><span class="p">,</span> <span class="mh">0xFF</span><span class="p">,</span> <span class="mh">0xc0010207</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">DP_OPS</span><span class="p">,</span>  <span class="mh">0xc0010206</span><span class="p">,</span> <span class="mh">0x003</span><span class="p">,</span> <span class="mh">0xF0</span><span class="p">,</span> <span class="mh">0xc0010207</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">VEC_INS</span><span class="p">,</span> <span class="mh">0xc0010208</span><span class="p">,</span> <span class="mh">0x0CB</span><span class="p">,</span> <span class="mh">0x04</span><span class="p">,</span> <span class="mh">0xc0010209</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="n">TOT_INS</span><span class="p">,</span> <span class="mh">0xc001020A</span><span class="p">,</span> <span class="mh">0x0C0</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">,</span> <span class="mh">0xc001020B</span><span class="p">,</span> <span class="mh">0x3</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_NUMCORE</span>
+<span class="c1">##### Uncore counters ##########</span>
+<span class="n">L3_CACHE_MISSES</span><span class="p">,</span> <span class="mh">0xc0010240</span><span class="p">,</span> <span class="mh">0x4E1</span><span class="p">,</span> <span class="mh">0xF7</span><span class="p">,</span> <span class="mh">0xc0010241</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">RW_DRAM_EXT</span><span class="p">,</span> <span class="mh">0xc0010242</span><span class="p">,</span> <span class="mh">0x1E0</span><span class="p">,</span> <span class="mh">0xF</span><span class="p">,</span> <span class="mh">0xc0010243</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">UNCORE_PER_NUMA</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">IO_DRAM_INT</span><span class="p">,</span> <span class="mh">0xc0010242</span><span class="p">,</span> <span class="mh">0x1E1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0xc0010243</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">UNCORE_PER_NUMA</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">DCT_PREFETCH</span><span class="p">,</span> <span class="mh">0xc0010242</span><span class="p">,</span> <span class="mh">0x1F0</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0xc0010243</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">DCT_RD_TOT</span><span class="p">,</span> <span class="mh">0xc0010244</span><span class="p">,</span> <span class="mh">0x1F0</span><span class="p">,</span> <span class="mh">0x62</span><span class="p">,</span> <span class="mh">0xc0010245</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">RW_DRAM_INT</span><span class="p">,</span> <span class="mh">0xc0010246</span><span class="p">,</span> <span class="mh">0x1E0</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0xc0010247</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">UNCORE_PER_NUMA</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">IO_DRAM_EXT</span><span class="p">,</span> <span class="mh">0xc0010246</span><span class="p">,</span> <span class="mh">0x1E1</span><span class="p">,</span> <span class="mh">0xF</span><span class="p">,</span> <span class="mh">0xc0010247</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">UNCORE_PER_NUMA</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="n">DCT_WRT</span><span class="p">,</span> <span class="mh">0xc0010246</span><span class="p">,</span> <span class="mh">0x1F0</span><span class="p">,</span> <span class="mh">0x19</span><span class="p">,</span> <span class="mh">0xc0010247</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="mh">0x1</span><span class="p">,</span> <span class="mh">0x0</span><span class="p">,</span> <span class="n">MSR_DEFAULT</span><span class="p">,</span> <span class="n">CTR_UNCORE</span>
+<span class="c1">#</span>
+<span class="c1"># Note that for the following, CTR_NUMCORE pairs are:</span>
+<span class="c1"># [0] Control: 0xc0010200 Data: 0xc0010201</span>
+<span class="c1"># [1] Control: 0xc0010202 Data: 0xc0010203</span>
+<span class="c1"># [2] Control: 0xc0010204 Data: 0xc0010205</span>
+<span class="c1"># [3] Control: 0xc0010206 Data: 0xc0010207</span>
+<span class="c1"># [4] Control: 0xc0010208 Data: 0xc0010209</span>
+<span class="c1"># [5] Control: 0xc001020A Data: 0xc001020B</span>
+<span class="c1">#</span>
+<span class="c1"># And CTR_UNCORE pairs are:</span>
+<span class="c1"># [0] Control: 0xc0010240 Data: 0xc0010241</span>
+<span class="c1"># [1] Control: 0xc0010242 Data: 0xc0010243</span>
+<span class="c1"># [2] Control: 0xc0010244 Data: 0xc0010245</span>
+<span class="c1"># [3] Control: 0xc0010246 Data: 0xc0010247</span>
+<span class="c1">#</span>
+<span class="c1"># The first column below indicates the counters available for a particular</span>
+<span class="c1"># feature. For example [2:0] indicates that the core counters (CTR_NUMCORE)</span>
+<span class="c1"># 0, 1, and 2, as indicated above, are available to count TLB_DM.</span>
+<span class="c1">#</span>
+<span class="c1"># NOTE: For the UNCORE_PER_NUMA case, use 0x0 to exclude external numa access</span>
+<span class="c1"># and 0xF to exclude local numa access and only count external access.</span>
+<span class="c1">##### Core counters ##########</span>
+<span class="c1">#[2:0] TLB_DM,  0xc0010200, 0x046, 0x07, 0xc0010201, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[2:0] TOT_CYC, 0xc0010202, 0x076, 0x00, 0xc0010203, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[2:0] L2_DCM,  0xc0010202, 0x043, 0x00, 0xc0010203, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] L1_DCM,  0xc0010204, 0x041, 0x01, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] L1_DCA,  0xc0010204, 0x040, 0x00, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] LS_DISP,  0xc0010204, 0x029, 0x01, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] LS_DISP,  0xc0010204, 0x029, 0x02, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] LS_DISP,  0xc0010204, 0x029, 0x04, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] LS_DISP,  0xc0010204, 0x029, 0x07, 0xc0010205, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[3] RETIRED_FLOPS,  0xc0010206, 0x003, 0xFF, 0xc0010207, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[3] DP_OPS,  0xc0010206, 0x003, 0xF0, 0xc0010207, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] VEC_INS, 0xc0010208, 0x0CB, 0x04, 0xc0010209, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">#[5:0] TOT_INS, 0xc001020A, 0x0C0, 0x00, 0xc001020B, 0x3, 0x0, 0x0, MSR_DEFAULT, CTR_NUMCORE</span>
+<span class="c1">##### Uncore counters ##########</span>
+<span class="c1">#[3:0] L3_CACHE_MISSES, 0xc0010240, 0x4E1, 0xF7, 0xc0010241, 0x0, 0x1, 0x0, MSR_DEFAULT, CTR_UNCORE</span>
+<span class="c1">#[3:0] RW_DRAM_EXT, 0xc0010242, 0x1E0, 0xF, 0xc0010243, 0x0, 0x1, 0x0, UNCORE_PER_NUMA, CTR_UNCORE</span>
+<span class="c1">#[3:0] IO_DRAM_INT, 0xc0010242, 0x1E1, 0x0, 0xc0010243, 0x0, 0x1, 0x0, UNCORE_PER_NUMA, CTR_UNCORE</span>
+<span class="c1">#[3:0] DCT_PREFETCH, 0xc0010242, 0x1F0, 0x64, 0xc0010243, 0x0, 0x1, 0x0, MSR_DEFAULT, CTR_UNCORE</span>
+<span class="c1">#[3:0] DCT_RD_TOT, 0xc0010244, 0x1F0, 0x62, 0xc0010245, 0x0, 0x1, 0x0, MSR_DEFAULT, CTR_UNCORE</span>
+<span class="c1">#[3:0] RW_DRAM_INT, 0xc0010246, 0x1E0, 0x0, 0xc0010247, 0x0, 0x1, 0x0, UNCORE_PER_NUMA, CTR_UNCORE</span>
+<span class="c1">#[3:0] IO_DRAM_EXT, 0xc0010246, 0x1E1, 0xF, 0xc0010247, 0x0, 0x1, 0x0, UNCORE_PER_NUMA, CTR_UNCORE</span>
+<span class="c1">#[3:0] DCT_WRT, 0xc0010246, 0x1F0, 0x19, 0xc0010247, 0x0, 0x1, 0x0, MSR_DEFAULT, CTR_UNCORE</span>
+</code></pre></div>
+</div>
+<h2 id="output-format"><a class="toc-backref" href="#id7" role="doc-backlink">OUTPUT FORMAT</a><a class="headerlink" href="#output-format" title="Link to this heading">¶</a></h2>
+<p>Example output format from the “ldms_ls” command is shown below. Since
+the counters can be added in any order and be changed dynamically, the
+names are generic (e.g., Ctr0_n) with CtrN_name being the string version
+of the name and CtrN_wctl being the write control register (event code
+and unit mask for the msr variable assigned to that counter).</p>
+<p>This is followed a vector of the values. If there is only 1 value in the
+vector, then the name is CtrN. If there is a value per numa domain, then
+the name is CtrN_n. If there is a value per core, then the name is
+CtrN_c.</p>
+<p>If the write control register is the same for all values in the vector,
+it is only written once and called CtrN_wctl. If the write control
+register is different for the values in the vector, as it would be for
+the per numa domain values, then the write control register variable is
+a vector of length &gt; 1 and is named CtrN_wctl_n. Zeros in the
+CtrN_wctl_n indicate that the “maxcore” value specified in the
+configuration of the sampler was greater than the actual number of cores
+and hence those wctl and variable data values will be 0.</p>
+<p>Example output is below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">nid00010</span><span class="o">/</span><span class="n">msr_interlagos</span><span class="p">:</span> <span class="n">consistent</span><span class="p">,</span> <span class="n">last</span> <span class="n">update</span><span class="p">:</span> <span class="n">Sun</span> <span class="n">Oct</span> <span class="mi">30</span> <span class="mi">16</span><span class="p">:</span><span class="mi">34</span><span class="p">:</span><span class="mi">16</span> <span class="mi">2016</span> <span class="p">[</span><span class="mi">4398</span><span class="n">us</span><span class="p">]</span>
+<span class="n">M</span> <span class="n">u64</span>        <span class="n">component_id</span>                               <span class="mi">10</span>
+<span class="n">D</span> <span class="n">u64</span>        <span class="n">job_id</span>                                     <span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr0_name</span>                                  <span class="s2">&quot;L3_CACHE_MISSES&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr0_wctl</span>                                  <span class="mi">85903603681</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr0_n</span>                                     <span class="mi">8761095</span><span class="p">,</span><span class="mi">660101</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr1_name</span>                                  <span class="s2">&quot;DCT_RD_TOT&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr1_wctl</span>                                  <span class="mi">73018663664</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr1_n</span>                                     <span class="mi">16748451</span><span class="p">,</span><span class="mi">1103973</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr2_name</span>                                  <span class="s2">&quot;RW_DRAM_EXT&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr2_wctl_n</span>                                <span class="mi">73018642144</span><span class="p">,</span><span class="mi">73018641888</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr2_n</span>                                     <span class="mi">4901448</span><span class="p">,</span><span class="mi">7120727</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr3_name</span>                                  <span class="s2">&quot;RW_DRAM_INT&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr3_wctl_n</span>                                <span class="mi">73018638816</span><span class="p">,</span><span class="mi">73018639072</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr3_n</span>                                     <span class="mi">74099900</span><span class="p">,</span><span class="mi">3773483</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr4_name</span>                                  <span class="s2">&quot;TOT_CYC&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr4_wctl</span>                                  <span class="mi">4391030</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr4_c</span>                                     <span class="mi">775759456</span><span class="p">,</span><span class="mi">2595008788</span><span class="p">,</span><span class="mi">234822206</span><span class="p">,</span><span class="mi">155962379</span><span class="p">,</span><span class="mi">51951208</span><span class="p">,</span><span class="mi">53210798</span><span class="p">,</span><span class="mi">82771568</span><span class="p">,</span><span class="mi">52716295</span><span class="p">,</span><span class="mi">85501768</span><span class="p">,</span><span class="mi">50656894</span><span class="p">,</span><span class="mi">175839012</span><span class="p">,</span><span class="mi">619930959</span><span class="p">,</span><span class="mi">179902397</span><span class="p">,</span><span class="mi">110558187</span><span class="p">,</span><span class="mi">334344071</span><span class="p">,</span><span class="mi">353769784</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr5_name</span>                                  <span class="s2">&quot;TOT_INS&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr5_wctl</span>                                  <span class="mi">4391104</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr5_c</span>                                     <span class="mi">211085929</span><span class="p">,</span><span class="mi">410194651</span><span class="p">,</span><span class="mi">45686350</span><span class="p">,</span><span class="mi">11096207</span><span class="p">,</span><span class="mi">4489395</span><span class="p">,</span><span class="mi">4565853</span><span class="p">,</span><span class="mi">13261794</span><span class="p">,</span><span class="mi">3626609</span><span class="p">,</span><span class="mi">15062986</span><span class="p">,</span><span class="mi">3753527</span><span class="p">,</span><span class="mi">3802413</span><span class="p">,</span><span class="mi">194511990</span><span class="p">,</span><span class="mi">55444449</span><span class="p">,</span><span class="mi">7321398</span><span class="p">,</span><span class="mi">39989531</span><span class="p">,</span><span class="mi">36190191</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr6_name</span>                                  <span class="s2">&quot;L1_DCM&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr6_wctl</span>                                  <span class="mi">4391233</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr6_c</span>                                     <span class="mi">5101215</span><span class="p">,</span><span class="mi">22654419</span><span class="p">,</span><span class="mi">1078523</span><span class="p">,</span><span class="mi">247674</span><span class="p">,</span><span class="mi">101807</span><span class="p">,</span><span class="mi">99840</span><span class="p">,</span><span class="mi">403194</span><span class="p">,</span><span class="mi">75661</span><span class="p">,</span><span class="mi">403958</span><span class="p">,</span><span class="mi">81801</span><span class="p">,</span><span class="mi">106359</span><span class="p">,</span><span class="mi">2316889</span><span class="p">,</span><span class="mi">663984</span><span class="p">,</span><span class="mi">186842</span><span class="p">,</span><span class="mi">944343</span><span class="p">,</span><span class="mi">921712</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr7_name</span>                                  <span class="s2">&quot;RETIRED_FLOPS&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr7_wctl</span>                                  <span class="mi">4456195</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr7_c</span>                                     <span class="mi">122</span><span class="p">,</span><span class="mi">197</span><span class="p">,</span><span class="mi">408</span><span class="p">,</span><span class="mi">57</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">131</span><span class="p">,</span><span class="mi">272</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr8_name</span>                                  <span class="s2">&quot;VEC_INS&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr8_wctl</span>                                  <span class="mi">4392139</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr8_c</span>                                     <span class="mi">13185</span><span class="p">,</span><span class="mi">32428971</span><span class="p">,</span><span class="mi">9960</span><span class="p">,</span><span class="mi">8153</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6517</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2863</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">280</span><span class="p">,</span><span class="mi">497910</span><span class="p">,</span><span class="mi">88393</span><span class="p">,</span><span class="mi">624</span><span class="p">,</span><span class="mi">59806</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">D</span> <span class="n">char</span><span class="p">[]</span>     <span class="n">Ctr9_name</span>                                  <span class="s2">&quot;TLB_DM&quot;</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr9_wctl</span>                                  <span class="mi">4392774</span>
+<span class="n">D</span> <span class="n">u64</span><span class="p">[]</span>      <span class="n">Ctr9_c</span>                                     <span class="mi">1312</span><span class="p">,</span><span class="mi">131553</span><span class="p">,</span><span class="mi">1080</span><span class="p">,</span><span class="mi">698</span><span class="p">,</span><span class="mi">154</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">546</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">266</span><span class="p">,</span><span class="mi">59</span><span class="p">,</span><span class="mi">125</span><span class="p">,</span><span class="mi">678</span><span class="p">,</span><span class="mi">901</span><span class="p">,</span><span class="mi">196</span><span class="p">,</span><span class="mi">6254</span><span class="p">,</span><span class="mi">155</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+</code></pre></div>
+</div>
+<h2 id="ldmsd-controller-configuration-commands-order"><a class="toc-backref" href="#id8" role="doc-backlink">LDMSD_CONTROLLER CONFIGURATION COMMANDS ORDER</a><a class="headerlink" href="#ldmsd-controller-configuration-commands-order" title="Link to this heading">¶</a></h2>
+<p>Configuration commands are intended to be issued in the following order:</p>
+<ul class="simple">
+<li><p>load</p></li>
+<li><p>config action=initialize</p></li>
+<li><p>config action=add (one or more)</p></li>
+<li><p>config action=finalize (one or more)</p></li>
+<li><p>start</p></li>
+</ul>
+<p>The following config commands can be issued anytime after the start in
+any order</p>
+<ul class="simple">
+<li><p>config action=halt</p></li>
+<li><p>config action=continue</p></li>
+<li><p>config action=reassign</p></li>
+<li><p>config action=rewrite</p></li>
+</ul>
+<h2 id="ldmsd-controller-configuration-attribute-syntax"><a class="toc-backref" href="#id9" role="doc-backlink">LDMSD_CONTROLLER CONFIGURATION ATTRIBUTE SYNTAX</a><a class="headerlink" href="#ldmsd-controller-configuration-attribute-syntax" title="Link to this heading">¶</a></h2>
+<p>The msr_interlagos plugin uses the sampler_base base class. This man
+page covers only the configuration attributes, or those with default
+values, specific to the this plugin; see ldms_sampler_base.man for the
+attributes of the base class.</p>
+<dl>
+<dt><strong>config</strong></dt><dd><div class="line-block">
+<div class="line">name=&lt;plugin_name&gt; action=&lt;action&gt; [ &lt;attr&gt;=&lt;value&gt; … ]</div>
+<div class="line">configuration line</div>
+</div>
+<dl>
+<dt>name=&lt;plugin_name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">This MUST be msr_interlagos</div>
+</div>
+</dd>
+<dt>action=&lt;action&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Options are initialize, add, finalize, halt, continue, reassign,
+rewrite, and ls:</div>
+</div>
+</dd>
+<dt><strong>initialize</strong></dt><dd><div class="line-block">
+<div class="line">corespernuma=&lt;cpnuma&gt; conffile=&lt;conffile&gt; [maxcore=&lt;maxcore&gt;
+schema=&lt;schema&gt; ]</div>
+<div class="line">initialize the plugin. sampler_base configuration arguments
+should be specified at this point.</div>
+</div>
+<dl>
+<dt>corespernuma=&lt;corespernuma&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Cores per numa node. Used to determine which and how many
+cores are used in setting counters that report per numa node.</div>
+</div>
+</dd>
+<dt>maxcore=&lt;maxcore&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Maxcores that will be reported for all core counters and will
+also be used in counters that report per numa node. Must be
+&gt;= actual number of cores. Any additional values will be
+reported with 0 values. Optional. Defaults to using the
+actual number of cores.</div>
+</div>
+</dd>
+<dt>schema=&lt;schema&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Schema name. Optional. Defaults to msr_interlagos.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>add</strong></dt><dd><div class="line-block">
+<div class="line">metricname=&lt;name&gt;</div>
+<div class="line">add a counter metric to the set. The metric set will be built in
+the order the metrics are added</div>
+</div>
+<dl>
+<dt>metricname=&lt;name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The name of counter e.g., L3_CACHE_MISSES. Options are listed
+in a separate section of this man page.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>finalize</strong></dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">creates the set after all the adds. No metrics may be added
+after this point.</div>
+</div>
+</dd>
+<dt><strong>halt</strong></dt><dd><div class="line-block">
+<div class="line">metricname=&lt;name&gt;</div>
+<div class="line">halts collection for this counter. Zero values will be returned
+for all metrics for this counter.</div>
+</div>
+<dl>
+<dt>metricname=&lt;name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The name of counter e.g., L3_CACHE_MISSES. metricname=all
+halts all.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>continue</strong></dt><dd><div class="line-block">
+<div class="line">metricname=&lt;name&gt;</div>
+<div class="line">continues collection for this counter after a halt.</div>
+</div>
+<dl>
+<dt>metricname=&lt;name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The name of counter e.g., L3_CACHE_MISSES. metricname=all
+continues all.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>rewrite</strong></dt><dd><div class="line-block">
+<div class="line">metricname=&lt;name&gt;</div>
+<div class="line">rewrites the counter variable. Used in case the counter variable
+has been changed for this address external to ldms.</div>
+</div>
+<dl>
+<dt>metricname=&lt;name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The name of counter e.g., L3_CACHE_MISSES. metricname=all
+rewrites all counters.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>reassign</strong></dt><dd><div class="line-block">
+<div class="line">oldmetricname=&lt;oldname&gt; newmetricname=&lt;newname&gt;</div>
+<div class="line">replaces a metric in the metric set with a new one. It must be
+the same size (e.g., numcores vs single value) as the previous
+counter.</div>
+</div>
+<dl>
+<dt>oldmetricname=&lt;oldname&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The name of counter to be replaced e.g., TOT_CYC</div>
+</div>
+</dd>
+<dt>newmetricname=&lt;newname&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The name of counter that the previous variable will be
+replaced with e.g., TOT_INS</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt><strong>ls</strong></dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">writes info about the intended counters to the log file.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<h2 id="bugs"><a class="toc-backref" href="#id10" role="doc-backlink">BUGS</a><a class="headerlink" href="#bugs" title="Link to this heading">¶</a></h2>
+<p>The sampler is not robust to errors in the configuration file (i.e.,
+there is no error checking with respect to registers being written to or
+the contents being written). An error could result in unexpected
+operation including damage to the host.</p>
+<h2 id="notes"><a class="toc-backref" href="#id11" role="doc-backlink">NOTES</a><a class="headerlink" href="#notes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>This is a developmental version of the sampler. It may change at any
+time.</p></li>
+<li><p>The format of the configuration file and the fields has changed since
+the v2 release.</p></li>
+<li><p>This plugin only works for Interlagos. Using this sampler on other
+architectures may result in badness as the addresses will not be
+correct.</p></li>
+</ul>
+<h2 id="examples"><a class="toc-backref" href="#id12" role="doc-backlink">EXAMPLES</a><a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<p>Within ldmsd_controller or a configuration file:</p>
+<div class="line-block">
+<div class="line">config name=msr_interlagos action=initialize producer=nid00010
+instance=nid00010 component_id=10 corespernuma=8
+conffile=/XXX/msr_conf.txt</div>
+<div class="line">config name=msr_interlagos action=add metricname=L3_CACHE_MISSES</div>
+<div class="line">config name=msr_interlagos action=add metricname=TOT_CYC</div>
+<div class="line">config name=msr_interlagos action=finalize</div>
+<div class="line">config name=msr_interlagos action=reassign oldmetricname=TOT_CYC
+newmetricname=TOT_INS</div>
+<div class="line">config name=msr_interlagos action=halt metricname=TOT_CYC</div>
+</div>
+<h2 id="see-also"><a class="toc-backref" href="#id13" role="doc-backlink">SEE ALSO</a><a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
+<p>ldmsd(7), ldms_quickstart(7), ldms_sampler_base(7),
+Plugin_store_function_csv(7), ldmsd_controller(8)</p>
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      Jan 15, 2025
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright Copyright 2024 Sandia National Laboratories and Open Grid Computing, Inc.
+
+SPDX-License-Identifier: LGPL-3.0.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.4.7.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/ovis-hpc/readthedocs" target="_blank" rel="noopener" title="Source on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.ldms-ug.org/" target="_blank" rel="noopener" title="OVIS-HPC" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05c5.05.5 9 4.77 9 9.95 0 1.45-.32 2.83-.88 4.07l-2.62-1.53c.32-.79.5-1.64.5-2.54 0-3.53-2.61-6.43-6-6.92V2.05M12 19c2.21 0 4.17-1 5.45-2.62l2.6 1.53A9.97 9.97 0 0 1 12 22C6.47 22 2 17.5 2 12a9.99 9.99 0 0 1 9-9.95v3.03C7.61 5.57 5 8.47 5 12a7 7 0 0 0 7 7m0-13a6 6 0 0 1 6 6c0 2.97-2.16 5.44-5 5.92v-3.09c1.17-.41 2-1.52 2-2.83a3 3 0 0 0-3-3l-.55.05-1.54-2.67C10.56 6.13 11.26 6 12 6m-6 6c0-1.86.85-3.5 2.18-4.62l1.54 2.67C9.27 10.57 9 11.26 9 12c0 1.31.83 2.42 2 2.83v3.09c-2.84-.48-5-2.95-5-5.92Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.tabs", "toc.integrate", "navigation.sections", "navigation.instant", "header.autohide", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=9a299579"></script>
+    
+  </body>
+</html>

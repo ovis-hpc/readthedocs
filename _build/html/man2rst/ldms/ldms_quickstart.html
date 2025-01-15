@@ -1,0 +1,1272 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.ico">
+    
+    
+      
+        <title>ldms_quickstart - OVIS-HPC  documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.b83f2e057cd610c26.min.css?v=3ca6ca4f" />
+        <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f637a71a" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Social: Facebook / Open Graph -->
+<title>Flux Framework</title>
+<link rel="canonical" href="https://flux-framework.org/"/>
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://flux-framework.org/">
+<meta property="og:title" content="Flux Framework">
+<meta property="og:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<meta property="og:description" content="Flux Framework">
+<meta property="og:site_name" content="Flux Framework">
+<meta property="og:locale" content="en_US">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FluxFramework">
+<meta name="twitter:title" content="Flux Framework">
+<meta name="twitter:description" content="Flux Framework">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+
+<!-- Social: Google+ / Schema.org  -->
+<meta itemprop="name" content="Flux Framework">
+<meta itemprop="description" content="Flux Framework">
+<meta itemprop="image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<script type="application/ld+json">
+  {"@type":"WebSite","headline":"Flux Framework","url":"https://flux-framework.org/","description":"Flux Framework","name":"Flux Framework","@context":"https://schema.org"}
+</script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.sphx-glr-script-out .highlight pre {
+  background-color: #def0ff !important;
+}
+  </style>
+
+
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="OVIS-HPC  documentation" class="md-header__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OVIS-HPC  documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ldms_quickstart
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faqs.html" class="md-tabs__link">
+      <span class="md-ellipsis">Contents</span>
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../projects.html" class="md-tabs__link">
+      <span class="md-ellipsis">Sub-<wbr>Projects</span>
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="OVIS-HPC  documentation" class="md-nav__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    OVIS-HPC  documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          <span class="md-ellipsis">Contents</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Contents</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faqs.html" class="md-nav__link">
+        <span class="md-ellipsis">FAQs</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Tutorials</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Contributing to LDMS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.html" class="md-nav__link">
+        <span class="md-ellipsis">Glossary</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications.html" class="md-nav__link">
+        <span class="md-ellipsis">OVIS Publications</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sub-Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects.html" class="md-nav__link">
+        <span class="md-ellipsis">Projects</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+  <a href="https://github.com/ovis-hpc/readthedocs/blob/main/man2rst/ldms/ldms_quickstart.rst" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+  </a>
+
+<h1 id="ldms-quickstart"><a class="toc-backref" href="#id8" role="doc-backlink">ldms_quickstart</a><a class="headerlink" href="#ldms-quickstart" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>12 Dec 2016</p>
+</dd>
+</dl>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#ldms-quickstart" id="id8">ldms_quickstart</a></p>
+<ul>
+<li><p><a class="reference internal" href="#name" id="id9">NAME</a></p></li>
+<li><p><a class="reference internal" href="#introduction" id="id10">INTRODUCTION</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id11">DESCRIPTION</a></p></li>
+<li><p><a class="reference internal" href="#arrangement-of-this-document" id="id12">Arrangement of this document</a></p></li>
+<li><p><a class="reference internal" href="#prerequisites" id="id13">1) PREREQUISITES</a></p></li>
+<li><p><a class="reference internal" href="#build-install" id="id14">2) BUILD/INSTALL:</a></p></li>
+<li><p><a class="reference internal" href="#configuring-and-starting-an-ldmsd" id="id15">3) CONFIGURING AND STARTING AN LDMSD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#environment-variables-for-ldms" id="id16">3-1) Environment Variables for LDMS</a></p></li>
+<li><p><a class="reference internal" href="#options-for-configuring-plugins-of-an-ldmsd" id="id17">3-2) Options for Configuring Plugins of an ldmsd</a></p></li>
+<li><p><a class="reference internal" href="#a-configuring-an-ldmsd-via-a-configuration-script" id="id18">3-2a) Configuring an ldmsd via a configuration script</a></p></li>
+<li><p><a class="reference internal" href="#b-configuring-ldmsd-via-ldmsd-controller" id="id19">3-2b) Configuring ldmsd via ldmsd_controller</a></p></li>
+<li><p><a class="reference internal" href="#starting-an-ldmsd" id="id20">3-3) Starting an ldmsd</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#example-configure-an-ldmsd-with-sampler-plugins" id="id21">4) EXAMPLE: CONFIGURE AN LDMSD WITH SAMPLER PLUGINS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#create-the-configuration-file-for-the-sampler-plugins" id="id22">4-1) Create the configuration file for the sampler plugins:</a></p></li>
+<li><p><a class="reference internal" href="#set-environment-variables-as-described-above" id="id23">4-2) Set environment variables, as described above.</a></p></li>
+<li><p><a class="reference internal" href="#start-the-ldmsd-with-the-config-file-as-described-above-e-g" id="id24">4-3) Start the ldmsd with the config file, as described above. e.g.,</a></p></li>
+<li><p><a class="reference internal" href="#verifying-the-collector" id="id25">4-4) Verifying the collector</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#example-configure-an-aggregator-using-ldmsd-controller" id="id26">5) EXAMPLE: CONFIGURE AN AGGREGATOR USING LDMSD_CONTROLLER</a></p>
+<ul>
+<li><p><a class="reference internal" href="#start-2-separate-ldmsds-one-on-host-vm1-1-and-one-on-host-vm1-2-with-sampler-plugins-as-described-above" id="id27">5-1) Start 2 separate ldmsds, one on host vm1_1 and one on host vm1_2, with sampler plugins, as described above</a></p></li>
+<li><p><a class="reference internal" href="#write-a-script-to-add-producers-and-start-collecting-from-them" id="id28">5-2) Write a script to add producers and start collecting from them:</a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id29">5-3) Set environment variables, as described above</a></p></li>
+<li><p><a class="reference internal" href="#start-an-ldmsd-on-your-host-to-aggregate-using-the-configuration-file" id="id30">5-4) Start an ldmsd on your host to aggregate using the configuration file</a></p></li>
+<li><p><a class="reference internal" href="#at-this-point-the-ldmsd-collector-should-be-checked-using-the-utility-ldms-ls" id="id31">5-4) At this point the ldmsd collector should be checked using the utility ldms_ls</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#example-configure-an-ldms-aggregator-with-a-storage-plugin" id="id32">6) EXAMPLE: CONFIGURE AN LDMS AGGREGATOR WITH A STORAGE PLUGIN</a></p>
+<ul>
+<li><p><a class="reference internal" href="#add-storage-configuration-lines-to-the-configuration-file-described-above" id="id33">6-1) Add storage configuration lines to the configuration file described above.</a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id34">6-2) Set environment variables, as described above</a></p></li>
+<li><p><a class="reference internal" href="#start-the-aggregator-with-the-full-configuration-file-both-aggregator-and-store-lines-as-described-above" id="id35">6-3) Start the aggregator with the full configuration file (both aggregator and store lines), as described above</a></p></li>
+<li><p><a class="reference internal" href="#verify-the-store" id="id36">6-4) Verify the store</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#examples-using-ldms-ls-to-display-sets-metrics-from-an-ldmsd" id="id37">7) EXAMPLES: USING LDMS_LS TO DISPLAY SETS/METRICS FROM AN LDMSD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id3" id="id38">7-1) Set environment variables, as described above</a></p></li>
+<li><p><a class="reference internal" href="#a-query-ldmsd-on-host-vm1-listening-on-port-60000-sampler-using-the-sock-transport-for-metric-sets-being-served-by-that-ldmsd" id="id39">7-2a) Query ldmsd on host vm1 listening on port 60000 (sampler) using the sock transport for metric sets being served by that ldmsd</a></p></li>
+<li><p><a class="reference internal" href="#b-query-ldmsd-on-host-vm1-listening-on-port-60002-aggregator-using-the-sock-transport-for-metric-sets-being-served-by-that-ldmsd" id="id40">7-2b) Query ldmsd on host vm1 listening on port 60002 (aggregator) using the sock transport for metric sets being served by that ldmsd</a></p></li>
+<li><p><a class="reference internal" href="#c-query-ldmsd-on-host-vm1-listening-on-port-60000-using-the-sock-transport-for-the-names-and-contents-of-metric-sets-being-served-by-that-ldmsd" id="id41">7-2c) Query ldmsd on host vm1 listening on port 60000 using the sock transport for the names and contents of metric sets being served by that ldmsd.</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#d-query-for-a-non-existent-set" id="id42">7-2d) Query for a non-existent set:</a></p></li>
+<li><p><a class="reference internal" href="#e-display-metadata-about-sets-contained-by-vm1-ldmsd-listening-on-port-60000" id="id43">7-2e) Display metadata about sets contained by vm1 ldmsd listening on port 60000</a></p></li>
+<li><p><a class="reference internal" href="#stop-an-ldmsd" id="id44">8) STOP AN LDMSD</a></p>
+<ul>
+<li><p><a class="reference internal" href="#to-kill-all-ldmsd-on-a-host" id="id45">To kill all ldmsd on a host</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#protection-domain-tags-cray" id="id46">9) PROTECTION DOMAIN TAGS (Cray)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#cray-xe-xk" id="id47">9-1) Cray XE/XK:</a></p></li>
+<li><p><a class="reference internal" href="#to-see-current-ptags" id="id48">To see current ptags:</a></p></li>
+<li><p><a class="reference internal" href="#to-create-a-userspace-ptag" id="id49">To create a userspace ptag:</a></p></li>
+<li><p><a class="reference internal" href="#to-remove-a-userspace-ptag" id="id50">To remove a userspace ptag:</a></p></li>
+<li><p><a class="reference internal" href="#ptag-related-enviroment-variables-for-ldms-xe-xk" id="id51">PTAG-Related Enviroment variables for ldms (XE/XK)</a></p></li>
+<li><p><a class="reference internal" href="#starting-ldms-from-aprun-with-ptags" id="id52">Starting ldms from aprun with ptags</a></p></li>
+<li><p><a class="reference internal" href="#cray-xc-cle-5-2" id="id53">9-2) Cray XC, CLE &lt;= 5.2:</a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id54">To see current ptags:</a></p></li>
+<li><p><a class="reference internal" href="#id5" id="id55">To create a userspace ptag:</a></p></li>
+<li><p><a class="reference internal" href="#id6" id="id56">To remove a userspace ptag:</a></p></li>
+<li><p><a class="reference internal" href="#ptag-related-enviroment-variables-for-ldms-xc" id="id57">PTAG-Related Enviroment variables for ldms (XC)</a></p></li>
+<li><p><a class="reference internal" href="#id7" id="id58">Starting ldms from aprun with ptags</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id59">10) TROUBLESHOOTING</a></p>
+<ul>
+<li><p><a class="reference internal" href="#what-causes-the-following-error-libibverbs-warning-rlimit-memlock-is-32768-bytes" id="id60">What causes the following error: libibverbs: Warning: RLIMIT_MEMLOCK is 32768 bytes?</a></p></li>
+<li><p><a class="reference internal" href="#why-doesn-t-my-ldmsd-start" id="id61">Why doesn’t my ldmsd start?</a></p></li>
+<li><p><a class="reference internal" href="#how-can-i-find-what-process-is-using-the-port" id="id62">How can I find what process is using the port?</a></p></li>
+<li><p><a class="reference internal" href="#why-arent-all-my-hosts-sets-adding-to-the-aggregator" id="id63">Why arent all my hosts/sets adding to the aggregator?</a></p></li>
+<li><p><a class="reference internal" href="#why-isn-t-my-ldmsd-storing-its-own-set-to-the-store" id="id64">Why isn’t my ldmsd storing its own set to the store?</a></p></li>
+<li><p><a class="reference internal" href="#why-is-my-aggregator-not-responding-cray-xe-xk" id="id65">Why is my aggregator not responding (CRAY XE/XK)?</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#man-pages" id="id66">11) MAN PAGES</a></p>
+<ul>
+<li><p><a class="reference internal" href="#general" id="id67">General</a></p></li>
+<li><p><a class="reference internal" href="#utilities" id="id68">Utilities</a></p></li>
+<li><p><a class="reference internal" href="#plugins" id="id69">Plugins</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#notes" id="id70">NOTES</a></p></li>
+<li><p><a class="reference internal" href="#bugs" id="id71">BUGS</a></p></li>
+<li><p><a class="reference internal" href="#see-also" id="id72">SEE ALSO</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="name"><a class="toc-backref" href="#id9" role="doc-backlink">NAME</a><a class="headerlink" href="#name" title="Link to this heading">¶</a></h2>
+<p>LDMS_QuickStart - man page for Quick Start of LDMS</p>
+<h2 id="introduction"><a class="toc-backref" href="#id10" role="doc-backlink">INTRODUCTION</a><a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>LDMS is the Lightweight Distributed Metric Service. LDMS is a
+distributed data collection, transport, and storage tool that supports a
+wide variety of configuration options. There are three main functional
+components described below.</p>
+<p><em>Samplers</em> run one or more plugins that periodically sample data of
+interest. Each plugin defines a group of metrics called a metric set.
+The sampling frequency is user defined and can be dynamically changed. A
+host can simultaneously run multiple plugins. Configuration flags
+determine whether the sampling plugins run synchronously or
+asynchonously (both on a host and across hosts). Memory allocated for a
+particular metric set is overwritten by each successive sampling. The
+host daemon does not retain sample history; plugins do not typically
+retain history, but can be written to do so.</p>
+<p><em>Aggregators</em> collect data in a pull fashion from samplers and/or other
+aggregators. The collection frequency is user defined and operates
+independently of other collection operations and sampling operations.
+Distinct metric sets can be collected at different frequencies. Once
+started, the aggregation schedule cannot be altered without restarting
+the aggregator. Fan-in refers to the number of hosts collected from by a
+single aggregator. Maximum fan-in varies by transport but is roughly
+9,000:1 for the socket transport and for the RDMA transport over
+Infiniband. It is &gt; 15000:1 for RDMA over the Cray Gemini transport.
+Daisy chaining is not limited to two levels; multiple aggregators may
+aggregate from the same sampler or aggregator ldmsd. Fan-in at higher
+levels is limited by the aggregator host capabilities (CPU, memory,
+network bandwidth, and storage bandwidth).</p>
+<p><em>Storage</em> plugins write in a variety of formats. Comma Separated Value
+(CSV) file storage of metric sets plugins are provided. Storage occurs
+when a valid updated metric set data is collected by an aggregator that
+has been configured to write that data to storage. Collection of a
+metric set whose data has not been updated or is incomplete does not
+result in a write to storage in any format.</p>
+<p>The host daemon is the same base code in all cases; differentiation is
+based on configuration of plugins for sampling or storage and on
+configuring aggregation of data from other host daemons.</p>
+<h2 id="description"><a class="toc-backref" href="#id11" role="doc-backlink">DESCRIPTION</a><a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<p>Quick Start instructions for LDMS (Lightweight Distributed Metric
+Service).</p>
+<p>This man page describes how to configure and run LDMS daemons (ldmsd) to
+perform the following tasks:</p>
+<ul class="simple">
+<li><p>collect data</p></li>
+<li><p>aggregate data from multiple ldmsds</p></li>
+<li><p>store collected data to files.</p></li>
+</ul>
+<p>There are three basic configurations that will be addressed:</p>
+<ul class="simple">
+<li><p>configuring an ldmsd with collector plugins</p></li>
+<li><p>configuring a ldmsd to aggregate information from other ldmsds</p></li>
+<li><p>configuring a store_csv storage plugin on an ldmsd.</p></li>
+</ul>
+<p>The order in which these configurations should be performed does not
+matter with respect to collectors and aggregators.</p>
+<p>While a complete listing of flags and parameters can be seen by running
+ldmsd and the configuration tools with the –help directive, this
+document describes the flags and parameters required for running a basic
+setup.</p>
+<p>There are no run scripts provided in the current release; the examples
+here can be used in the creation of such.</p>
+<h2 id="arrangement-of-this-document"><a class="toc-backref" href="#id12" role="doc-backlink">Arrangement of this document</a><a class="headerlink" href="#arrangement-of-this-document" title="Link to this heading">¶</a></h2>
+<p>This document is arranged as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Prerequisites</p></li>
+<li><p>Build and install</p></li>
+<li><p>Configuring and Starting an ldmsd (general)</p></li>
+<li><p>through 8) Example ldmsd configurations and queries</p></li>
+</ol>
+<ol class="arabic simple" start="9">
+<li><p>Protection Domain Tags (Cray Only)</p></li>
+<li><p>Troubleshooting</p></li>
+<li><p>About the man pages</p></li>
+</ol>
+</div></blockquote>
+<h2 id="prerequisites"><a class="toc-backref" href="#id13" role="doc-backlink">1) PREREQUISITES</a><a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>All sections below assume the build directory is /tmp/opt/ovis.</p></li>
+<li><p>libevent-2.0 is a requirement.</p></li>
+<li><p>Python 2.7 or Python 2.6 with the argparse module is required for
+ldmsd_controller</p></li>
+</ul>
+<h2 id="build-install"><a class="toc-backref" href="#id14" role="doc-backlink">2) BUILD/INSTALL:</a><a class="headerlink" href="#build-install" title="Link to this heading">¶</a></h2>
+<p>There is a separate document with build/install instructions.</p>
+<p>The default ldms build in v3 has authentication turned on. This document
+does not include use of the authentication flags; the instructions here
+are as if you had built with –disable_ovis_auth. For more information
+on authentication, see the ldms_authentication man page.</p>
+<h2 id="configuring-and-starting-an-ldmsd"><a class="toc-backref" href="#id15" role="doc-backlink">3) CONFIGURING AND STARTING AN LDMSD</a><a class="headerlink" href="#configuring-and-starting-an-ldmsd" title="Link to this heading">¶</a></h2>
+<h3 id="environment-variables-for-ldms"><a class="toc-backref" href="#id16" role="doc-backlink">3-1) Environment Variables for LDMS</a><a class="headerlink" href="#environment-variables-for-ldms" title="Link to this heading">¶</a></h3>
+<p>You will need to set the following environment variables when running
+LDMS daemons. This assumes that ldms has been installed in to
+/tmp/opt/ovis.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>export LD_LIBRARY_PATH=/tmp/opt/ovis/lib/:/tmp/opt/ovis/lib/ovis-ldms/:&lt;path to libevent-2.0&gt;/lib:$LD_LIBRARY_PATH
+export ZAP_LIBPATH=/tmp/opt/ovis/lib/ovis-ldms
+export LDMSD_PLUGIN_LIBPATH=/tmp/opt/ovis/lib/ovis-ldms
+export PATH=/tmp/opt/ovis/sbin/:/tmp/opt/ovis/bin:$PATH
+export LDMSD_SOCKPATH=/tmp/run/ldmsd
+</code></pre></div>
+</div>
+<p>LDMSD_SOCKPATH determines the location for the unix domain socket
+(described in the ldmsd args below). The default is /var/run/ldmsd. Make
+sure you use a location that is writeable if you are running as
+non-root.</p>
+<h3 id="options-for-configuring-plugins-of-an-ldmsd"><a class="toc-backref" href="#id17" role="doc-backlink">3-2) Options for Configuring Plugins of an ldmsd</a><a class="headerlink" href="#options-for-configuring-plugins-of-an-ldmsd" title="Link to this heading">¶</a></h3>
+<p>Plugins for an ldmsd can be configured via a configuration file
+specified as an argument to the “-c” flag. Also, ldmsd_controller is a
+configuration tool that can work in interactive mode and can also can be
+directed commands/scripts to a socket. The plugin configuration commands
+are the same in all cases.</p>
+<p>In the instructions below, we briefly illustrate use of the
+configuration script to ldmsd vs ldmsd_controller. Some environmental
+variables have been supressed in this section for clarity. In all
+subsequent examples (Sections 4+), we provide versbose detail for the
+ldmsd configuration script method only. Altering this to use the other
+methods should then be obvious.</p>
+<h3 id="a-configuring-an-ldmsd-via-a-configuration-script"><a class="toc-backref" href="#id18" role="doc-backlink">3-2a) Configuring an ldmsd via a configuration script</a><a class="headerlink" href="#a-configuring-an-ldmsd-via-a-configuration-script" title="Link to this heading">¶</a></h3>
+<p>This is the most usual mode of configuring ldms in production scenarios
+and can also be used for test scenarios.</p>
+<p>Example commands for configuring a sampler:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">more</span> <span class="n">config</span><span class="o">.</span><span class="n">file</span>
+
+<span class="n">load</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span>
+<span class="n">config</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">producer</span><span class="o">=</span><span class="n">vm1_1</span> <span class="n">instance</span><span class="o">=</span><span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span>
+<span class="n">start</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1000000</span>
+</code></pre></div>
+</div>
+<p>The path to the configuration script is then provided to the ldmsd via
+the “-c” flag when it is started:</p>
+<p>Example ldmsd start command with a configuration script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span><span class="p">:</span><span class="mi">60000</span> <span class="o">-</span><span class="n">S</span> <span class="n">tmp</span><span class="o">/</span><span class="n">ldmsd</span><span class="o">/</span><span class="n">sock1</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">logfile</span> <span class="o">-</span><span class="n">v</span> <span class="n">DEBUG</span> <span class="o">-</span><span class="n">c</span> <span class="o">./</span><span class="n">config</span><span class="o">.</span><span class="n">file</span>
+</code></pre></div>
+</div>
+<h3 id="b-configuring-ldmsd-via-ldmsd-controller"><a class="toc-backref" href="#id19" role="doc-backlink">3-2b) Configuring ldmsd via ldmsd_controller</a><a class="headerlink" href="#b-configuring-ldmsd-via-ldmsd-controller" title="Link to this heading">¶</a></h3>
+<p>You can use ldmsd_controller to connect to the ldmsd at any time to
+issue plugin commands. This is most often used for dynamically issuing
+commands to a running ldmsd.</p>
+<p>Example ldmsd start command without a configuration script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span><span class="p">:</span><span class="mi">60000</span> <span class="o">-</span><span class="n">S</span> <span class="n">tmp</span><span class="o">/</span><span class="n">ldmsd</span><span class="o">/</span><span class="n">sock1</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">logfile</span> <span class="o">-</span><span class="n">v</span> <span class="n">DEBUG</span>
+</code></pre></div>
+</div>
+<p>Call the ldmsd_controller interactively and enter the same commands as
+you would in the configuration script.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldmsd_controller</span> <span class="o">--</span><span class="n">host</span> <span class="n">vm1_1</span> <span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="mi">61000</span>
+<span class="n">ldmsd_controller</span><span class="o">&gt;</span> <span class="n">load</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span>
+<span class="n">ldmsd_controller</span><span class="o">&gt;</span> <span class="n">config</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">producer</span><span class="o">=</span><span class="n">vm1_1</span> <span class="n">instance</span><span class="o">=</span><span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span>
+<span class="n">ldmsd_controller</span><span class="o">&gt;</span> <span class="n">start</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1000000</span>
+<span class="n">ldmsd_controller</span><span class="o">&gt;</span> <span class="n">quit</span>
+</code></pre></div>
+</div>
+<p>Relatedly, you can run ldmsd_controller with the commands in script
+form. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">more</span> <span class="n">config</span><span class="o">.</span><span class="n">sh</span>
+
+<span class="c1">#!/bin/bash</span>
+<span class="n">echo</span> <span class="s2">&quot;load name=meminfo&quot;</span>
+<span class="n">echo</span> <span class="s2">&quot;config name=meminfo producer=vm1_1 instance=vm1_1/meminfo&quot;</span>
+<span class="n">echo</span> <span class="s2">&quot;start name=meminfo interval=1000000&quot;</span>
+</code></pre></div>
+</div>
+<p>Call the ldmsd_controller with the script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldmsd_controller</span> <span class="o">--</span><span class="n">host</span> <span class="n">vm1_1</span> <span class="o">--</span><span class="n">port</span><span class="o">=</span><span class="mi">60000</span> <span class="o">--</span><span class="n">script</span> <span class="o">./</span><span class="n">config</span><span class="o">.</span><span class="n">sh</span>
+</code></pre></div>
+</div>
+<p>ldmsd_contoller may be executed multiple times to issues different
+commands to the same ldmsd.</p>
+<h3 id="starting-an-ldmsd"><a class="toc-backref" href="#id20" role="doc-backlink">3-3) Starting an ldmsd</a><a class="headerlink" href="#starting-an-ldmsd" title="Link to this heading">¶</a></h3>
+<p>3-3a) Set environment variables, as described above.</p>
+<p>3-3b) Run ldmsd:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">executable</span><span class="o">&gt;/</span><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="o">&lt;</span><span class="n">transport</span><span class="o">&gt;</span><span class="p">:</span><span class="o">&lt;</span><span class="n">listen</span> <span class="n">port</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">S</span> <span class="o">&lt;</span><span class="n">unix</span> <span class="n">domain</span> <span class="n">socket</span> <span class="n">path</span><span class="o">/</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">l</span> <span class="o">&lt;</span><span class="n">log</span> <span class="n">file</span> <span class="n">path</span><span class="o">/</span><span class="n">name</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">v</span> <span class="o">&lt;</span><span class="n">LOG_LEVEL</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">c</span> <span class="n">config</span><span class="o">.</span><span class="n">file</span>
+</code></pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>Transport is one of: sock, rdma, ugni (ugni is Cray specific for
+using RDMA over the Gemini/Aries network)</p></li>
+<li><p>The configuration file contains the commands to configure the
+plugins.</p></li>
+<li><p>The unix domain socket can be used to communicate configuration
+information to an ldmsd. The default path for this is
+/var/run/ldmsd/. To change this the environment variable
+LDMSD_SOCKPATH must be set to the desired path (e.g. export
+LDMSD_SOCKPATH=/tmp/run/ldmsd)</p></li>
+<li><p>No log can be can be obtained by using LOG_LEVEL QUIET, or specifying
+/dev/null for the log file, or using command line redirection.</p></li>
+<li><p>The default is to run as a background process but the -F flag can be
+specified for foreground</p></li>
+<li><p>A script can be made to start ldmsd and collectors on a host where
+that script contains the information to execute the command.</p></li>
+</ul>
+<p>3-3c) Examples for launching ldmsd:</p>
+<ul class="simple">
+<li><p>Start an ldmsd on the socket transport with a log file and a
+configuration file.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span><span class="p">:</span><span class="mi">60000</span> <span class="o">-</span><span class="n">S</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">ldmsd</span><span class="o">/</span><span class="n">metric_socket</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="mi">1</span> <span class="o">-</span><span class="n">c</span> <span class="n">config</span><span class="o">.</span><span class="n">file</span>
+
+<span class="n">Same</span> <span class="n">but</span> <span class="k">with</span> <span class="n">log</span> <span class="n">level</span> <span class="n">QUIET</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span><span class="p">:</span><span class="mi">60000</span> <span class="o">-</span><span class="n">S</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">ldmsd</span><span class="o">/</span><span class="n">metric_socket</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="mi">1</span> <span class="o">-</span><span class="n">c</span> <span class="n">config</span><span class="o">.</span><span class="n">file</span> <span class="o">-</span><span class="n">V</span> <span class="n">QUIET</span>
+</code></pre></div>
+</div>
+<ul class="simple">
+<li><p>Start 2 instances of ldmsd on host vm1</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">Note</span><span class="p">:</span> <span class="n">Make</span> <span class="n">sure</span> <span class="n">to</span> <span class="n">use</span> <span class="n">different</span> <span class="n">socket</span> <span class="n">names</span> <span class="ow">and</span> <span class="n">listen</span> <span class="n">on</span> <span class="n">different</span> <span class="n">ports</span> <span class="k">if</span> <span class="n">you</span> <span class="n">are</span> <span class="n">on</span> <span class="n">the</span> <span class="n">same</span> <span class="n">host</span><span class="o">.</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span><span class="p">:</span><span class="mi">60000</span> <span class="o">-</span><span class="n">S</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">ldmsd</span><span class="o">/</span><span class="n">metric_socket_vm1_1</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">vm_1</span> <span class="o">-</span><span class="n">c</span> <span class="n">config</span><span class="o">.</span><span class="n">file</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">ldmsd</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span><span class="p">:</span><span class="mi">60001</span> <span class="o">-</span><span class="n">S</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">ldmsd</span><span class="o">/</span><span class="n">metric_socket_vm1_2</span> <span class="o">-</span><span class="n">l</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ovis</span><span class="o">/</span><span class="n">logs</span><span class="o">/</span><span class="n">vm_2</span> <span class="o">-</span><span class="n">c</span> <span class="n">config</span><span class="o">.</span><span class="n">file</span>
+</code></pre></div>
+</div>
+<h2 id="example-configure-an-ldmsd-with-sampler-plugins"><a class="toc-backref" href="#id21" role="doc-backlink">4) EXAMPLE: CONFIGURE AN LDMSD WITH SAMPLER PLUGINS</a><a class="headerlink" href="#example-configure-an-ldmsd-with-sampler-plugins" title="Link to this heading">¶</a></h2>
+<h3 id="create-the-configuration-file-for-the-sampler-plugins"><a class="toc-backref" href="#id22" role="doc-backlink">4-1) Create the configuration file for the sampler plugins:</a><a class="headerlink" href="#create-the-configuration-file-for-the-sampler-plugins" title="Link to this heading">¶</a></h3>
+<p>Configure a “meminfo” collector plugin to collect every second.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">load</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span>
+<span class="n">config</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">producer</span><span class="o">=</span><span class="n">vm1_1</span> <span class="n">instance</span><span class="o">=</span><span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span>
+<span class="n">start</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">interval</span><span class="o">=</span><span class="mi">1000000</span>
+
+
+<span class="n">Notes</span><span class="p">:</span>
+<span class="n">For</span> <span class="n">synchronous</span> <span class="n">operation</span> <span class="n">include</span> <span class="s2">&quot;offset=&lt;#usec&gt;&quot;</span> <span class="ow">in</span> <span class="n">start</span> <span class="n">line</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">start</span> <span class="n">name</span><span class="o">=</span><span class="n">meminfo</span> <span class="n">interval</span><span class="o">=</span><span class="n">xxx</span> <span class="n">offset</span><span class="o">=</span><span class="n">yyy</span><span class="p">)</span><span class="o">.</span>
+<span class="n">This</span> <span class="n">will</span> <span class="n">cause</span> <span class="n">the</span> <span class="n">sampler</span> <span class="n">to</span> <span class="n">target</span> <span class="n">interval</span> <span class="o">+</span> <span class="n">yyy</span> <span class="n">aligned</span> <span class="n">to</span> <span class="n">the</span> <span class="n">second</span> <span class="ow">and</span> <span class="n">micro</span> <span class="n">second</span>
+<span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">every</span> <span class="mi">5</span> <span class="n">seconds</span> <span class="k">with</span> <span class="n">an</span> <span class="n">offset</span> <span class="n">of</span> <span class="mi">0</span> <span class="n">usec</span> <span class="n">would</span> <span class="n">ideally</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">collections</span> <span class="n">at</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">,</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">05</span><span class="p">,</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="n">etc</span><span class="o">.</span>
+<span class="n">whereas</span> <span class="k">with</span> <span class="n">an</span> <span class="n">offset</span> <span class="n">of</span> <span class="mi">100</span><span class="p">,</span><span class="mi">000</span> <span class="n">usec</span> <span class="n">it</span> <span class="n">would</span> <span class="n">be</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">00.1</span><span class="p">,</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">05.1</span><span class="p">,</span> <span class="mi">00</span><span class="p">:</span><span class="mi">00</span><span class="p">:</span><span class="mf">10.1</span><span class="p">,</span> <span class="n">etc</span><span class="p">)</span>
+<span class="n">Different</span> <span class="n">plugins</span> <span class="n">may</span> <span class="n">have</span> <span class="n">additional</span> <span class="n">configuration</span> <span class="n">parameters</span><span class="o">.</span>
+</code></pre></div>
+</div>
+<h3 id="set-environment-variables-as-described-above"><a class="toc-backref" href="#id23" role="doc-backlink">4-2) Set environment variables, as described above.</a><a class="headerlink" href="#set-environment-variables-as-described-above" title="Link to this heading">¶</a></h3>
+<h3 id="start-the-ldmsd-with-the-config-file-as-described-above-e-g"><a class="toc-backref" href="#id24" role="doc-backlink">4-3) Start the ldmsd with the config file, as described above. e.g.,</a><a class="headerlink" href="#start-the-ldmsd-with-the-config-file-as-described-above-e-g" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>ldmsd -x sock:60000 -S tmp/ldmsd/sock1 -l /tmp/log/logfile -v DEBUG
+-c ./config.file</p>
+</div></blockquote>
+<h3 id="verifying-the-collector"><a class="toc-backref" href="#id25" role="doc-backlink">4-4) Verifying the collector</a><a class="headerlink" href="#verifying-the-collector" title="Link to this heading">¶</a></h3>
+<p>At this point the ldmsd collector should be checked using the utility
+ldms_ls (See Using ldms_ls below)</p>
+<h2 id="example-configure-an-aggregator-using-ldmsd-controller"><a class="toc-backref" href="#id26" role="doc-backlink">5) EXAMPLE: CONFIGURE AN AGGREGATOR USING LDMSD_CONTROLLER</a><a class="headerlink" href="#example-configure-an-aggregator-using-ldmsd-controller" title="Link to this heading">¶</a></h2>
+<h3 id="start-2-separate-ldmsds-one-on-host-vm1-1-and-one-on-host-vm1-2-with-sampler-plugins-as-described-above"><a class="toc-backref" href="#id27" role="doc-backlink">5-1) Start 2 separate ldmsds, one on host vm1_1 and one on host vm1_2, with sampler plugins, as described above</a><a class="headerlink" href="#start-2-separate-ldmsds-one-on-host-vm1-1-and-one-on-host-vm1-2-with-sampler-plugins-as-described-above" title="Link to this heading">¶</a></h3>
+<h3 id="write-a-script-to-add-producers-and-start-collecting-from-them"><a class="toc-backref" href="#id28" role="doc-backlink">5-2) Write a script to add producers and start collecting from them:</a><a class="headerlink" href="#write-a-script-to-add-producers-and-start-collecting-from-them" title="Link to this heading">¶</a></h3>
+<p>This adds vm1_1 as a producer with its sets collected at 2 second
+intervals and vm1_2 as a producer with its sets collected at 5 second
+intervals. Here the “name” of the producer must match the “producer”
+name given to the sampler.</p>
+<p>The first set of lines adds the producers. The second set of lines
+establishes the aggregation from them. at the specified intervals.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">more</span> <span class="n">add_prdcr</span><span class="o">.</span><span class="n">config</span>
+<span class="n">prdcr_add</span> <span class="n">name</span><span class="o">=</span><span class="n">vm1_2</span> <span class="n">host</span><span class="o">=</span><span class="n">vm1</span> <span class="nb">type</span><span class="o">=</span><span class="n">active</span> <span class="n">xprt</span><span class="o">=</span><span class="n">sock</span> <span class="n">port</span><span class="o">=</span><span class="mi">60001</span> <span class="n">interval</span><span class="o">=</span><span class="mi">20000000</span>
+<span class="n">prdcr_start</span> <span class="n">name</span><span class="o">=</span><span class="n">vm1_2</span>
+<span class="n">prdcr_add</span> <span class="n">name</span><span class="o">=</span><span class="n">vm1_1</span> <span class="n">host</span><span class="o">=</span><span class="n">vm1</span> <span class="nb">type</span><span class="o">=</span><span class="n">active</span> <span class="n">xprt</span><span class="o">=</span><span class="n">sock</span> <span class="n">port</span><span class="o">=</span><span class="mi">60000</span> <span class="n">interval</span><span class="o">=</span><span class="mi">20000000</span>
+<span class="n">prdcr_start</span> <span class="n">name</span><span class="o">=</span><span class="n">vm1_1</span>
+<span class="n">updtr_add</span> <span class="n">name</span><span class="o">=</span><span class="n">policy2_h1</span> <span class="n">interval</span><span class="o">=</span><span class="mi">2000000</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">updtr_prdcr_add</span> <span class="n">name</span><span class="o">=</span><span class="n">policy2_h1</span> <span class="n">regex</span><span class="o">=</span><span class="n">vm1_1</span>
+<span class="n">updtr_start</span> <span class="n">name</span><span class="o">=</span><span class="n">policy2_h1</span>
+<span class="n">updtr_add</span> <span class="n">name</span><span class="o">=</span><span class="n">policy5_h2</span> <span class="n">interval</span><span class="o">=</span><span class="mi">5000000</span> <span class="n">offset</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">updtr_prdcr_add</span> <span class="n">name</span><span class="o">=</span><span class="n">policy5_h2</span> <span class="n">regex</span><span class="o">=</span><span class="n">vm1_2</span>
+<span class="n">updtr_start</span> <span class="n">name</span><span class="o">=</span><span class="n">policy5_h2</span>
+</code></pre></div>
+</div>
+<h3 id="id1"><a class="toc-backref" href="#id29" role="doc-backlink">5-3) Set environment variables, as described above</a><a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<h3 id="start-an-ldmsd-on-your-host-to-aggregate-using-the-configuration-file"><a class="toc-backref" href="#id30" role="doc-backlink">5-4) Start an ldmsd on your host to aggregate using the configuration file</a><a class="headerlink" href="#start-an-ldmsd-on-your-host-to-aggregate-using-the-configuration-file" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>/tmp/opt/ovis/sbin/ldmsd -x sock:60002 -S
+/var/run/ldmsd/metric_socket_agg -l /tmp/opt/ovis/logs/vm1_agg -c
+./add_prdcr.sh</p>
+</div></blockquote>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>There is no requirement that aggregator intervals match collection
+intervals</p></li>
+<li><p>Because the collection and aggregation processes operate
+asynchronously there is the potential for duplicate data collection
+as well as missed samples. The first is handled by the storage
+plugins by comparing generation numbers and not storing duplicates.
+The second implies either a loss in fidelity (if collecting counter
+data) or a loss of data points here and there (if collecting
+differences of counter values or non counter values). This can be
+handled using the synchronous option on both collector and aggregator
+but is not covered here.</p></li>
+</ul>
+<h3 id="at-this-point-the-ldmsd-collector-should-be-checked-using-the-utility-ldms-ls"><a class="toc-backref" href="#id31" role="doc-backlink">5-4) At this point the ldmsd collector should be checked using the utility ldms_ls</a><a class="headerlink" href="#at-this-point-the-ldmsd-collector-should-be-checked-using-the-utility-ldms-ls" title="Link to this heading">¶</a></h3>
+<p>(See Using ldms_ls below). In this case you should see metric sets for
+both vm1_1 and vm1_2 displayed when you query the aggregator ldmsd using
+ldms_ls.</p>
+<h2 id="example-configure-an-ldms-aggregator-with-a-storage-plugin"><a class="toc-backref" href="#id32" role="doc-backlink">6) EXAMPLE: CONFIGURE AN LDMS AGGREGATOR WITH A STORAGE PLUGIN</a><a class="headerlink" href="#example-configure-an-ldms-aggregator-with-a-storage-plugin" title="Link to this heading">¶</a></h2>
+<h3 id="add-storage-configuration-lines-to-the-configuration-file-described-above"><a class="toc-backref" href="#id33" role="doc-backlink">6-1) Add storage configuration lines to the configuration file described above.</a><a class="headerlink" href="#add-storage-configuration-lines-to-the-configuration-file-described-above" title="Link to this heading">¶</a></h3>
+<p>This adds a store_csv to store sets whose schema are meminfo or vmstat
+and whose instance name matches the regex. A set’s schema and instance
+names will be seen in the output of ldms_ls (described below).</p>
+<p>&gt; more add_store.sh load name=store_csv config name=store_csv
+path=&lt;&lt;STORE_PATH&gt;&gt; action=init altheader=0 rollover=30 rolltype=1
+strgp_add name=policy_mem plugin=store_csv container=csv schema=meminfo
+strgp_prdcr_add name=policy_mem regex=vm* strgp_start
+name=policy_vmstat strgp_add name=policy_vmstat plugin=store_csv
+container=csv schema=vmstat strgp_prdcr_add name=policy_vmstat
+regex=vm* strgp_start name=policy_vmstat</p>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>For the csv store, the whole path must pre-exist.</p></li>
+<li><p>See the Plugin_store_csv man page for more info on the plugin
+configuration arguments.</p></li>
+<li><p>If you want to collect on a host and store that data on the same
+host, run two ldmsd’s: one with a collector plugin only and one as an
+aggegrator with a store plugin only.</p></li>
+</ul>
+<h3 id="id2"><a class="toc-backref" href="#id34" role="doc-backlink">6-2) Set environment variables, as described above</a><a class="headerlink" href="#id2" title="Link to this heading">¶</a></h3>
+<h3 id="start-the-aggregator-with-the-full-configuration-file-both-aggregator-and-store-lines-as-described-above"><a class="toc-backref" href="#id35" role="doc-backlink">6-3) Start the aggregator with the full configuration file (both aggregator and store lines), as described above</a><a class="headerlink" href="#start-the-aggregator-with-the-full-configuration-file-both-aggregator-and-store-lines-as-described-above" title="Link to this heading">¶</a></h3>
+<h3 id="verify-the-store"><a class="toc-backref" href="#id36" role="doc-backlink">6-4) Verify the store</a><a class="headerlink" href="#verify-the-store" title="Link to this heading">¶</a></h3>
+<p>Go to data store and verify files have been created and are being
+written to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">cd</span> <span class="o">&lt;&lt;</span><span class="n">STORE_PATH</span><span class="o">&gt;&gt;/&lt;</span><span class="n">container</span><span class="o">&gt;</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">ltr</span>
+</code></pre></div>
+</div>
+<p>You can now utilize this data.</p>
+<p>Data will flush to the store when the OS flushes data unless an advanced
+flag is used. Thus, in a default configuration, if you have a small
+number of nodes and/or a long interval, you may not see data appear in
+the store for a few minutes.</p>
+<h2 id="examples-using-ldms-ls-to-display-sets-metrics-from-an-ldmsd"><a class="toc-backref" href="#id37" role="doc-backlink">7) EXAMPLES: USING LDMS_LS TO DISPLAY SETS/METRICS FROM AN LDMSD</a><a class="headerlink" href="#examples-using-ldms-ls-to-display-sets-metrics-from-an-ldmsd" title="Link to this heading">¶</a></h2>
+<h3 id="id3"><a class="toc-backref" href="#id38" role="doc-backlink">7-1) Set environment variables, as described above</a><a class="headerlink" href="#id3" title="Link to this heading">¶</a></h3>
+<h3 id="a-query-ldmsd-on-host-vm1-listening-on-port-60000-sampler-using-the-sock-transport-for-metric-sets-being-served-by-that-ldmsd"><a class="toc-backref" href="#id39" role="doc-backlink">7-2a) Query ldmsd on host vm1 listening on port 60000 (sampler) using the sock transport for metric sets being served by that ldmsd</a><a class="headerlink" href="#a-query-ldmsd-on-host-vm1-listening-on-port-60000-sampler-using-the-sock-transport-for-metric-sets-being-served-by-that-ldmsd" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldms_ls</span> <span class="o">-</span><span class="n">h</span> <span class="n">vm1</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span> <span class="o">-</span><span class="n">p</span> <span class="mi">60000</span>
+<span class="n">Should</span> <span class="k">return</span><span class="p">:</span>
+<span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span>
+<span class="n">vm1_1</span><span class="o">/</span><span class="n">vmstat</span>
+</code></pre></div>
+</div>
+<h3 id="b-query-ldmsd-on-host-vm1-listening-on-port-60002-aggregator-using-the-sock-transport-for-metric-sets-being-served-by-that-ldmsd"><a class="toc-backref" href="#id40" role="doc-backlink">7-2b) Query ldmsd on host vm1 listening on port 60002 (aggregator) using the sock transport for metric sets being served by that ldmsd</a><a class="headerlink" href="#b-query-ldmsd-on-host-vm1-listening-on-port-60002-aggregator-using-the-sock-transport-for-metric-sets-being-served-by-that-ldmsd" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldms_ls</span> <span class="o">-</span><span class="n">h</span> <span class="n">vm1</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span> <span class="o">-</span><span class="n">p</span> <span class="mi">60002</span>
+<span class="n">Should</span> <span class="k">return</span><span class="p">:</span>
+<span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span>
+<span class="n">vm1_1</span><span class="o">/</span><span class="n">vmstat</span>
+<span class="n">vm1_2</span><span class="o">/</span><span class="n">meminfo</span>
+<span class="n">vm1_2</span><span class="o">/</span><span class="n">vmstat</span>
+</code></pre></div>
+</div>
+<h3 id="c-query-ldmsd-on-host-vm1-listening-on-port-60000-using-the-sock-transport-for-the-names-and-contents-of-metric-sets-being-served-by-that-ldmsd"><a class="toc-backref" href="#id41" role="doc-backlink">7-2c) Query ldmsd on host vm1 listening on port 60000 using the sock transport for the names and contents of metric sets being served by that ldmsd.</a><a class="headerlink" href="#c-query-ldmsd-on-host-vm1-listening-on-port-60000-using-the-sock-transport-for-the-names-and-contents-of-metric-sets-being-served-by-that-ldmsd" title="Link to this heading">¶</a></h3>
+<p>Should return: Set names (vm1_1/meminfo and vm1_1/vmstat in this case)
+as well as all names and values associated with each set respectively.
+Only vm1_1/meminfo shown here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">ldms_ls</span> <span class="o">-</span><span class="n">h</span> <span class="n">vm1</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span> <span class="o">-</span><span class="n">p</span> <span class="mi">60000</span> <span class="o">-</span><span class="n">l</span>
+<span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span><span class="p">:</span> <span class="n">consistent</span><span class="p">,</span> <span class="n">last</span> <span class="n">update</span><span class="p">:</span> <span class="n">Wed</span> <span class="n">Jul</span> <span class="mi">31</span> <span class="mi">21</span><span class="p">:</span><span class="mi">51</span><span class="p">:</span><span class="mi">08</span> <span class="mi">2013</span> <span class="p">[</span><span class="mi">246540</span><span class="n">us</span><span class="p">]</span>
+<span class="n">U64</span> <span class="mi">33084652</span>         <span class="n">MemTotal</span>
+<span class="n">U64</span> <span class="mi">32092964</span>         <span class="n">MemFree</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">Buffers</span>
+<span class="n">U64</span> <span class="mi">49244</span>            <span class="n">Cached</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">SwapCached</span>
+<span class="n">U64</span> <span class="mi">13536</span>            <span class="n">Active</span>
+<span class="n">U64</span> <span class="mi">39844</span>            <span class="n">Inactive</span>
+<span class="n">U64</span> <span class="mi">5664</span>             <span class="n">Active</span><span class="p">(</span><span class="n">anon</span><span class="p">)</span>
+<span class="n">U64</span> <span class="mi">13540</span>            <span class="n">Inactive</span><span class="p">(</span><span class="n">anon</span><span class="p">)</span>
+<span class="n">U64</span> <span class="mi">7872</span>             <span class="n">Active</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">U64</span> <span class="mi">26304</span>            <span class="n">Inactive</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<span class="n">U64</span> <span class="mi">2996</span>             <span class="n">Unevictable</span>
+<span class="n">U64</span> <span class="mi">2988</span>             <span class="n">Mlocked</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">SwapTotal</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">SwapFree</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">Dirty</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">Writeback</span>
+<span class="n">U64</span> <span class="mi">7164</span>             <span class="n">AnonPages</span>
+<span class="n">U64</span> <span class="mi">6324</span>             <span class="n">Mapped</span>
+<span class="n">U64</span> <span class="mi">12544</span>            <span class="n">Shmem</span>
+<span class="n">U64</span> <span class="mi">84576</span>            <span class="n">Slab</span>
+<span class="n">U64</span> <span class="mi">3948</span>             <span class="n">SReclaimable</span>
+<span class="n">U64</span> <span class="mi">80628</span>            <span class="n">SUnreclaim</span>
+<span class="n">U64</span> <span class="mi">1608</span>             <span class="n">KernelStack</span>
+<span class="n">U64</span> <span class="mi">804</span>              <span class="n">PageTables</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">NFS_Unstable</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">Bounce</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">WritebackTmp</span>
+<span class="n">U64</span> <span class="mi">16542324</span>         <span class="n">CommitLimit</span>
+<span class="n">U64</span> <span class="mi">73764</span>            <span class="n">Committed_AS</span>
+<span class="n">U64</span> <span class="mi">34359738367</span>      <span class="n">VmallocTotal</span>
+<span class="n">U64</span> <span class="mi">3467004</span>          <span class="n">VmallocUsed</span>
+<span class="n">U64</span> <span class="mi">34356268363</span>      <span class="n">VmallocChunk</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">HugePages_Total</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">HugePages_Free</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">HugePages_Rsvd</span>
+<span class="n">U64</span> <span class="mi">0</span>                <span class="n">HugePages_Surp</span>
+<span class="n">U64</span> <span class="mi">2048</span>             <span class="n">Hugepagesize</span>
+<span class="n">U64</span> <span class="mi">565248</span>           <span class="n">DirectMap4k</span>
+<span class="n">U64</span> <span class="mi">5726208</span>          <span class="n">DirectMap2M</span>
+<span class="n">U64</span> <span class="mi">27262976</span>         <span class="n">DirectMap1G</span>
+</code></pre></div>
+</div>
+<h2 id="d-query-for-a-non-existent-set"><a class="toc-backref" href="#id42" role="doc-backlink">7-2d) Query for a non-existent set:</a><a class="headerlink" href="#d-query-for-a-non-existent-set" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldms_ls</span> <span class="o">-</span><span class="n">h</span> <span class="n">vm1</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span> <span class="o">-</span><span class="n">p</span> <span class="mi">60000</span> <span class="o">-</span><span class="n">l</span> <span class="n">vm1_1</span><span class="o">/</span><span class="n">foo</span>
+<span class="n">ldms_ls</span><span class="p">:</span> <span class="n">No</span> <span class="n">such</span> <span class="n">file</span> <span class="ow">or</span> <span class="n">directory</span>
+<span class="n">ldms_ls</span><span class="p">:</span> <span class="n">lookup</span> <span class="n">failed</span> <span class="k">for</span> <span class="nb">set</span> <span class="s1">&#39;vm1_1/foo&#39;</span>
+</code></pre></div>
+</div>
+<h2 id="e-display-metadata-about-sets-contained-by-vm1-ldmsd-listening-on-port-60000"><a class="toc-backref" href="#id43" role="doc-backlink">7-2e) Display metadata about sets contained by vm1 ldmsd listening on port 60000</a><a class="headerlink" href="#e-display-metadata-about-sets-contained-by-vm1-ldmsd-listening-on-port-60000" title="Link to this heading">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldms_ls</span> <span class="o">-</span><span class="n">h</span> <span class="n">vm1</span> <span class="o">-</span><span class="n">x</span> <span class="n">sock</span> <span class="o">-</span><span class="n">p</span> <span class="mi">60000</span> <span class="o">-</span><span class="n">v</span>
+<span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span><span class="p">:</span> <span class="n">consistent</span><span class="p">,</span> <span class="n">last</span> <span class="n">update</span><span class="p">:</span> <span class="n">Fri</span> <span class="n">Dec</span> <span class="mi">16</span> <span class="mi">17</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">08</span> <span class="mi">2016</span> <span class="p">[</span><span class="mi">5091</span><span class="n">us</span><span class="p">]</span>
+  <span class="n">METADATA</span> <span class="o">--------</span>
+    <span class="n">Producer</span> <span class="n">Name</span> <span class="p">:</span> <span class="n">vm1_1</span>
+    <span class="n">Instance</span> <span class="n">Name</span> <span class="p">:</span> <span class="n">vm1_1</span><span class="o">/</span><span class="n">meminfo</span>
+      <span class="n">Schema</span> <span class="n">Name</span> <span class="p">:</span> <span class="n">meminfo</span>
+             <span class="n">Size</span> <span class="p">:</span> <span class="mi">1816</span>
+     <span class="n">Metric</span> <span class="n">Count</span> <span class="p">:</span> <span class="mi">43</span>
+               <span class="n">GN</span> <span class="p">:</span> <span class="mi">2</span>
+  <span class="n">DATA</span> <span class="o">------------</span>
+        <span class="n">Timestamp</span> <span class="p">:</span> <span class="n">Fri</span> <span class="n">Dec</span> <span class="mi">16</span> <span class="mi">17</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span><span class="mi">08</span> <span class="mi">2016</span> <span class="p">[</span><span class="mi">5091</span><span class="n">us</span><span class="p">]</span>
+         <span class="n">Duration</span> <span class="p">:</span> <span class="p">[</span><span class="mf">0.000072</span><span class="n">s</span><span class="p">]</span>
+       <span class="n">Consistent</span> <span class="p">:</span> <span class="n">TRUE</span>
+             <span class="n">Size</span> <span class="p">:</span> <span class="mi">384</span>
+               <span class="n">GN</span> <span class="p">:</span> <span class="mi">985</span>
+  <span class="o">-----------------</span>
+</code></pre></div>
+</div>
+<h2 id="stop-an-ldmsd"><a class="toc-backref" href="#id44" role="doc-backlink">8) STOP AN LDMSD</a><a class="headerlink" href="#stop-an-ldmsd" title="Link to this heading">¶</a></h2>
+<h3 id="to-kill-all-ldmsd-on-a-host"><a class="toc-backref" href="#id45" role="doc-backlink">To kill all ldmsd on a host</a><a class="headerlink" href="#to-kill-all-ldmsd-on-a-host" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">killall</span> <span class="n">ldmsd</span>
+</code></pre></div>
+</div>
+<h2 id="protection-domain-tags-cray"><a class="toc-backref" href="#id46" role="doc-backlink">9) PROTECTION DOMAIN TAGS (Cray)</a><a class="headerlink" href="#protection-domain-tags-cray" title="Link to this heading">¶</a></h2>
+<h3 id="cray-xe-xk"><a class="toc-backref" href="#id47" role="doc-backlink">9-1) Cray XE/XK:</a><a class="headerlink" href="#cray-xe-xk" title="Link to this heading">¶</a></h3>
+<p>If you are going to be using the “ugni” transport (RDMA over Gemini) you
+will need to run with either system (as root) or user (as user) ptags.
+While root CAN run using any ptag the fact that its use is unknown to
+ALPS could cause collisions with applications.</p>
+<h3 id="to-see-current-ptags"><a class="toc-backref" href="#id48" role="doc-backlink">To see current ptags:</a><a class="headerlink" href="#to-see-current-ptags" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">apstat</span> <span class="o">-</span><span class="n">P</span>
+<span class="n">PDomainID</span>           <span class="n">Type</span>    <span class="n">Uid</span>   <span class="n">PTag</span>     <span class="n">Cookie</span>
+<span class="n">LDMS</span>              <span class="n">system</span>      <span class="mi">0</span>     <span class="mi">84</span> <span class="mh">0xa9380000</span>
+</code></pre></div>
+</div>
+<h3 id="to-create-a-userspace-ptag"><a class="toc-backref" href="#id49" role="doc-backlink">To create a userspace ptag:</a><a class="headerlink" href="#to-create-a-userspace-ptag" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">apmgr</span> <span class="n">pdomain</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">somenamehere</span><span class="o">&gt;</span>
+
+<span class="n">Example</span><span class="p">:</span>
+<span class="o">&gt;</span> <span class="n">apmgr</span> <span class="n">pdomain</span> <span class="o">-</span><span class="n">c</span> <span class="n">foo</span>
+<span class="o">&gt;</span> <span class="n">apstat</span> <span class="o">-</span><span class="n">P</span>
+<span class="n">PDomainID</span>           <span class="n">Type</span>    <span class="n">Uid</span>   <span class="n">PTag</span>     <span class="n">Cookie</span>
+<span class="n">LDMS</span>              <span class="n">system</span>      <span class="mi">0</span>     <span class="mi">84</span> <span class="mh">0xa9380000</span>
+<span class="n">foo</span>                 <span class="n">user</span>     <span class="mi">12345</span>  <span class="mi">233</span> <span class="mh">0xa1230000</span>
+</code></pre></div>
+</div>
+<p>Note: A system administrator will have to setup system ptags and/or
+enable users to set up ptags.</p>
+<h3 id="to-remove-a-userspace-ptag"><a class="toc-backref" href="#id50" role="doc-backlink">To remove a userspace ptag:</a><a class="headerlink" href="#to-remove-a-userspace-ptag" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">apmgr</span> <span class="n">pdomain</span> <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="n">somenamehere</span><span class="o">&gt;</span>
+</code></pre></div>
+</div>
+<p>Note: The userid of the ptag being removed must match that of the user
+running the command or root</p>
+<h3 id="ptag-related-enviroment-variables-for-ldms-xe-xk"><a class="toc-backref" href="#id51" role="doc-backlink">PTAG-Related Enviroment variables for ldms (XE/XK)</a><a class="headerlink" href="#ptag-related-enviroment-variables-for-ldms-xe-xk" title="Link to this heading">¶</a></h3>
+<p>Set the following environment variables for either user or system ptags
+(example shows user ptag values):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">export</span> <span class="n">ZAP_UGNI_PTAG</span> <span class="mi">233</span>
+<span class="n">export</span> <span class="n">ZAP_UGNI_COOKIE</span> <span class="mh">0xa1230000</span>
+</code></pre></div>
+</div>
+<h3 id="starting-ldms-from-aprun-with-ptags"><a class="toc-backref" href="#id52" role="doc-backlink">Starting ldms from aprun with ptags</a><a class="headerlink" href="#starting-ldms-from-aprun-with-ptags" title="Link to this heading">¶</a></h3>
+<p>When running with user space ptags you must specify the ptag name when
+using aprun</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">aprun</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">aprun</span> <span class="n">args</span> <span class="n">here</span><span class="o">&gt;&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="n">foo</span> <span class="n">ldmsd</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">ldmsd</span> <span class="n">flags</span> <span class="n">here</span><span class="o">&gt;&gt;</span>
+<span class="ow">or</span>
+<span class="n">aprun</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">aprun</span> <span class="n">args</span> <span class="n">here</span><span class="o">&gt;&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="n">foo</span> <span class="n">ldms_ls</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">ldms_ls</span> <span class="n">flags</span> <span class="n">here</span><span class="o">&gt;&gt;</span>
+</code></pre></div>
+</div>
+<p>Note: On some systems you will run aprun after a qsub -I or within a
+script specified in qsub or similiar.</p>
+<h3 id="cray-xc-cle-5-2"><a class="toc-backref" href="#id53" role="doc-backlink">9-2) Cray XC, CLE &lt;= 5.2:</a><a class="headerlink" href="#cray-xc-cle-5-2" title="Link to this heading">¶</a></h3>
+<p>If you are going to be using the “ugni” transport (RDMA over Aries) you
+will need to run with either system (as root) or user (as user) ptags.
+While root CAN run using any ptag the fact that its use is unknown to
+ALPS could cause collisions with applications.</p>
+<h3 id="id4"><a class="toc-backref" href="#id54" role="doc-backlink">To see current ptags:</a><a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="o">&gt;</span> <span class="n">apstat</span> <span class="o">-</span><span class="n">P</span>
+<span class="n">PDomainID</span>   <span class="n">Type</span>   <span class="n">Uid</span>     <span class="n">Cookie</span>    <span class="n">Cookie2</span>
+<span class="n">LDMS</span>      <span class="n">system</span>     <span class="mi">0</span> <span class="mh">0x86b80000</span>          <span class="mi">0</span>
+</code></pre></div>
+</div>
+<h3 id="id5"><a class="toc-backref" href="#id55" role="doc-backlink">To create a userspace ptag:</a><a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">apmgr</span> <span class="n">pdomain</span> <span class="o">-</span><span class="n">c</span> <span class="o">&lt;</span><span class="n">somenamehere</span><span class="o">&gt;</span>
+
+<span class="n">Example</span><span class="p">:</span>
+<span class="o">&gt;</span> <span class="n">apmgr</span> <span class="n">pdomain</span> <span class="o">-</span><span class="n">c</span> <span class="n">foo</span>
+<span class="o">&gt;</span> <span class="n">apstat</span> <span class="o">-</span><span class="n">P</span>
+<span class="n">PDomainID</span>   <span class="n">Type</span>   <span class="n">Uid</span>     <span class="n">Cookie</span>    <span class="n">Cookie2</span>
+<span class="n">LDMS</span>      <span class="n">system</span>     <span class="mi">0</span> <span class="mh">0x86b80000</span>          <span class="mi">0</span>
+<span class="n">foo</span>         <span class="n">user</span> <span class="mi">20596</span> <span class="mh">0x86bb0000</span> <span class="mh">0x86bc0000</span>
+</code></pre></div>
+</div>
+<p>Note: A system administrator will have to setup system ptags and/or
+enable users to set up ptags.</p>
+<h3 id="id6"><a class="toc-backref" href="#id56" role="doc-backlink">To remove a userspace ptag:</a><a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">apmgr</span> <span class="n">pdomain</span> <span class="o">-</span><span class="n">r</span> <span class="o">&lt;</span><span class="n">somenamehere</span><span class="o">&gt;</span>
+</code></pre></div>
+</div>
+<p>Note: The userid of the ptag being removed must match that of the user
+running the command or root</p>
+<h3 id="ptag-related-enviroment-variables-for-ldms-xc"><a class="toc-backref" href="#id57" role="doc-backlink">PTAG-Related Enviroment variables for ldms (XC)</a><a class="headerlink" href="#ptag-related-enviroment-variables-for-ldms-xc" title="Link to this heading">¶</a></h3>
+<p>Set the following environment variables. On XC the ptag value doesn’t
+matter but ZAP_UGNI_PTAG must be defined. Set the Cookie (not Cookie2)
+for either user or system ptag.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">export</span> <span class="n">ZAP_UGNI_PTAG</span><span class="o">=</span><span class="mi">0</span>
+<span class="n">export</span> <span class="n">ZAP_UGNI_COOKIE</span><span class="o">=</span><span class="mh">0x86bb0000</span>
+</code></pre></div>
+</div>
+<h3 id="id7"><a class="toc-backref" href="#id58" role="doc-backlink">Starting ldms from aprun with ptags</a><a class="headerlink" href="#id7" title="Link to this heading">¶</a></h3>
+<p>When running with user space ptags you must specify the ptag name when
+using aprun</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">aprun</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">aprun</span> <span class="n">args</span> <span class="n">here</span><span class="o">&gt;&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="n">foo</span> <span class="n">ldmsd</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">ldmsd</span> <span class="n">flags</span> <span class="n">here</span><span class="o">&gt;&gt;</span>
+<span class="ow">or</span>
+<span class="n">aprun</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">aprun</span> <span class="n">args</span> <span class="n">here</span><span class="o">&gt;&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="n">foo</span> <span class="n">ldms_ls</span> <span class="o">&lt;&lt;</span><span class="n">usual</span> <span class="n">ldms_ls</span> <span class="n">flags</span> <span class="n">here</span><span class="o">&gt;&gt;</span>
+</code></pre></div>
+</div>
+<p>Note: On some systems you will run aprun after a qsub -I or within a
+script specified in qsub or similiar.</p>
+<h2 id="troubleshooting"><a class="toc-backref" href="#id59" role="doc-backlink">10) TROUBLESHOOTING</a><a class="headerlink" href="#troubleshooting" title="Link to this heading">¶</a></h2>
+<h3 id="what-causes-the-following-error-libibverbs-warning-rlimit-memlock-is-32768-bytes"><a class="toc-backref" href="#id60" role="doc-backlink">What causes the following error: libibverbs: Warning: RLIMIT_MEMLOCK is 32768 bytes?</a><a class="headerlink" href="#what-causes-the-following-error-libibverbs-warning-rlimit-memlock-is-32768-bytes" title="Link to this heading">¶</a></h3>
+<p>Running as a user with “max locked memory” set too low. The following is
+an example of trying to run ldms_ls as a user with “max locked memory”
+set to 32k:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">ldms_ls</span> <span class="o">-</span><span class="n">h</span> <span class="o">&lt;</span><span class="n">hostname</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">x</span> <span class="n">rdma</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">portnum</span><span class="o">&gt;</span>
+<span class="n">libibverbs</span><span class="p">:</span> <span class="ne">Warning</span><span class="p">:</span> <span class="n">RLIMIT_MEMLOCK</span> <span class="ow">is</span> <span class="mi">32768</span> <span class="nb">bytes</span><span class="o">.</span>
+   <span class="n">This</span> <span class="n">will</span> <span class="n">severely</span> <span class="n">limit</span> <span class="n">memory</span> <span class="n">registrations</span><span class="o">.</span>
+<span class="n">RDMA</span><span class="p">:</span> <span class="n">recv_buf</span> <span class="n">reg_mr</span> <span class="n">failed</span><span class="p">:</span> <span class="n">error</span> <span class="mi">12</span>
+<span class="n">ldms_ls</span><span class="p">:</span> <span class="n">Cannot</span> <span class="n">allocate</span> <span class="n">memory</span>
+</code></pre></div>
+</div>
+<h3 id="why-doesn-t-my-ldmsd-start"><a class="toc-backref" href="#id61" role="doc-backlink">Why doesn’t my ldmsd start?</a><a class="headerlink" href="#why-doesn-t-my-ldmsd-start" title="Link to this heading">¶</a></h3>
+<p>Possible options:</p>
+<ul class="simple">
+<li><p>Check for existing /var/run/ldms/metric_socket or similar. Sockets
+can be left if an ldmsd did not clean up upon termination. kill -9
+may leave the socket hanging around.</p></li>
+<li><p>The port you are trying to use may already be in use on the node. The
+following shows the logfile output of such a case:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">54</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">Started</span> <span class="n">LDMS</span> <span class="n">Daemon</span> <span class="n">version</span> <span class="mf">2.1.0</span>
+<span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">54</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">Process</span> <span class="mi">123456</span> <span class="n">listening</span> <span class="n">on</span> <span class="n">transport</span> <span class="n">ugni</span><span class="p">:</span><span class="mi">60020</span>
+<span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">54</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">EV_WARN</span><span class="p">:</span> <span class="n">Can</span><span class="s1">&#39;t change condition callbacks once they have been initialized.</span>
+<span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">54</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">Error</span> <span class="mi">12</span> <span class="n">listening</span> <span class="n">on</span> <span class="n">the</span> <span class="s1">&#39;ugni&#39;</span> <span class="n">transport</span><span class="o">.</span>
+<span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">36</span><span class="p">:</span><span class="mi">54</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">LDMS</span> <span class="n">Daemon</span> <span class="n">exiting</span><span class="o">...</span><span class="n">status</span> <span class="mi">7</span>
+<span class="n">If</span> <span class="n">using</span> <span class="n">the</span> <span class="o">-</span><span class="n">l</span> <span class="n">flag</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">your</span> <span class="n">log</span> <span class="n">directory</span> <span class="n">exists</span> <span class="n">prior</span> <span class="n">to</span> <span class="n">running</span>
+<span class="n">If</span> <span class="n">writing</span> <span class="n">to</span> <span class="n">a</span> <span class="n">store</span> <span class="k">with</span> <span class="n">this</span> <span class="n">particular</span> <span class="n">lmdsd</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">your</span> <span class="n">store</span> <span class="n">directory</span> <span class="n">exists</span> <span class="n">prior</span> <span class="n">to</span> <span class="n">running</span>
+<span class="n">If</span> <span class="n">you</span> <span class="n">are</span> <span class="n">running</span> <span class="n">on</span> <span class="n">a</span> <span class="n">Cray</span> <span class="k">with</span> <span class="n">transport</span> <span class="n">ugni</span> <span class="n">using</span> <span class="n">a</span> <span class="n">user</span> <span class="n">space</span> <span class="n">PTag</span><span class="p">,</span> <span class="n">check</span> <span class="n">that</span> <span class="n">you</span> <span class="n">called</span> <span class="n">aprun</span> <span class="k">with</span> <span class="n">the</span> <span class="o">-</span><span class="n">p</span> <span class="n">flag</span>
+<span class="n">aprun</span> <span class="o">-</span><span class="n">N</span> <span class="mi">1</span> <span class="o">-</span><span class="n">n</span> <span class="o">&lt;</span><span class="n">number</span> <span class="n">of</span> <span class="n">nodes</span><span class="o">&gt;</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">ptag</span> <span class="n">name</span><span class="o">&gt;</span> <span class="n">run_my_ldmsd</span><span class="o">.</span><span class="n">sh</span>
+</code></pre></div>
+</div>
+<h3 id="how-can-i-find-what-process-is-using-the-port"><a class="toc-backref" href="#id62" role="doc-backlink">How can I find what process is using the port?</a><a class="headerlink" href="#how-can-i-find-what-process-is-using-the-port" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div><p>netstat -abno</p>
+</div></blockquote>
+<h3 id="why-arent-all-my-hosts-sets-adding-to-the-aggregator"><a class="toc-backref" href="#id63" role="doc-backlink">Why arent all my hosts/sets adding to the aggregator?</a><a class="headerlink" href="#why-arent-all-my-hosts-sets-adding-to-the-aggregator" title="Link to this heading">¶</a></h3>
+<p>Possible options:</p>
+<ul class="simple">
+<li><p>use -m flag on the aggregator to use more memory when adding a lot of
+hosts</p></li>
+<li><p>use -p on the aggregator to use more processors</p></li>
+</ul>
+<h3 id="why-isn-t-my-ldmsd-storing-its-own-set-to-the-store"><a class="toc-backref" href="#id64" role="doc-backlink">Why isn’t my ldmsd storing its own set to the store?</a><a class="headerlink" href="#why-isn-t-my-ldmsd-storing-its-own-set-to-the-store" title="Link to this heading">¶</a></h3>
+<p>Currently, this is not supported. You can use a separate ldmsd on the
+same host to gather another ldmsd’s data for that host.</p>
+<h3 id="why-is-my-aggregator-not-responding-cray-xe-xk"><a class="toc-backref" href="#id65" role="doc-backlink">Why is my aggregator not responding (CRAY XE/XK)?</a><a class="headerlink" href="#why-is-my-aggregator-not-responding-cray-xe-xk" title="Link to this heading">¶</a></h3>
+<p>Running a ldmsd aggregator as a user but trying to aggregate from a
+ldmsd that uses a system ptag can result in the aggregator hanging
+(alive but not responding and not writing to the store). The following
+is the logfile output of such an aggregator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">40</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">Connected</span> <span class="n">to</span> <span class="n">host</span> <span class="s1">&#39;nid00081:60020&#39;</span>
+<span class="n">Tue</span> <span class="n">Sep</span> <span class="mi">24</span> <span class="mi">08</span><span class="p">:</span><span class="mi">42</span><span class="p">:</span><span class="mi">42</span> <span class="mi">2013</span><span class="p">:</span> <span class="n">cq_thread_proc</span><span class="p">:</span> <span class="n">Error</span> <span class="mi">11</span>  <span class="n">monitoring</span> <span class="n">the</span> <span class="n">CQ</span><span class="o">.</span>
+</code></pre></div>
+</div>
+<h2 id="man-pages"><a class="toc-backref" href="#id66" role="doc-backlink">11) MAN PAGES</a><a class="headerlink" href="#man-pages" title="Link to this heading">¶</a></h2>
+<p>ldms comes with man pages. In the build process these will be installed
+in &lt;build_path&gt;/ovis/share/man. Man pages are in the following
+catagories:</p>
+<h3 id="general"><a class="toc-backref" href="#id67" role="doc-backlink">General</a><a class="headerlink" href="#general" title="Link to this heading">¶</a></h3>
+<p>General pages address information, such as ldms_build_install,
+ldms_quickstart, and ldms_authentication.</p>
+<h3 id="utilities"><a class="toc-backref" href="#id68" role="doc-backlink">Utilities</a><a class="headerlink" href="#utilities" title="Link to this heading">¶</a></h3>
+<p>Utilities pages address the various utilities and commands such as
+ldmsd, ldmsd_controller, and ldms_ls.</p>
+<h3 id="plugins"><a class="toc-backref" href="#id69" role="doc-backlink">Plugins</a><a class="headerlink" href="#plugins" title="Link to this heading">¶</a></h3>
+<p>Plugin pages address all plugins, both samplers and stores. Naming
+convention for these pages is Plugin_XXX. For example: Plugin_aries_mmr,
+Plugin_cray_system_sampler_variants, Plugin_kgnilnd, Plugin_meminfo,
+Plugin_procinterrupts, Plugin_procnetdev, Plugin_procnfs,
+Plugin_store_csv, Plugin_store_function_csv, Plugin_store_sos, and
+Plugin_vmstat.</p>
+<h2 id="notes"><a class="toc-backref" href="#id70" role="doc-backlink">NOTES</a><a class="headerlink" href="#notes" title="Link to this heading">¶</a></h2>
+<p>As part of the install, test scripts are placed in /tmp/opt/ovis/bin.
+These scripts may serve as additional examples. These are being
+converted from using the obsolete ldmsctl tool to the ldmsd_controller
+tool, so they may not be fully updated at any given time.</p>
+<h2 id="bugs"><a class="toc-backref" href="#id71" role="doc-backlink">BUGS</a><a class="headerlink" href="#bugs" title="Link to this heading">¶</a></h2>
+<p>No known bugs.</p>
+<h2 id="see-also"><a class="toc-backref" href="#id72" role="doc-backlink">SEE ALSO</a><a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
+<p>ldms_build_install(7), ldmsd(8), ldmsd_controller(8),
+ldms_authentication(7), ldms_build_install(7), ldms_ls(8)</p>
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      Jan 15, 2025
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright Copyright 2024 Sandia National Laboratories and Open Grid Computing, Inc.
+
+SPDX-License-Identifier: LGPL-3.0.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.4.7.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/ovis-hpc/readthedocs" target="_blank" rel="noopener" title="Source on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.ldms-ug.org/" target="_blank" rel="noopener" title="OVIS-HPC" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05c5.05.5 9 4.77 9 9.95 0 1.45-.32 2.83-.88 4.07l-2.62-1.53c.32-.79.5-1.64.5-2.54 0-3.53-2.61-6.43-6-6.92V2.05M12 19c2.21 0 4.17-1 5.45-2.62l2.6 1.53A9.97 9.97 0 0 1 12 22C6.47 22 2 17.5 2 12a9.99 9.99 0 0 1 9-9.95v3.03C7.61 5.57 5 8.47 5 12a7 7 0 0 0 7 7m0-13a6 6 0 0 1 6 6c0 2.97-2.16 5.44-5 5.92v-3.09c1.17-.41 2-1.52 2-2.83a3 3 0 0 0-3-3l-.55.05-1.54-2.67C10.56 6.13 11.26 6 12 6m-6 6c0-1.86.85-3.5 2.18-4.62l1.54 2.67C9.27 10.57 9 11.26 9 12c0 1.31.83 2.42 2 2.83v3.09c-2.84-.48-5-2.95-5-5.92Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.tabs", "toc.integrate", "navigation.sections", "navigation.instant", "header.autohide", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=9a299579"></script>
+    
+  </body>
+</html>

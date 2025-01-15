@@ -1,0 +1,1076 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../_static/favicon.ico">
+    
+    
+      
+        <title>Plugin_store_csv - OVIS-HPC  documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../../_static/sphinx_immaterial_theme.b83f2e057cd610c26.min.css?v=3ca6ca4f" />
+        <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=f637a71a" />
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Social: Facebook / Open Graph -->
+<title>Flux Framework</title>
+<link rel="canonical" href="https://flux-framework.org/"/>
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://flux-framework.org/">
+<meta property="og:title" content="Flux Framework">
+<meta property="og:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<meta property="og:description" content="Flux Framework">
+<meta property="og:site_name" content="Flux Framework">
+<meta property="og:locale" content="en_US">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FluxFramework">
+<meta name="twitter:title" content="Flux Framework">
+<meta name="twitter:description" content="Flux Framework">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+
+<!-- Social: Google+ / Schema.org  -->
+<meta itemprop="name" content="Flux Framework">
+<meta itemprop="description" content="Flux Framework">
+<meta itemprop="image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<script type="application/ld+json">
+  {"@type":"WebSite","headline":"Flux Framework","url":"https://flux-framework.org/","description":"Flux Framework","name":"Flux Framework","@context":"https://schema.org"}
+</script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.sphx-glr-script-out .highlight pre {
+  background-color: #def0ff !important;
+}
+  </style>
+
+
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="OVIS-HPC  documentation" class="md-header__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OVIS-HPC  documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Plugin_store_csv
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faqs.html" class="md-tabs__link">
+      <span class="md-ellipsis">Contents</span>
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../projects.html" class="md-tabs__link">
+      <span class="md-ellipsis">Sub-<wbr>Projects</span>
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="OVIS-HPC  documentation" class="md-nav__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    OVIS-HPC  documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          <span class="md-ellipsis">Contents</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Contents</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faqs.html" class="md-nav__link">
+        <span class="md-ellipsis">FAQs</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tutorials/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Tutorials</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Contributing to LDMS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary.html" class="md-nav__link">
+        <span class="md-ellipsis">Glossary</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../publications.html" class="md-nav__link">
+        <span class="md-ellipsis">OVIS Publications</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sub-Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../projects.html" class="md-nav__link">
+        <span class="md-ellipsis">Projects</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+  <a href="https://github.com/ovis-hpc/readthedocs/blob/main/man2rst/ldms/Plugin_store_csv.rst" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+  </a>
+
+<h1 id="plugin-store-csv"><a class="toc-backref" href="#id1" role="doc-backlink">Plugin_store_csv</a><a class="headerlink" href="#plugin-store-csv" title="Link to this heading">¶</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Date<span class="colon">:</span></dt>
+<dd class="field-odd"><p>26 Nov 2018</p>
+</dd>
+</dl>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#plugin-store-csv" id="id1">Plugin_store_csv</a></p>
+<ul>
+<li><p><a class="reference internal" href="#name" id="id2">NAME</a></p></li>
+<li><p><a class="reference internal" href="#synopsis" id="id3">SYNOPSIS</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id4">DESCRIPTION</a></p></li>
+<li><p><a class="reference internal" href="#store-csv-configuration-sources" id="id5">STORE_CSV CONFIGURATION SOURCES</a></p></li>
+<li><p><a class="reference internal" href="#store-csv-configuration-attribute-syntax" id="id6">STORE_CSV CONFIGURATION ATTRIBUTE SYNTAX</a></p></li>
+<li><p><a class="reference internal" href="#options-file" id="id7">OPTIONS FILE</a></p></li>
+<li><p><a class="reference internal" href="#strgp-add-attribute-syntax" id="id8">STRGP_ADD ATTRIBUTE SYNTAX</a></p></li>
+<li><p><a class="reference internal" href="#store-column-ordering" id="id9">STORE COLUMN ORDERING</a></p></li>
+<li><p><a class="reference internal" href="#metapath-substitution" id="id10">METAPATH SUBSTITUTION</a></p></li>
+<li><p><a class="reference internal" href="#notes" id="id11">NOTES</a></p></li>
+<li><p><a class="reference internal" href="#bugs" id="id12">BUGS</a></p></li>
+<li><p><a class="reference internal" href="#imperfect-features" id="id13">IMPERFECT FEATURES</a></p></li>
+<li><p><a class="reference internal" href="#examples" id="id14">EXAMPLES</a></p></li>
+<li><p><a class="reference internal" href="#see-also" id="id15">SEE ALSO</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<h2 id="name"><a class="toc-backref" href="#id2" role="doc-backlink">NAME</a><a class="headerlink" href="#name" title="Link to this heading">¶</a></h2>
+<p>Plugin_store_csv - man page for the LDMS store_csv plugin</p>
+<h2 id="synopsis"><a class="toc-backref" href="#id3" role="doc-backlink">SYNOPSIS</a><a class="headerlink" href="#synopsis" title="Link to this heading">¶</a></h2>
+<div class="line-block">
+<div class="line">Within ldmsd_controller script or a configuration file:</div>
+<div class="line">load name=store_csv</div>
+<div class="line">config name=store_csv [ &lt;attr&gt; = &lt;value&gt; ]</div>
+<div class="line">config name=store_csv [opt_file=filename] [ &lt;attr&gt; = &lt;value&gt; ]</div>
+<div class="line">config name=store_csv [container=c schema=s] [ &lt;attr&gt; = &lt;value&gt; ]</div>
+<div class="line">strgp_add name=&lt;policyname&gt; plugin=store_csv container=&lt;c&gt; schema=&lt;s&gt;
+[decomposition=&lt;DECOMP_CONFIG_FILE_JSON&gt;]</div>
+</div>
+<h2 id="description"><a class="toc-backref" href="#id4" role="doc-backlink">DESCRIPTION</a><a class="headerlink" href="#description" title="Link to this heading">¶</a></h2>
+<p>With LDMS (Lightweight Distributed Metric Service), store plugins for
+the ldmsd (ldms daemon) are configured via the ldmsd_controller or a
+configuration file. The store_csv plugin is a CSV store.</p>
+<h2 id="store-csv-configuration-sources"><a class="toc-backref" href="#id5" role="doc-backlink">STORE_CSV CONFIGURATION SOURCES</a><a class="headerlink" href="#store-csv-configuration-sources" title="Link to this heading">¶</a></h2>
+<p>Default configuration options can be defined on the config line or in
+the store_csv line of the options file. Options for the specific
+instance matching ‘container=c schema=s” can be given in the file
+indicated by opt_file=filename when configuring the defaults (see
+section OPTIONS FILE below) or can be scripted.</p>
+<p>The configuration parameters rolltype, rollover, and rollagain are
+applied to all metric sets alike from the values given on the command
+line or in the “store_csv” line of the options file. All other options
+can be specified per instance.</p>
+<p>The config defaults (a config line without container or schema defined)
+can be specified once in scripting or the opt_file. They are used for
+any container/schema pair not explicitly configured.</p>
+<p>The config values for a specific container/schema pair can be specified
+once in scripting or in the opt_file. Any attribute not specifically
+defined will take on the value configured in the default config line or
+opt_file.</p>
+<h2 id="store-csv-configuration-attribute-syntax"><a class="toc-backref" href="#id6" role="doc-backlink">STORE_CSV CONFIGURATION ATTRIBUTE SYNTAX</a><a class="headerlink" href="#store-csv-configuration-attribute-syntax" title="Link to this heading">¶</a></h2>
+<dl>
+<dt><strong>config</strong></dt><dd><div class="line-block">
+<div class="line">name=&lt;plugin_name&gt; path=&lt;path&gt; [ altheader=&lt;0/!0&gt;
+typeheader=&lt;typeformat&gt; time_format=&lt;0/1&gt; ietfcsv=&lt;0/1&gt;
+buffer=&lt;0/1/N&gt; buffertype=&lt;3/4&gt; rolltype=&lt;rolltype&gt;
+rollover=&lt;rollover&gt; rollempty=&lt;0/1&gt; userdata=&lt;0/!0&gt;]
+[rename_template=&lt;metapath&gt; [rename_uid=&lt;int-uid&gt;
+[rename_gid=&lt;int-gid] rename_perm=&lt;octal-mode&gt;]]
+[create_uid=&lt;int-uid&gt;] [create_gid=&lt;int-gid]
+[create_perm=&lt;octal-mode&gt;] [opt_file=filename] [ietfcsv=&lt;0/1&gt;]
+[typeheader=&lt;0/1/2&gt;] [array_expand=&lt;false/true&gt;]
+[array_sep=&lt;separating char&gt;] [array_lquote=&lt;left-quote char&gt;]
+[array_rquote=&lt;right-quote char&gt;]</div>
+<div class="line">ldmsd_controller configuration line</div>
+</div>
+<dl>
+<dt>name=&lt;plugin_name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">This MUST be store_csv.</div>
+</div>
+</dd>
+<dt>opt_file=&lt;filename&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The options for the plugin and specific instances will be read
+from the named file. See OPTIONS FILE.</div>
+</div>
+</dd>
+<dt>path=&lt;path&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">This option is required; the config line or the options file
+must supply a default value. The output files will be put into a
+directory whose root is specified by the path argument. This
+directory must exist; the subdirectories and files will be
+created. The full path to the output files will be
+&lt;path&gt;/&lt;container&gt;/&lt;schema&gt;. Container and schema are set when
+the strgp is added. If you choose a rollover option, then the
+filename will also be postpended by “.” followed by the epoch
+time e.g., XXX/meminfo_ctr/meminfo-123456789.</div>
+</div>
+</dd>
+<dt>altheader=&lt;0/!0&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Distinguishes whether or not to write the header to a separate
+file than the data file. 0 = same file. Any non-zero is a
+separate file. Default is the same file. If a separate file is
+used then, if the data file is called “meminfo” the additional
+header file will be called “meminfo.HEADER”). If you choose a
+rollover option, the header file name will be postpended with
+the epochtime, similar to the data file, and a new one will be
+written at each rollover. Default is altheader=0.</div>
+</div>
+</dd>
+<dt>typeheader=&lt;typeformat&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Controls the presence and format of a .KIND file. The kind CSV
+file gives type information on each metric (or metric array).
+For example, if the metric file is named meminfo, the kind file
+is named meminfo.KIND and if the metric file is named
+meminfo.15111111, the kind file is named meminfo.KIND.15111111.
+The typeformat parameter is 0 (no kind file), 1 (ldms kinds with
+arrays flattend out into scalars), 2 (LDMS kinds with arrays).
+The typeformat supporting arrays uses the notation
+&lt;typename&gt;[]&lt;len&gt; for extraction of lengths by scripting tools.
+The default typeformat is 0.</div>
+</div>
+</dd>
+<dt>time_format=&lt;0/1&gt;</dt><dd><p>Controls the format of the initial time fields in each line of the
+CSV files.</p>
+</dd>
+</dl>
+<p>A value of 0 means the classic LDMS format where the first field
+(Time) is &lt;seconds since epoch&gt;.&lt;microseconds&gt;, and the second field
+(Time_usec) is &lt;microseconds&gt; repeated.</p>
+<p>A value of 1 chooses an alternate format where the first field
+(Time_msec) is &lt;milliseconds since epoch&gt;, and the second field
+(Time_usec) is just the additional &lt;microseconds&gt; since the epoch in
+excess of the milliseconds since epoch. In other words, there is no
+overlap of the values in the first and seconds fields, which is in
+contrast to the repetition employed by format 0.</p>
+<dl>
+<dt>ietfcsv=&lt;0/1&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Turns on (1) or off (0) use of IETF 4180 quoting for header
+column names.</div>
+</div>
+</dd>
+<dt>userdata=&lt;0/!0&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Distinguishes whether or not to write each metrics’ user data
+along with each data value. 0 = no write. Any non-zero means to
+write the values. Default is to not write.</div>
+</div>
+</dd>
+<dt>buffer=&lt;0/1/N&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Distinguishes whether or not to buffer the data for the
+writeout. 0 = does not buffer. 1 enables buffering with the
+system determining the flush. N will flush after approximately N
+kB of data (&gt; 4) or N lines – buffertype determines which of
+these it is. Default is system controlled buffering (1).</div>
+</div>
+</dd>
+<dt>buffertype=&lt;3/4&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">If buffer=N then buffertype determines if the buffer parameter
+refers to kB of writeout or number of lines. The values are the
+same as in rolltype, so only 3 and 4 are applicable.</div>
+</div>
+</dd>
+<dt>rolltype=&lt;rolltype&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">By default, the store does not rollover and the data is written
+to a continously open filehandle. Rolltype and rollover are used
+in conjunction to enable the store to manage rollover, including
+flushing before rollover. The header will be rewritten when a
+roll occurs. Valid options are:</div>
+</div>
+<dl>
+<dt>1</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">wake approximately every rollover seconds and roll. Rollover
+is suppressed if no data at all has been written and
+rollempty=0.</div>
+</div>
+</dd>
+<dt>2</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">wake daily at rollover seconds after midnight (&gt;=0) and roll.
+Rollover is suppressed if no data at all has been written and
+rollempty=0.</div>
+</div>
+</dd>
+<dt>3</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">roll after approximately rollover records are written.</div>
+</div>
+</dd>
+<dt>4</dt><dd><p>roll after approximately rollover bytes are written.</p>
+</dd>
+<dt>5</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">wake at rollover seconds after midnight (&gt;=0) and roll, then
+repeat every rollagain (&gt; rollover) seconds during the day.
+For example “rollagain=3600 rollover=0 rolltype=5” rolls
+files hourly. Rollover is suppressed if no data at all has
+been written and rollempty=0.</div>
+</div>
+</dd>
+</dl>
+</dd>
+<dt>rollover=&lt;rollover&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Rollover value controls the frequency of rollover (e.g., number
+of bytes, number of records, time interval, seconds after
+midnight). Note that these values are estimates.</div>
+</div>
+</dd>
+<dt>rollempty=0</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Turn off rollover of empty files. Default value is 1 (create
+extra empty files).</div>
+</div>
+</dd>
+<dt>create_perm=&lt;modebits&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Only octal (e.g.0744) specifications are allowed. If unspecified
+or 0 is given, then no change is made. The default permission is
+0600 for data files. The mode specified can include execute bits
+which will apply to intermediate directories created but not
+data files. For example 0755 will yield 0755 for new directories
+and 0644 for data files.</div>
+</div>
+</dd>
+<dt>create_uid=&lt;numeric-uid&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify a new user id for data files. If unspecified, no change
+in user ownership is made. Changes in ownership of the files do
+not affect intermediate directories.</div>
+</div>
+</dd>
+<dt>create_gid=&lt;numeric-gid&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify a new group id for data files. If unspecified, no change
+in group ownership is made.</div>
+</div>
+</dd>
+<dt>rename_template=&lt;metapath&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">This option relocates closed CSV files, typically to a
+subdirectory, for processing by other tools that watch
+directories. The metapath template is applied to define a new
+name after file closure. The rename is limited to locations on
+the same mount point, per the C rename(2) call. Substitutions
+(%) in the provided template are performed as described in
+METAPATH SUBSTITUTIONS below. Errors in template specification
+will cause the rename to be skipped. As part of the renaming
+process, the mode and ownership of the file may also be adjusted
+by specifying rename_perm, rename_uid, and rename_gid. Missing
+intermediate directories will be created if possible. To enable
+greater flexibility than the renaming just described (e.g.
+crossing file systems), an external program must monitor the
+output directory and handle completed files.</div>
+</div>
+</dd>
+<dt>rename_perm=&lt;modebits&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Only octal (e.g.0744) specifications are allowed. If unspecified
+or 0 is given, then no change is made. The permissions are
+changed before the rename and even if the rename fails. This
+option is applied only if rename_template is applied.</div>
+</div>
+</dd>
+<dt>rename_uid=&lt;numeric-uid&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify a new user id for the file. If unspecified, no change in
+user ownership is made. Changes in ownership of the files do not
+affect intermediate directories that might be created following
+the template. This option is applied only if rename_template is
+applied.</div>
+</div>
+</dd>
+<dt>rename_gid=&lt;numeric-gid&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify a new group id for the file. If unspecified, no change
+in group ownership is made. This option is applied only if
+rename_template is applied.</div>
+</div>
+</dd>
+<dt>expand_array=&lt;true/false&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The default is false. Each array element is stored in a column.
+True means that all elements are stored in a single column.</div>
+</div>
+</dd>
+<dt>array_sep=&lt;char&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify a character to separate array elements. If exand_array
+is true, the value is ignored.</div>
+</div>
+</dd>
+<dt>array_lquote=&lt;char&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify the left-quote character if expand_array is true. If
+expand_array is false, the value is ignored.</div>
+</div>
+</dd>
+<dt>array_rquote=&lt;char&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Specify the right-quote character if expand_array is true. If
+expand_array is false, the value is ignored.</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<h2 id="options-file"><a class="toc-backref" href="#id7" role="doc-backlink">OPTIONS FILE</a><a class="headerlink" href="#options-file" title="Link to this heading">¶</a></h2>
+<p>The plug-in options file or repeated scripted config calls replace the
+LDMS v3 ‘action’ keyword for defining instance specific settings.</p>
+<p>The options file recognizes lines starting with # as comments.
+Continuation lines are allowed (end lines with a \ to continue them).
+Comment lines are continued if ended with a \. See EXAMPLES below.</p>
+<p>When an option is needed for a plugin instance, the content of the
+options file is searched beginning with the options line holding
+“container=$c schema=$s”. If the matching container/schema is not found
+in the options file or the option is not defined among the options on
+that line of the file, then the option value from the ldmsd script
+‘config’ command line is used. If the option is not set on the command
+line, the defaults are taken from the line of the options file
+containing the keyword ‘store_csv’. If the option is found in none of
+these places, the compiled default is applied.</p>
+<h2 id="strgp-add-attribute-syntax"><a class="toc-backref" href="#id8" role="doc-backlink">STRGP_ADD ATTRIBUTE SYNTAX</a><a class="headerlink" href="#strgp-add-attribute-syntax" title="Link to this heading">¶</a></h2>
+<p>The strgp_add sets the policies being added. This line determines the
+output files via identification of the container and schema.</p>
+<dl>
+<dt><strong>strgp_add</strong></dt><dd><div class="line-block">
+<div class="line">plugin=store_csv name=&lt;policy_name&gt; schema=&lt;schema&gt;
+container=&lt;container&gt; [decomposition=&lt;DECOMP_CONFIG_FILE_JSON&gt;]</div>
+<div class="line">ldmsd_controller strgp_add line</div>
+</div>
+<dl>
+<dt>plugin=&lt;plugin_name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">This MUST be store_csv.</div>
+</div>
+</dd>
+<dt>name=&lt;policy_name&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The policy name for this strgp.</div>
+</div>
+</dd>
+<dt>container=&lt;container&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The container and the schema determine where the output files
+will be written (see path above). They also are used to match
+any specific config lines.</div>
+</div>
+</dd>
+<dt>schema=&lt;schema&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The container and the schema determine where the output files
+will be written (see path above). You can have multiples of the
+same sampler, but with different schema (which means they will
+have different metrics) and they will be stored in different
+containers (and therefore files).</div>
+</div>
+</dd>
+<dt>decomposition=&lt;DECOMP_CONFIG_FILE_JSON&gt;</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Optionally use set-to-row decomposition with the specified
+configuration file in JSON format. See more about decomposition
+in ldmsd_decomposition(7).</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<h2 id="store-column-ordering"><a class="toc-backref" href="#id9" role="doc-backlink">STORE COLUMN ORDERING</a><a class="headerlink" href="#store-column-ordering" title="Link to this heading">¶</a></h2>
+<p>This store generates output columns in a sequence influenced by the
+sampler data registration. Specifically, the column ordering is</p>
+<blockquote>
+<div><p>Time, Time_usec, ProducerName, &lt;sampled metric &gt;*</p>
+</div></blockquote>
+<p>where each &lt;sampled metric&gt; is either</p>
+<blockquote>
+<div><p>&lt;metric_name&gt;.userdata, &lt;metric_name&gt;.value</p>
+</div></blockquote>
+<p>or if userdata has been opted not to include, just:</p>
+<blockquote>
+<div><p>&lt;metric_name&gt;</p>
+</div></blockquote>
+<p>The column sequence of &lt;sampled metrics&gt; is the order in which the
+metrics are added into the metric set by the sampler (or the order they
+are specifed by the user).</p>
+<p>Note that the sampler’s number and order of metric additions may vary
+with the kind and number of hardware features enabled on a host at
+runtime or with the version of kernel. Because of this potential for
+variation, down-stream tools consuming the CSV files should always
+determine column names or column number of a specific metric by parsing
+the header line or .HEADER file.</p>
+<h2 id="metapath-substitution"><a class="toc-backref" href="#id10" role="doc-backlink">METAPATH SUBSTITUTION</a><a class="headerlink" href="#metapath-substitution" title="Link to this heading">¶</a></h2>
+<p>The following % escape sequence replacements are performed on the
+rename_template value for file renamings:</p>
+<dl>
+<dt>%P</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">plugin name</div>
+</div>
+</dd>
+<dt>%C</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">container name</div>
+</div>
+</dd>
+<dt>%S</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">schema name</div>
+</div>
+</dd>
+<dt>%T</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">file type (DATA, HEADER, KIND, UNITS, CNAMES, PYNAMES)</div>
+</div>
+</dd>
+<dt>%B</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">basename(closed-file-name)</div>
+</div>
+</dd>
+<dt>%D</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">dirname(closed-file-name)</div>
+</div>
+</dd>
+<dt>%{ENV_VAR_NAME}</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">getenv(ENV_VAR_NAME). The use of undefined or empty environment
+vars yields an empty substitution, not an error. Characters in the
+environment variable are restricted to: ‘A-Za-z0-9%&#64;()+-_./:=’;
+other characters present will prevent the rename.</div>
+</div>
+</dd>
+<dt>%s</dt><dd><div class="line-block">
+<div class="line"><br /></div>
+<div class="line">timestamp suffix, if it exists.</div>
+</div>
+</dd>
+</dl>
+<h2 id="notes"><a class="toc-backref" href="#id11" role="doc-backlink">NOTES</a><a class="headerlink" href="#notes" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Please note the argument changes from v2 and v3. The notification of
+file events has be removed, being redundant with renaming closed
+files into a spool directory.</p></li>
+<li><p>The ‘sequence’ option has been removed. The ‘action’ option has been
+replaced; see “OPTIONS FILE” above.</p></li>
+<li><p>In the opt_file passed by name to store_csv, including the line
+prefix “config name=store_csv” is redundant and is disallowed. The
+opt_file syntax is plugin specific and is not an ldmsd configuration
+script. Scripts written in the store_csv opt_file syntax cannot be
+used directly with the ldmsd include statement.</p></li>
+</ul>
+<h2 id="bugs"><a class="toc-backref" href="#id12" role="doc-backlink">BUGS</a><a class="headerlink" href="#bugs" title="Link to this heading">¶</a></h2>
+<p>None known.</p>
+<h2 id="imperfect-features"><a class="toc-backref" href="#id13" role="doc-backlink">IMPERFECT FEATURES</a><a class="headerlink" href="#imperfect-features" title="Link to this heading">¶</a></h2>
+<p>The rename and create options do not accept symbolic permissions, uid,
+or gid. There is no metapath substitution for file creation.</p>
+<h2 id="examples"><a class="toc-backref" href="#id14" role="doc-backlink">EXAMPLES</a><a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
+<p>Within ldmsd_controller or in a ldmsd command script file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="n">load</span> <span class="n">name</span><span class="o">=</span><span class="n">store_csv</span>
+<span class="n">config</span> <span class="n">name</span><span class="o">=</span><span class="n">store_csv</span> <span class="n">opt_file</span><span class="o">=/</span><span class="n">etc</span><span class="o">/</span><span class="n">sysconfig</span><span class="o">/</span><span class="n">ldms</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">store</span><span class="o">-</span><span class="n">plugins</span><span class="o">/</span><span class="n">store_csv</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">strgp_add</span> <span class="n">name</span><span class="o">=</span><span class="n">csv_mem_policy</span> <span class="n">plugin</span><span class="o">=</span><span class="n">store_csv</span> <span class="n">container</span><span class="o">=</span><span class="n">loadavg_store</span> <span class="n">schema</span><span class="o">=</span><span class="n">loadavg</span>
+</code></pre></div>
+</div>
+<p>Or with interactive modifications to override file properties:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code>load name=store_csv
+config name=store_csv altheader=1 rolltype=2 rollover=0 path=/mprojects/ovis/ClusterData/${LDMSCLUSTER} create_gid=1000000039 create_perm=640 rename_template=%D/archive-spool/%{HOSTNAME}/%B rename_perm=444
+</code></pre></div>
+</div>
+<p>And in the options file for store_csv
+(/etc/sysconfig/ldms.d/store-plugins/store_csv.conf by convention)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><code><span class="c1"># defaults for csv, unless overridden on ldmsd script config line.</span>
+<span class="n">store_csv</span> <span class="n">altheader</span><span class="o">=</span><span class="mi">1</span> <span class="n">path</span><span class="o">=/</span><span class="n">XXX</span><span class="o">/</span><span class="n">storedir</span> <span class="n">rolltype</span><span class="o">=</span><span class="mi">2</span> <span class="n">rollover</span><span class="o">=</span><span class="mi">0</span>
+<span class="c1"># tailored setting for loadavg instance</span>
+<span class="n">container</span><span class="o">=</span><span class="n">loadavg_store</span> <span class="n">schema</span><span class="o">=</span><span class="n">loadavg</span> <span class="n">altheader</span><span class="o">=</span><span class="mi">0</span> <span class="n">path</span><span class="o">=/</span><span class="n">XXX</span><span class="o">/</span><span class="n">loaddir</span> \
+     <span class="n">create_gid</span><span class="o">=</span><span class="mi">1000000039</span> <span class="n">create_perm</span><span class="o">=</span><span class="mi">640</span> \
+     <span class="n">rename_template</span><span class="o">=%</span><span class="n">D</span><span class="o">/</span><span class="n">archive</span><span class="o">-</span><span class="n">spool</span><span class="o">/%</span><span class="p">{</span><span class="n">HOSTNAME</span><span class="p">}</span><span class="o">/%</span><span class="n">B</span> \
+     <span class="n">rename_perm</span><span class="o">=</span><span class="mi">444</span>
+</code></pre></div>
+</div>
+<p>Updating from v3:</p>
+<p>If in version 3 “config name=store_csv action=custom container=cstore
+schema=meminfo” was used for a specific csv instance, then put the
+additional options for that store instance in the store_csv options file
+on a line:</p>
+<p>container=cstore schema=meminfo &lt;op=val &gt;*</p>
+<p>or use them interactively or in a script as:</p>
+<p>config name=store_csv container=cstore schema=meminfo &lt;op=val &gt;*</p>
+<p>after the store_csv defaults have been set.</p>
+<h2 id="see-also"><a class="toc-backref" href="#id15" role="doc-backlink">SEE ALSO</a><a class="headerlink" href="#see-also" title="Link to this heading">¶</a></h2>
+<p>ldmsd(8), ldms_quickstart(7), ldmsd_controller(8),
+ldmsd_decomposition(7)</p>
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      Jan 15, 2025
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright Copyright 2024 Sandia National Laboratories and Open Grid Computing, Inc.
+
+SPDX-License-Identifier: LGPL-3.0.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.4.7.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/ovis-hpc/readthedocs" target="_blank" rel="noopener" title="Source on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.ldms-ug.org/" target="_blank" rel="noopener" title="OVIS-HPC" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05c5.05.5 9 4.77 9 9.95 0 1.45-.32 2.83-.88 4.07l-2.62-1.53c.32-.79.5-1.64.5-2.54 0-3.53-2.61-6.43-6-6.92V2.05M12 19c2.21 0 4.17-1 5.45-2.62l2.6 1.53A9.97 9.97 0 0 1 12 22C6.47 22 2 17.5 2 12a9.99 9.99 0 0 1 9-9.95v3.03C7.61 5.57 5 8.47 5 12a7 7 0 0 0 7 7m0-13a6 6 0 0 1 6 6c0 2.97-2.16 5.44-5 5.92v-3.09c1.17-.41 2-1.52 2-2.83a3 3 0 0 0-3-3l-.55.05-1.54-2.67C10.56 6.13 11.26 6 12 6m-6 6c0-1.86.85-3.5 2.18-4.62l1.54 2.67C9.27 10.57 9 11.26 9 12c0 1.31.83 2.42 2 2.83v3.09c-2.84-.48-5-2.95-5-5.92Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.tabs", "toc.integrate", "navigation.sections", "navigation.instant", "header.autohide", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="../../_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=9a299579"></script>
+    
+  </body>
+</html>

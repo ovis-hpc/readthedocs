@@ -1,0 +1,1908 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="_static/favicon.ico">
+    
+    
+      
+        <title>OVIS Publications - OVIS-HPC  documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="_static/sphinx_immaterial_theme.b83f2e057cd610c26.min.css?v=3ca6ca4f" />
+        <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f637a71a" />
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Social: Facebook / Open Graph -->
+<title>Flux Framework</title>
+<link rel="canonical" href="https://flux-framework.org/"/>
+<meta property="og:type" content="website">
+
+<meta property="og:url" content="https://flux-framework.org/">
+<meta property="og:title" content="Flux Framework">
+<meta property="og:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<meta property="og:description" content="Flux Framework">
+<meta property="og:site_name" content="Flux Framework">
+<meta property="og:locale" content="en_US">
+
+<!-- Social: Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@FluxFramework">
+<meta name="twitter:title" content="Flux Framework">
+<meta name="twitter:description" content="Flux Framework">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+
+<!-- Social: Google+ / Schema.org  -->
+<meta itemprop="name" content="Flux Framework">
+<meta itemprop="description" content="Flux Framework">
+<meta itemprop="image" content="https://raw.githubusercontent.com/flux-framework/flux-docs/main/images/flux-logo.png">
+<script type="application/ld+json">
+  {"@type":"WebSite","headline":"Flux Framework","url":"https://flux-framework.org/","description":"Flux Framework","name":"Flux Framework","@context":"https://schema.org"}
+</script>
+
+<style>
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+.sphx-glr-script-out .highlight pre {
+  background-color: #def0ff !important;
+}
+  </style>
+
+
+
+
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="OVIS-HPC  documentation" class="md-header__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OVIS-HPC  documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OVIS Publications
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="faqs.html" class="md-tabs__link md-tabs__link--active">
+      <span class="md-ellipsis">Contents</span>
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="projects.html" class="md-tabs__link">
+      <span class="md-ellipsis">Sub-<wbr>Projects</span>
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="OVIS-HPC  documentation" class="md-nav__button md-logo" aria-label="OVIS-HPC  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    OVIS-HPC  documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ovis-hpc/readthedocs/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ovis-hpc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          <span class="md-ellipsis">Contents</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contents" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Contents</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="faqs.html" class="md-nav__link">
+        <span class="md-ellipsis">FAQs</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Tutorials</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="contributing/index.html" class="md-nav__link">
+        <span class="md-ellipsis">Contributing to LDMS</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="glossary.html" class="md-nav__link">
+        <span class="md-ellipsis">Glossary</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          <span class="md-ellipsis">OVIS Publications</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">OVIS Publications</span>
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#citing-ldms" class="md-nav__link">
+    <span class="md-ellipsis">Citing LDMS</span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publications-and-selected-presentations" class="md-nav__link">
+    <span class="md-ellipsis">Publications and Selected Presentations</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Publications and Selected Presentations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id1" class="md-nav__link">
+    <span class="md-ellipsis">2023</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id4" class="md-nav__link">
+    <span class="md-ellipsis">2022</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id5" class="md-nav__link">
+    <span class="md-ellipsis">2021</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id6" class="md-nav__link">
+    <span class="md-ellipsis">2020</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id9" class="md-nav__link">
+    <span class="md-ellipsis">2019</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id12" class="md-nav__link">
+    <span class="md-ellipsis">2018</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id14" class="md-nav__link">
+    <span class="md-ellipsis">2017</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id18" class="md-nav__link">
+    <span class="md-ellipsis">2016</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id23" class="md-nav__link">
+    <span class="md-ellipsis">2015</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id28" class="md-nav__link">
+    <span class="md-ellipsis">2014</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id33" class="md-nav__link">
+    <span class="md-ellipsis">2013</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id35" class="md-nav__link">
+    <span class="md-ellipsis">2012</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id36" class="md-nav__link">
+    <span class="md-ellipsis">2011</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id37" class="md-nav__link">
+    <span class="md-ellipsis">2010</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id40" class="md-nav__link">
+    <span class="md-ellipsis">2009</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id41" class="md-nav__link">
+    <span class="md-ellipsis">2008</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id42" class="md-nav__link">
+    <span class="md-ellipsis">2007</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id43" class="md-nav__link">
+    <span class="md-ellipsis">2006</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id44" class="md-nav__link">
+    <span class="md-ellipsis">2005</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id46" class="md-nav__link">
+    <span class="md-ellipsis">2004</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id47" class="md-nav__link">
+    <span class="md-ellipsis">2003</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-releases-hmdr" class="md-nav__link">
+    <span class="md-ellipsis">Dataset Releases -<wbr> HMDR</span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset Releases - HMDR">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#id48" class="md-nav__link">
+    <span class="md-ellipsis">2019</span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id49" class="md-nav__link">
+    <span class="md-ellipsis">2016</span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sub-Projects" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Sub-<wbr>Projects</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="projects.html" class="md-nav__link">
+        <span class="md-ellipsis">Projects</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+  <a href="https://github.com/ovis-hpc/readthedocs/blob/main/publications.rst" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+  </a>
+
+<h1 id="ovis-publications">OVIS Publications<a class="headerlink" href="#ovis-publications" title="Link to this heading">¶</a></h1>
+<h2 id="citing-ldms">Citing LDMS<a class="headerlink" href="#citing-ldms" title="Link to this heading">¶</a></h2>
+<dl class="simple">
+<dt>To reference LDMS, please use:</dt><dd></dd>
+</dl>
+<div class="line-block">
+<div class="line">Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications</div>
+<div class="line">A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker</div>
+<div class="line">SC ‘14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis</div>
+<div class="line">New Orleans, LA, USA, 2014, pp. 154-165</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/SC.2014.18">doi: 10.1109/SC.2014.18</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<dl class="simple">
+<dt>BibTex:</dt><dd></dd>
+</dl>
+<div class="line-block">
+<div class="line">&#64;INPROCEEDINGS{7013000,</div>
+<div class="line">author={Agelastos, Anthony and Allan, Benjamin and Brandt, Jim and Cassella, Paul and Enos, Jeremy and Fullop, Joshi and Gentile, Ann and Monk, Steve and Naksinehaboon, Nichamon and Ogden, Jeff and Rajan, Mahesh and Showerman, Michael and Stevenson, Joel and Taerat, Narate and Tucker, Tom},</div>
+<div class="line">booktitle={SC ‘14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis},</div>
+<div class="line">title={The Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications},</div>
+<div class="line">year={2014},</div>
+<div class="line">volume={},</div>
+<div class="line">number={},</div>
+<div class="line">pages={154-165},</div>
+<div class="line">doi={10.1109/SC.2014.18}}</div>
+</div>
+<h2 id="publications-and-selected-presentations">Publications and Selected Presentations<a class="headerlink" href="#publications-and-selected-presentations" title="Link to this heading">¶</a></h2>
+<p>Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS).</p>
+<h3 id="id1">2023<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Prodigy: Toward Unsupervised Anomaly Detection in Production HPC Systems</div>
+<div class="line">Burak Aksar, Efe Sencan, Benjamin Schwaller, Omar Aaziz, Vitus J. Leung, Jim Brandt, Brian Kulis, Manuel Egele, and Ayse K. Coskun</div>
+<div class="line">SC <a href="#id2"><span class="problematic" id="id3">`</span></a>23: Proc of the Int’l Conf. for High Performance Computing, Networking, Storage and Analysis.</div>
+<div class="line">Nov 2023, to appear.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Autonomy Loops for Monitoring, Operational Data Analytics, Feedback, and Response in HPC Operations</div>
+<div class="line">Francieli Boito, Jim Brandt, Valeria Cardellini, Philip Carns, Florina M. Ciorba, Hilary Egan, Ahmed Eleliemy, Ann Gentile, Thomas Gruber, Jeff Hanson, Utz-Uwe Haus, Kevin Huck, Thomas Ilsche, Thomas Jakobsche, Terry Jones, Sven Karlsson, Abdullah Mueen, Michael Ott, Tapasya Patki, Krishnan Raghavan, Stephen Simms, Kathleen Shoga, Michael Showerman, Devesh Tiwari, Torsten Wilde, Ivy Peng, and Keiji Yamamoto</div>
+<div class="line">Proc. IEEE Cluster</div>
+<div class="line">Oct 2023, to appear</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Towards Practical Machine Learning Frameworks for Performance Diagnostics in Supercomputers</div>
+<div class="line">B. Aksar, E. Sencan, B. Schwaller, V. Leung, J. Brandt, B. Kulis, M. Egele, and A. Coskun</div>
+<div class="line">AI4Sys ‘23: Proceedings of the First Workshop on AI for Systems, August 2023, pp 1–6</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/3588982.3603609">doi: 10.1145/3588982.3603609</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Evaluating and Influencing Extreme-Scale Monitoring Implementations</div>
+<div class="line">Jim Brandt, Chris Morrone, Eric Roman, Ann Gentile, Tom Tucker, Jeff Hanson, Kathleen Shoga, and Alec Scott</div>
+<div class="line">Proc Cray User’s Group</div>
+<div class="line">May 2023.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171)</div>
+<div class="line">Jim Brandt, Florina Ciorba, Ann Gentile, Michael Ott, and Torsten Wilde</div>
+<div class="line">In Dagstuhl Reports, Volume 13, Issue 4, pp. 98-120, Schloss Dagstuhl - Leibniz-Zentrum für Informatik (2023)</div>
+<div class="line"><a class="reference external" href="https://drops.dagstuhl.de/entities/document/10.423/DagRep.13.4.98">doi: 10.4230/DagRep.13.4.98</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Community Readiness and Opportunities for Progress in HPC Monitoring, Analysis, Feedback, and Response – <em>Keynote</em></div>
+<div class="line">J. Brandt</div>
+<div class="line"><a class="reference external" href="https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/23171">Driving HPC Operations With Holistic Monitoring and Operational Data Analytics (Dagstuhl Seminar 23171)</a></div>
+<div class="line">Apr 2023</div>
+</div>
+<h3 id="id4">2022<a class="headerlink" href="#id4" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">ALBADross: Active Learning Based Anomaly Diagnosis for Production HPC Systems</div>
+<div class="line">B. Aksar, E. Sencan, B. Schwaller, O. Aaziz, V. Leung, J. Brandt, B. Kulis, B and A. Coskun,</div>
+<div class="line">2022 IEEE International Conference on Cluster Computing (CLUSTER), Heidelberg, Germany, 2022, pp. 369-380</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER51413.2022.00048">doi: 10.1109/CLUSTER51413.2022.00048</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Metrics for Packing Efficiency and Fairness of HPC Cluster Batch Job Scheduling</div>
+<div class="line">A. Goponenko, K. Lamar, C. Peterson, B. Allan, J. Brandt, and D. Dechev</div>
+<div class="line">2022 IEEE 34th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD), Bordeaux, France, 2022, pp. 241-252</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/SBAC-PAD55451.2022.00035">doi: 10.1109/SBAC-PAD55451.2022.00035</a></div>
+</div>
+<h3 id="id5">2021<a class="headerlink" href="#id5" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Systematically Inferring I/O Performance Variability by Examining Repetitive Job Behavior</div>
+<div class="line">E. Costa, T. Patel, B. Schwaller, J. Brandt, D. Tiwari</div>
+<div class="line">SC ‘21: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis, November 2021, Article No.: 33, Pages 1–15</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/3458817.3476186">doi: 10.1145/3458817.3476186</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Backfilling HPC Jobs with a Multimodal-Aware Predictor</div>
+<div class="line">K. Lamar, A. Goponenko, C. Peterson, B. Allan, J. Brandt, and D. Dechev</div>
+<div class="line">2021 IEEE International Conference on Cluster Computing (CLUSTER), Portland, OR, USA, 2021, pp. 618-622</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/Cluster48925.2021.00093">doi: 10.1109/Cluster48925.2021.00093</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Using Monitoring Data to Improve HPC Performance via Network-Data-Driven Allocation</div>
+<div class="line">Y. Zhang, B. Aksar, O. Aaziz, B. Schwaller, J. Brandt, V. Leung, M. Egele, and A. Coskun</div>
+<div class="line">2021 IEEE High Performance Extreme Computing Conference (HPEC), Waltham, MA, USA, 2021, pp. 1-7</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/HPEC49654.2021.9622783">doi: 10.1109/HPEC49654.2021.9622783</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Integrating Systems Operations into CoDesign – <em>Keynote</em></div>
+<div class="line">Presented by A. Gentile</div>
+<div class="line"><a class="reference external" href="https://moda21.sciencesconf.org/">2nd Int’l Workshop on Monitoring and Operational Data Analytics (MODA21)</a>. Jul 2021.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://dl.acm.org/doi/pdf/10.1145/3447818.3460362">Delay Sensitivity-Driven Congestion Mitigation for HPC Systems</a></div>
+<div class="line">A. Patke, S. Jha, H. Qui, J. Brandt, A. Gentile, J. Greenseid, A. Kalbarczyk, and R. Iyer</div>
+<div class="line">ICS ‘21: Proceedings of the ACM International Conference on Supercomputing, June 2021, Pages 342–353</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/3447818.3460362">doi: 10.1145/3447818.3460362</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.youtube.com/watch?v=EmsYILnwDys">Enabling System and Application Data Fusion</a></div>
+<div class="line">Presented by A. Gentile</div>
+<div class="line">2021 ECP Annual Meeting Center and Application Monitoring WG. Apr 2021.</div>
+</div>
+<h3 id="id6">2020<a class="headerlink" href="#id6" title="Link to this heading">¶</a></h3>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">HPC System Data Pipeline to Enable Meaningful Insights through Analytic-Driven Visualizations</div>
+<div class="line">B. Schwaller, N. Tucker, T. Tucker, B. Allan, and J. Brandt</div>
+<div class="line">in 2020 IEEE International Conference on Cluster Computing (CLUSTER), Kobe, Japan, 2020 pp. 433-441.</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER49012.2020.00062">doi: 10.1109/CLUSTER49012.2020.00062</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Towards Workload-Adaptive Scheduling for HPC Clusters</div>
+<div class="line">A. Goponenko, R. Izadpanah, J. Brandt, and D. Dechev</div>
+<div class="line">2020 IEEE International Conference on Cluster Computing (CLUSTER), Kobe, Japan, 2020, pp. 449-453</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER49012.2020.00064">doi: 10.1109/CLUSTER49012.2020.00064</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">LDMS Monitoring of EDR InfiniBand Networks – <em>workshop work-in-progress paper &amp; presentation</em></div>
+<div class="line">B. Allan, M. Aguilar, B. Schwaller, S. Langer</div>
+<div class="line">2020 IEEE International Conference on Cluster Computing (CLUSTER), Kobe, Japan, 2020, pp. 459-463</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER49012.2020.00066">doi: 10.1109/CLUSTER49012.2020.00066</a></div>
+<div class="line">Also as Sandia Technical Report SAND2020-8534C (paper) and SAND2020-9599C (presentation).</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Inspecting fast commodity RDMA network performance on production systems with LDMS – <em>Workshop presentation</em></div>
+<div class="line">B. Allan, M. Aguilar, B. Schwaller, S. Langer</div>
+<div class="line"><a class="reference external" href="https://sites.google.com/view/ldmscon2020">LDMSCON2020: LDMS Users Group Conference 2020</a>, Aug 2020.</div>
+<div class="line">Sandia Technical report SAND2020-8014C.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Production LDMS, genders, systemd, and the future – <em>Workshop presentation</em></div>
+<div class="line">B. Allan</div>
+<div class="line"><a class="reference external" href="https://sites.google.com/view/ldmscon2020">LDMSCON2020: LDMS Users Group Conference 2020</a>, Aug 2020.</div>
+<div class="line">Sandia Technical report SAND2020-8015C.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">LDMS packaging: Moving from tribal knowledge to community knowledge – <em>Workshop presentation</em></div>
+<div class="line">B. Allan</div>
+<div class="line"><a class="reference external" href="https://sites.google.com/view/ldmscon2020">LDMSCON2020: LDMS Users Group Conference 2020</a>, Aug 2020.</div>
+<div class="line">Sandia Technical report SAND2020-8013C.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">ALAMO: Autonomous Lightweight Allocation, Management, and Optimization</div>
+<div class="line">R. Brightwell, K. B. Ferreira, R. E. Grant, S. Levy, J. Lofstead, S. L. Olivier, K. T. Pedretti, A. J. Younge, A. Gentile, and J. Brandt.</div>
+<div class="line">In: Nichols J., Verastegui B., Maccabe A., Hernandez O., Parete-Koon S., Ahearn T. (eds) Driving Scientific and Engineering Discoveries Through the Convergence of HPC, Big Data and AI.</div>
+<div class="line">Smoky Mountains Computational Sciences and Engineering Conference (SMC2020) Communications in Computer and Information Science, vol 1315. Springer, Cham., 2020.</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1007/978-3-030-63393-6_27">doi: 10.1007/978-3-030-63393-6_27</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.usenix.org/conference/nsdi20/presentation/jha">Measuring Congestion in High-Performance Datacenter Networks</a></div>
+<div class="line">S. Jha, A. Gentile, J. Brandt, A. Patke, B. Lim, G. Bauer, M. Showerman, L. Kaplan, Z. Kalbarczyk, W. Kramer, and R. Iyer</div>
+<div class="line">In the <a class="reference external" href="https://www.usenix.org/conference/nsdi20">17th USENIX Symposium on Networked Systems Design and Implementation (NSDI)</a>. Feb 2020.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Attributing Performance Variation from Integrated Application and System Data – <em>poster</em></div>
+<div class="line">O. Aaziz, B. Allan, J. Brandt, J. Cook., K. Devine, J. Elliott, A. Gentile, S. Olivier, K. Pedretti, and T. Tucker</div>
+<div class="line">Applied Computer Science Meeting, Feb 2020.</div>
+</div>
+<h3 id="id9">2019<a class="headerlink" href="#id9" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Enabling Machine Learning-based HPC Performance Diagnostics in Production Environments – <em>Panel Organizer</em></div>
+<div class="line">Organizers: M. Showerman, J. Greenseid, A. Gentile, and J. Brandt</div>
+<div class="line">Panelists: W. T. Kramer (NCSA), R. Gerber (NERSC), N. Brown (EPCC), and A. Saxton (NCSA)</div>
+<div class="line"><a class="reference external" href="https://sc19.supercomputing.org">SC19</a>, Fri 11/22 8:30 AM Nov 2019</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Holistic Measurement Driven System Assessment (HMDSA) – <em>poster</em></div>
+<div class="line">S. Jha, M. Showerman, A. Saxton, J. Enos, G. Bauer, Z. Kalbarczyk, A. Gentile, J. Brandt, R. Iyer, and W. T. Kramer</div>
+<div class="line"><a class="reference external" href="https://sc19.supercomputing.org">SC19</a>, Nov 2019.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">A Machine Learning Approach to Understanding HPC Application Performance Variation – <em>poster</em></div>
+<div class="line">B. Aksar, B. Schwaller, O. Aaziz, E. Ates, J. Brandt, A. K. Coskun, M. Egele, and V. Leung</div>
+<div class="line"><a class="reference external" href="https://sc19.supercomputing.org">SC19</a>, Nov 2019.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">LDMS v4: Writing Sampler and Store Plugins</div>
+<div class="line">A. Gentile</div>
+<div class="line"><a class="reference external" href="https://sites.google.com/view/ldmscon2019">LDMS User’s Group Conference 2019 (LDMSCON2019)</a></div>
+<div class="line">Sandia National Laboratories, SAND2019-12858 O, Oct 2019.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Figures of merit for production HPC</div>
+<div class="line">B. Allan</div>
+<div class="line">Sandia National Laboratories, SAND2019-12564, Oct. 2019.</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.2172/1571365">doi: 10.2172/1571365</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Proxy or Imposter? A Method and Case Study to Determine the Answer</div>
+<div class="line">O. Aaziz, J. Cook, C. Vaughan, and D. Richards</div>
+<div class="line">2019 IEEE International Conference on Cluster Computing (CLUSTER), Albuquerque, NM, USA, 2019, pp. 1-9</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2019.8891049">doi: 10.1109/CLUSTER.2019.8891049</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Standardized Environment for Monitoring Heterogeneous Architectures</div>
+<div class="line">C. Brown, B. Schwaller, N. Gauntt, B. Allan and K. Davis</div>
+<div class="line">2019 IEEE International Conference on Cluster Computing (CLUSTER), Albuquerque, NM, USA, 2019, pp. 1-5</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2019.8890997">doi: 10.1109/CLUSTER.2019.8890997</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">A Study of Network Congestion in Two Supercomputing High-Speed Interconnects</div>
+<div class="line">S. Jha, A. Patke, J. Brandt, A. Gentile, M. Showerman, E. Roman, Z. Kalbarczyk, and R. Iyer</div>
+<div class="line">in 2019 IEEE Symposium on High-Performance Interconnects (HOTI), Santa Clara, CA, USA, 2019, pp. 45-48</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/HOTI.2019.00024">doi: 10.1109/HOTI.2019.00024</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.osti.gov/servlets/purl/1641829">Sandia HPC cluster performance monitoring, analysis &amp; visualization</a></div>
+<div class="line">B. Allan</div>
+<div class="line">Sandia National Laboratories, SAND2019-10266C, Aug. 2019.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">HPAS: An HPC Performance Anomaly Suite for Reproducing Performance Variations</div>
+<div class="line">E. Ates, Y. Zhang, B. Aksar, J. Brandt, V. J. Leung, M. Egele, and A. K. Coskun</div>
+<div class="line">ICPP ‘19: Proceedings of the 48th International Conference on Parallel Processing, August 2019, Article No.: 40, Pages 1–10</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/3337821.3337907">doi: 10.1145/3337821.3337907</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Production Application Performance Data Streaming for System Monitoring</div>
+<div class="line">R. Izadpanah, B. Allan, D. Dechev, and J. Brandt</div>
+<div class="line">ACM Transactions on Modeling and Performance Evaluation of Computing Systems (TOMPECS). Vol 4 Issue 2, Article No.: 8, pp 1–25, 2019</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/3319498">doi: doi.org/10.1145/3319498</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Exploring New Monitoring and Analysis Capabilities on Cray’s Software Preview System</div>
+<div class="line">J. Brandt, C. Brown, S. Donoho, A. Gentile, J. Greenseid, W. Kramer, P. Langer, A. Rashid, K. Rehm, and M. Showerman</div>
+<div class="line">at <a class="reference external" href="https://cug.org/cug-2019/">Cray User Group (CUG) 2019</a>. May 2019.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Extracting Actionable System-Application Performance Factors</div>
+<div class="line">J. Brandt, A. Gentile, and J. Cook</div>
+<div class="line">Minisymposium on Modeling Resource Utilization and Contention in HPC System-Application Interactions – <em>Minisymposium Organizer</em></div>
+<div class="line">at the <a class="reference external" href="http://www.siam.org/meetings/cse19/">SIAM Conf. on Computational Science and Engineering (CSE 19)</a>, Feb-Mar 2019.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Holistic Measurement Driven System Assessment (HMDSA) – <a class="reference external" href="https://hmdsa.github.io/hmdsa/pages/resources/figs/ECP_Kramer_poster_fin.pdf">poster</a></div>
+<div class="line">Bill Kramer, Greg Bauer, Brett Bode, Mike Showerman, Jeremy Enos, Aaron Saxton, Saurabh Jha, Zbigniew Kalbarczyk, and Ravishankar Iyer (NCSA/UIUC) and James Brandt and Ann Gentile (SNL)</div>
+<div class="line">at <a class="reference external" href="https://ecpannualmeeting.com/">Exascale Computing Project Annual Meeting 2019</a>, Jan 2019.</div>
+<div class="line">and <a class="reference external" href="https://hmdsa.github.io/hmdsa/">HMDSA Project Website</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Two Weeks In The Life of Skybridge – SLURM and LDMS metrics and metadata.</div>
+<div class="line">B. Allan</div>
+<div class="line">Sandia National Laboratories SAND 2019-4915, April 2019.</div>
+</div>
+<h3 id="id12">2018<a class="headerlink" href="#id12" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Platform Independent Run Time HPC Monitoring, Analysis, and Feedback at Any-Scale – <em>Featured Presentation at DOE Booth</em></div>
+<div class="line">J. Brandt</div>
+<div class="line">SC18, Nov 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring Large-Scale HPC Systems: Extracting and Presenting Meaningful System and Application Insights – <em>BoF Session Organizer</em></div>
+<div class="line"><a class="reference external" href="https://sc18.supercomputing.org/presentation/?id=bof219&amp;sess=sess452">SC18</a>, Nov 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">An Efficient Latch-free Database Index Based on Multi-dimensional Lists</div>
+<div class="line">K. Lamar, R. Izadpanah, J. Brandt, and D. Dechev</div>
+<div class="line">2018 IEEE 37th International Performance Computing and Communications Conference (IPCCC), Orlando, FL, USA, 2018, pp. 1-2</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/PCCC.2018.8710973">doi: 10.1109/PCCC.2018.8710973</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Online Diagnosis of Performance Variation in HPC Systems Using Machine Learning</div>
+<div class="line">O. Tuncer, E. Ates, Y. Zhang, A. Turk, J. Brandt, V. Leung, M.Egele, and A. Coskun</div>
+<div class="line">IEEE Transactions on Parallel and Distributed Systems</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/TPDS.2018.2870403">doi: 10.1109/TPDS.2018.2870403</a>, Sep 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">A Methodology for Characterizing the Correspondence Between Real and Proxy Applications</div>
+<div class="line">O. Aaziz, J.M. Cook, J. Cook, T. Juedeman, D. Richards, and C. Vaughan</div>
+<div class="line">2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 190-200</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2018.00037">doi: 10.1109/CLUSTER.2018.00037</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Large-Scale System Monitoring Experiences and Recommendations – <em>Invited Peer-Reviewed Submission at</em> <a class="reference external" href="https://sites.google.com/site/hpcmaspa2018">HPCMASPA</a></div>
+<div class="line">V. Ahlgren, S. Andersson, J. Brandt, N. P. Cardo, S. Chunduri, J. Enos, P. Fields, A. Gentile, R. Gerber, M. Gienger, J. Greenseid, A. Greiner, B. Hadri, Y. (Helen) He, D. Hoppe, U. Kaila, K. Kelly, M. Klein, A. Kristiansen, S. Leak, M. Mason, K. Pedretti, J-G. Piccinali, J. Repik, J. Rogers, S. Salminen, M. Showerman, C. Whitney, and J. Williams (Authors representing ALCF, CSC, CSCS, HLRS, KAUST, LANL, NCSA, NERSC, ORNL, SNL, and Cray)</div>
+<div class="line">2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 532-542</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2018.00069">doi: 10.1109/CLUSTER.2018.00069</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Characterizing Supercomputer Traffic Networks Through Link-Level Analysis</div>
+<div class="line">S. Jha, J. Brandt, A. Gentile, Z. Kalbarczyk, and R. Iyer</div>
+<div class="line">2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 562-570</div>
+<div class="line"><a class="reference external" href="https://doi.org/doi:10.1109/CLUSTER.2018.00072">doi: 10.1109/CLUSTER.2018.00072</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Modeling Expected Application Runtime for Characterizing and Assessing Job Performance</div>
+<div class="line">O. Aaziz, J. Cook, and M. Tanash</div>
+<div class="line">2018 IEEE International Conference on Cluster Computing (CLUSTER), Belfast, UK, 2018, pp. 543-551</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2018.00070">doi: 10.1109/CLUSTER.2018.00070</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Taxonomist: Application Detection through Rich Monitoring Data – <em>Best Artifact Award</em></div>
+<div class="line">E. Ates, O. Tuncer, A. Turk, V. J. Leung, J. Brandt, M. Egele and A. K. Coskun</div>
+<div class="line">Euro-Par 2018: Parallel Processing: 24th International Conference on Parallel and Distributed Computing, Turin, Italy, August 27 - 31, 2018, Pages 92–105</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1007/978-3-319-96983-1_7">doi: 0.1007/978-3-319-96983-1_7</a></div>
+<div class="line"><a class="reference external" href="https://doi.org/10.6084/m9.figshare.6384248">Artifact</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Integrating Low-latency Analysis into HPC System Monitoring</div>
+<div class="line">R. Izadpanah, N. Naksinehaboon, J. Brandt, A. Gentile, and D. Dechev</div>
+<div class="line">ICPP ‘18: Proceedings of the 47th International Conference on Parallel Processing, August 2018, Article No.: 5, Pages 1–10</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/3225058.3225086">doi: 10.1145/3225058.3225086</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Cray System Monitoring: Successes, Requirements, Priorities</div>
+<div class="line">V. Ahlgren, S. Andersson, J. Brandt, N. P. Cardo, S. Chunduri, J. Enos, P. Fields, A. Gentile, R. Gerber, J. Greenseid, A. Greiner, B. Hadri, Y. He, D. Hoppe, U. Kaila, K. Kelly, M. Klein, A. Kristiansen, S. Leak, M. Mason, K. Pedretti, J-G. Piccinali, J. Repik, J. Rogers, S. Salminen, M. Showerman, C. Whitney, and J. Williams. (Authors representing ALCF, CSC, CSCS, HLRS, KAUST, LANL, NCSA, NERSC, ORNL, SNL, and Cray)</div>
+<div class="line"><a class="reference external" href="https://cug.org/CUG2018">Proc. Cray Users Group (CUG)</a>, Stockholm, Sweden. May 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Supporting Failure Analysis with Discoverable, Annotated Log Datasets</div>
+<div class="line">S. Leak, A. Greiner, A. Gentile, and J. Brandt</div>
+<div class="line"><a class="reference external" href="https://cug.org/CUG2018">Proc. Cray Users Group (CUG)</a>, Stockholm, Sweden. May 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Automated Analysis and Effective Feedback – <em>BOF Session Organizer</em></div>
+<div class="line">M. Showerman, J. Brandt, and A. Gentile</div>
+<div class="line"><a class="reference external" href="https://cug.org/CUG2018">Cray Users Group (CUG)</a>, May 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Runtime HPC System and Application Performance Assessment and Diagnostics</div>
+<div class="line">J. Brandt, A. Gentile, Jon Cook, B. Allan, Jeanine Cook, O. Aaziz, T. Tucker, N. Naksinehaboon, N. Taerat, E. Ates, O. Tuncer, M. Egele, A. Turk, and A. Coskun</div>
+<div class="line"><a class="reference external" href="http://www.cvent.com/events/coda-2018-conference-on-data-analysis-2018/event-summary-3e85bd2488b946d59cf84337876019e7.aspx">Conference on Data Analysis (CODA)</a>, Sante Fe, NM, March 2018.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Continuous Performance Tracking for Kokkos using LDMS</div>
+<div class="line">J. Brandt, S. Hammond, T. Tucker, A. Gentile, and J. Cook</div>
+<div class="line">Programming Models and CoDesign Meeting, Albuquerque, NM. Feb 2018.</div>
+</div>
+<h3 id="id14">2017<a class="headerlink" href="#id14" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Systems Monitoring Data in Action – <em>BoF Session Organizer</em></div>
+<div class="line">SC17, 12:15pm-1:15 pm Thurs Nov 16 2017.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Holistic Measurement Driven System Assessment</div>
+<div class="line">S. Jha, J. Brandt, A. Gentile, Z. Kalbarczyk, G. Bauer, J. Enos, M. Showerman, L. Kaplan, B. Bode, A. Greiner, A. Bonnie, M. Mason, R. Iyer, and W. Kramer</div>
+<div class="line">2017 IEEE International Conference on Cluster Computing (CLUSTER), Honolulu, HI, USA, 2017, pp. 797-800</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2017.124">doi: 10.1109/CLUSTER.2017.124</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Diagnosing Performance Variations in HPC Applications Using Machine Learning – <em>Gauss Award Winner</em></div>
+<div class="line">O. Tuncer, E. Ates, Y. Zhang, A. Turk, J. Brandt, V. J. Leung, M. Egele, and A. K. Coskun</div>
+<div class="line">High Performance Computing: 32nd International Conference, ISC High Performance 2017, Frankfurt, Germany, June 18–22, 2017, Pages 355–373</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1007/978-3-319-58667-0_19">doi: 0.1007/978-3-319-58667-0_19</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">LDMS Version 3 Tutorial and Demo Material – <em>(NB: Deprecated)</em></div>
+<div class="line">J. Brandt, T. Tucker, A. Gentile, N. Naksinehaboon, and N. Taerat</div>
+<div class="line">Sandia National Laboratories, SAND2017-5153 O, May 2017.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Understanding Fault Scenarios and Impacts Through Fault Injection Experiments in Cielo</div>
+<div class="line">V. Formicola, S. Jha, F. Deng, D. Chen (UIUC), A. Bonnie, M. Mason (LANL), J. Brandt, A. Gentile (SNL), L. Kaplan, J. Repik (Cray), J, Enos, M. Showerman (NCSA), A. Greiner (NERSC), Z. Kalbarczyk, R. Iyer, and W. Kramer (UIUC)</div>
+<div class="line"><a class="reference external" href="https://cug.org/CUG2017">Proc. Cray Users Group (CUG)</a>, May 2017.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Runtime Collection and Analysis of System Metrics for Production Monitoring of Trinity Phase II</div>
+<div class="line">A. DeConinck, H. Nam, D. Morton, A. Bonnie, C. Lueninghoener (LANL), J. Brandt, A. Gentile, K. Pedretti, A. Agelastos, C. Vaughan, S. Hammond, B. Allan (SNL), M. Davis and J. Repik (Cray)</div>
+<div class="line"><a class="reference external" href="https://cug.org/CUG2017">Proc. Cray Users Group (CUG)</a>, May 2017.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Holistic Systems Monitoring and Analysis – <em>BOF Session Organizer</em></div>
+<div class="line">M. Showerman, J. Brandt, and A. Gentile</div>
+<div class="line"><a class="reference external" href="https://cug.org/CUG2017">Cray Users Group (CUG)</a>, May 2017.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Contention and Congestion: Challenges and Approaches to Understanding Application Impact</div>
+<div class="line">A. Gentile, J. Brandt, A. Agelastos, and J. Lamb, K. Ruggirello, and J. Stevenson</div>
+<div class="line"><a class="reference external" href="http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=61301">Minisymposium on Understanding Performance Variability due to Application-Data Center Interaction</a> – <em>Minisymposium Organizer</em></div>
+<div class="line">at the <a class="reference external" href="http://www.siam.org/meetings/cse17/">SIAM Conf. on Computational Science and Engineering (CSE 17)</a>, Feb 2017.</div>
+</div>
+<h3 id="id18">2016<a class="headerlink" href="#id18" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://sc16.supercomputing.org/presentation/?id=pan110&amp;sess=sess187">Data Analytics Support for HPC System Management</a> – <em>Panelist</em></div>
+<div class="line">SC16, Fri 18th Nov 2016 10:30-noon.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring Large Scale HPC Systems: Understanding, Diagnosis and Attribution of Performance Variation and Issues – <em>BoF Session Organizer</em></div>
+<div class="line">SC16, 5:15pm-7pm Wed Nov 16 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Discovery, Interpretation, and Communication of Meaningful Information in HPC Monitoring Data</div>
+<div class="line"><a class="reference external" href="http://www.cecs.ucf.edu/">University of Central Florida</a>, Oct 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Holistic Measurement Driven Resilience</div>
+<div class="line"><a class="reference external" href="http://chaos.community/">Chaos Community Day</a> Seattle, WA. Aug. 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Continuous Whole-System Monitoring Toward Rapid Understanding of Production HPC Applications and Systems</div>
+<div class="line">A. Agelastos, B. Allan, J. Brandt, A. Gentile, S. Lefantzi, S. Monk, J. Ogden, M. Rajan, and J. Stevenson</div>
+<div class="line"><a class="reference external" href="http://www.journals.elsevier.com/parallel-computing">Parallel Computing (2016)</a>, Elsevier B. V.</div>
+<div class="line"><a class="reference external" href="http://dx.doi.org/10.1016/j.parco.2016.05.009">http://dx.doi.org/10.1016/j.parco.2016.05.009</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Large-Scale Persistent Numerical Data Source Monitoring System Experiences</div>
+<div class="line">J. Brandt, A. Gentile, M. Showerman, J. Enos, J. Fullop, and G. Bauer</div>
+<div class="line">2016 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), Chicago, IL, USA, 2016, pp. 1711-1720</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/IPDPSW.2016.188">doi: 10.1109/IPDPSW.2016.188</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Design and Implementation of a Scalable HPC Monitoring System</div>
+<div class="line">S. Sanchez, A. Bonnie, G. Van Heule, C. Robinson, A. DeConinck, K. Kelly, Q. Snead, and J. Brandt</div>
+<div class="line">2016 IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW), Chicago, IL, USA, 2016, pp. 1721-1725</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/IPDPSW.2016.167">doi: 10.1109/IPDPSW.2016.167</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Network Performance Counter Monitoring and Analysis on the Cray XC Platform</div>
+<div class="line">J. Brandt, E. Froese, A. Gentile, L. Kaplan, B. Allan, and E. Walsh</div>
+<div class="line">Proc. <a class="reference external" href="https://cug.org/CUG2016">Cray Users Group (CUG)</a>, May 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Dynamic Model Specific Register (MSR) Data Collection as a System Service</div>
+<div class="line">G. H. Bauer, J. Brandt, A. Gentile, A. Kot, and M. Showerman</div>
+<div class="line">Proc. <a class="reference external" href="https://cug.org/CUG2016">Cray Users Group (CUG)</a>, May 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://ssl.linklings.net/conferences/cug/cug2016_program/views/includes/files/pap126s2-file1.pdf">Design and Implementation of a Scalable HPC Monitoring System for Trinity</a></div>
+<div class="line">A. DeConinck, A. Bonnie, K. Kelly, S. Sanchez, C. Martin, and M. Mason (LANL), J. Brandt, A. Gentile, B. Allan, and A. Agelastos (SNL), M. Davis and M. Berry (Cray)</div>
+<div class="line">Proc. <a class="reference external" href="https://cug.org/CUG2016">Cray Users Group (CUG)</a>, May 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://cug.org/proceedings/cug2016_proceedings/includes/files/bof112.pdf">Addressing the Challenges of “Systems Monitoring” Data Flows</a>– <em>BOF Session Organizer</em></div>
+<div class="line">M. Showerman, J. Brandt, and A. Gentile</div>
+<div class="line">Proc. <a class="reference external" href="https://cug.org/CUG2016">Cray Users Group (CUG)</a>, May 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Smart HPC Centers: Data, Analysis, Feedback, and Response</div>
+<div class="line">J. Brandt, A. Gentile, C. Martin, B. Allan, and K. Devine</div>
+<div class="line"><a class="reference external" href="http://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=22167">Minisymposium on Improving Performance, Throughput, and Efficiency of HPC Centers through Full System Data Analytics</a> – <em>Minisymposium Organizer</em></div>
+<div class="line">at the <a class="reference external" href="http://www.siam.org/meetings/pp16/">SIAM Conf. on Parallel Processing for Scientific Computing (PP16)</a>, Paris, France. Apr 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring High Speed Network Fabrics: Experiences and Needs</div>
+<div class="line">J. Brandt, A. Gentile, B. Allan, S. Lefantzi, and M. Aguilar</div>
+<div class="line">at <a class="reference external" href="https://www.openfabrics.org/index.php/2016-ofa-workshop.html">Open Fabrics Alliance Workshop</a>, Monterey, CA. Apr 2016.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring Large Scale HPC Platforms: Issues, Approaches, and Experiences</div>
+<div class="line"><a class="reference external" href="http://www.cecs.ucf.edu/">Univ. of Central Florida</a>, Jan 2016.</div>
+</div>
+<h3 id="id23">2015<a class="headerlink" href="#id23" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://scdoe.info/2015/11/09/jim-brandt-sandia/">HPC Monitoring, Understanding, and Performance: Where Less is Less</a> – <em>Featured Presentation at DOE Booth</em></div>
+<div class="line">J. Brandt</div>
+<div class="line">at <a class="reference external" href="http://scdoe.info/booth-schedule/">IEEE/ACM Int’l. Conf. for High Performance Storage, Networking, and Analysis (SC15)</a> Austin, TX. Nov 2015.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://scdoe.info/booth-schedule/">LDMS Demo</a> at DOE Booth SC15 Nov 2015.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring Large-Scale HPC Systems: Data Analytics and Insights - BOF Session Organizer 🔸</div>
+<div class="line">at <a class="reference external" href="http://sc15.supercomputing.org/">IEEE/ACM Int’l. Conf. for High Performance Storage, Networking, and Analysis (SC15)</a> Austin, TX. Nov 2015.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Infrastructure for In Situ System Monitoring and Application Data Analysis</div>
+<div class="line">J. Brandt, K. Devine, and A. Gentile</div>
+<div class="line"><a class="reference external" href="http://vis.lbl.gov/Events/ISAV-2015/">ISAV 2015</a>: Proceedings of the First Workshop on In Situ Infrastructures for Enabling Extreme-Scale Analysis and Visualization, November 2015, Pages 36–40,</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/2828612.2828621">doi: 10.1145/2828612.2828621</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">New Systems, New Behaviors, New Patterns: Monitoring Insights from System Standup</div>
+<div class="line">J. Brandt, A. Gentile, C. Martin, J. Repik, and N. Taerat</div>
+<div class="line"><a class="reference external" href="http://www.mcs.anl.gov/ieeecluster2015/">2015 IEEE International Conference on Cluster Computing</a>, Chicago, IL, USA, 2015, pp. 658-665</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2015.116">doi: 10.1109/CLUSTER.2015.116</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Extending LDMS to Enable Performance Monitoring in Multi-Core Applications</div>
+<div class="line">S. Feldman, D. Zhang, D. Dechev, and J. Brandt</div>
+<div class="line"><a class="reference external" href="http://www.mcs.anl.gov/ieeecluster2015/">2015 IEEE International Conference on Cluster Computing</a>, Chicago, IL, USA, 2015, pp. 717-720</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2015.125">doi: 10.1109/CLUSTER.2015.125</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Toward Rapid Understanding of Production HPC Applications and Systems</div>
+<div class="line">A. Agelastos, B. Allan, J. Brandt, A. Gentile, S. Lefantzi, S. Monk, J. Ogden, M. Rajan, and J. Stevenson</div>
+<div class="line"><a class="reference external" href="http://www.mcs.anl.gov/ieeecluster2015/">2015 IEEE International Conference on Cluster Computing</a>, Chicago, IL, USA, 2015, pp. 464-473</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2015.71">doi: 10.1109/CLUSTER.2015.71</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Enabling Advanced Operational Analysis Through Multi-Subsystem Data Integration on Trinity – <em>Best Paper Finalist</em></div>
+<div class="line">J. Brandt, D. DeBonis, A. Gentile, J. Lujan, C. Martin, D. Martinez, S. Olivier, K. Pedretti, N. Taerat, and R. Velarde</div>
+<div class="line">Proc. <a class="reference external" href="https://cug.org/CUG2015">Cray User’s Group (CUG)</a>, Chicago, IL. April 2015.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Scalable Integrated High-Fidelity Continuous Monitoring</div>
+<div class="line">at System Monitoring of Cray Systems BoF</div>
+<div class="line">Proc. <a class="reference external" href="https://cug.org/CUG2015">Cray User’s Group (CUG)</a>, Chicago, IL. April 2015.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Demonstrating Improved Application Performance Using Dynamic Monitoring and Task Mapping – <em>Minisymposium Presentation</em></div>
+<div class="line">J. Brandt, K. Devine, A. Gentile, and K. Pedretti</div>
+<div class="line">Minisymposium on Topology Mapping and Locality</div>
+<div class="line">at the <a class="reference external" href="http://www.siam.org/meetings/cse15/">SIAM Conf. on Computational Science and Engineering (CSE 15)</a>, Salt Lake City, UT. Mar 2015.</div>
+</div>
+<h3 id="id28">2014<a class="headerlink" href="#id28" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Extreme-scale HPC Monitoring</div>
+<div class="line">In <a class="reference external" href="https://www.sandia.gov/app/uploads/sites/165/2022/03/HPC_AnnualReport2014_FNL.pdf">Sandia National Laboratories HPC Annual Report 2014</a>, 2014.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Lightweight Distributed Metric Service: A Scalable Infrastructure for Continuous Monitoring of Large Scale Computing Systems and Applications</div>
+<div class="line">A. Agelastos, B. Allan, J. Brandt, P. Cassella, J. Enos, J. Fullop, A. Gentile, S. Monk, N. Naksinehaboon, J. Ogden, M. Rajan, M. Showerman, J. Stevenson, N. Taerat, and T. Tucker</div>
+<div class="line"><a class="reference external" href="http://sc14.supercomputing.org/">SC ‘14: Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis</a></div>
+<div class="line">New Orleans, LA, USA, 2014, pp. 154-165</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/SC.2014.18">doi: 10.1109/SC.2014.18</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring Large-Scale HPC Systems: Issues and Approaches – <em>BOF Session Organizer</em></div>
+<div class="line"><a class="reference external" href="http://sc14.supercomputing.org/">IEEE/ACM Int’l. Conf. for High Performance Storage, Networking, and Analysis (SC14)</a>, New Orleans, LA. Nov 2014.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Demonstrating Improved Application Performance Using Dynamic Monitoring and Task Mapping</div>
+<div class="line">J. Brandt, K. Devine, A. Gentile, and K. Pedretti</div>
+<div class="line"><a class="reference external" href="http://www.cluster2014.org/">2014 IEEE International Conference on Cluster Computing (CLUSTER)</a>, Madrid, Spain, 2014, pp. 408-415</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2014.6968670">doi: 10.1109/CLUSTER.2014.6968670</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Monitoring Application Resource Utilization on the Intel PHI Coprocessor – Minitalk</div>
+<div class="line">J. Brandt and A. Gentile</div>
+<div class="line"><a class="reference external" href="https://sites.google.com/site/hpcmaspa2014/">1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA)</a> at <a class="reference external" href="http://www.cluster2014.org/">IEEE Int’l. Conf. on Cluster Computing (CLUSTER)</a>, Madrid, Spain. Sept 2014.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://github.com/ovis-hpc/ovis-publications/wiki/papers/2014/SilentErrorsHpcmaspa2014.pdf">Memory Reliability and Performance Degradation</a>– Minitalk (<a class="reference external" href="https://github.com/ovis-hpc/ovis-publications/wiki/papers/2014/SilentErrorsAbstractHpcmaspa2014.pdf">Extended Abstract</a>)</div>
+</div>
+<p>Benjamin Allan
+| <a class="reference external" href="https://sites.google.com/site/hpcmaspa2014/">1st Workshop on Monitoring and Analysis for High Performance Computing Systems Plus Applications (HPCMASPA)</a> at <a class="reference external" href="http://www.cluster2014.org/">IEEE Int’l. Conf. on Cluster Computing (CLUSTER)</a>, Madrid, Spain. Sept 2014.</p>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Large Scale System Monitoring and Analysis on Blue Waters Using OVIS – <em>Best Paper Finalist</em></div>
+<div class="line">M. Showerman, J. Enos, J. Fullop (NCSA), P. Cassella (Cray), N. Naksinehaboon, N. Taerat, T. Tucker (OGC), J. Brandt, A. Gentile, and B. Allan (SNL)</div>
+<div class="line">Proc. <a class="reference external" href="https://ssl.linklings.net/conferences/cug/cug2014_program/views/at_a_glance.html">Cray User’s Group (CUG)</a>, Lugano, Switzerland. May 2014.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Large Scale HPC Monitoring</div>
+<div class="line"><a class="reference external" href="http://research.nmsu.edu/areas/computer/">New Mexico State University</a>, Las Cruses, NM. April 2014.</div>
+</div>
+<h3 id="id33">2013<a class="headerlink" href="#id33" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://cug.org/proceedings/cug2013_proceedings/includes/files/pap167-file1.pdf">High Fidelity Data Collection and Transport Service Applied to the Cray XE6/XK6</a></div>
+<div class="line">J. Brandt, T. Tucker, A. Gentile, D. Thompson, V. Kuhns, and J. Repik</div>
+<div class="line">Proc. <a class="reference external" href="https://ssl.linklings.net/conferences/cug/cug2013_program/views/at_a_glance.html">Cray User’s Group (CUG)</a>, Napa Valley, CA. May 2013.</div>
+</div>
+<h3 id="id35">2012<a class="headerlink" href="#id35" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Filtering Log Data: Finding Needles in the Haystack</div>
+<div class="line">L. Yu, Z. Zheng, Z. Lan, T. Jones, J. Brandt, and A. Gentile</div>
+<div class="line"><a class="reference external" href="http://2012.dsn.org/">IEEE/IFIP Int’l. Conf. on Dependable Systems and Networks (DSN 2012)</a>, Boston, MA, 2012, pp. 1-12</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/DSN.2012.6263948">doi: 10.1109/DSN.2012.6263948</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Report of Experiments and Evidence for ASC L2 Milestone 4467 - Demonstration of a Legacy Application’s Path to Exascale</div>
+<div class="line">B. Barrett, R. Barrett, J. Brandt, R. Brightwell, M. Curry, N. Fabian, K. Ferreira, A. Gentile, S. Hemmert, S. Kelly, R. Klundt, J. Laros, V. Leung, M. Levenhagen, G. Lofstead, K. Moreland, R. Oldfield, K. Pedretti, A. Rodrigues, D. Thompson, T. Tucker, L. Ward, J. Van Dyke, C. Vaughan, and K. Wheeler</div>
+<div class="line">SAND2012-1750. Sandia National Laboratories. March 2012.</div>
+</div>
+<h3 id="id36">2011<a class="headerlink" href="#id36" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">OVIS, Lightweight Data Metric Service (LDMS), and Log File Analysis</div>
+<div class="line">SC|11 Seattle, WA, November 2011.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit ASC Booth 803 – Demos &amp; talk</p></li>
+<li><p>OVIS at <a class="reference external" href="http://sc11.supercomputing.org/schedule/event_detail.php?evid=bof195">Petascale Systems Management BOF</a> – <em>Panelist</em></p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Develop Feedback System for Intelligent Dynamic Resource Allocation to Improve Application Performance</div>
+<div class="line">J. Brandt, A. Gentile, D. Thompson and T. Tucker</div>
+<div class="line">SAND2011-6301. Sandia National Laboratories. September 2011.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Framework for Enabling System Understanding</div>
+<div class="line">J. Brandt, F. Chen, A. Gentile, C. Leangsuksun, J. Mayo, P. Pebay, D. Roe, N. Taerat, D. Thompson, and M. Wong</div>
+<div class="line">In: Alexander, M., et al. Euro-Par 2011: Parallel Processing Workshops. Euro-Par 2011. Lecture Notes in Computer Science, vol 7156. Springer, Berlin, Heidelberg.</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1007/978-3-642-29740-3_27">doi: 10.1007/978-3-642-29740-3_27</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Baler: Deterministic, lossless log message clustering tool</div>
+<div class="line">N. Taerat, J. Brandt, A. Gentile, M. Wong, and C. Leangsuksun</div>
+<div class="line">In: Computer Science - Research and Development</div>
+<div class="line">Volume 26, Numbers 3-4, 285-295, (2011)</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1007/s00450-011-0155-3">doi: 10.1007/s00450-011-0155-3</a></div>
+</div>
+<h3 id="id37">2010<a class="headerlink" href="#id37" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">OVIS, Lightweight Data Metric Service (LDMS), and Log File Analysis</div>
+<div class="line">SC|10 New Orleans, LA, Nov 2010.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit ASC Booth Demos</p></li>
+<li><p>Exhibit ASC Booth talk: OVIS 3: Scalable Data Collection and Analysis for Large Scale HPC System Understanding</p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Scalable HPC Monitoring and Analysis for Understanding and Automated Response – <em>Invited Presentation</em></div>
+<div class="line"><a class="reference external" href="http://www.csm.ornl.gov/srt/conferences/ResilienceSummit/2010/">HPC Resilience Summit 2010: Workshop on Resilience for Exascale HPC</a> at the Los Alamos Computer Science Symposium, Santa Fe, NM. Oct 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS 3.2 User’s Guide – <em>(NB: Deprecated)</em></div>
+<div class="line">J. Brandt, A. Gentile, C. Houf, J. Mayo, P. Pebay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line">SAND 2010-7109, Sandia National Laboratories, Oct 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Understanding Large Scale HPC Systems Through Scalable Monitoring and Analysis</div>
+<div class="line"><a class="reference external" href="http://www.cs.nmsu.edu/wp/">New Mexico State University</a>, Las Cruces, NM. October 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Understanding Large Scale HPC Systems Through Scalable Monitoring and Analysis – <em>Invited Presentation</em></div>
+<div class="line"><a class="reference external" href="http://www.egi.eu/EGITF2010/">European Grid Initiative (EGI) Technical Forum 2010</a>, Amsterdam, Netherlands. September 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Computing Contingency Statistics in Parallel: Design Trade-Offs and Limiting Cases</div>
+<div class="line">P. Pébay, D. Thompson, and J. Bennett</div>
+<div class="line"><a class="reference external" href="https://ieeexplore.ieee.org/xpl/conhome/5599992/proceeding">2010 IEEE International Conference on Cluster Computing</a>, Heraklion, Greece, 2010, pp. 156-165</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTER.2010.43">doi: 10.1109/CLUSTER.2010.43</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">A Framework for Graph-Based Synthesis, Analysis, and Visualization of HPC Cluster Job Data</div>
+<div class="line">J. Brandt, V. De Sapio, A. Gentile, P. Kegelmeyer, J. Mayo, P. Pebay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line">SAND2010-2400, Sandia National Laboratories, August 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">The OVIS analysis architecture – <em>(NB: Deprecated)</em></div>
+<div class="line">J. M. Brandt, V. De Sapio, A. C. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. H. Wong</div>
+<div class="line">Sandia Report SAND2010-5107, Sandia National Laboratories, July 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">The Python command line interface to the OVIS analysis functionality – <em>(NB: Deprecated)</em></div>
+<div class="line">J. M. Brandt, A. C. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. H. Wong</div>
+<div class="line">Sandia Report SAND2010-4289, Sandia National Laboratories, June 2010.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Quantifying Effectiveness of Failure Prediction and Response in HPC Systems: Methodology and Example</div>
+<div class="line">J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line">2010 International Conference on Dependable Systems and Networks Workshops (DSN-W), Chicago, IL, USA, 2010, pp. 2-7</div>
+<div class="line"><a class="reference external" href="https://doi.org/doi:10.1109/DSNW.2010.5542629">doi: 10.1109/DSNW.2010.5542629</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Using Cloud Constructs and Predictive Analysis to Enable Pre-Failure Process Migration in HPC Systems</div>
+<div class="line">J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://www.manjrasoft.com/ccgrid2010/mainpage.html">2010 10th IEEE/ACM International Conference on Cluster, Cloud and Grid Computing</a>, Melbourne, VIC, Australia, 2010, pp. 703-708</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CCGRID.2010.31">doi: 10.1109/CCGRID.2010.31</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Combining Virtualization, Resource Characterization, and Resource Management to Enable Efficient High Performance Compute Platforms Through Intelligent Dynamic Resource Allocation</div>
+<div class="line">J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line">2010 IEEE International Symposium on Parallel &amp; Distributed Processing, Workshops and Phd Forum (IPDPSW), Atlanta, GA, USA, 2010, pp. 1-8</div>
+<div class="line"><a class="reference external" href="https://doi.org/doi:10.1109/IPDPSW.2010.5470719">doi: 10.1109/IPDPSW.2010.5470719</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Scalable Information Fusion for Fault Tolerance in Large-Scale HPC – <em>Minisymposium Presentation</em></div>
+<div class="line">J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line">Minisymposium on Vertically Integrated Fault Tolerance for Large-Scale Scientific Computing</div>
+</div>
+<p>at the <a class="reference external" href="http://www.siam.org/meetings/pp10/">SIAM Conf. on Parallel Processing and Scientific Computing (PP10)</a>, Seattle, WA. Feb 2010.</p>
+<h3 id="id40">2009<a class="headerlink" href="#id40" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">OVIS in HPC: Information Fusion for Resilience</div>
+<div class="line"><a class="reference external" href="http://www.latech.edu/">Louisiana Tech University</a> Ruston, LA. December 2009.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Failure Prediction and Resilience in Large-Scale HPC Platforms</div>
+<div class="line"><a class="reference external" href="http://sc09.supercomputing.org/">SC|09</a> Portland, OR, November 2009.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Presentation and Demo</p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Advanced ParaView Visualization</div>
+<div class="line">K. Moreland, J. Ahrens, D. DeMarle, D. Thompson, P. Pébay and N. Fabian</div>
+<div class="line">peer-reviewed tutorial on the use of statistics engines at the <a class="reference external" href="http://vis.computer.org/VisWeek2009">IEEE VisWeek 2009</a>, Atlantic City, NJ. October 2009.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Data Fusion and Statistical Analysis: Piercing the Darkness of the Black Box – <em>Invited Presentation</em></div>
+<div class="line">J. Brandt, F. Chen, V. De Sapio, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://www.lanl.gov/conferences/lacss/2009/agenda/workshops.shtml">Workshop on Resiliency for Petascale HPC</a> at the <a class="reference external" href="https://www.lanl.gov/conferences/lacss/2009/">Los Alamos Computer Science Symposium (LACSS 2009)</a>, Santa Fe, NM. October 2009.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Methodologies for Advance Warning of Compute Cluster Problems via Statistical Analysis: A Case Study</div>
+<div class="line">J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://xcr.cenit.latech.edu/resilience2009/">Proceedings of the 2009 Workshop on Resiliency in High Performance Computing (Resilience)</a> June 2009, pp. 7-14</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1145/1552526.1552528">doi: 10.1145/1552526.1552528</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Resource Monitoring and Management with OVIS to Enable HPC in Cloud Computing Environments</div>
+<div class="line">J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://www.ipdps.org/">2009 IEEE International Symposium on Parallel &amp; Distributed Processing</a>, Rome, Italy, 2009, pp. 1-8</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/IPDPS.2009.5161234">doi: 10.1109/IPDPS.2009.5161234</a></div>
+</div>
+<ul class="simple">
+<li><p>Note: 5th Workshop on System Management Techniques, Processes, and Services (SMTPS) - Special Focus on Cloud Computing – <em>Best Paper Award</em></p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS 2.0 User’s Guide – <em>(NB: Deprecated)</em></div>
+<div class="line">J. Brandt, A. Gentile, J. Mayo, P. Pébay, D. Roe, D. Thompson, and M. Wong</div>
+<div class="line">SAND 2009-2329, Sandia National Laboratories, April 2009</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS: Scalable Real-time Analysis of Very Large Datasets</div>
+<div class="line">Overview viewgraph. 2009.</div>
+</div>
+<h3 id="id41">2008<a class="headerlink" href="#id41" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">OVIS-2: Whole System Monitoring and Analysis - Toward Understanding and Prediction</div>
+<div class="line">J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://sc08.supercomputing.org/">SC|08</a> Austin, TX. November 2008.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Presentation and Demo</p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Combining System Characterization and Novel Execution Models to Achieve Scalable Robust Computing – <em>Invited Presentation</em></div>
+<div class="line">H. Adalsteinsson, J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pebay, D. Thompson, and M. Wong</div>
+<div class="line">Workshop on Resiliency for Petascale HPC</div>
+<div class="line">at the <a class="reference external" href="http://www.lanl.gov/conferences/lacss/2008/">Los Alamos Computer Science Symposium (LACSS 2008)</a>, Santa Fe, NM. October 2008.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS: Scalable, Real-time Statistical Analysis of Very Large Datasets</div>
+<div class="line">J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay , D. Thompson, and M. Wong</div>
+<div class="line">2008 Sandia Workshop on Data Mining and Data Analysis</div>
+<div class="line">Extended abstract, SAND Report 2008-6109, Sandia National Laboratories, September 2008.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Using Probabilistic Characterization to Reduce Runtime Faults on HPC Systems</div>
+<div class="line">J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay , D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://ccgrid2008.ens-lyon.fr/">2008 Eighth IEEE International Symposium on Cluster Computing and the Grid (CCGRID)</a>, Lyon, France, 2008, pp. 759-764</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CCGRID.2008.124">doi: 10.1109/CCGRID.2008.124</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS-2: A Robust Distributed Architecture for Scalable RAS</div>
+<div class="line">J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://www.ipdps.org/">2008 IEEE International Symposium on Parallel and Distributed Processing</a>, Miami, FL, USA, 2008, pp. 1-8</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/IPDPS.2008.4536549">doi: 10.1109/IPDPS.2008.4536549</a></div>
+</div>
+<h3 id="id42">2007<a class="headerlink" href="#id42" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">OVIS-2: A Distributed Framework for Scalable Monitoring and Analysis of Large Computational Clusters</div>
+<div class="line">J. Brandt, B. Debusschere, A. Gentile, J. Mayo, P. Pébay, D. Thompson, and M. Wong</div>
+<div class="line"><a class="reference external" href="http://sc07.supercomputing.org/">SC|07</a> Reno, NV, November 2007.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Presentation and Demo</p></li>
+</ul>
+<h3 id="id43">2006<a class="headerlink" href="#id43" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Monitoring Computational Clusters with OVIS</div>
+<div class="line">J. M. Brandt, A. C. Gentile, P. P. Pébay and M. H. Wong</div>
+<div class="line">SAND Report 2006-7939, Sandia National Laboratories, December 2006.</div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS: A Tool for Intelligent, Real-time Monitoring of Computational Clusters</div>
+<div class="line">J. M. Brandt, A. C. Gentile, J. Ortega, P. P. Pébay, D. C. Thompson, and M. H. Wong</div>
+<div class="line"><a class="reference external" href="http://sc06.supercomputing.org/">SC|06</a> Tampa, FL, November 2006.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Presentation and Demo</p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">OVIS: A Tool for Intelligent, Real-Time Monitoring of Computational Clusters</div>
+<div class="line"><a class="reference external" href="http://www.ipdps.org/ipdps2006/">Proceedings 20th IEEE International Parallel &amp; Distributed Processing Symposium</a>, Rhodes, Greece, 2006, pp. 8 pp.-</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/IPDPS.2006.1639698">doi: 10.1109/IPDPS.2006.1639698</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Distributed, Intelligent RAS System for Large Computational Clusters: FactSheet</div>
+<div class="line">J. M. Brandt, A. C. Gentile, P. P. Pébay and M. H. Wong</div>
+<div class="line">Fact sheet, Sandia National Laboratories, April 2006.</div>
+</div>
+<h3 id="id44">2005<a class="headerlink" href="#id44" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Bayesian Inference for Intelligent, Real-time Monitoring of Computational Clusters</div>
+<div class="line">J. M. Brandt, A. C. Gentile, D. J. Hale, Y. M. Marzouk, and P. P. Pébay</div>
+<div class="line"><a class="reference external" href="http://sc05.supercomputing.org/">SC|05</a> Seattle, Washington, November 2005.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Presentation, Demo, and Flier</p></li>
+<li><p>Conference Poster</p></li>
+</ul>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Meaningful Automated Statistical Analysis of Large Computational Clusters</div>
+<div class="line">J. M. Brandt, A. C. Gentile, Y. M. Marzouk and P. P. Pebay</div>
+<div class="line"><a class="reference external" href="http://www.cluster2005.org/">2005 IEEE International Conference on Cluster Computing</a>, Burlington, MA, USA, 2005, pp. 1-2</div>
+<div class="line"><a class="reference external" href="https://doi.org/10.1109/CLUSTR.2005.347090">doi: 10.1109/CLUSTR.2005.347090</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Meaningful Automated Statistical Analysis of Large Computational Clusters</div>
+<div class="line">J. M. Brandt, A. C. Gentile, Y. M. Marzouk, and P. P. Pébay</div>
+<div class="line">SAND Report 2005-4558, Sandia National Laboratories, July 2005.</div>
+</div>
+<h3 id="id46">2004<a class="headerlink" href="#id46" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Detection of System Abnormalities Through Behavioral Analysis of ASC Codes</div>
+<div class="line">J. M. Brandt and A. C. Gentile</div>
+<div class="line"><a class="reference external" href="http://acm.supercomputing.org/sc2004">SC|04</a> Exhibit, Pittsburgh, PA, November 2004.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Demo</p></li>
+</ul>
+<h3 id="id47">2003<a class="headerlink" href="#id47" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Distributed Intelligent RAS System for Large Computational Clusters</div>
+<div class="line">J. M. Brandt, N. M. Berry, R. A. Yao, B. M. Tsudama, and A. C. Gentile</div>
+<div class="line"><a class="reference external" href="http://acm.supercomputing.org/sc2003">SC|03</a>, Phoenix, AZ November 2003.</div>
+</div>
+<ul class="simple">
+<li><p>Exhibit Demo</p></li>
+<li><p>Conference Poster</p></li>
+</ul>
+<h2 id="dataset-releases-hmdr">Dataset Releases - HMDR<a class="headerlink" href="#dataset-releases-hmdr" title="Link to this heading">¶</a></h2>
+<p>The ASCR funded exascale resilience project Holistic Measurement Driven Resilience: Combining Operational Fault and Failure Measurements and Fault Injection for Quantifying Fault Detection and Impact released the following system datasets in support of resilience research:</p>
+<h3 id="id48">2019<a class="headerlink" href="#id48" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Cielo Fault Injection Dataset 2016</div>
+<div class="line">S. Jha, V. Formicola, A. Bonnie, M. Mason, D. Chen, F. Deng, A. Gentile, J. Brandt, L. Kaplan, J. Repik, J. Enos, M. Showerman, A. Greiner, Z. Kalbarczyk, R. Iyer, and W. Kramer.</div>
+<div class="line">LA-UR-19-22749, SAND2019-3531 O, Mar 2019.</div>
+</div>
+<h3 id="id49">2016<a class="headerlink" href="#id49" title="Link to this heading">¶</a></h3>
+<div class="line-block">
+<div class="line">Mutrino Dataset 2/15-6/16 (12/16 Release) (<a class="reference external" href="http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/about-mutrino1yr-v122016.pdf">About</a>)</div>
+<div class="line">J. Brandt, A. Gentile, and J. Repik</div>
+<div class="line">SAND2016-12310 O, Dec 2016</div>
+<div class="line">[Online]: <a class="reference external" href="http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/mutrino1yr-v122016.tgz">http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/mutrino1yr-v122016.tgz</a></div>
+</div>
+<blockquote>
+<div></div></blockquote>
+<div class="line-block">
+<div class="line">Mutrino Dataset 2/15-5/15 (<a class="reference external" href="http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/about-logs.051715.pdf">About</a>)</div>
+<div class="line">J. Brandt, A. Gentile, and J. Repik</div>
+<div class="line">SAND2016-2449 O, Mar 2016</div>
+<div class="line">[Online]: <a class="reference external" href="http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/logs.051715.cr.tgz">http://portal.nersc.gov/project/m888/resilience/datasets/mutrino/logs.051715.cr.tgz</a></div>
+</div>
+
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      Jan 15, 2025
+    
+  </small>
+</div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="glossary.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Glossary" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Glossary
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="projects.html" class="md-footer__link md-footer__link--next" aria-label="Next: Projects" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Projects
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright Copyright 2024 Sandia National Laboratories and Open Grid Computing, Inc.
+
+SPDX-License-Identifier: LGPL-3.0.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    7.4.7.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    <a href="https://github.com/ovis-hpc/readthedocs" target="_blank" rel="noopener" title="Source on github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="https://www.ldms-ug.org/" target="_blank" rel="noopener" title="OVIS-HPC" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 2.05c5.05.5 9 4.77 9 9.95 0 1.45-.32 2.83-.88 4.07l-2.62-1.53c.32-.79.5-1.64.5-2.54 0-3.53-2.61-6.43-6-6.92V2.05M12 19c2.21 0 4.17-1 5.45-2.62l2.6 1.53A9.97 9.97 0 0 1 12 22C6.47 22 2 17.5 2 12a9.99 9.99 0 0 1 9-9.95v3.03C7.61 5.57 5 8.47 5 12a7 7 0 0 0 7 7m0-13a6 6 0 0 1 6 6c0 2.97-2.16 5.44-5 5.92v-3.09c1.17-.41 2-1.52 2-2.83a3 3 0 0 0-3-3l-.55.05-1.54-2.67C10.56 6.13 11.26 6 12 6m-6 6c0-1.86.85-3.5 2.18-4.62l1.54 2.67C9.27 10.57 9 11.26 9 12c0 1.31.83 2.42 2 2.83v3.09c-2.84-.48-5-2.95-5-5.92Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand", "navigation.tabs", "toc.integrate", "navigation.sections", "navigation.instant", "header.autohide", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "toc.follow", "toc.sticky", "content.tabs.link", "announce.dismiss"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+      
+        <script src="_static/sphinx_immaterial_theme.f9d9eeeb247ace16c.min.js?v=9a299579"></script>
+    
+  </body>
+</html>

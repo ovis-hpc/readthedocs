@@ -1,2 +1,0 @@
-Additional SOS Tutorial Material
-===============================

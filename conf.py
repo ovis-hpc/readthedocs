@@ -35,9 +35,6 @@ import urllib3
 #os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt' 
 #os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt' 
 
-# overrride READTHEDOCS output dir
-os.environ['READTHEDOCS_OUTPUT'] = '_build'
-
 from urllib.request import build_opener, HTTPSHandler, install_opener
 
 # Disable SSL verification globally

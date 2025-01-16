@@ -11,7 +11,7 @@ build:
     python: "3.13"
   commands:
     - export READTHEDOCS_OUTPUT=${READTHEDOCS_OUTPUT:-_build}
-
+    - sphinx-build -b html . $READTHEDOCS_OUTPUT/html
 # Build documentation in the top-level directory with Sphinx
 sphinx:
   configuration: conf.py

@@ -32,8 +32,8 @@ from sphinx.ext import intersphinx
 import urllib3
 
 # Set environment variables to ca-bundle.crt when using container on Sandia machine.
-#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt' 
-#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt' 
+#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
+#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
 
 from urllib.request import build_opener, HTTPSHandler, install_opener
 
@@ -63,11 +63,11 @@ if rtd_version not in ["stable", "latest"]:
     rtd_version = "stable"
 
 # Boolean to generate example gallery if we can import flux
-try:
-    import flux
-    has_flux = True
-except ImportError:
-    has_flux = False
+#try:
+#    import flux
+#    has_flux = True
+#except ImportError:
+#    has_flux = False
 
 # -- General configuration ---------------------------------------------------
 
@@ -98,8 +98,8 @@ extensions = [
 
 # This would require a flux instance / python bindings to run
 # so we do it locally and then persist the auto_examples to render
-if has_flux:
-    extensions.append("sphinx_gallery.gen_gallery")
+#if has_flux:
+#    extensions.append("sphinx_gallery.gen_gallery")
 
 # sphinxcontrib.spelling settings
 spelling_word_list_filename = ["spell.en.pws"]
@@ -123,13 +123,13 @@ exclude_patterns = [
     ".github",
 ]
 
-if has_flux:
-    sphinx_gallery_conf = {
-        "examples_dirs": "examples",  # path to your example scripts
-        "gallery_dirs": "auto_examples",  # path to where to save gallery generated output
-        "filename_pattern": "/example",
-        "default_thumb_file": "images/logo.png",
-    }
+#if has_flux:
+#    sphinx_gallery_conf = {
+#        "examples_dirs": "examples",  # path to your example scripts
+#        "gallery_dirs": "auto_examples",  # path to where to save gallery generated output
+#        "filename_pattern": "/example",
+#        "default_thumb_file": "images/logo.png",
+#    }
 
 master_doc = "index"
 source_suffix = {".rst": "restructuredtext"}
@@ -155,37 +155,21 @@ domainrefs = {
         "text": "%s(8)",
         "url": "http://man7.org/linux/man-pages/man8/%s.8.html",
     },
-    "core:man1": {
+    "ldms:man-pages": {
         "text": "%s(1)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-core/en/latest/man1/%s.html",
+        "url": "https://ovis-hpc-personal.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
     },
-    "core:man3": {
-        "text": "%s(3)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-core/en/latest/man3/%s.html",
+    "sos:man-pages": {
+        "text": "%s(1)",
+        "url": "https://ovis-hpc-personal.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
     },
-    "core:man5": {
-        "text": "%s(5)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-core/en/latest/man5/%s.html",
+    "ldms:main": {
+        "text": "%s(1)",
+        "url": "https://ovis-hpc-personal.readthedocs.io/projects/ldms/en/latest/%s.html",
     },
-    "core:man7": {
-        "text": "%s(7)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-core/en/latest/man7/%s.html",
-    },
-    "sched:man5": {
-        "text": "%s(5)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-sched/en/latest/man5/%s.html",
-    },
-    "security:man3": {
-        "text": "%s(3)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-security/en/latest/man3/%s.html",
-    },
-    "security:man5": {
-        "text": "%s(5)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-security/en/latest/man5/%s.html",
-    },
-    "security:man8": {
-        "text": "%s(8)",
-        "url": "https://flux-framework.readthedocs.io/projects/flux-security/en/latest/man8/%s.html",
+    "sos:main": {
+        "text": "%s(1)",
+        "url": "https://ovis-hpc-personal.readthedocs.io/projects/sos/en/latest/%s.html",
     },
 }
 

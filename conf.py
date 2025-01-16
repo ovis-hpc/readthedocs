@@ -155,11 +155,11 @@ domainrefs = {
         "text": "%s(8)",
         "url": "http://man7.org/linux/man-pages/man8/%s.8.html",
     },
-    "ldms:man-pages": {
+    "ldms:man": {
         "text": "%s(1)",
         "url": "https://ovis-hpc-personal.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
     },
-    "sos:man-pages": {
+    "sos:man": {
         "text": "%s(1)",
         "url": "https://ovis-hpc-personal.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
     },

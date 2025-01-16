@@ -53,4 +53,5 @@ Manual Pages
 ------------
 
 - :ref:`ldms:man-pages`
-- :ref:`sos:man-pages`
+- :ldms:man:`ldms-man-pages`
+- :sos:man:`sos-man-pages`

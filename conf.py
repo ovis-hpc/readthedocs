@@ -24,6 +24,7 @@ import os
 import sys
 import subprocess
 import sphinx_immaterial
+from recommonmark.transform import AutoStructify
 
 import ssl
 import requests

@@ -24,17 +24,18 @@ import os
 import sys
 import subprocess
 import sphinx_immaterial
-from recommonmark.transform import AutoStructify  # noqa
 
 import ssl
 import requests
 from sphinx.ext import intersphinx
 import urllib3
 
-# Set environment variables to bypass SSL verification
-#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'  # Disable SSL verification globally
-#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'  # For the requests package
-#os.environ['PIP_NO_VERIFY_CERTS'] = '1'  # Disable SSL verification for pip
+# Set environment variables to ca-bundle.crt when using container on Sandia machine.
+#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt' 
+#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt' 
+
+# overrride READTHEDOCS output dir
+os.environ['READTHEDOCS_OUTPUT'] = '_build'
 
 from urllib.request import build_opener, HTTPSHandler, install_opener
 

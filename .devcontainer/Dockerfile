@@ -50,7 +50,5 @@ ENV INPUTRC=/etc/inputrc
 
 USER $USERNAME
 
-ENV http_proxy=http://proxy.sandia.gov:80
-ENV https_proxy=http://proxy.sandia.gov:80
 ENV PATH=/env/bin:${PATH}
 WORKDIR /workspace/ovis-docs

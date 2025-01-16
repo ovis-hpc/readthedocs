@@ -6,7 +6,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = .
-BUILDDIR      = $(READTHEDOCS_OUTPUT)/html
+BUILDDIR      = _build/html
 
 # Put it first so that "make" without argument is like "make help".
 help:

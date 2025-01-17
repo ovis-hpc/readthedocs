@@ -22,7 +22,6 @@ Welcome to OVIS-HPC documentation!
    aboutovis
    faqs
    tutorials/index
-   ldmscon/index
    contributing/index
    glossary
    publications

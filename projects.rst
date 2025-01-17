@@ -8,25 +8,25 @@ This page provides a quick introduction to our main sub-projects! You can also f
 
 
 ---------
-OVIS LDMS
+LDMS
 ---------
 
- -  Read the `LDMS Documentation <https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html>`_
+ -  Read the `LDMS documentation <https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html>`_
 
 ----------
-OVIS SOS
+SOS
 ----------
 
- -  Read the `SOS Documentation <https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html>`_
+ -  Read the `SOS documentation <https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html>`_
 
 -------------
-OVIS Maestro
+Maestro
 -------------
 
- -  Read the `Maestro Documentation <https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/index.html>`_
+ -  Read the `Maestro documentation <https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/index.html>`_
 
 ---------------
-OVIS Baler
+Baler
 ---------------
 
- -  Read the `Baler Documentation <https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html>`_
+ -  Read the `Baler documentation <https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html>`_

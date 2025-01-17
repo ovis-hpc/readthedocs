@@ -62,13 +62,6 @@ rtd_version = os.environ.get("READTHEDOCS_VERSION", "latest")
 if rtd_version not in ["stable", "latest"]:
     rtd_version = "stable"
 
-# Boolean to generate example gallery if we can import flux
-#try:
-#    import flux
-#    has_flux = True
-#except ImportError:
-#    has_flux = False
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
@@ -96,11 +89,6 @@ extensions = [
     "sphinx_immaterial.graphviz",
 ]
 
-# This would require a flux instance / python bindings to run
-# so we do it locally and then persist the auto_examples to render
-#if has_flux:
-#    extensions.append("sphinx_gallery.gen_gallery")
-
 # sphinxcontrib.spelling settings
 spelling_word_list_filename = ["spell.en.pws"]
 
@@ -122,14 +110,6 @@ exclude_patterns = [
     "README.md",
     ".github",
 ]
-
-#if has_flux:
-#    sphinx_gallery_conf = {
-#        "examples_dirs": "examples",  # path to your example scripts
-#        "gallery_dirs": "auto_examples",  # path to where to save gallery generated output
-#        "filename_pattern": "/example",
-#        "default_thumb_file": "images/logo.png",
-#    }
 
 master_doc = "index"
 source_suffix = {".rst": "restructuredtext"}
@@ -156,7 +136,7 @@ domainrefs = {
         "url": "http://man7.org/linux/man-pages/man8/%s.8.html",
     },
     "ldms:all-man": {
-        "text": "LDMS Man Pages",
+        "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/index.html",
     },
     "ldms:man": {
@@ -164,11 +144,15 @@ domainrefs = {
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
     },
     "ldms:doc": {
-        "text": "LDMS Documentation",
+        "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html",
     },
+    "ldms:doc-page": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s.html",
+    },
     "sos:all-man": {
-        "text": "SOS Man Pages",
+        "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/index.html",
     },
     "sos:man": {
@@ -176,8 +160,28 @@ domainrefs = {
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
     },
     "sos:doc": {
-        "text": "SOS Documentation",
+        "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html",
+    },
+    "sos:doc-page": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/%s.html",
+    },
+    "maestro:doc": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/index.html",
+    },
+    "maestro:doc-page": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/%s.html",
+    },
+    "baler:doc": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html",
+    },
+    "baler:doc-page": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/%s.html",
     },
 }
 
@@ -246,8 +250,8 @@ html_theme_options = {
         {
             "media": "(prefers-color-scheme: light)",
             "scheme": "default",
-            "primary": "blue",
-            "accent": "light-blue",
+            "primary": "indigo",
+            "accent": "cyan",
             "toggle": {
                 "icon": "material/lightbulb-outline",
                 "name": "Switch to dark mode",
@@ -257,7 +261,7 @@ html_theme_options = {
             "media": "(prefers-color-scheme: dark)",
             "scheme": "slate",
             "primary": "blue",
-            "accent": "light-blue",
+            "accent": "teal",
             "toggle": {
                 "icon": "material/lightbulb",
                 "name": "Switch to light mode",

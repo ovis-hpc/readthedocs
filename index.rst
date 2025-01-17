@@ -22,7 +22,7 @@ Welcome to OVIS-HPC documentation!
    aboutovis
    faqs
    tutorials/index
-   contributing/index
+   contributing
    glossary
    publications
 
@@ -51,5 +51,5 @@ Welcome to OVIS-HPC documentation!
 Manual Pages
 ------------
 
-- :ldms:man:`ldms-man-pages`
-- :sos:man:`sos-man-pages`
+- :ldms:all-man:`LDMS man pages`
+- :sos:all-man:`SOS man pages`

@@ -57,10 +57,17 @@ def role(config, role, rawtext, text, lineno, inliner, options={}, content=[]):
             docutils.utils.unescape(text),
         )
 
+    # Determine if the URL template contains a '%s' for string formatting
+    if '%s' in config['url']:
+        refuri = config['url'] % (text,)
+    else:
+        refuri = config['url']  # Use the URL as is if it doesn't contain '%s'
+
+    # Create the reference node
     node = docutils.nodes.reference(
         rawsource=rawtext,
         text=title,
-        refuri=config['url'] % (text,),
+        refuri=refuri,
         **options
     )
 

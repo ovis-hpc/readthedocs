@@ -51,8 +51,6 @@ Welcome to OVIS-HPC documentation!
 Manual Pages
 ------------
 
-- :doc:`LDMS Documentation <ldms:index.html>`_
-- `LDMS man pages <ldms:ldms_man/index.html>`_
-- `SOS man pages <sos:sos_man/index.html>`_
-`LDMS Documentation <ldms:index.html>`_
+- :ldms:all-man:`LDMS man pages`
+- :sos:all-man:`SOS man pages`
 

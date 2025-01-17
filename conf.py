@@ -139,6 +139,10 @@ domainrefs = {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
     },
+    "ldms:all-man": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/index.html",
+    },
     "ldms:doc-page": {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s.html",
@@ -146,6 +150,10 @@ domainrefs = {
     "sos:man": {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
+    },
+    "sos:all-man": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/index.html",
     },
     "sos:doc-page": {
         "text": "%s",

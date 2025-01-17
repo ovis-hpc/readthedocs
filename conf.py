@@ -226,7 +226,7 @@ html_theme_options = {
         {
             "media": "(prefers-color-scheme: light)",
             "scheme": "default",
-            "primary": "indigo",
+            "primary": "light-blue",
             "accent": "cyan",
             "toggle": {
                 "icon": "material/lightbulb-outline",

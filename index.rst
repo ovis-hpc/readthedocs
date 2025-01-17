@@ -52,6 +52,5 @@ Welcome to OVIS-HPC documentation!
 Manual Pages
 ------------
 
-- :ref:`ldms:man-pages`
 - :ldms:man:`ldms-man-pages`
 - :sos:man:`sos-man-pages`

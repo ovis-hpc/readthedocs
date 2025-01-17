@@ -155,21 +155,29 @@ domainrefs = {
         "text": "%s(8)",
         "url": "http://man7.org/linux/man-pages/man8/%s.8.html",
     },
+    "ldms:all-man": {
+        "text": "LDMS Man Pages",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/index.html",
+    },
     "ldms:man": {
-        "text": "%s(1)",
-        "url": "https://ovis-hpc-personal.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
+    },
+    "ldms:doc": {
+        "text": "LDMS Documentation",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html",
+    },
+    "sos:all-man": {
+        "text": "SOS Man Pages",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/index.html",
     },
     "sos:man": {
-        "text": "%s(1)",
-        "url": "https://ovis-hpc-personal.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
     },
-    "ldms:main": {
-        "text": "%s(1)",
-        "url": "https://ovis-hpc-personal.readthedocs.io/projects/ldms/en/latest/%s.html",
-    },
-    "sos:main": {
-        "text": "%s(1)",
-        "url": "https://ovis-hpc-personal.readthedocs.io/projects/sos/en/latest/%s.html",
+    "sos:doc": {
+        "text": "SOS Documentation",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html",
     },
 }
 
@@ -177,19 +185,19 @@ domainrefs = {
 
 intersphinx_mapping = {
     "sos": (
-        "https://ovis-hpc-personal.readthedocs.io/projects/sos/en/latest/",
+        "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/",
         None,
     ),
     "maestro": (
-        "https://ovis-hpc-personal.readthedocs.io/projects/maestro/en/latest/",
+        "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/",
         None,
     ),
     "baler": (
-        "https://ovis-hpc-personal.readthedocs.io/projects/baler/en/latest/",
+        "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/",
         None,
     ),
     "ldms": (
-        "https://ovis-hpc-personal.readthedocs.io/projects/ldms/en/latest/",
+        "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/",
         None,
     ),
 }
@@ -260,7 +268,7 @@ html_theme_options = {
     "version_dropdown": False,
     "version_info": [
         {
-            "version": "https://ovis-hpc-personal.readthedocs.io",
+            "version": "https://ovis-hpc.readthedocs.io",
             "title": "ReadTheDocs",
             "aliases": [],
         },

@@ -143,14 +143,14 @@ domainrefs = {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
     },
-    "ldms:doc": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html",
-    },
-    "ldms:doc-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s.html",
-    },
+#    "ldms:doc": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html",
+#    },
+#    "ldms:doc-page": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s.html",
+#    },
     "sos:all-man": {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/index.html",
@@ -159,30 +159,30 @@ domainrefs = {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
     },
-    "sos:doc": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html",
-    },
-    "sos:doc-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/%s.html",
-    },
-    "maestro:doc": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/index.html",
-    },
-    "maestro:doc-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/%s.html",
-    },
-    "baler:doc": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html",
-    },
-    "baler:doc-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/%s.html",
-    },
+#    "sos:doc": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html",
+#    },
+#    "sos:doc-page": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/%s.html",
+#    },
+#    "maestro:doc": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/index.html",
+#    },
+#    "maestro:doc-page": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/%s.html",
+#    },
+#    "baler:doc": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html",
+#    },
+#    "baler:doc-page": {
+#        "text": "%s",
+#        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/%s.html",
+#    },
 }
 
 # -- Options for Intersphinx -------------------------------------------------

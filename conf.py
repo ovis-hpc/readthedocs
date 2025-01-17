@@ -152,6 +152,7 @@ domainrefs = {
 #        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s.html",
 #    },
     "sos:all-man": {
+        "text": "All of the sos manpages",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/index.html",
     },
     "sos:man": {

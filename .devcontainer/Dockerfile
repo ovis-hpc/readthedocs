@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y iputils-ping python3.9-venv python3.9-d
     ca-certificates curl && apt-get clean
 COPY ./requirements.txt /requirements.txt 
 COPY ./.github/dev-requirements.txt /dev-requirements.txt
-COPY certs/ /etc/ssl/certs
+COPY /home/$(whoami)/certs/ /etc/ssl/certs
 
 ENV PYTHONPATH=/usr/lib/python3.9
 

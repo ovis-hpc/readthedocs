@@ -6,7 +6,7 @@
    SPDX-License-Identifier: (LGPL-3.0)
 
 Welcome to OVIS-HPC documentation!
-================================
+===================================
 
 .. image:: images/ovis-logo.png
    :width: 225

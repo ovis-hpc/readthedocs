@@ -11,22 +11,22 @@ This page provides a quick introduction to our main sub-projects! You can also f
 LDMS
 ---------
 
- -  Read the :ldms:doc:`LDMS documentation` 
+ -  Read the :ldms:docs:`LDMS documentation` 
 
 ----------
 SOS
 ----------
 
- -  Read the :sos:doc:`SOS documentation`
+ -  Read the :sos:docs:`SOS documentation`
 
 -------------
 Maestro
 -------------
 
- -  Read the :maestro:doc:`Maestro documentation`
+ -  Read the :maestro:docs:`Maestro documentation`
 
 ---------------
 Baler
 ---------------
 
- -  Read the :baler:doc:`Baler documentation`
+ -  Read the :baler:docs:`Baler documentation`

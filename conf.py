@@ -187,6 +187,10 @@ domainrefs = {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/%s.html",
     },
+    "baler:docs": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html",
+    },
 }
 
 # -- Options for Intersphinx -------------------------------------------------

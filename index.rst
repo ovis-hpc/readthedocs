@@ -20,6 +20,9 @@ Welcome to OVIS-HPC documentation!
    :caption: Contents
 
    aboutovis
+   ldmscon
+   ug
+   ug_notes
    faqs
    tutorials/index
    contributing
@@ -27,26 +30,16 @@ Welcome to OVIS-HPC documentation!
    publications
    
 .. toctree::
-   :maxdepth: 5
-   :caption: LDMSCON
-
-   ldmscon
-   ug
-   ug_notes
-
-
-.. toctree::
    :maxdepth: 1
    :caption: Sub-Projects
 
    projects
 
-
 Manual Pages
 ------------
 
-- Please review the LDMS :ldms:all-man:`man` pages
-- LDMS :ldms:all-man:`store` man pages
-- LDMS :ldms:all-man:`sampler` man pages
-- :sos:all-man:`SOS man pages`
+- :ldms:all-man:`ldms` man pages
+- `ldms` :ldms:all-man:`store` man pages
+- `ldms` :ldms:all-man:`sampler` man pages
+- :sos:all-man:`sos` man pages
 

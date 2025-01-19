@@ -4,17 +4,49 @@ The LDMS Users Group Conferences (LDMSCON) serves as a forum for users to share 
 
 About
 **********
-You can find the general information and previous conferences following webpage:
+You can find the general information and previous conferences following webpage: 
 `LDMS Users Group Conference`_.
 
 .. _LDMS Users Group Conference: https://sites.google.com/view/ldmscon
 
-Please go to the <insert-link> to stay up to date on tutorials, presentations and discussions about LDMS and its' software capabilities.
+Please go to the `LDMS-UG Webpage <https://www.ldms-ug.org/>`_ to stay up to date on tutorials, presentations and discussions about LDMS and its' software capabilities.
 ------------
+
+LDMSCON2024
+************
+The following attachment contains the scripts and commands used in the LDMCON2024 Basics **powerpoint presentation** located on the `LDMSCON2024 Tutorial Slides <https://sites.google.com/view/ldmscon2024/tutorials/tutorial-slides>`_ webpage. 
+
+**Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial powerpoint.**
+
+:download: `ldmscon2024_directory.zip <https://github.com/ovis-hpc/readthedocs/blob/main/files/ldmscon2024_directory.zip>`_
+
+.. note:: 
+  
+   This tutorial assumes LDMS is already installed on the system. If it is not, please follow the `Build and Installation <https://ovis-hpc.readthedocs.io/en/latest/ldms/ldms-quickstart.html#installation>`_ steps under the LDMS Quick-Start section.
+
+Recordings of presentations, tutorials and information for LDMSCON2024 can be viewed by highlighting your cursor over "Tutorials" and "Presentations" on the top right of the main webpage:
+`LDMSCON2024 <https://sites.google.com/view/ldmscon2024>`_
+
+.. image:: images/ldmscon/ldmscon2024_tabs.png
+   :width: 500
+
+.. note::
+  
+  **If the file directory ``ldmscon2024`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation, and following files, **will need to be changed to ``<path-to-zip-files>/ldmscon2024/``**.
+
+   * ``../conf/e3/agg_store_csv.conf``
+   * ``../scripts/e1/start_ldms_simple.sh``
+   * ``../scripts/e2/start_ldms_simple_agg.sh``
+   * ``../scripts/e3/start_agg_store_csv.sh``
+   * ``../scripts/e3/store_csv.txt``
+
+.. note::
+   * All files under ``../scripts/e*`` are not used in the tutorial but rather are the commands/steps used for each exercise. They demonstrate LDMS's ability to configure and initialize it's daemons with a single bash script. 
+   * These scripts must be ran in a directory that is readable and writable. Otherwise the log/data file generation will not work.
 
 LDMSCON2023
 ************
-The following attachment contains the scripts and commands used in the LDMCON2023 Basics powerpoint presentation.
+The following attachment contains the scripts and commands used in the LDMCON2023 Basics powerpoint presentation. 
 
 **Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial.**
 
@@ -31,7 +63,6 @@ Recordings of previous presentations, tutorials and information for LDMSCON2023 
    :width: 200
 
 .. note::
-
   **If the file directory ``ldmscon2023`` is not extracted under ``/root/``** then please keep in mind that **any reference to ``/root/``** in the powerpoint presentation, and following files, **will need to be changed to the absolute path of ``ldmscon2023/``**.
 
    * ``../conf/e3/agg_store_csv.conf``
@@ -41,10 +72,8 @@ Recordings of previous presentations, tutorials and information for LDMSCON2023 
    * ``../scripts/e3/store_csv.txt``
 
 .. note::
-   All files under ``../scripts/e*`` are not used in the tutorial but rather are the commands/steps used for each exercise. They demonstrate LDMS's ability to configure and initialize it's daemons with a single bash script.
-
-.. note::
-   These scripts must be ran in a directory that is readable and writable. Otherwise the log/data file generation will not work.
+   * All files under ``../scripts/e*`` are not used in the tutorial but rather are the commands/steps used for each exercise. They demonstrate LDMS's ability to configure and initialize it's daemons with a single bash script. 
+   * These scripts must be ran in a directory that is readable and writable. Otherwise the log/data file generation will not work.
 
 LDMSCON2022
 ************

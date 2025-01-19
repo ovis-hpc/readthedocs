@@ -137,7 +137,15 @@ domainrefs = {
     },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s_man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
+    },
+    "ldms:sampler-man": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/sampler_man/%s.html",
+    },
+    "ldms:store-man": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/store_man/%s.html",
     },
     "ldms:all-man": {
         "text": "%s",

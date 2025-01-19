@@ -10,7 +10,6 @@ You can find the general information and previous conferences following webpage:
 .. _LDMS Users Group Conference: https://sites.google.com/view/ldmscon
 
 Please go to the `LDMS-UG Webpage <https://www.ldms-ug.org/>`_ to stay up to date on tutorials, presentations and discussions about LDMS and its' software capabilities.
-------------
 
 LDMSCON2024
 ************

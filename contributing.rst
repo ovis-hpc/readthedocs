@@ -6,7 +6,7 @@ Contributing
 
 The OVIS-HPC team values contributions of all kinds: bug fixes, new features, documentation, and more. If you have questions or need help, please `contact us <https://github.com/ovis-hpc/OVIS-HPC/people>`_.
 
-This guide explains how to contribute to `OVIS-HPC projects <https://github.com/ovis-hpc>`_ efficiently. Our projects follow the Collective Code Construction Contract (`C4.1 <https://github.com/ovis-hpc/rfc/blob/master/spec_1.rst>`_), which is a collaboration model based on GitHub’s fork and pull request workflow.
+This guide explains how to contribute to `OVIS-HPC projects <https://github.com/ovis-hpc>`_ efficiently.
 
 .. _pull-requests:
 
@@ -45,7 +45,6 @@ Follow these guidelines for contributing:
 * Check existing issues and pull requests to avoid duplication.
 * Include tests when possible. Automated coverage reports are generated for pull requests.
 * Update documentation as needed. If you can’t, open a `documentation issue <https://github.com/ovis-hpc/docs/issues>`_.
-* Use the coding styles: C code follows Kernighan & Ritchie (see `RFC 7 <https://github.com/ovis-hpc/rfc/blob/master/spec_7.rst>`_), and Python code follows `black <https://black.readthedocs.io/en/stable/the_black_code_style/index.html>`_.
 * Write clear, focused commits:
 
   - Avoid merge commits.
@@ -54,4 +53,3 @@ Follow these guidelines for contributing:
   - Reference related issues in the commit message.
   - Use clear, imperative phrasing and wrap lines at 72 characters.
 
-For detailed guidelines on commits, refer to `RFC 1 <https://github.com/ovis-hpc/rfc/blob/master/spec_1.rst>`_.

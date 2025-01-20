@@ -32,8 +32,8 @@ from sphinx.ext import intersphinx
 import urllib3
 
 # Set environment variables to ca-bundle.crt when using container on Sandia machine.
-#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
-#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
+os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
+os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
 
 from urllib.request import build_opener, HTTPSHandler, install_opener
 
@@ -190,6 +190,10 @@ domainrefs = {
     "baler:docs": {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html",
+    },
+    "asf:docs": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/asf/index.html",
     },
 }
 

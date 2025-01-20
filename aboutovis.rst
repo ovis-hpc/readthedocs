@@ -22,3 +22,8 @@ Baler
 
 Baler analyzes and compresses logs, extracting patterns and anomalies while reducing storage needs. It transforms raw logs into actionable insights, aiding trend detection and forensic analysis.
 
+ASF (AppSysFusion)
+------------------
+AppSysFusion provides analysis and visualization capabilities aimed at serving insights from HPC monitoring data gathered with LDMS, though could be generalized outside of that scope.
+It combines a Grafana front-end with a Django back-end to perform in-query analyses on raw data and return transformed information back to the end user.
+

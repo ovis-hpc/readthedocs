@@ -11,8 +11,4 @@ find a tutorial of interest.
    :maxdepth: 2
    :caption: Tutorials
 
-   ../auto_examples/index
-   commands/index
-   containers/index
-   lab/index
-   integrations/index
+   ldms-getting-started

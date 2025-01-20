@@ -11,7 +11,12 @@ This page provides a quick introduction to our main sub-projects! You can also f
 LDMS
 ---------
 
- -  Read the :ldms:docs:`LDMS documentation` 
+ -  Read the :ldms:docs:`LDMS documentation`
+
+.. note::
+
+        Documentation of LDMS is currently in the migration process from multiple locations to readthedocs website. The original LDMS documentation can be found on the OVIS-HPC github wiki: `Ovis-Wiki <https://github.com/ovis-hpc/ovis-wiki/wiki>`_
+
 
 ----------
 SOS

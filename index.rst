@@ -23,9 +23,7 @@ Welcome to OVIS-HPC documentation!
    ldmscon
    ug
    faqs
-   tutorials/index
    contributing
-   glossary
    publications
    
 .. toctree::

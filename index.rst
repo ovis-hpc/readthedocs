@@ -36,7 +36,7 @@ Manual Pages
 ------------
 
 - :ldms:all-man:`ldms` man pages
-- `ldms` :ldms:all-man:`store` man pages
-- `ldms` :ldms:all-man:`sampler` man pages
+- ldms :ldms:all-man:`store` man pages
+- ldms :ldms:all-man:`sampler` man pages
 - :sos:all-man:`sos` man pages
 

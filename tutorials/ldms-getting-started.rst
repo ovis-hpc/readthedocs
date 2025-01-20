@@ -1,14 +1,15 @@
-Getting Started with LDMS
-=========================
 
-LDMS (Lightweight Distributed Metric Service) is a powerful tool for collecting, aggregating, and transporting system metrics in HPC environments. To begin using LDMS, follow the resources below to set up and understand its core functionality.
+Moderate to Advanced
+--------------------
+For those who are familiar with LDMS and moderately experienced in the Linux environment, please follow the LDMS Quick Start guide. This provides quick and easy step-by-step instructions on installation, configuration, and basic usage of LDMS.
 
-Quick Start Guide
------------------
+- :ldms:docs-page:`ldms-quickstart`
 
-The Quick Start guide provides a step-by-step introduction to setting up and using LDMS. It covers installation, configuration, and basic usage.
 
-- :ldms:docs-page:`ldms-quickstart`_
+Beginners
+----------
 
-For more detailed instructions with a more how-to step-by-step guide. Please follow the tutorial provided in :doc:`ldmscon` from the most recent year.
+For those who have never heard of LDMS or are unfamiliar with the Linux environment, please use the hands-on tutorial recording and slides from the most recent :doc:`ldmscon`_.
+
+This tutorial covers the basic configurations, commands, usage and their definitions. 
   

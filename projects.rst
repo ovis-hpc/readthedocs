@@ -22,7 +22,8 @@ LDMS
 SOS
 ----------
 
- -  Read the :sos:docs:`SOS documentation`
+ -  Read the :doc:`SOS documentation <sos:index>`
+:sos:docs:`SOS documentation`
 
 -------------
 Maestro

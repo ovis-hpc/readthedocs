@@ -1,3 +1,5 @@
+.. _ldmscon:
+
 LDMS Users Group Conference (LDMSCON)
 ###########
 The LDMS Users Group Conferences (LDMSCON) serves as a forum for users to share experiences with the LDMS product.

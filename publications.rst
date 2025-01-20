@@ -1,3 +1,5 @@
+.. _publications:
+
 OVIS Publications
 =====================
 

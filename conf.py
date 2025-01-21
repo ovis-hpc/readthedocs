@@ -147,53 +147,9 @@ domainrefs = {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/store_man/%s.html",
     },
-    "ldms:all-man": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s_man/index.html",
-    },
-    "ldms:docs-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/%s.html",
-    },
-    "ldms:docs": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/index.html",
-    },
     "sos:man": {
         "text": "%s",
         "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
-    },
-    "sos:all-man": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/index.html",
-    },
-    "sos:docs-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/%s.html",
-    },
-    "sos:docs": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/index.html",
-    },
-    "maestro:docs-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/%s.html",
-    },
-    "maestro:docs": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/maestro/en/latest/index.html",
-    },
-    "baler:docs-page": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/%s.html",
-    },
-    "baler:docs": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/baler/en/latest/index.html",
-    },
-    "asf:docs": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/asf/index.html",
     },
 }
 

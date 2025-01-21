@@ -11,7 +11,7 @@ This page provides a quick introduction to our main sub-projects! You can also f
 LDMS
 ---------
 
- -  Read the :ldms:docs:`LDMS documentation`
+ -  Read the :doc:`LDMS documentation <ldms:index>`
 
 .. note::
 
@@ -23,22 +23,21 @@ SOS
 ----------
 
  -  Read the :doc:`SOS documentation <sos:index>`
-:sos:docs:`SOS documentation`
 
 -------------
 Maestro
 -------------
 
- -  Read the :maestro:docs:`Maestro documentation`
+ -  Read the :doc:`Maestro documentation <maestro:index>`
 
 ---------------
 Baler
 ---------------
 
- -  Read the :baler:docs:`Baler documentation`
+ -  Read the :doc:`Baler documentation <baler:index>`
 
 ---------------
 ASF
 ---------------
 
- -  Read the :asf:docs:`ASF documentation`
+ -  Read the :doc:`ASF documentation <ldms:asf/index>`

@@ -2,7 +2,7 @@
 
 Beginners
 ----------
-For those who have never heard of LDMS or are unfamiliar with the Linux environment, please use the hands-on tutorial recording and slides from the most recent :doc:`LDMS Conference <ovis-hpc:ldmscon>`.
+For those who have never heard of LDMS or are unfamiliar with the Linux environment, please use the hands-on tutorial recording and slides from the most recent :doc:`LDMS Conference <../ldmscon>`.
 
 This tutorial covers the basic configurations, commands, usage and their definitions.
 

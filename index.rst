@@ -48,8 +48,3 @@ Manual Pages
 - :doc:`LDMS store plugin man pages <ldms:store_man/index>`
 - :doc:`LDMS sampler plugin man pages <ldms:sampler_man/index>`
 - :doc:`SOS man pages <sos:sos_man/index>`
-- :ldms:all-man:`ldms` man pages
-- ldms :ldms:all-man:`store` man pages
-- ldms :ldms:all-man:`sampler` man pages
-- :sos:all-man:`sos` man pages
-

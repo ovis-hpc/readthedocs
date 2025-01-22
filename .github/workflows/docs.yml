@@ -27,21 +27,8 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install -r docs/requirements.txt
+          pip install -r ./requirements.txt
 
       - name: Build Documentation Locally
         run: |
           sphinx-build -b html docs/ docs/_build
-
-  trigger-rtd:
-    needs: build-docs  # Ensures this job runs after the build-docs job
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Trigger Read the Docs Build
-        env:
-          RTD_SECRET: ${{ secrets.RTD_WEBHOOK_SECRET }}
-        run: |
-          curl -X POST \
-            -H "Authorization: Token $RTD_SECRET" \
-            https://readthedocs.org/api/v2/webhook/ovis-hpc/273114/

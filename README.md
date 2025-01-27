@@ -2,96 +2,62 @@
 
 Edits should be made to the `.rst` files.
 The documentation can be built with `make html` or `make man`.
-The generated files will be found in the `_build` directory. Note that if you
-want to build the docs, it is recommended to use the development environment to have
-the Flux Python bindings available, e.g.,:
-
-```python
-import flux
-# no error
-```
-
-If you build the docs in an environment without the bindings, the sphinx gallery examples
-will not properly generate. This is OK if you don't edit them.
-
-## VSCode Development Container
-
-We provide a VSCode [Development Container](https://code.visualstudio.com/docs/remote/containers)
-to provide an environment for you to easily work on the documentation, and ensure that Flux
-is installed to generate some of our Sphinx Gallery (TBA) tutorials. This works by way
-of the assets in [.devcontainer](https://code.visualstudio.com/docs/remote/containers#_create-a-devcontainerjson-file).
+The generated files will be found in the `_build` directory.
 
 ## Manual Development Container
 
-If you want to generate the container manually, this is also an option! First build it:
+To generate the container manually, build it with:
 
 ```bash
-$ docker build -f ./.devcontainer/Dockerfile -t flux-docs .
+$ docker build -f ./.devcontainer/Dockerfile -t ovis-docs .
 ```
 This will build the base environment. You can then bind your container to the present
 working directory to build:
 
 ```bash
-$ docker run -it --rm -v $PWD/:/workspace/flux-docs flux-docs flux start make html
+$ docker run -it --rm -v $PWD/:/workspace/ovis-docs ovis-docs make html
 ```
 
 You can also go in interactively - just be careful and don't commit from within the container.
 
 ```bash
-$ docker run -it --rm -v $PWD/:/workspace/flux-docs flux-docs bash
+$ docker run -it --rm -v $PWD/:/workspace/ovis-docs ovis-docs bash
 ```
 
-### Setup
+### If Using a Machine with a Proxy
 
-You can follow the [tutorial](https://code.visualstudio.com/docs/remote/containers-tutorial) where you'll basically
-need to:
+If you are working in an environment with a proxy, you may need to configure the proxy settings inside the Docker container in order to build the documentation properly.
 
-1. Install Docker
-2. Install the [Development Containers](vscode:extension/ms-vscode-remote.remote-containers) extension
+Uncomment the following lines (or add them if they don't exist) in the conf.py code:
 
-Then you can go to the command palette (View -> Command Palette) and select `Dev Containers: Open Workspace in Container.`
-and select your cloned Flux Docs repository root. This will build a development environment from [fluxrm/flux-sched](https://hub.docker.com/r/fluxrm/flux-sched/tags).
+```python
+os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
+os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
+```
 
-While this uses the focal base, you are free to change the base image and rebuild if you need to test on another operating system! 
-When your container is built, when you open `Terminal -> New Terminal` and you'll be in the container! 
-You should be able to build docs:
+Run the following command to build the documentation using the proxy. Make sure to replace `<path-to-certs>` with the actual path to the certificates on your machine, and `<proxy:port>` with your proxy's address and port:
 
 ```bash
-$ flux start make html
+$ docker run -u root -it --rm -v $PWD/:/workspace/ovis-docs -v /<path-to-certs>:/etc/ssl/certs/ -e http_proxy=http://<proxy:port> -e https_proxy=<proxy:port> ovis-docs make html
 ```
+This ensures that the Docker container has access to the necessary certificates and can connect through the proxy to download dependencies or access external resources.
 
-If you don't have Flux Python bindings or don't want to generate them, just fall back
-to:
 
-```bash
-$ make html
-```
+### Steps to visualize changes on Read the Docs:
+1. **Fork the repository**: Fork the repository where the docs are located to your own GitHub account.
+2. **Create a Read the Docs account**: Sign up for a free Read the Docs account at [readthedocs.org](https://readthedocs.org/).
+3. **Link the repository**: 
+    - After logging in, go to the **"Import a Project"** page on [Read the Docs](https://readthedocs.org/projects/).
+    - Choose **"GitHub"** as the source and authorize Read the Docs to access your GitHub account.
+    - Select your forked repository from the list.
+4. **Specify the correct branch**: 
+    - In the project settings, you will be asked to specify the branch of your repository. Select the branch that contains the changes you've made to the documentation.
+5. **Set the location of `.readthedocs.yml`**: 
+    - Read the Docs will need to know where your `.readthedocs.yml` file is located. In the project settings, ensure that you specify the **current directory** (`./`) as the location of the `.readthedocs.yml` file.
+    - The `.readthedocs.yml` file controls the configuration of your documentation build process on Read the Docs (including things like Python dependencies, versioning, and build steps).
+6. **Build the documentation**: After linking the project and selecting the correct branch, Read the Docs will automatically build the documentation. You can view the generated docs at the provided URL.
 
-The build will detect that the Flux Python bindings are not available and build everything
-except for the examples gallery. And then you can do as you would do on your host to start a local webserver:
-
-```console
-..
-The HTML pages are in _build/html.
-
-$ cd _build/html/
-$ python3 -m http.server 9999
-Serving HTTP on 0.0.0.0 port 9999 (http://0.0.0.0:9999/) ...
-```
-VSCode is smart enough to see you open the port and give you a button to click to open it in
-the browser! If not, you can open your browser to [http://localhost:9999/](http://localhost:9999/).
-We will provide further instructions here for building sphinx examples as they are added.
-
-**Important** it's recommended that you commit (or otherwise write to the .git folder) from the outside
-of the container. This will allow you to sign commits with your (not mounted to the container) key,
-and will ensure the permissions of the commit are not done by a root user. If you update the sphinx
-examples, the permissions can also get wonky. In either case, you can run this from your terminal outside of VSCode:
-
-```bash
-$ sudo chown -R $USER .
-$ sudo chown -R $USER .git/ .
-# and then commit
-```
+This will allow you to see your changes in real-time as you push updates to the branch.
 
 ## Installing Sphinx
 

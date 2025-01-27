@@ -32,15 +32,8 @@ from sphinx.ext import intersphinx
 import urllib3
 
 # Set environment variables to ca-bundle.crt when using container on Sandia machine.
-#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
-#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
-
-from urllib.request import build_opener, HTTPSHandler, install_opener
-
-# Disable SSL verification globally
-ssl._create_default_https_context = ssl._create_unverified_context
-opener = build_opener(HTTPSHandler(context=ssl._create_unverified_context()))
-install_opener(opener)
+os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
+os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
 
 sys.path.insert(0, os.path.abspath("."))
 
@@ -269,26 +262,6 @@ html_theme_options = {
 }
 
 
-#    "touch_icon": "images/flux-operator.jpg",
-#    "theme_color": "#262626",
-#    "nav_links": [
-#        {
-#            "href": "https://flux-framework.org/",
-#            "internal": False,
-#            "title": "Flux Framework",
-#        },
-#        {
-#            "href": "https://github.com/flux-framework",
-#            "internal": False,
-#            "title": "Flux Framework on GitHub",
-#        },
-#        {
-#            "href": "https://github.com/flux-framework/flux-docs",
-#            "internal": False,
-#            "title": "Flux Documentation on GitHub",
-#        },
-#    ],
-
 todo_include_todos = True
 sphinx_immaterial_bundle_source_maps = True
 
@@ -343,6 +316,3 @@ def setup(app):
         indextemplate="pair: %s; configuration value",
     )
 
-#linkcheck_ignore = [
-#    r'https://github.com/flux-framework/flux-core\?tab\=readme-ov-file\#build-requirements'
-#]

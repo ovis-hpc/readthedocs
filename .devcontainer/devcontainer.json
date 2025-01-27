@@ -1,5 +1,5 @@
 {
-    "name": "Flux Core Python 3.6",
+    "name": "OVIS-HPC Python 3.8",
     "dockerFile": "Dockerfile",
     "context": "../",
     "customizations": {

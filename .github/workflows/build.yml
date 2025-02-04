@@ -25,6 +25,11 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
 
+    - name: Install CA Certificates
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y ca-certificates
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
@@ -35,8 +40,7 @@ jobs:
     - name: Run Quick Tests
       run: |
         echo "Running quick build and tests..."
-        # Add your build or test commands here
-        make html
+        make html -C docs
 
     - name: Verify Build
       run: |

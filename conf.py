@@ -31,10 +31,6 @@ import requests
 from sphinx.ext import intersphinx
 import urllib3
 
-# Set environment variables to ca-bundle.crt when using container on Sandia machine.
-#os.environ["CURL_CA_BUNDLE"] = '/etc/ssl/certs/ca-bundle.crt'
-#os.environ['REQUESTS_CA_BUNDLE'] = '/etc/ssl/certs/ca-bundle.crt'
-
 sys.path.insert(0, os.path.abspath("."))
 
 # -- Project information -----------------------------------------------------

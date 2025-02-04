@@ -1,0 +1,38 @@
+jobs:
+  quick-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt', '.github/dev-requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iputils-ping python3.9-venv python3.9-dev
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r .github/dev-requirements.txt
+          pip install sphinx sphinx-rtd-theme pymdown-extensions
+
+      - name: Build Documentation
+        run: |
+          make -C docs html
+
+      - name: Run Quick Tests (Optional)
+        run: |
+          # Add quick test commands here if needed
+          echo "Quick build check completed successfully."

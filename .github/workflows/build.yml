@@ -36,7 +36,7 @@ jobs:
       run: |
         echo "Running quick build and tests..."
         # Add your build or test commands here
-        make html -C docs
+        make html
 
     - name: Verify Build
       run: |

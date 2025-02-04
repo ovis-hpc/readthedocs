@@ -40,11 +40,11 @@ jobs:
     - name: Run Quick Tests
       run: |
         echo "Running quick build and tests..."
-        make html -C docs
+        make html
 
     - name: Verify Build
       run: |
-        if [ ! -d "docs/_build/html" ]; then
+        if [ ! -d "_build/html" ]; then
           echo "Build failed: Documentation not generated."
           exit 1
         else

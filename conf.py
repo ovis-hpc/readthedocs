@@ -126,25 +126,21 @@ domainrefs = {
     },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
-    },
-    "ldms:sampler-man": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/sampler_man/%s.html",
-    },
-    "ldms:store-man": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/store_man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/%s.html",
     },
     "sos:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/%s.html",
     },
 }
 
 # -- Options for Intersphinx -------------------------------------------------
 
 intersphinx_mapping = {
+    "ovis-hpc": (
+        "https://ovis-hpc.readthedocs.io/en/latest/",
+        None,
+    ),
     "sos": (
         "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/",
         None,
@@ -161,6 +157,11 @@ intersphinx_mapping = {
         "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/",
         None,
     ),
+    "containers": (
+        "https://ovis-hpc.readthedocs.io/projects/containers/en/latest/",
+        None,
+    ),
+
 }
 
 # -- Options for HTML output -------------------------------------------------

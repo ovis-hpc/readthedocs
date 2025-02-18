@@ -44,7 +44,6 @@ OVIS is a modular system for HPC data collection, transport, storage, analysis, 
 Manual Pages
 ------------
 
-- :doc:`LDMS man pages <ldms:ldms_man/index>`
-- :doc:`LDMS store plugin man pages <ldms:store_man/index>`
-- :doc:`LDMS sampler plugin man pages <ldms:sampler_man/index>`
-- :doc:`SOS man pages <sos:sos_man/index>`
+- :doc:`LDMS man pages <ldms:docs/man/index>`
+- :doc:`LDMS store and sampler plugin man pages <ldms:docs/man/plugins/**>`
+- :doc:`SOS man pages <sos:docs/man/sos>`

@@ -177,6 +177,15 @@ html_css_files = ["custom.css"]
 extensions.append("sphinx_immaterial")
 html_theme = "sphinx_immaterial"
 
+# Get the current Read the Docs version (branch/tag)
+rtd_version = os.getenv("READTHEDOCS_VERSION", "main")
+
+# Adjust for GitHub branch references
+if rtd_version and rtd_version.startswith("v"):
+    edit_uri_branch = f"refs/tags/{rtd_version}"
+else:
+    edit_uri_branch = f"blob/{rtd_version}"
+
 # material theme options (see theme.conf for more information)
 html_theme_options = {
     "icon": {
@@ -186,7 +195,7 @@ html_theme_options = {
     "site_url": "http://ovis-hpc.github.io/readthedocs/",
     "repo_url": "https://github.com/ovis-hpc/readthedocs/",
     "repo_name": "ovis-hpc",
-    "edit_uri": "blob/main",
+    "edit_uri": edit_uri_branch,
     "globaltoc_collapse": True,
     "features": [
         "navigation.expand",

@@ -193,7 +193,7 @@ html_theme_options = {
         "edit": "material/file-edit-outline",
     },
     "site_url": "http://ovis-hpc.github.io/readthedocs/",
-    "repo_url": "https://github.com/ovis-hpc/readthedocs/",
+    "repo_url": "https://github.com/Snell1224/readthedocs/",
     "repo_name": "ovis-hpc",
     "edit_uri": edit_uri_branch,
     "globaltoc_collapse": True,

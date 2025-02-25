@@ -126,11 +126,11 @@ domainrefs = {
     },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html#%s",
     },
     "sos:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html#%s",
     },
 }
 
@@ -177,9 +177,6 @@ html_css_files = ["custom.css"]
 extensions.append("sphinx_immaterial")
 html_theme = "sphinx_immaterial"
 
-# Get the current Read the Docs version (branch/tag)
-rtd_version = os.getenv("READTHEDOCS_VERSION", "main")
-
 # Adjust for GitHub branch references
 if rtd_version and rtd_version.startswith("v"):
     edit_uri_branch = f"refs/tags/{rtd_version}"
@@ -193,7 +190,7 @@ html_theme_options = {
         "edit": "material/file-edit-outline",
     },
     "site_url": "http://ovis-hpc.github.io/readthedocs/",
-    "repo_url": "https://github.com/Snell1224/readthedocs/",
+    "repo_url": "https://github.com/ovis-hpc/readthedocs/",
     "repo_name": "ovis-hpc",
     "edit_uri": edit_uri_branch,
     "globaltoc_collapse": True,

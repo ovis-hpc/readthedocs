@@ -36,7 +36,7 @@ sys.path.insert(0, os.path.abspath("."))
 # -- Project information -----------------------------------------------------
 
 project = "OVIS-HPC"
-copyright = """Copyright 2024 Sandia National Laboratories and Open Grid Computing, Inc.
+copyright = """Copyright 2025 Sandia National Laboratories and Open Grid Computing, Inc.
 
 SPDX-License-Identifier: LGPL-3.0"""
 author = "This page is maintained by the Ovis-HPC community."
@@ -126,11 +126,11 @@ domainrefs = {
     },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html",
     },
     "sos:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html",
     },
 }
 

@@ -19,23 +19,17 @@ LDMS Containers
 ---------------
 The LDMS Containers provides Docker recipes and scripts for building images of various LDMS related components such as:
 
-- **ldms-dev**
-  Development environment with dependencies for building OVIS binaries and developing LDMS plugins.
+- **ldms-dev**: Development environment with dependencies for building OVIS binaries and developing LDMS plugins.
 
-- **ldms-samp**  
-  Runtime image containing `ldmsd` and sampler plugins for data collection.
+- **ldms-samp**: Runtime image containing `ldmsd` and sampler plugins for data collection.
 
-- **ldms-agg**  
-  Includes `ldmsd`, sampler plugins, and storage plugins (e.g., SOS) for data aggregation and storage.
+- **ldms-agg**: Includes `ldmsd`, sampler plugins, and storage plugins (e.g., SOS) for data aggregation and storage.
 
-- **ldms-maestro**  
-  Contains Maestro and Etcd for managing distributed LDMS deployments.
+- **ldms-maestro**: Contains Maestro and Etcd for managing distributed LDMS deployments.
 
-- **ldms-ui**  
-  Provides an HTTP-based UI backend for LDMS data access using uwsgi, Django, and SOSDB.
+- **ldms-ui**: Provides an HTTP-based UI backend for LDMS data access using uwsgi, Django, and SOSDB.
 
-- **ldms-grafana**  
-  Includes Grafana with the SOS data source plugin for visualizing LDMS data.
+- **ldms-grafana**: Includes Grafana with the SOS data source plugin for visualizing LDMS data.
 
 
 Maestro

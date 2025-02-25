@@ -45,5 +45,6 @@ Manual Pages
 ------------
 
 - :doc:`LDMS man pages <ldms:docs/man/index>`
-- :doc:`LDMS store and sampler plugin man pages <ldms:docs/man/plugins/**>`
+- :doc:`LDMS store plugin man pages <ldms:docs/man/plugins/store/**>`
+- :doc:`LDMS sampler plugin man pages <ldms:docs/man/plugins/sampler/**>`
 - :doc:`SOS man pages <sos:docs/man/sos>`

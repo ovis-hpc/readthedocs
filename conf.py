@@ -36,7 +36,7 @@ sys.path.insert(0, os.path.abspath("."))
 # -- Project information -----------------------------------------------------
 
 project = "OVIS-HPC"
-copyright = """Copyright 2024 Sandia National Laboratories and Open Grid Computing, Inc.
+copyright = """Copyright 2025 Sandia National Laboratories and Open Grid Computing, Inc.
 
 SPDX-License-Identifier: LGPL-3.0"""
 author = "This page is maintained by the Ovis-HPC community."
@@ -126,25 +126,21 @@ domainrefs = {
     },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/ldms_man/%s.html",
-    },
-    "ldms:sampler-man": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/sampler_man/%s.html",
-    },
-    "ldms:store-man": {
-        "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/store_man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html",
     },
     "sos:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/sos_man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html",
     },
 }
 
 # -- Options for Intersphinx -------------------------------------------------
 
 intersphinx_mapping = {
+    "ovis-hpc": (
+        "https://ovis-hpc.readthedocs.io/en/latest/",
+        None,
+    ),
     "sos": (
         "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/",
         None,
@@ -161,6 +157,11 @@ intersphinx_mapping = {
         "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/",
         None,
     ),
+    "containers": (
+        "https://ovis-hpc.readthedocs.io/projects/containers/en/latest/",
+        None,
+    ),
+
 }
 
 # -- Options for HTML output -------------------------------------------------

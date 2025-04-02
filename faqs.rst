@@ -16,10 +16,11 @@ General Questions
 
 OVIS-HPC is a modular system designed for high-performance computing (HPC) environments. It includes several subprojects:
 
+- **LDMS**: Lightweight distributed metric service for monitoring and telemetry.
+- **AppSysFusion**: A modular tool for analyzing and visualizing HPC monitoring data for efficient in-query analysis.
 - **SOS**: Provides scalable and optimized storage solutions for HPC.
 - **Maestro**: Manages data orchestration and workflow automation.
 - **Baler**: Handles data compression and efficient storage management.
-- **LDMS**: Lightweight distributed metric service for monitoring and telemetry.
 
 **Who maintains OVIS-HPC?**
 

@@ -124,13 +124,21 @@ domainrefs = {
         "text": "%s(8)",
         "url": "http://man7.org/linux/man-pages/man8/%s.8.html",
     },
+    "ldms:man-pages": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html",
+    },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html#%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/%s.html",
+    },
+    "sos:man-pages": {
+        "text": "%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html",
     },
     "sos:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html#%s",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/%s.html",
     },
 }
 

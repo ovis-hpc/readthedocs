@@ -51,7 +51,8 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 **Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial.**
 
-:download:`ldmscon2023_directory.zip <_static/files/ldmscon2023_directory.zip>`
+`ldmscon2023_directory.zip <files/ldmscon2023_directory.zip>`_
+`ldmscon2023_directory.zip <_static/files/ldmscon2023_directory.zip>`_
 
 Recordings of previous presentations, tutorials and information for LDMSCON2023 can be found here:
 `LDMSCON2023 <https://sites.google.com/view/ldmscon2023>`_

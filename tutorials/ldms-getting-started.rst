@@ -8,5 +8,4 @@ This tutorial covers the basic configurations, commands, usage and their definit
 
 Moderate to Advanced
 --------------------
-For those who are familiar with LDMS and moderately experienced in the Linux environment, please follow the :doc:`LDMS Quickstart Guides <ldms:intro/ldms-quickstart>` guide. This provides quick and easy step-by-step instructions on installation, configuration, and basic usage of LDMS.
-
+For those who are familiar with LDMS and moderately experienced in the Linux environment, please follow the :doc:`LDMS Quickstart Guides <ldms:intro/quick-start>` guide. This provides quick and easy step-by-step instructions on installation, configuration, and basic usage of LDMS.

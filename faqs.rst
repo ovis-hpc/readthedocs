@@ -60,7 +60,7 @@ Yes, contributions are welcome! Check out our `Contributing Guide <https://githu
 
 **How do I install OVIS-HPC?**
 
-Each subproject has its own installation instructions, available in their respective repositories. For example, you can find LDMS installation steps in the `LDMS repository <https://github.com/ovis-hpc/ldms>`_.
+Each subproject of OVIS-HPC has its own installation instructions, available in the README's of their respective GitHub repositories or `documentation pages <https://ovis-hpc.readthedocs.io/en/latest/projects.html>`. 
 
 **Is there any user documentation available?**
 

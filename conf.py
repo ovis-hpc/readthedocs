@@ -126,19 +126,19 @@ domainrefs = {
     },
     "ldms:man-pages": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/index.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/rst_man/index.html",
     },
     "ldms:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/rst_man/%s.html",
     },
     "sos:man-pages": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/index.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/rst_man/index.html",
     },
     "sos:man": {
         "text": "%s",
-        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/man/%s.html",
+        "url": "https://ovis-hpc.readthedocs.io/projects/sos/en/latest/rst_man/%s.html",
     },
 }
 

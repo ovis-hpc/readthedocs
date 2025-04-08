@@ -19,11 +19,11 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 **Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial powerpoint.**
 
-:download: `ldmscon2024_directory.zip <ovis-hpc:files/ldmscon2024_directory.zip>`
+:download:`ldmscon2024_directory.zip <ovis-hpc:files/ldmscon2024_directory.zip>`
 
 .. note:: 
   
-   This tutorial assumes LDMS is already installed on the system. If it is not, please follow the :doc:`LDMS Quickstart <ldms:ldms-quickstart>` installation instructions.
+   This tutorial assumes LDMS is already installed on the system. If it is not, please follow the :doc:`LDMS Quickstart <ldms:intro/quick-start>` installation instructions.
 
 Recordings of presentations, tutorials and information for LDMSCON2024 can be viewed by highlighting your cursor over "Tutorials" and "Presentations" on the top right of the main webpage:
 `LDMSCON2024 <https://sites.google.com/view/ldmscon2024>`_

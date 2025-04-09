@@ -16,10 +16,11 @@ General Questions
 
 OVIS-HPC is a modular system designed for high-performance computing (HPC) environments. It includes several subprojects:
 
+- **LDMS**: Lightweight distributed metric service for monitoring and telemetry.
+- **AppSysFusion**: A modular tool for analyzing and visualizing HPC monitoring data for efficient in-query analysis.
 - **SOS**: Provides scalable and optimized storage solutions for HPC.
 - **Maestro**: Manages data orchestration and workflow automation.
 - **Baler**: Handles data compression and efficient storage management.
-- **LDMS**: Lightweight distributed metric service for monitoring and telemetry.
 
 **Who maintains OVIS-HPC?**
 
@@ -59,7 +60,7 @@ Yes, contributions are welcome! Check out our `Contributing Guide <https://githu
 
 **How do I install OVIS-HPC?**
 
-Each subproject has its own installation instructions, available in their respective repositories. For example, you can find LDMS installation steps in the `LDMS repository <https://github.com/ovis-hpc/ldms>`_.
+Each subproject of OVIS-HPC has its own installation instructions, available in the README's of their respective GitHub repositories or `documentation pages <https://ovis-hpc.readthedocs.io/en/latest/projects.html>`. 
 
 **Is there any user documentation available?**
 

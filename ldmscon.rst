@@ -19,7 +19,7 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 **Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial powerpoint.**
 
-:download:`ldmscon2024_directory.zip <ovis-hpc:files/ldmscon2024_directory.zip>`
+`ldmscon2024_directory.zip <_static/files/ldmscon2024_directory.zip>`_
 
 .. note:: 
   
@@ -51,7 +51,6 @@ The following attachment contains the scripts and commands used in the LDMCON202
 
 **Please DOWNLOAD THE FOLLOWING .ZIP FILE to easily follow along with the tutorial.**
 
-`ldmscon2023_directory.zip <files/ldmscon2023_directory.zip>`_
 `ldmscon2023_directory.zip <_static/files/ldmscon2023_directory.zip>`_
 
 Recordings of previous presentations, tutorials and information for LDMSCON2023 can be found here:

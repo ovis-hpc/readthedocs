@@ -59,6 +59,7 @@ If you instead want to test a build on your local machine, please install the fo
 ``` shell
 pip install -r requirements.txt
 pip install sphinx sphinx-rtd-theme
+
 ```
 
 Optionally, you can run the following to build the documents:
@@ -66,5 +67,3 @@ Optionally, you can run the following to build the documents:
 ``` shell
 sphinx-build -b html docs/ docs/_build
 ```
-
-Users may want to install these packages into a [Python Virtual Environment](https://docs.python.org/3/tutorial/venv.html)

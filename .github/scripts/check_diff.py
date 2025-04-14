@@ -3,7 +3,6 @@
 # This script checks that two directories are recursively equal
 # however we only care about name (existence) and timestamp.
 # Usage:
-# testing PR builds
 #  python .github/scripts/check_diff.py /tmp/auto_examples ./auto_examples
 
 import argparse

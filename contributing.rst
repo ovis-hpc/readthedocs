@@ -1,8 +1,8 @@
 .. _contributing:
 
-============
-Contributing
-============
+===========
+Source Code
+===========
 
 The OVIS-HPC team values contributions of all kinds: bug fixes, new features, documentation, and more. If you have questions or need help, please `contact us <https://github.com/ovis-hpc/OVIS-HPC/people>`_.
 
@@ -52,4 +52,14 @@ Follow these guidelines for contributing:
   - Use meaningful commit titles with a prefix indicating the area (e.g., ``sos:``, ``maestro:``, ``baler:``, ``ldms:``).
   - Reference related issues in the commit message.
   - Use clear, imperative phrasing and wrap lines at 72 characters.
+
+==============
+Documentation
+==============
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Contributing To Documentation
+
+    README
 

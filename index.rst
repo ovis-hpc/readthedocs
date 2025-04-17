@@ -42,7 +42,7 @@ OVIS is a modular system for HPC data collection, transport, storage, analysis, 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: Contributing
 
    contributing
    README

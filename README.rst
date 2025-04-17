@@ -10,23 +10,25 @@ To enable RST linking, add the following directive at the top of the file:
    - ``.. _<file-name>``
 
 This will allow you to reference this file with
-.. tabs::
 
-   .. tab:: reStructuredText
+.. code-block:: rst
 
-      .. code-block:: rst
-
-         - :ref:`file-name`.
-         - :ref:`file-name <file-name>`.
+   - :ref:`file-name`.
+   - :ref:`file-name <file-name>`.
 
 Where ``file-name`` is what will be displayed on the website and ``<file-name>`` is the directive name listed at the top of the file.
 
 For more information please see [Read the Docs cross referencing documentation](https://docs.readthedocs.com/platform/stable/guides/cross-referencing-with-sphinx.html).
 
-Using Readthedocs
----------------------
+Test Your Changes
+-----------------
 
-To visualize and test your documentation changes on the offical [OVIS LDMS Documentation page](https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/) before submitting a PR, please follow the steps below.
+There are multiple ways to preview your documentation changes before merging them. We recommend using a **personal Read the Docs account** for testing, as it allows you to view the rendered results without affecting the main project. However, testing through a **pull request** is useful when you want to see a side-by-side comparison using Read the Docs' "diff" feature.
+
+Personal Readthedocs Account
+............................
+
+To visualize and test your documentation changes on the offical [OVIS LDMS Documentation page](https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/), you can set up your own RTD account.
 
 1. **Fork the repository**: Fork the repository where the docs are located to your own GitHub account.
 2. **Create a Read the Docs account**: Sign up for a free Read the Docs account at [readthedocs.org](https://readthedocs.org/).
@@ -43,27 +45,45 @@ To visualize and test your documentation changes on the offical [OVIS LDMS Docum
 
 This will allow you to see your changes in real-time as you push updates to the branch.
 
-For more detailed step-by-step instructions with images please see [Read the Docs Tutorial](https://docs.readthedocs.com/platform/stable/tutorial/index.html#creating-a-read-the-docs-account).
+For a full walkthrough with screenshots, visit the [Read the Docs Tutorial](https://docs.readthedocs.com/platform/stable/tutorial/index.html#creating-a-read-the-docs-account).
 
-Edits To Other Files
---------------------
+Review Pull Request Changes
+...........................
 
-If you are making changes to the project configurations (i.e. conf.py or requirements.txt), submit the PR and one of the admins will review the changes.
+To preview documentation changes through a pull request (PR):
+
+1. **Submit a PR** with your changes to the official repository.
+2. Read the Docs will automatically detect the pull request and generate a preview.
+3. On the PR page, a comment from Read the Docs will appear with a link to the **preview documentation build**.
+4. Click the link to review the rendered documentation, including a **side-by-side comparison** ("View docs as diff") between the current version and your proposed changes.
+
+This is especially useful for maintainers to verify how changes will appear before merging.
+
 
 Using Local Machine
------------------------
+...................
 
 The documentation can be built with `make html` or `make man` and the generated files will be found in the `_build` directory.
 If you instead want to test a build on your local machine, please install the following depencencies before running `make html`.
 
-``` shell
-pip install -r requirements.txt
-pip install sphinx sphinx-rtd-theme
+.. code-block:: rst
 
-```
+   pip install -r docs/requirements.txt
+   sphinx-build -b html docs/ docs/_build
 
-Optionally, you can run the following to build the documents:
 
-``` shell
-sphinx-build -b html docs/ docs/_build
-```
+or, if you are using make:
+
+.. code-block:: rst
+   
+   make html
+
+.. note::
+
+        Even if the documentation builds successfully, the final appearance (especially images, plots, or custom themes) may differ from the online version. Always check the rendered result on Read the Docs when possible.
+
+
+Edits To Other Files
+--------------------
+
+If your changes affect the documentation build process itself (e.g. editing `conf.py`, `.readthedocs.yml`, or `requirements.txt`), please submit a PR as usual. An admin or maintainer will review the changes to ensure compatibility with the build system.

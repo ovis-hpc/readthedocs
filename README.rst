@@ -38,8 +38,8 @@ To visualize and test your documentation changes on the offical `OVIS LDMS Docum
     - Select your forked repository from the list.
 4. **Specify the correct branch**:
     - In the project settings, you will be asked to specify the branch of your repository. Select the branch that contains the changes you've made to the documentation.
-5. **Set the location of `.readthedocs.yml`**:
-    - Read the Docs will need to know where your `.readthedocs.yml` file is located. In the project settings, ensure that you specify the **current directory** (`./`) as the location of the `.readthedocs.yml` file.
+5. **Set the location of** ``.readthedocs.yml``:
+    - Read the Docs will need to know where your ``.readthedocs.yml`` file is located. In the project settings, ensure that you specify the **current directory** (`./`) as the location of the ``.readthedocs.yml`` file.
     - The `.readthedocs.yml` file controls the configuration of your documentation build process on Read the Docs (including things like Python dependencies, versioning, and build steps).
 6. **Build the documentation**: After linking the project and selecting the correct branch, Read the Docs will automatically build the documentation. You can view the generated docs at the provided URL.
 

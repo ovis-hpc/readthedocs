@@ -18,7 +18,7 @@ This will allow you to reference this file with
 
 Where ``file-name`` is what will be displayed on the website and ``<file-name>`` is the directive name listed at the top of the file.
 
-For more information please see [Read the Docs cross referencing documentation](https://docs.readthedocs.com/platform/stable/guides/cross-referencing-with-sphinx.html).
+For more information please see `Read the Docs cross referencing documentation <https://docs.readthedocs.com/platform/stable/guides/cross-referencing-with-sphinx.html>`_.
 
 Test Your Changes
 -----------------
@@ -28,12 +28,12 @@ There are multiple ways to preview your documentation changes before merging the
 Personal Readthedocs Account
 ............................
 
-To visualize and test your documentation changes on the offical [OVIS LDMS Documentation page](https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/), you can set up your own RTD account.
+To visualize and test your documentation changes on the offical `OVIS LDMS Documentation page <https://ovis-hpc.readthedocs.io/projects/ldms/en/latest/>`_, you can set up your own RTD account.
 
 1. **Fork the repository**: Fork the repository where the docs are located to your own GitHub account.
-2. **Create a Read the Docs account**: Sign up for a free Read the Docs account at [readthedocs.org](https://readthedocs.org/).
+2. **Create a Read the Docs account**: Sign up for a free Read the Docs account at `readthedocs.org <https://readthedocs.org/>`_.
 3. **Link the repository**:
-    - After logging in, go to the **"Import a Project"** page on [Read the Docs](https://readthedocs.org/projects/).
+    - After logging in, go to the **"Import a Project"** page on `Read the Docs <https://readthedocs.org/projects/>`_.
     - Choose **"GitHub"** as the source and authorize Read the Docs to access your GitHub account.
     - Select your forked repository from the list.
 4. **Specify the correct branch**:
@@ -45,7 +45,7 @@ To visualize and test your documentation changes on the offical [OVIS LDMS Docum
 
 This will allow you to see your changes in real-time as you push updates to the branch.
 
-For a full walkthrough with screenshots, visit the [Read the Docs Tutorial](https://docs.readthedocs.com/platform/stable/tutorial/index.html#creating-a-read-the-docs-account).
+For a full walkthrough with screenshots, visit the `Read the Docs Tutorial <https://docs.readthedocs.com/platform/stable/tutorial/index.html#creating-a-read-the-docs-account>`_.
 
 Review Pull Request Changes
 ...........................

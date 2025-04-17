@@ -1,4 +1,4 @@
-About the OVIS Project
+About the OVIS-HPC Project
 ================================
 OVIS is composed of multiple subprojects, each designed to address specific aspects of HPC system monitoring and data management. These subprojects work together seamlessly to form a comprehensive ecosystem for efficient performance analysis and optimization.
 

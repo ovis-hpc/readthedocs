@@ -1,11 +1,12 @@
 .. _projects:
 
-========
-Projects
-========
+
+==============
+Documentation
+==============
+
 
 This page provides a quick introduction to our main sub-projects! You can also find them along with associated projects on our `main portal page <https://ovis.ca.sandia.gov/>`_.
-
 
 ---------
 LDMS

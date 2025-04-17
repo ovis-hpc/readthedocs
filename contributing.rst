@@ -27,12 +27,12 @@ Steps to create a pull request:
 5. Run ``make check`` to ensure everything works.
 6. Organize your commits into logical units.
 7. Push your branch: ``git push origin new_feature``
-8. Open a pull request to the `ovis-hpc/[project]` repository. Include a description of the changes and reference related issues.
+8. Open a pull request to the ``ovis-hpc/[project]`` repository. Include a description of the changes and reference related issues.
 9. Automated tests will run on your pull request.
 
 For significant changes, open an issue first to discuss your ideas.
 
-Pull requests to the main branch should be rebased to avoid merge commits. Use `WIP:` in the title for drafts to prevent premature merging.
+Pull requests to the main branch should be rebased to avoid merge commits. Use ``WIP:`` in the title for drafts to prevent premature merging.
 
 .. _dev-guidelines:
 
@@ -44,7 +44,7 @@ Follow these guidelines for contributing:
 
 * Check existing issues and pull requests to avoid duplication.
 * Include tests when possible. Automated coverage reports are generated for pull requests.
-* Update documentation as needed. If you can’t, open a `documentation issue <https://github.com/ovis-hpc/docs/issues>`_.
+* Update documentation as needed. If you can’t, open a `documentation issue <https://github.com/ovis-hpc/readthedocs/issues>`_.
 * Write clear, focused commits:
 
   - Avoid merge commits.

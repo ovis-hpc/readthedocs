@@ -26,7 +26,6 @@ OVIS is a modular system for HPC data collection, transport, storage, analysis, 
    ldmscon
    ug
    faqs
-   contributing
    publications
    
 .. toctree::
@@ -40,6 +39,13 @@ OVIS is a modular system for HPC data collection, transport, storage, analysis, 
    :caption: Getting Started With LDMS
 
    tutorials/ldms-getting-started
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contributing
+
+   contributing
+   README
 
 Manual Pages
 ------------

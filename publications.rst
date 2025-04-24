@@ -33,6 +33,20 @@ Publications and Selected Presentations
 
 Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS).
 
+2024
+^^^^
+ ::
+| Workload-adaptive Scheduling for Efficient Use of Parallel File Systems in High-performance Computing Clusters
+| Alexander Goponenko, Benjamin Allan, Jim Brandt, Damian Dechev
+| In 15th IEEE International Workshop on Performance Modeling, Benchmarking and Simulation of High-Performance Computer Systems at SC, November 18, 2024.
+| `Publisher's page <https://ieeexplore.ieee.org/document/10820615>`_
+
+ ::
+| Job Scheduling for HPC Clusters: Constraint Programming vs. Backfilling Approaches
+| Alexander Goponenko, Kenneth Lamar, Benjamin Allan, Jim Brandt, Damian Dechev
+| In Proceedings of the 18th ACM International Conference on Distributed and Event-based Systems (ACM DEBS 2024), Lyon, France, June 25 – June 28, 2024.
+| `Publisher's page <https://dl.acm.org/doi/abs/10.1145/3629104.3666038>`_
+
 2023
 ^^^^
 | Prodigy: Toward Unsupervised Anomaly Detection in Production HPC Systems
@@ -51,6 +65,12 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | B. Aksar, E. Sencan, B. Schwaller, V. Leung, J. Brandt, B. Kulis, M. Egele, and A. Coskun
 | AI4Sys '23: Proceedings of the First Workshop on AI for Systems, August 2023, pp 1–6
 | `doi: 10.1145/3588982.3603609 <https://doi.org/10.1145/3588982.3603609>`_
+
+ ::
+| Evaluating HPC Job Run Time Predictions Using Application Input Parameters
+| Kenneth Lamar, Alexander Goponenko, Omar Aaziz, Benjamin A Allan, James M Brandt, Damian Dechev
+| DEBS ’23: 17th ACM International Conference on Distributed and Event-based Systems, Neuchatel, Switzerland, June 27-30, 2023.
+| `Publisher's page <https://dl.acm.org/doi/10.1145/3583678.3596893>`_
 
  ::
 | Evaluating and Influencing Extreme-Scale Monitoring Implementations

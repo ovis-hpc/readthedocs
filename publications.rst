@@ -32,6 +32,13 @@ Publications and Selected Presentations
 -----------------------------------------
 
 Note: Publications prior to Sept 2011 refer to a different and now deprecated architecture for data collection and transport (i.e., they do NOT use LDMS).
+2025 
+^^^^
+ ::
+| Refine: A Robust Approach to Unsupervised Anomaly Detection for Production HPC Systems.
+| Sencan, Efe, Yin-Ching Lee, Connor Casey, Benjamin Schwaller, Vitus J. Leung, Jim Brandt, Brian Kulis, Manuel Egele, and Ayse K. Coskun.
+| In International Supercomputing Conference 2025
+| May 2025, to appear.
 
 2024
 ^^^^
@@ -46,6 +53,18 @@ Note: Publications prior to Sept 2011 refer to a different and now deprecated ar
 | Alexander Goponenko, Kenneth Lamar, Benjamin Allan, Jim Brandt, Damian Dechev
 | In Proceedings of the 18th ACM International Conference on Distributed and Event-based Systems (ACM DEBS 2024), Lyon, France, June 25 – June 28, 2024.
 | `Publisher's page <https://dl.acm.org/doi/abs/10.1145/3629104.3666038>`_
+
+ ::
+| System-Wide Roofline Profiling-a Case Study on NERSC’s Perlmutter Supercomputer
+| Austin, Brian, Dhruva Kulkarni, Brandon Cook, Samuel Williams, and Nicholas J. Wright. 
+| SC24-W: Workshops of the International Conference for High Performance Computing, Networking, Storage and Analysis
+| November 2024
+
+ :: 
+| Evolving Large Scale HPC Monitoring & Analysis to Track Modern Dynamic Environments.
+| Shoga, Kathleen, Jim Brandt, Benjamin Schwaller, and Thomas Tucker.
+| In 2024 IEEE International Conference on Cluster Computing Workshops (CLUSTER Workshops) (pp. 36-43). IEEE.
+| September 2024
 
 2023
 ^^^^

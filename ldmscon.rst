@@ -13,6 +13,14 @@ You can find the general information and previous conferences following webpage:
 
 Please go to the `LDMS-UG Webpage <https://www.ldms-ug.org/>`_ to stay up to date on tutorials, presentations and discussions about LDMS and its' software capabilities.
 
+LDMSCON2025
+************
+Recordings of presentations, tutorials and information for LDMSCON2025 can be viewed by highlighting your cursor over **Tutorials** and click on **Tutorial Slides** or **Tutorial Videos** on the top right of the main webpage:
+`LDMSCON2025 <https://sites.google.com/view/ldmscon2025>`_
+
+.. image:: images/ldmscon/ldmscon2025_tabs.png
+   :width: 500
+
 LDMSCON2024
 ************
 The following attachment contains the scripts and commands used in the LDMCON2024 Basics **powerpoint presentation** located on the `LDMSCON2024 Tutorial Slides <https://sites.google.com/view/ldmscon2024/tutorials/tutorial-slides>`_ webpage. 
@@ -25,7 +33,7 @@ The following attachment contains the scripts and commands used in the LDMCON202
   
    This tutorial assumes LDMS is already installed on the system. If it is not, please follow the :doc:`LDMS Quickstart <ldms:intro/quick-start>` installation instructions.
 
-Recordings of presentations, tutorials and information for LDMSCON2024 can be viewed by highlighting your cursor over "Tutorials" and "Presentations" on the top right of the main webpage:
+Recordings of presentations, tutorials and information for LDMSCON2024 can be viewed by highlighting your cursor over **Tutorials** and **Presentations** on the top right of the main webpage:
 `LDMSCON2024 <https://sites.google.com/view/ldmscon2024>`_
 
 .. image:: images/ldmscon/ldmscon2024_tabs.png
@@ -56,10 +64,10 @@ The following attachment contains the scripts and commands used in the LDMCON202
 Recordings of previous presentations, tutorials and information for LDMSCON2023 can be found here:
 `LDMSCON2023 <https://sites.google.com/view/ldmscon2023>`_
 
-* The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
+* The tutorial videos and slides can be viewed under the **Tutorials** tab at the top right.
 .. image:: images/ldmscon/ldmscon2023pres.PNG
    :width: 200
-* The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
+* The presentation videos and slides can be viewed under the **Presentations** tab at the top right.
 .. image:: images/ldmscon/ldmscon2023tutorial.png
    :width: 200
 
@@ -81,10 +89,10 @@ LDMSCON2022
 Recordings of previous presentations, tutorials and information for LDMSCON2022 can be found here:
 `LDMSCON2022 <https://sites.google.com/view/ldmscon2022>`_
 
-* The tutorial videos and slides can be viewed under the "Tutorials" tab at the top right.
+* The tutorial videos and slides can be viewed under the **Tutorials** tab at the top right.
 .. image:: images/ldmscon/ldmscon2022pres.PNG
    :width: 200
-* The presentation videos and slides can be viewed under the "Presentations" tab at the top right.
+* The presentation videos and slides can be viewed under the **Presentations** tab at the top right.
 .. image:: images/ldmscon/ldmscon2022tutorial.PNG
    :width: 200
 

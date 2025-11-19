@@ -60,7 +60,7 @@ Yes, contributions are welcome! Check out our `Contributing Guide <https://githu
 
 **How do I install OVIS-HPC?**
 
-Each subproject of OVIS-HPC has its own installation instructions, available in the README's of their respective GitHub repositories or `documentation pages <https://ovis-hpc.readthedocs.io/en/latest/projects.html>`. 
+Each subproject of OVIS-HPC has its own installation instructions, available in the README's of their respective GitHub repositories or `documentation pages <https://ovis-hpc.readthedocs.io/en/latest/projects.html>`_. 
 
 **Is there any user documentation available?**
 
